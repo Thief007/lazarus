@@ -1,0 +1,88 @@
+object ImExportCompOptsDlg: TImExportCompOptsDlg
+  Caption = 'ImExportCompOptsDlg'
+  ClientHeight = 235
+  ClientWidth = 554
+  OnClose = ImExportCompOptsDlgCLOSE
+  OnCreate = ImExportCompOptsDlgCREATE
+  PixelsPerInch = 90
+  HorzScrollBar.Page = 555
+  VertScrollBar.Page = 236
+  Left = 316
+  Height = 235
+  Top = 212
+  Width = 554
+  object OpenRecentGroupbox: TGroupBox
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Caption = 'OpenRecentGroupbox'
+    ClientHeight = 159
+    ClientWidth = 532
+    ParentColor = True
+    ParentCtl3D = False
+    TabOrder = 0
+    Left = 8
+    Height = 176
+    Top = 8
+    Width = 536
+    object RecentListbox: TListBox
+      Align = alTop
+      Anchors = [akTop, akLeft, akBottom]
+      ClickOnSelChange = False
+      OnClick = RecentListboxCLICK
+      OnDblClick = RecentListboxDBLCLICK
+      TabOrder = 0
+      TopIndex = 18446744073709551615
+      Height = 121
+      Width = 532
+    end
+    object OpenRecentButton: TButton
+      Anchors = [akLeft, akBottom]
+      Caption = 'OpenRecentButton'
+      OnClick = OpenRecentButtonCLICK
+      TabOrder = 1
+      Left = 9
+      Height = 25
+      Top = 129
+      Width = 150
+    end
+    object SaveToRecentButton: TButton
+      Anchors = [akLeft, akBottom]
+      Caption = 'SaveToRecentButton'
+      OnClick = SaveToRecentButtonCLICK
+      TabOrder = 2
+      Left = 182
+      Height = 25
+      Top = 129
+      Width = 150
+    end
+  end
+  object OpenButton: TButton
+    Anchors = [akLeft, akBottom]
+    Caption = 'OpenButton'
+    OnClick = OpenButtonCLICK
+    TabOrder = 1
+    Left = 8
+    Height = 25
+    Top = 200
+    Width = 167
+  end
+  object CancelButton: TButton
+    Anchors = [akLeft, akBottom]
+    Caption = 'CancelButton'
+    ModalResult = 2
+    TabOrder = 2
+    Left = 432
+    Height = 25
+    Top = 200
+    Width = 110
+  end
+  object SaveButton: TButton
+    Anchors = [akLeft, akBottom]
+    Caption = 'SaveButton'
+    OnClick = SaveButtonCLICK
+    TabOrder = 3
+    Left = 214
+    Height = 25
+    Top = 200
+    Width = 167
+  end
+end
