@@ -1,0 +1,3029 @@
+<?xml version="1.0" encoding="ISO8859-1"?>
+<fpdoc-descriptions>
+<package name="lcl">
+
+<!--
+  ====================================================================
+    IntfGraphics
+  ====================================================================
+-->
+
+<module name="IntfGraphics">
+<short></short>
+<descr>
+</descr>
+
+<!-- unresolved type reference Visibility: default -->
+<element name="Classes">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- unresolved type reference Visibility: default -->
+<element name="SysUtils">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- unresolved type reference Visibility: default -->
+<element name="fpImage">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- unresolved type reference Visibility: default -->
+<element name="FPReadBMP">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- unresolved type reference Visibility: default -->
+<element name="BMPComn">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- unresolved type reference Visibility: default -->
+<element name="FPCAdds">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- unresolved type reference Visibility: default -->
+<element name="AvgLvlTree">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- unresolved type reference Visibility: default -->
+<element name="LCLType">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- unresolved type reference Visibility: default -->
+<element name="LCLProc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- unresolved type reference Visibility: default -->
+<element name="GraphType">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- unresolved type reference Visibility: default -->
+<element name="LCLIntf">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure type Visibility: default -->
+<element name="TOnGetLazIntfImagePixel">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TOnGetLazIntfImagePixel.x">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TOnGetLazIntfImagePixel.y">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TOnGetLazIntfImagePixel.Color">
+<short></short>
+</element>
+
+<!-- procedure type Visibility: default -->
+<element name="TOnSetLazIntfImagePixel">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TOnSetLazIntfImagePixel.x">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TOnSetLazIntfImagePixel.y">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TOnSetLazIntfImagePixel.Color">
+<short></short>
+</element>
+
+<!-- procedure type Visibility: default -->
+<element name="TOnReadRawImageBits">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TOnReadRawImageBits.TheData">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TOnReadRawImageBits.Position">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TOnReadRawImageBits.Prec">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TOnReadRawImageBits.Shift">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TOnReadRawImageBits.Bits">
+<short></short>
+</element>
+
+<!-- procedure type Visibility: default -->
+<element name="TOnWriteRawImageBits">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TOnWriteRawImageBits.TheData">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TOnWriteRawImageBits.Position">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TOnWriteRawImageBits.Prec">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TOnWriteRawImageBits.Shift">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TOnWriteRawImageBits.Bits">
+<short></short>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TLazIntfImage">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TLazIntfImage.FAutoCreateMask">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TLazIntfImage.FDataDescription">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TLazIntfImage.FPixelData">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TLazIntfImage.FPixelDataSize">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TLazIntfImage.FMaskData">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TLazIntfImage.FMaskDataSize">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TLazIntfImage.FLineStarts">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TLazIntfImage.FMaskLineStarts">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TLazIntfImage.FUpdateCount">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TLazIntfImage.fCreateAllDataNeeded">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TLazIntfImage.FGetSetColorFunctionsUpdateNeeded">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TLazIntfImage.FReadRawImageBits">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TLazIntfImage.FWriteRawImageBits">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TLazIntfImage.FAlphaReadRawImageBits">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TLazIntfImage.FAlphaWriteRawImageBits">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: private -->
+<element name="TLazIntfImage.GetTColors">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TLazIntfImage.GetTColors.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.GetTColors.x">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.GetTColors.y">
+<short></short>
+</element>
+
+<!-- procedure Visibility: private -->
+<element name="TLazIntfImage.SetAutoCreateMask">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.SetAutoCreateMask.AValue">
+<short></short>
+</element>
+
+<!-- procedure Visibility: private -->
+<element name="TLazIntfImage.SetTColors">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.SetTColors.x">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.SetTColors.y">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.SetTColors.AValue">
+<short></short>
+</element>
+
+<!-- variable Visibility: protected -->
+<element name="TLazIntfImage.OnGetInternalColor">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: protected -->
+<element name="TLazIntfImage.OnSetInternalColor">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazIntfImage.SetUsePalette">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.SetUsePalette.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazIntfImage.SetInternalColor">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.SetInternalColor.x">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.SetInternalColor.y">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.SetInternalColor.Value">
+<short></short>
+</element>
+
+<!-- function Visibility: protected -->
+<element name="TLazIntfImage.GetInternalColor">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TLazIntfImage.GetInternalColor.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.GetInternalColor.x">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.GetInternalColor.y">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazIntfImage.SetInternalPixel">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.SetInternalPixel.x">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.SetInternalPixel.y">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.SetInternalPixel.Value">
+<short></short>
+</element>
+
+<!-- function Visibility: protected -->
+<element name="TLazIntfImage.GetInternalPixel">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TLazIntfImage.GetInternalPixel.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.GetInternalPixel.x">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.GetInternalPixel.y">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazIntfImage.FreeAllData">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazIntfImage.FreePixelData">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazIntfImage.FreeMaskData">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazIntfImage.CreateAllData">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazIntfImage.CreatePixelData">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazIntfImage.CreateMaskData">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazIntfImage.CreateDataAndLineStarts">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.CreateDataAndLineStarts.Data">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.CreateDataAndLineStarts.DataSize">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.CreateDataAndLineStarts.TheLineStarts">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.CreateDataAndLineStarts.TheBitsPerPixel">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.CreateDataAndLineStarts.TheLineEnd">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazIntfImage.SetDataDescription">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.SetDataDescription.NewDescription">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazIntfImage.ChooseGetSetColorFunctions">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazIntfImage.ChooseRawBitsProc">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.ChooseRawBitsProc.BitsPerPixel">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.ChooseRawBitsProc.ByteOrder">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.ChooseRawBitsProc.BitOrder">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.ChooseRawBitsProc.ProcReadRawImageBits">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.ChooseRawBitsProc.ProcWriteRawImageBits">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazIntfImage.GenericGetColor">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.GenericGetColor.x">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.GenericGetColor.y">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.GenericGetColor.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazIntfImage.GetColor_NoPalette_RGBA_Alpha_Sep_Mask">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.GetColor_NoPalette_RGBA_Alpha_Sep_Mask.x">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.GetColor_NoPalette_RGBA_Alpha_Sep_Mask.y">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.GetColor_NoPalette_RGBA_Alpha_Sep_Mask.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazIntfImage.GetColor_NoPalette_RGBA_Alpha_Sep_NoMask">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.GetColor_NoPalette_RGBA_Alpha_Sep_NoMask.x">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.GetColor_NoPalette_RGBA_Alpha_Sep_NoMask.y">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.GetColor_NoPalette_RGBA_Alpha_Sep_NoMask.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazIntfImage.GetColor_NoPalette_RGBA_Alpha_NoSep">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.GetColor_NoPalette_RGBA_Alpha_NoSep.x">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.GetColor_NoPalette_RGBA_Alpha_NoSep.y">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.GetColor_NoPalette_RGBA_Alpha_NoSep.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazIntfImage.GetColor_NoPalette_RGBA_NoAlpha">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.GetColor_NoPalette_RGBA_NoAlpha.x">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.GetColor_NoPalette_RGBA_NoAlpha.y">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.GetColor_NoPalette_RGBA_NoAlpha.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazIntfImage.GetColor_NoPalette_Gray">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.GetColor_NoPalette_Gray.x">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.GetColor_NoPalette_Gray.y">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.GetColor_NoPalette_Gray.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazIntfImage.GetColor_NULL">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.GetColor_NULL.x">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.GetColor_NULL.y">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.GetColor_NULL.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazIntfImage.GenericSetColor">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.GenericSetColor.x">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.GenericSetColor.y">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.GenericSetColor.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazIntfImage.SetColor_NoPalette_RGBA_Alpha_Sep_Mask">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.SetColor_NoPalette_RGBA_Alpha_Sep_Mask.x">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.SetColor_NoPalette_RGBA_Alpha_Sep_Mask.y">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.SetColor_NoPalette_RGBA_Alpha_Sep_Mask.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazIntfImage.SetColor_NoPalette_RGBA_Alpha_NoSep">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.SetColor_NoPalette_RGBA_Alpha_NoSep.x">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.SetColor_NoPalette_RGBA_Alpha_NoSep.y">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.SetColor_NoPalette_RGBA_Alpha_NoSep.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazIntfImage.SetColor_NoPalette_RGBA_NoAlpha">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.SetColor_NoPalette_RGBA_NoAlpha.x">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.SetColor_NoPalette_RGBA_NoAlpha.y">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.SetColor_NoPalette_RGBA_NoAlpha.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazIntfImage.SetColor_NoPalette_Gray">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.SetColor_NoPalette_Gray.x">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.SetColor_NoPalette_Gray.y">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.SetColor_NoPalette_Gray.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazIntfImage.SetColor_NULL">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.SetColor_NULL.x">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.SetColor_NULL.y">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.SetColor_NULL.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazIntfImage.SetColor_BPP32_R8G8B8_A1_BIO_TTB">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.SetColor_BPP32_R8G8B8_A1_BIO_TTB.x">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.SetColor_BPP32_R8G8B8_A1_BIO_TTB.y">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.SetColor_BPP32_R8G8B8_A1_BIO_TTB.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazIntfImage.SetColor_BPP32_R8G8B8_A1_BIO_TTB_RBO">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.SetColor_BPP32_R8G8B8_A1_BIO_TTB_RBO.x">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.SetColor_BPP32_R8G8B8_A1_BIO_TTB_RBO.y">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.SetColor_BPP32_R8G8B8_A1_BIO_TTB_RBO.Value">
+<short></short>
+</element>
+
+<!-- constructor Visibility: public -->
+<element name="TLazIntfImage.Create">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.Create.AWidth">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.Create.AHeight">
+<short></short>
+</element>
+
+<!-- destructor Visibility: public -->
+<element name="TLazIntfImage.Destroy">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TLazIntfImage.BeginUpdate">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TLazIntfImage.EndUpdate">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TLazIntfImage.SetSize">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.SetSize.AWidth">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.SetSize.AHeight">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TLazIntfImage.CheckDescription">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TLazIntfImage.CheckDescription.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.CheckDescription.ADescription">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.CheckDescription.ExceptionOnError">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TLazIntfImage.GetDescriptionFromDevice">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.GetDescriptionFromDevice.DC">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TLazIntfImage.GetDescriptionFromBitmap">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.GetDescriptionFromBitmap.Bitmap">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TLazIntfImage.LoadFromDevice">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.LoadFromDevice.DC">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TLazIntfImage.LoadFromBitmap">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.LoadFromBitmap.Bitmap">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.LoadFromBitmap.MaskBitmap">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TLazIntfImage.CreateBitmap">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.CreateBitmap.Bitmap">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.CreateBitmap.MaskBitmap">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.CreateBitmap.AlwaysCreateMask">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TLazIntfImage.SetRawImage">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.SetRawImage.RawImage">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TLazIntfImage.GetRawImage">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.GetRawImage.RawImage">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TLazIntfImage.FillPixels">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.FillPixels.Color">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TLazIntfImage.GetXYDataPostion">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.GetXYDataPostion.x">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.GetXYDataPostion.y">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.GetXYDataPostion.Position">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TLazIntfImage.GetXYMaskPostion">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.GetXYMaskPostion.x">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.GetXYMaskPostion.y">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.GetXYMaskPostion.Position">
+<short></short>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TLazIntfImage.PixelData">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TLazIntfImage.MaskData">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TLazIntfImage.DataDescription">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TLazIntfImage.AutoCreateMask">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TLazIntfImage.TColors">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.TColors.x">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImage.TColors.y">
+<short></short>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TLazIntfImageMask">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TLazIntfImageMask.FImage">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazIntfImageMask.SetInternalColor">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImageMask.SetInternalColor.x">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImageMask.SetInternalColor.y">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImageMask.SetInternalColor.Value">
+<short></short>
+</element>
+
+<!-- function Visibility: protected -->
+<element name="TLazIntfImageMask.GetInternalColor">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TLazIntfImageMask.GetInternalColor.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImageMask.GetInternalColor.x">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImageMask.GetInternalColor.y">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazIntfImageMask.SetInternalPixel">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImageMask.SetInternalPixel.x">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImageMask.SetInternalPixel.y">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImageMask.SetInternalPixel.Value">
+<short></short>
+</element>
+
+<!-- function Visibility: protected -->
+<element name="TLazIntfImageMask.GetInternalPixel">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TLazIntfImageMask.GetInternalPixel.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImageMask.GetInternalPixel.x">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImageMask.GetInternalPixel.y">
+<short></short>
+</element>
+
+<!-- constructor Visibility: public -->
+<element name="TLazIntfImageMask.CreateWithImage">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazIntfImageMask.CreateWithImage.TheImage">
+<short></short>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TLazIntfImageMask.Image">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TLazAVLPalette">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: protected -->
+<element name="TLazAVLPalette.FAVLPalette">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: protected -->
+<element name="TLazAVLPalette.FAVLNodes">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazAVLPalette.SetCount">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazAVLPalette.SetCount.NewCount">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazAVLPalette.SetColor">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazAVLPalette.SetColor.Index">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazAVLPalette.SetColor.NewColor">
+<short></short>
+</element>
+
+<!-- function Visibility: protected -->
+<element name="TLazAVLPalette.CompareEntries">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TLazAVLPalette.CompareEntries.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazAVLPalette.CompareEntries.Index1">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazAVLPalette.CompareEntries.Index2">
+<short></short>
+</element>
+
+<!-- function Visibility: protected -->
+<element name="TLazAVLPalette.CompareColorWithEntries">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TLazAVLPalette.CompareColorWithEntries.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazAVLPalette.CompareColorWithEntries.AColor">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazAVLPalette.CompareColorWithEntries.Index">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazAVLPalette.EnlargeData">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- destructor Visibility: public -->
+<element name="TLazAVLPalette.Destroy">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TLazAVLPalette.IndexOf">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TLazAVLPalette.IndexOf.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazAVLPalette.IndexOf.AColor">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TLazAVLPalette.Add">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TLazAVLPalette.Add.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazAVLPalette.Add.NewColor">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TLazAVLPalette.CheckConsistency">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PArrayNode">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TArrayNode">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: public -->
+<element name="TArrayNode.Parent">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: public -->
+<element name="TArrayNode.Value">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: public -->
+<element name="TArrayNode.Childs">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: public -->
+<element name="TArrayNode.StartValue">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: public -->
+<element name="TArrayNode.Capacity">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: public -->
+<element name="TArrayNode.Data">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constructor Visibility: public -->
+<element name="TArrayNode.Create">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- destructor Visibility: public -->
+<element name="TArrayNode.Destroy">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TArrayNode.DeleteChilds">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TArrayNode.UnbindFromParent">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TArrayNode.CreateChildNode">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TArrayNode.CreateChildNode.ChildValue">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TArrayNode.GetChildNode">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TArrayNode.GetChildNode.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TArrayNode.GetChildNode.ChildValue">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TArrayNode.GetChildNode.CreateIfNotExists">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TArrayNode.Expand">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TArrayNode.Expand.ValueToInclude">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TArrayNode.FindPrevSibling">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TArrayNode.FindPrevSibling.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TArrayNode.FindNextSibling">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TArrayNode.FindNextSibling.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TArrayNode.FindNext">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TArrayNode.FindNext.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TArrayNode.FindPrev">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TArrayNode.FindPrev.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TArrayNode.FindFirstChild">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TArrayNode.FindFirstChild.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TArrayNode.FindLastChild">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TArrayNode.FindLastChild.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TArrayNode.FindLastSubChild">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TArrayNode.FindLastSubChild.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TArrayNode.FindFirstSibling">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TArrayNode.FindFirstSibling.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TArrayNode.FindLastSibling">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TArrayNode.FindLastSibling.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TArrayNode.ConsistencyCheck">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TArrayNodesTree">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: public -->
+<element name="TArrayNodesTree.Root">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TArrayNodesTree.FindNode">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TArrayNodesTree.FindNode.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TArrayNodesTree.FindNode.IntArray">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TArrayNodesTree.FindNode.Count">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TArrayNodesTree.FindData">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TArrayNodesTree.FindData.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TArrayNodesTree.FindData.IntArray">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TArrayNodesTree.FindData.Count">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TArrayNodesTree.SetNode">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TArrayNodesTree.SetNode.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TArrayNodesTree.SetNode.IntArray">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TArrayNodesTree.SetNode.Count">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TArrayNodesTree.SetNode.Data">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TArrayNodesTree.Delete">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TArrayNodesTree.Delete.Node">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TArrayNodesTree.Clear">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- constructor Visibility: public -->
+<element name="TArrayNodesTree.Create">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- destructor Visibility: public -->
+<element name="TArrayNodesTree.Destroy">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TArrayNodesTree.ConsistencyCheck">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TLazReaderXPM">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TLazReaderXPM.FWidth">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TLazReaderXPM.FHeight">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TLazReaderXPM.FColorCount">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TLazReaderXPM.FCharsPerPixel">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TLazReaderXPM.fXHot">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TLazReaderXPM.fYHot">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TLazReaderXPM.FPixelToColorTree">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazReaderXPM.ClearPixelToColorTree">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazReaderXPM.InternalRead">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazReaderXPM.InternalRead.Str">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazReaderXPM.InternalRead.Img">
+<short></short>
+</element>
+
+<!-- function Visibility: protected -->
+<element name="TLazReaderXPM.InternalCheck">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TLazReaderXPM.InternalCheck.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazReaderXPM.InternalCheck.Str">
+<short></short>
+</element>
+
+<!-- constructor Visibility: public -->
+<element name="TLazReaderXPM.Create">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- destructor Visibility: public -->
+<element name="TLazReaderXPM.Destroy">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TLazWriterXPM">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TLazWriterXPM.FNibblesPerSample">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TLazWriterXPM.FRightShiftSample">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: private -->
+<element name="TLazWriterXPM.SetNibblesPerSample">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazWriterXPM.SetNibblesPerSample.AValue">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazWriterXPM.InternalWrite">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazWriterXPM.InternalWrite.Str">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazWriterXPM.InternalWrite.Img">
+<short></short>
+</element>
+
+<!-- constructor Visibility: public -->
+<element name="TLazWriterXPM.Create">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TLazWriterXPM.NibblesPerSample">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TLazReaderBMP">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: private -->
+<element name="TLazReaderBMP.FreeBufs">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: protected -->
+<element name="TLazReaderBMP.ReadSize">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: protected -->
+<element name="TLazReaderBMP.BFI">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: protected -->
+<element name="TLazReaderBMP.FPalette">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: protected -->
+<element name="TLazReaderBMP.LineBuf">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazReaderBMP.SetupRead">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazReaderBMP.SetupRead.nPalette">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazReaderBMP.SetupRead.nRowBits">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazReaderBMP.SetupRead.Stream">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazReaderBMP.SetupRead.ReadPalette">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazReaderBMP.ReadScanLine">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazReaderBMP.ReadScanLine.Row">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazReaderBMP.ReadScanLine.Stream">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazReaderBMP.WriteScanLine">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazReaderBMP.WriteScanLine.Row">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazReaderBMP.WriteScanLine.Img">
+<short></short>
+</element>
+
+<!-- function Visibility: protected -->
+<element name="TLazReaderBMP.BmpRGBAToFPColor">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TLazReaderBMP.BmpRGBAToFPColor.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazReaderBMP.BmpRGBAToFPColor.RGBA">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazReaderBMP.InternalRead">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazReaderBMP.InternalRead.Stream">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazReaderBMP.InternalRead.Img">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazReaderBMP.InternalReadBody">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazReaderBMP.InternalReadBody.Stream">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazReaderBMP.InternalReadBody.Img">
+<short></short>
+</element>
+
+<!-- function Visibility: protected -->
+<element name="TLazReaderBMP.InternalCheck">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TLazReaderBMP.InternalCheck.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazReaderBMP.InternalCheck.Stream">
+<short></short>
+</element>
+
+<!-- constructor Visibility: public -->
+<element name="TLazReaderBMP.Create">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- destructor Visibility: public -->
+<element name="TLazReaderBMP.Destroy">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TLazReaderPartIcon">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazReaderPartIcon.InternalRead">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazReaderPartIcon.InternalRead.Stream">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazReaderPartIcon.InternalRead.Img">
+<short></short>
+</element>
+
+<!-- function Visibility: protected -->
+<element name="TLazReaderPartIcon.InternalCheck">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TLazReaderPartIcon.InternalCheck.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazReaderPartIcon.InternalCheck.Stream">
+<short></short>
+</element>
+
+<!-- function Visibility: protected -->
+<element name="TLazReaderPartIcon.BmpRGBAToFPColor">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TLazReaderPartIcon.BmpRGBAToFPColor.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazReaderPartIcon.BmpRGBAToFPColor.RGBA">
+<short></short>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TLazReaderIcon">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TLazReaderIcon.FIcon">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TLazReaderIcon.FnIcons">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TLazReaderIcon.FnStartPos">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: private -->
+<element name="TLazReaderIcon.SetIcon">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazReaderIcon.SetIcon.AValue">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TLazReaderIcon.InternalRead">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazReaderIcon.InternalRead.Stream">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazReaderIcon.InternalRead.Img">
+<short></short>
+</element>
+
+<!-- function Visibility: protected -->
+<element name="TLazReaderIcon.InternalCheck">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TLazReaderIcon.InternalCheck.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TLazReaderIcon.InternalCheck.Stream">
+<short></short>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TLazReaderIcon.Icon">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="ReadCompleteStreamToString">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="ReadCompleteStreamToString.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="ReadCompleteStreamToString.Str">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="ReadCompleteStreamToString.StartSize">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="ReadCompleteStreamToStream">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="ReadCompleteStreamToStream.SrcStream">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="ReadCompleteStreamToStream.DestStream">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="ReadCompleteStreamToStream.StartSize">
+<short></short>
+</element>
+</module> <!-- IntfGraphics -->
+</package>
+</fpdoc-descriptions>
