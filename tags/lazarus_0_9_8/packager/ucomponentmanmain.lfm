@@ -1,0 +1,161 @@
+object FrmComponentMan: TFrmComponentMan
+  CAPTION = 'Component Manager for Lazarus'
+  CLIENTHEIGHT = 310
+  CLIENTWIDTH = 515
+  CONSTRAINTS.MINHEIGHT = 310
+  CONSTRAINTS.MINWIDTH = 514
+  ONCREATE = FrmMainCREATE
+  ONDESTROY = FrmMainDESTROY
+  ONSHOW = FrmMainSHOW
+  HORZSCROLLBAR.PAGE = 516
+  VERTSCROLLBAR.PAGE = 311
+  LEFT = 304
+  HEIGHT = 310
+  TOP = 355
+  WIDTH = 515
+  HELPTYPE = htkeyword
+  object ListComps: TLISTBOX
+    ANCHORS = [aktop, akleft, akright, akbottom]
+    ONCLICK = ListCompsCLICK
+    SORTED = True
+    TABORDER = 0
+    TOPINDEX = -1
+    LEFT = 12
+    HEIGHT = 215
+    TOP = 40
+    WIDTH = 240
+    HELPTYPE = htkeyword
+  end
+  object Label1: TLABEL
+    AUTOSIZE = True
+    ANCHORS = [aktop, akleft]
+    CAPTION = 'Installed Components:'
+    LAYOUT = tltop
+    LEFT = 12
+    HEIGHT = 24
+    TOP = 8
+    WIDTH = 273
+    HELPTYPE = htkeyword
+  end
+  object Button1: TBUTTON
+    ANCHORS = [akleft, akbottom]
+    CAPTION = 'Add New'
+    TABORDER = 1
+    ONCLICK = Button1CLICK
+    LEFT = 24
+    HEIGHT = 31
+    TOP = 267
+    WIDTH = 75
+    HELPTYPE = htkeyword
+  end
+  object BtnRemove: TBUTTON
+    ANCHORS = [akleft, akbottom]
+    CAPTION = 'Remove'
+    TABORDER = 2
+    ONCLICK = BtnRemoveCLICK
+    LEFT = 128
+    HEIGHT = 31
+    TOP = 267
+    WIDTH = 75
+    HELPTYPE = htkeyword
+  end
+  object Label2: TLABEL
+    AUTOSIZE = True
+    ANCHORS = [aktop, akright]
+    CAPTION = 'Component Name:'
+    LAYOUT = tltop
+    LEFT = 264
+    HEIGHT = 22
+    TOP = 20
+    WIDTH = 225
+    HELPTYPE = htkeyword
+  end
+  object Label3: TLABEL
+    AUTOSIZE = True
+    ANCHORS = [aktop, akright]
+    CAPTION = 'Pascal Unit:'
+    LAYOUT = tltop
+    LEFT = 262
+    HEIGHT = 22
+    TOP = 165
+    WIDTH = 101
+    HELPTYPE = htkeyword
+  end
+  object Label4: TLABEL
+    AUTOSIZE = True
+    ANCHORS = [aktop, akright]
+    CAPTION = 'Page:'
+    LAYOUT = tltop
+    LEFT = 264
+    HEIGHT = 24
+    TOP = 96
+    WIDTH = 83
+    HELPTYPE = htkeyword
+  end
+  object BtnCancel: TBITBTN
+    KIND = bkcancel
+    SPACING = 3
+    ANCHORS = [akright, akbottom]
+    MODALRESULT = 2
+    CAPTION = 'Cancel'
+    TABORDER = 3
+    ONCLICK = BtnCancelCLICK
+    LEFT = 392
+    HEIGHT = 31
+    TOP = 267
+    WIDTH = 97
+    HELPTYPE = htkeyword
+  end
+  object Bitbtn2: TBITBTN
+    KIND = bkok
+    SPACING = 3
+    ANCHORS = [akright, akbottom]
+    DEFAULT = True
+    MODALRESULT = 1
+    CAPTION = 'Save'
+    TABORDER = 4
+    ONCLICK = Bitbtn2CLICK
+    LEFT = 293
+    HEIGHT = 31
+    TOP = 267
+    WIDTH = 81
+    HELPTYPE = htkeyword
+  end
+  object LblComponent: TLABEL
+    ANCHORS = [aktop, akright]
+    CAPTION = 'LblComponent'
+    LAYOUT = tltop
+    LEFT = 264
+    HEIGHT = 25
+    TOP = 56
+    WIDTH = 232
+    HELPTYPE = htkeyword
+  end
+  object LblUnit: TLABEL
+    ANCHORS = [aktop, akright]
+    CAPTION = 'LblUnit'
+    LAYOUT = tltop
+    LEFT = 264
+    HEIGHT = 45
+    TOP = 208
+    WIDTH = 201
+    HELPTYPE = htkeyword
+  end
+  object TxtPage: TEDIT
+    ANCHORS = [aktop, akright]
+    ONCHANGE = TxtPageCHANGE
+    TABORDER = 5
+    LEFT = 264
+    HEIGHT = 23
+    TOP = 128
+    WIDTH = 232
+    HELPTYPE = htkeyword
+  end
+  object DlgLoad: TOPENDIALOG
+    OPTIONS = [ofenablesizing, ofviewdetail]
+    FILTER = '*.pp|*.pas'
+    FILTERINDEX = 0
+    left = 160
+    top = 456
+  end
+end
