@@ -1,0 +1,45 @@
+#   $Id$
+#
+#   Makefile.fpc for Lazarus for Free Pascal
+#
+
+[package]
+name=synedit
+version=1.0.3
+
+[compiler]
+unittargetdir=units/$(CPU_TARGET)-$(OS_TARGET)
+unitdir=../../lcl/units/$(CPU_TARGET)-$(OS_TARGET) .
+options=-gl
+
+[target]
+units=allsyneditunits
+implicitunits=syntextdrawer syneditkeycmds synedittypes syneditstrconst \
+  syneditsearch syneditmiscprocs syneditmiscclasses synedittextbuffer \
+  synedit synedithighlighter synhighlightermulti synregexpr synexporthtml \
+  syneditexport synmemo synmacrorecorder syneditplugins syneditregexsearch \
+  synhighlighterposition synhighlighterjava synhighlightercss \
+  synhighlighterphp synhighlightertex synhighlighterhashentries \
+  synhighlightersql
+
+[require]
+# Adding lcl does not work, because it adds the source path.
+#packages=lcl
+packages=fcl regexpr
+
+[default]
+#lcldir=../../lcl
+
+[clean]
+files=$(wildcard $(COMPILER_UNITTARGETDIR)/*$(OEXT)) \
+      $(wildcard $(COMPILER_UNITTARGETDIR)/*$(PPUEXT)) \
+      $(wildcard $(COMPILER_UNITTARGETDIR)/*$(RSTEXT)) \
+      $(wildcard *$(OEXT)) $(wildcard *$(PPUEXT)) $(wildcard *$(RSTEXT))
+
+[rules]
+.PHONY: cleartarget all
+
+cleartarget:
+        -$(DEL) $(COMPILER_UNITTARGETDIR)/allsyneditunits$(PPUEXT)
+
+all: cleartarget $(COMPILER_UNITTARGETDIR) allsyneditunits$(PPUEXT)
