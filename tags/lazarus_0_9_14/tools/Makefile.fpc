@@ -1,0 +1,48 @@
+#   $Id$
+#
+#   Makefile.fpc for Lazarus for Free Pascal
+#
+
+[package]
+name=lazarus-tools
+version=0.9b
+
+[target]
+dirs=apiwizz
+programs=lazres svn2revisioninc updatepofiles 
+
+[require]
+packages=rtl fcl
+
+[compiler]
+options=-gl
+unitdir=. $(LAZDIR)/lcl/units/$(CPU_TARGET)-$(OS_TARGET) \
+          $(LAZDIR)/lcl/units/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM)
+unittargetdir=.
+targetdir=.
+
+[prerules]
+LAZDIR=..
+
+[prerules]
+# LCL Platform
+ifndef LCL_PLATFORM
+ifeq ($(OS_TARGET),win32)
+LCL_PLATFORM=win32
+else
+LCL_PLATFORM=gtk
+endif
+endif
+export LCL_PLATFORM
+
+
+[rules]
+.PHONY: all
+
+all: apiwizz_all
+        $(MAKE) --assume-new=lazres.pp lazres$(EXEEXT)
+        $(MAKE) --assume-new=svn2revisioninc.pas svn2revisioninc$(EXEEXT)
+        $(MAKE) --assume-new=updatepofiles.pas updatepofiles$(EXEEXT)
+
+# end.
+
