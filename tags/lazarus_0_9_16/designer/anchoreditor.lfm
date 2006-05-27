@@ -1,0 +1,407 @@
+object AnchorDesigner: TAnchorDesigner
+  ActiveControl = LeftBorderSpaceSpinEdit
+  Caption = 'AnchorDesigner'
+  ClientHeight = 259
+  ClientWidth = 520
+  OnClose = AnchorDesignerClose
+  OnCreate = AnchorDesignerCreate
+  OnDestroy = AnchorDesignerDestroy
+  OnShow = AnchorDesignerShow
+  PixelsPerInch = 112
+  Position = poScreenCenter
+  HorzScrollBar.Page = 519
+  VertScrollBar.Page = 258
+  Left = 298
+  Height = 259
+  Top = 179
+  Width = 520
+  object BorderSpaceGroupBox: TGroupBox
+    Anchors = [akTop, akLeft, akBottom]
+    Caption = 'BorderSpaceGroupBox'
+    ClientHeight = 87
+    ClientWidth = 176
+    TabOrder = 0
+    Left = 170
+    Height = 104
+    Top = 80
+    Width = 180
+    object LeftBorderSpaceSpinEdit: TSpinEdit
+      OnChange = BorderSpaceSpinEditChange
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 0
+      Value = 1
+      Height = 20
+      Top = 30
+      Width = 56
+    end
+    object RightBorderSpaceSpinEdit: TSpinEdit
+      OnChange = BorderSpaceSpinEditChange
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+      Value = 1
+      Left = 118
+      Height = 20
+      Top = 30
+      Width = 56
+    end
+    object TopBorderSpaceSpinEdit: TSpinEdit
+      OnChange = BorderSpaceSpinEditChange
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 2
+      Value = 1
+      Left = 58
+      Height = 20
+      Width = 56
+    end
+    object BottomBorderSpaceSpinEdit: TSpinEdit
+      OnChange = BorderSpaceSpinEditChange
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 3
+      Value = 1
+      Left = 58
+      Height = 20
+      Top = 57
+      Width = 56
+    end
+    object AroundBorderSpaceSpinEdit: TSpinEdit
+      OnChange = BorderSpaceSpinEditChange
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 4
+      Value = 1
+      Left = 58
+      Height = 20
+      Top = 30
+      Width = 56
+    end
+  end
+  object TopGroupBox: TGroupBox
+    Anchors = [akTop, akLeft, akRight]
+    Caption = 'TopGroupBox'
+    ClientHeight = 33
+    ClientWidth = 404
+    TabOrder = 1
+    Left = 64
+    Height = 50
+    Width = 408
+    object TopRefTopSpeedButton: TSpeedButton
+      Anchors = [akTop, akRight]
+      Color = clBtnFace
+      GroupIndex = 1
+      NumGlyphs = 0
+      Transparent = False
+      OnClick = ReferenceSideButtonClicked
+      ShowHint = True
+      ParentShowHint = False
+      Left = 296
+      Height = 30
+      Width = 30
+    end
+    object TopRefBottomSpeedButton: TSpeedButton
+      Anchors = [akTop, akRight]
+      Color = clBtnFace
+      GroupIndex = 1
+      NumGlyphs = 0
+      Transparent = False
+      OnClick = ReferenceSideButtonClicked
+      ShowHint = True
+      ParentShowHint = False
+      Left = 331
+      Height = 30
+      Width = 30
+    end
+    object TopRefCenterSpeedButton: TSpeedButton
+      Anchors = [akTop, akRight]
+      Color = clBtnFace
+      GroupIndex = 1
+      NumGlyphs = 0
+      Transparent = False
+      OnClick = ReferenceSideButtonClicked
+      ShowHint = True
+      ParentShowHint = False
+      Left = 366
+      Height = 30
+      Width = 30
+    end
+    object TopSiblingLabel: TLabel
+      Caption = 'Sibling'
+      Color = clNone
+      ParentColor = False
+      Left = 94
+      Height = 14
+      Top = 4
+      Width = 31
+    end
+    object TopAnchoredCheckBox: TCheckBox
+      Caption = 'Enabled'
+      OnChange = AnchorEnabledCheckBoxChange
+      TabOrder = 0
+      UseOnChange = True
+      Left = 2
+      Height = 13
+      Width = 59
+    end
+    object TopSiblingComboBox: TComboBox
+      Anchors = [akTop, akLeft, akRight]
+      AutoCompleteText = [cbactEndOfLineComplete, cbactSearchAscending]
+      MaxLength = 0
+      OnChange = SiblingComboBoxChange
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+      Text = 'TopSiblingComboBox'
+      Left = 158
+      Height = 21
+      Width = 129
+    end
+  end
+  object BottomGroupBox: TGroupBox
+    Anchors = [akLeft, akRight, akBottom]
+    Caption = 'BottomGroupBox'
+    ClientHeight = 33
+    ClientWidth = 404
+    TabOrder = 2
+    Left = 64
+    Height = 50
+    Top = 200
+    Width = 408
+    object BottomRefTopSpeedButton: TSpeedButton
+      Anchors = [akTop, akRight]
+      Color = clBtnFace
+      GroupIndex = 3
+      NumGlyphs = 0
+      Transparent = False
+      OnClick = ReferenceSideButtonClicked
+      ShowHint = True
+      ParentShowHint = False
+      Left = 296
+      Height = 30
+      Width = 30
+    end
+    object BottomRefBottomSpeedButton: TSpeedButton
+      Anchors = [akTop, akRight]
+      Color = clBtnFace
+      GroupIndex = 3
+      NumGlyphs = 0
+      Transparent = False
+      OnClick = ReferenceSideButtonClicked
+      ShowHint = True
+      ParentShowHint = False
+      Left = 331
+      Height = 30
+      Width = 30
+    end
+    object BottomRefCenterSpeedButton: TSpeedButton
+      Anchors = [akTop, akRight]
+      Color = clBtnFace
+      GroupIndex = 3
+      NumGlyphs = 0
+      Transparent = False
+      OnClick = ReferenceSideButtonClicked
+      ShowHint = True
+      ParentShowHint = False
+      Left = 366
+      Height = 30
+      Width = 30
+    end
+    object BottomSiblingLabel: TLabel
+      Caption = 'Sibling'
+      Color = clNone
+      ParentColor = False
+      Left = 94
+      Height = 14
+      Top = 8
+      Width = 31
+    end
+    object BottomAnchoredCheckBox: TCheckBox
+      Caption = 'Enabled'
+      OnChange = AnchorEnabledCheckBoxChange
+      TabOrder = 0
+      UseOnChange = True
+      Left = 2
+      Height = 13
+      Width = 59
+    end
+    object BottomSiblingComboBox: TComboBox
+      Anchors = [akTop, akLeft, akRight]
+      AutoCompleteText = [cbactEndOfLineComplete, cbactSearchAscending]
+      MaxLength = 0
+      OnChange = SiblingComboBoxChange
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+      Text = 'BottomSiblingComboBox'
+      Left = 158
+      Height = 21
+      Width = 129
+    end
+  end
+  object RightGroupBox: TGroupBox
+    Anchors = [akTop, akLeft, akBottom]
+    Caption = 'RightGroupBox'
+    ClientHeight = 112
+    ClientWidth = 146
+    TabOrder = 3
+    Left = 364
+    Height = 129
+    Top = 64
+    Width = 150
+    object RightRefLeftSpeedButton: TSpeedButton
+      Color = clBtnFace
+      GroupIndex = 4
+      NumGlyphs = 0
+      Transparent = False
+      OnClick = ReferenceSideButtonClicked
+      ShowHint = True
+      ParentShowHint = False
+      Left = 5
+      Height = 30
+      Top = 81
+      Width = 30
+    end
+    object RightRefRightSpeedButton: TSpeedButton
+      Color = clBtnFace
+      GroupIndex = 4
+      NumGlyphs = 0
+      Transparent = False
+      OnClick = ReferenceSideButtonClicked
+      ShowHint = True
+      ParentShowHint = False
+      Left = 40
+      Height = 30
+      Top = 81
+      Width = 30
+    end
+    object RightRefCenterSpeedButton: TSpeedButton
+      Color = clBtnFace
+      GroupIndex = 4
+      NumGlyphs = 0
+      Transparent = False
+      OnClick = ReferenceSideButtonClicked
+      ShowHint = True
+      ParentShowHint = False
+      Left = 75
+      Height = 30
+      Top = 81
+      Width = 30
+    end
+    object RightSiblingLabel: TLabel
+      Caption = 'Sibling'
+      Color = clNone
+      ParentColor = False
+      Left = 2
+      Height = 14
+      Top = 28
+      Width = 31
+    end
+    object RightAnchoredCheckBox: TCheckBox
+      Caption = 'Enabled'
+      OnChange = AnchorEnabledCheckBoxChange
+      TabOrder = 0
+      UseOnChange = True
+      Left = 2
+      Height = 13
+      Width = 59
+    end
+    object RightSiblingComboBox: TComboBox
+      Anchors = [akTop, akLeft, akRight]
+      AutoCompleteText = [cbactEndOfLineComplete, cbactSearchAscending]
+      MaxLength = 0
+      OnChange = SiblingComboBoxChange
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+      Text = 'RightSiblingComboBox'
+      Left = 5
+      Height = 21
+      Top = 49
+      Width = 135
+    end
+  end
+  object LeftGroupBox: TGroupBox
+    Anchors = [akTop, akLeft, akBottom]
+    Caption = 'LeftGroupBox'
+    ClientHeight = 112
+    ClientWidth = 146
+    TabOrder = 4
+    Left = 8
+    Height = 129
+    Top = 64
+    Width = 150
+    object LeftRefLeftSpeedButton: TSpeedButton
+      Color = clBtnFace
+      GroupIndex = 2
+      NumGlyphs = 0
+      Transparent = False
+      OnClick = ReferenceSideButtonClicked
+      ShowHint = True
+      ParentShowHint = False
+      Left = 5
+      Height = 30
+      Top = 81
+      Width = 30
+    end
+    object LeftRefRightSpeedButton: TSpeedButton
+      Color = clBtnFace
+      GroupIndex = 2
+      NumGlyphs = 0
+      Transparent = False
+      OnClick = ReferenceSideButtonClicked
+      ShowHint = True
+      ParentShowHint = False
+      Left = 40
+      Height = 30
+      Top = 81
+      Width = 30
+    end
+    object LeftRefCenterSpeedButton: TSpeedButton
+      Color = clBtnFace
+      GroupIndex = 2
+      NumGlyphs = 0
+      Transparent = False
+      OnClick = ReferenceSideButtonClicked
+      ShowHint = True
+      ParentShowHint = False
+      Left = 75
+      Height = 30
+      Top = 81
+      Width = 30
+    end
+    object LeftSiblingLabel: TLabel
+      Caption = 'Sibling'
+      Color = clNone
+      ParentColor = False
+      Left = 2
+      Height = 14
+      Top = 28
+      Width = 31
+    end
+    object LeftAnchoredCheckBox: TCheckBox
+      Caption = 'Enabled'
+      OnChange = AnchorEnabledCheckBoxChange
+      TabOrder = 0
+      UseOnChange = True
+      Left = 2
+      Height = 13
+      Width = 59
+    end
+    object LeftSiblingComboBox: TComboBox
+      Anchors = [akTop, akLeft, akRight]
+      AutoCompleteText = [cbactEndOfLineComplete, cbactSearchAscending]
+      MaxLength = 0
+      OnChange = SiblingComboBoxChange
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+      Text = 'LeftSiblingComboBox'
+      Left = 5
+      Height = 21
+      Top = 49
+      Width = 134
+    end
+  end
+end

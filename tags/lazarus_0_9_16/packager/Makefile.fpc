@@ -1,0 +1,16 @@
+#   $Id$
+#
+#   Makefile.fpc for Lazarus for Free Pascal
+#
+
+[target]
+
+[clean]
+files=$(wildcard *$(OEXT)) $(wildcard *$(PPUEXT)) $(wildcard *$(RSTEXT))\
+      $(wildcard ./units/*$(OEXT)) $(wildcard ./units/*$(PPUEXT)) $(wildcard ./units/*$(RSTEXT))$(wildcard ./units/*$(OEXT)) $(wildcard ./units/*$(PPUEXT)) $(wildcard ./units/*$(RSTEXT))
+
+[rules]
+cleanlaz: clean
+
+# end.
+

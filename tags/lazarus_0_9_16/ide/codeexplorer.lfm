@@ -1,0 +1,78 @@
+object CodeExplorerView: TCodeExplorerView
+  ActiveControl = RefreshButton
+  Caption = 'CodeExplorerView'
+  ClientHeight = 505
+  ClientWidth = 206
+  KeyPreview = True
+  OnClose = CodeExplorerViewCLOSE
+  OnCreate = CodeExplorerViewCREATE
+  OnDestroy = CodeExplorerViewDestroy
+  OnResize = CodeExplorerViewRESIZE
+  PixelsPerInch = 112
+  HorzScrollBar.Page = 205
+  VertScrollBar.Page = 504
+  Left = 378
+  Height = 505
+  Top = 175
+  Width = 206
+  object RefreshButton: TButton
+    
+    Caption = 'Refresh'
+    OnClick = RefreshButtonCLICK
+    TabOrder = 0
+    Height = 25
+    Width = 96
+  end
+  object OptionsButton: TButton
+    
+    Caption = 'Options'
+    OnClick = OptionsButtonClick
+    TabOrder = 1
+    Left = 110
+    Height = 25
+    Width = 96
+  end
+  object CodeTreeview: TTreeView
+    Align = alBottom
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Top = 1
+    DefaultItemHeight = 16
+    HideSelection = False
+    Images = Imagelist1
+    ParentCtl3D = False
+    PopupMenu = TreePopupmenu
+    RightClickSelect = True
+    TabOrder = 2
+    OnDblClick = CodeTreeviewDBLCLICK
+    OnDeletion = CodeTreeviewDELETION
+    OnKeyUp = CodeTreeviewKeyUp
+    Options = [tvoAutoItemHeight, tvoKeepCollapsedNodes, tvoRightClickSelect, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips]
+    AnchorSideTop.Control = FilterEdit
+    AnchorSideTop.Side = asrBottom
+    Height = 456
+    Top = 49
+    Width = 206
+  end
+  object FilterEdit: TEdit
+    Anchors = [akTop, akLeft, akRight]
+    OnChange = FilterEditChange
+    TabOrder = 3
+    Text = 'FilterEdit'
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = RefreshButton
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Height = 23
+    Top = 25
+    Width = 206
+  end
+  object Imagelist1: TImageList
+    left = 64
+    top = 32
+  end
+  object TreePopupmenu: TPopupMenu
+    left = 64
+    top = 72
+  end
+end
