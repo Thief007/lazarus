@@ -1,0 +1,2667 @@
+{%MainUnit ../lclintf.pp}
+
+(******************************************************************************
+  All Winapi related stuff goes here.
+  This file is used by LCLIntf.pas
+  If a procedure is platform dependent then it should call:
+    WidgetSet.MyDependentProc
+
+  If a procedure insn't platform dependent, it is no part of InterfaseBase has
+  to be implementerd here
+
+  !! Keep this alphabetical !!
+
+ *****************************************************************************
+ *                                                                           *
+ *  This file is part of the Lazarus Component Library (LCL)                 *
+ *                                                                           *
+ *  See the file COPYING.modifiedLGPL, included in this distribution,        *
+ *  for details about the copyright.                                         *
+ *                                                                           *
+ *  This program is distributed in the hope that it will be useful,          *
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of           *
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.                     *
+ *                                                                           *
+ *****************************************************************************
+ ******************************************************************************)
+
+{******************************************************************************
+  These functions redirect to the platform specific interface object.
+
+  Note:
+    the section for not referring WidgetSet is at the end
+ ******************************************************************************}
+//##apiwiz##sps##   // Do not remove
+
+{
+function TWinCEWidgetSet.Arc(DC: HDC; Left, Top, width, height, angle1,
+  angle2: Integer): Boolean;
+begin
+  Result:=inherited Arc(DC, Left, Top, width, height, angle1, angle2);
+end;
+
+function TWinCEWidgetSet.AngleChord(DC: HDC; x, y, width, height, angle1,
+  angle2: Integer): Boolean;
+begin
+  Result:=inherited AngleChord(DC, x, y, width, height, angle1, angle2);
+end;}
+
+{------------------------------------------------------------------------------
+  Method:  BitBlt
+  Params:  DestDC        - The destination device context
+           X, Y          - The left/top corner of the destination rectangle
+           Width, Height - The size of the destination rectangle
+           SrcDC         - The source devicecontext
+           XSrc, YSrc    - The left/top corner of the source rectangle
+           Rop           - The raster operation to be performed
+  Returns: True if succesful
+
+  The BitBlt function copies a bitmap from a source context into a destination
+  context using the specified raster operation.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.BitBlt(DestDC: HDC; X, Y, Width, Height: Integer; SrcDC: HDC; XSrc, YSrc: Integer; Rop: DWORD): Boolean;
+Begin
+  Result := Boolean(Windows.BitBlt(DestDC, X, Y, Width, Height, SrcDC, XSrc, YSrc, Rop));
+End;
+
+{------------------------------------------------------------------------------
+  Method:  BeginPaint
+  Params:  Handle        - Handle to window to begin painting in
+           PS            - PAINTSTRUCT variable that will receive painting information.
+  Returns: A device context for the specified window if succesful otherwise nil
+
+  The BeginPaint function prepares the specified window for painting and fills
+  a PAINTSTRUCT structure with information about the painting.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.BeginPaint(Handle: HWND; var PS: TPaintStruct): HDC;
+Begin
+  Result := Windows.BeginPaint(Handle, @PS);
+End;
+
+
+{function TWinCEWidgetSet.CallNextHookEx(hHk: HHOOK; ncode: Integer;
+  wParam: WParam; lParam: LParam): Integer;
+begin
+  Result:=inherited CallNextHookEx(hHk, ncode, wParam, lParam);
+end;}
+
+{------------------------------------------------------------------------------
+  Method:  CallWindowProc
+  Params: LPPrevWndFunc - Address of specified window procedure
+          Handle        - Handle of window receiving messages
+          Msg           - The message sent
+          WParam        - Word parameter
+          LParam        - Long-integer parameter
+  Returns: Message result
+
+  Passes message information to the specified window procedure
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.CallWindowProc(LPPrevWndFunc: TFarProc; Handle: HWND;
+    Msg: UINT; WParam: WParam; LParam: LParam): Integer;
+Begin
+  Result := Windows.CallWindowProc(WNDPROC(LPPrevWndFunc), Handle, Msg, Windows.WPARAM(WParam), Windows.LPARAM(LParam));
+End;
+
+{------------------------------------------------------------------------------
+  Method:  ClientToScreen
+  Params:  Handle - Handle of window
+           P      - container that contains coordinates
+  Returns: Whether the call was successful
+
+  Converts client coordinates to screen coordinates
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.ClientToScreen(Handle: HWND; Var P: TPoint): Boolean;
+var
+  ORect: TRect;
+Begin
+  Result := Boolean(Windows.ClientToScreen(Handle, @P));
+  if not Result then exit;
+  Result := GetLCLClientBoundsOffset(Handle, ORect);
+  if not Result then exit;
+  inc(P.X, ORect.Left);
+  inc(P.Y, ORect.Top);
+End;
+
+{function TWinCEWidgetSet.ClipboardFormatToMimeType(FormatID: TClipboardFormat
+  ): string;
+begin
+  Result:=inherited ClipboardFormatToMimeType(FormatID);
+end;
+
+function TWinCEWidgetSet.ClipboardGetData(ClipboardType: TClipboardType;
+  FormatID: TClipboardFormat; Stream: TStream): boolean;
+begin
+  Result:=inherited ClipboardGetData(ClipboardType, FormatID, Stream);
+end;
+
+function TWinCEWidgetSet.ClipboardGetFormats(ClipboardType: TClipboardType;
+  var Count: integer; var List: PClipboardFormat): boolean;
+begin
+  Result:=inherited ClipboardGetFormats(ClipboardType, Count, List);
+end;
+
+function TWinCEWidgetSet.ClipboardGetOwnerShip(ClipboardType: TClipboardType;
+  OnRequestProc: TClipboardRequestEvent; FormatCount: integer;
+  Formats: PClipboardFormat): boolean;
+begin
+  Result:=inherited ClipboardGetOwnerShip(ClipboardType, OnRequestProc,
+    FormatCount, Formats);
+end;
+
+function TWinCEWidgetSet.ClipboardRegisterFormat(const AMimeType: string
+  ): TClipboardFormat;
+begin
+  Result:=inherited ClipboardRegisterFormat(AMimeType);
+end;}
+
+{------------------------------------------------------------------------------
+  Function: CombineRgn
+  Params:  Dest, Src1, Src2, fnCombineMode
+  Returns: longint
+
+  Combine the 2 Source Regions into the Destination Region using the specified
+  Combine Mode. The Destination must already be initialized. The Return value
+  is the Destination's Region type, or ERROR.
+
+  The Combine Mode can be one of the following:
+      RGN_AND  : Gets a region of all points which are in both source regions
+
+      RGN_COPY : Gets an exact copy of the first source region
+
+      RGN_DIFF : Gets a region of all points which are in the first source
+                 region but not in the second.(Source1 - Source2)
+
+      RGN_OR   : Gets a region of all points which are in either the first
+                 source region or in the second.(Source1 + Source2)
+
+      RGN_XOR  : Gets all points which are in either the first Source Region
+                 or in the second, but not in both.
+
+  The result can be one of the following constants
+      Error
+      NullRegion
+      SimpleRegion
+      ComplexRegion
+
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.CombineRgn(Dest, Src1, Src2 : HRGN; fnCombineMode : Longint) : Longint;
+begin
+  Result := Windows.CombineRgn(Dest, Src1, Src2, fnCombineMode);
+end;
+
+{------------------------------------------------------------------------------
+  Method:  CreateBitmap
+  Params:  Width      - bitmap width, in pixels
+           Height     - bitmap height, in pixels
+           Planes     - number of color planes
+           BitCount   - number of bits required to identify a color
+           BitmapBits - pointer to array containing color data
+  Returns: A handle to a bitmap
+
+  The CreateBitmap function creates a bitmap with the specified width, height,
+  and color format (color planes and bits per pixel).
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.CreateBitmap(Width, Height: Integer; Planes, BitCount: LongInt; BitmapBits: Pointer): HBITMAP;
+Begin
+  Assert(False, Format('Trace:> [TWinCEWidgetSet.CreateBitmap] Width: %d, Height: %d, Planes: %d, BitCount: %d, BitmapBits: 0x%x', [Width, Height, Planes, BitCount, Longint(BitmapBits)]));
+  Result := Windows.CreateBitmap(Width, Height, Planes, BitCount, BitmapBits);
+  Assert(False, Format('Trace:< [TWinCEWidgetSet.CreateBitmap] --> 0x%x', [Integer(Result)]));
+End;
+
+{function TWinCEWidgetSet.ComboBoxDropDown(Handle: HWND; DropDown: boolean
+  ): boolean;
+begin
+  Result:=inherited ComboBoxDropDown(Handle, DropDown);
+end;
+
+function TWinCEWidgetSet.CreateBitmapFromRawImage(const RawImage: TRawImage;
+  var Bitmap, MaskBitmap: HBitmap; AlwaysCreateMask: boolean): boolean;
+begin
+  Result:=inherited CreateBitmapFromRawImage(RawImage, Bitmap, MaskBitmap,
+    AlwaysCreateMask);
+end;}
+
+Function TWinCEWidgetSet.CreateBrushIndirect(Const LogBrush: TLogBrush): HBRUSH;
+Var
+  LB: Windows.LogBrush;
+Begin
+  LB.lbStyle := LogBrush.lbStyle;
+  LB.lbColor := Windows.COLORREF(ColorToRGB(LogBrush.lbColor));
+  LB.lbHatch := LogBrush.lbHatch;
+  Assert(False, Format('Trace:> [TWinCEWidgetSet.CreateBrushIndirect]  Style: %d, Color: %8x', [lb.lbStyle, lb.lbColor]));
+  Result := 0;
+  if lb.lbStyle = BS_SOLID then
+  Result := Windows.CreateSolidBrush(LB.lbColor);
+  if lb.lbStyle= BS_NULL then
+  Result := Windows.GetStockObject(NULL_BRUSH);
+  if lb.lbStyle = BS_DIBPATTERNPT then
+  Result := CreateDIBPatternBrushPt(pointer(lb.lbHatch), lb.lbColor);
+  Assert(False, Format('Trace:< [TWinCEWidgetSet.CreateBrushIndirect] Got --> %x', [Result]));
+End;
+
+{------------------------------------------------------------------------------
+  Method:  CreateCaret
+  Params:  Handle - handle to owner window
+           Bitmap - handle to bitmap for caret shape
+           Width  - caret width
+           Height - caret height
+  Returns: Whether the function succeeded
+
+  Creates a new shape for the system caret and assigns ownership of the caret
+  to the specified window
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.CreateCaret(Handle: HWND; Bitmap: HBITMAP; Width, Height: Integer): Boolean;
+Begin
+{$ifdef DEBUG_CARET}
+  DebugLn('[CreateCaret] for window ', IntToHex(Handle, 8));
+{$endif}
+  Result := Boolean(Windows.CreateCaret(Handle, Bitmap, Width, Height));
+  Assert(False, 'Trace:TODO: [TWinCEWidgetSet.CreateCaret] Finish');
+End;
+
+{------------------------------------------------------------------------------
+  Method:  CreateCompatibleBitmap
+  Params: DC     - handle to device context
+          Width  - width of bitmap, in pixels
+          Height - height of bitmap, in pixels
+  Returns: a handle to the bitmap
+
+  Creates a bitmap compatible with the specified device context.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.CreateCompatibleBitmap(DC: HDC; Width, Height: Integer): HBITMAP;
+Begin
+  Assert(False, Format('Trace:> [TWinCEWidgetSet.CreateCompatibleBitmap] DC: 0x%x, W: %d, H: %d', [DC, Width, Height]));
+  Result := Windows.CreateCompatibleBitmap(DC, Width, Height);
+  Assert(False, Format('Trace:< [TWinCEWidgetSet.CreateCompatibleBitmap] DC: 0x%x --> 0x%x', [DC, Result]));
+End;
+
+
+{------------------------------------------------------------------------------
+  Method:  CreateCompatibleDC
+  Params:  DC - handle to memory device context
+  Returns: handle to a memory device context
+
+  Creates a memory device context (DC) compatible with the specified device.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.CreateCompatibleDC(DC: HDC): HDC;
+Begin
+  Result := Windows.CreateCompatibleDC(DC);
+  Assert(False, Format('Trace:[TWinCEWidgetSet.CreateCompatibleDC] DC: 0x%x --> 0x%x', [Integer(DC), Integer(Result)]));
+End;
+
+{------------------------------------------------------------------------------
+  Method:  CreateFontIndirect
+  Params:  LogFont - logical font record
+  Returns: a handle to a logical font
+
+  Creates a logical font that has the characteristics specified in the
+  specified record.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.CreateFontIndirect(Const LogFont: TLogFont): HFONT;
+Var
+  TempLogFont: TLogFont;
+Begin
+  TempLogFont := LogFont;
+  if String(TempLogFont.lfFaceName) = DefFontData.Name then
+  begin
+    Move(FMetrics.lfMessageFont.lfFaceName, TempLogFont.lfFaceName, LF_FACESIZE);
+    if TempLogFont.lfHeight = 0 then
+      TempLogFont.lfHeight := FMetrics.lfMessageFont.lfHeight;
+  end;
+  Result := Windows.CreateFontIndirect(@TempLogFont);
+End;
+
+{function TWinCEWidgetSet.CreateFontIndirectEx(const LogFont: TLogFont;
+  const LongFontName: string): HFONT;
+begin
+  Result:=inherited CreateFontIndirectEx(LogFont, LongFontName);
+end;
+
+function TWinCEWidgetSet.CreatePalette(const LogPalette: TLogPalette
+  ): HPALETTE;
+begin
+  Result:=inherited CreatePalette(LogPalette);
+end;}
+
+{------------------------------------------------------------------------------
+  Method:  CreatePenIndirect
+  Params:  LogPen - record that defines the style, width, and color of a pen
+  Returns: a handle that identifies a logical cosmetic pen
+
+  Creates a logical cosmetic pen that has the style, width, and color specified
+  in a record.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.CreatePenIndirect(Const LogPen: TLogPen): HPEN;
+Var
+  LP: TLogPen;
+Begin
+  LP := LogPen;
+  Lp.lopnColor := Windows.COLORREF(ColorToRGB(Lp.lopnColor));
+  Assert(False, 'Trace:[TWinCEWidgetSet.CreatePenIndirect]');
+  Result := Windows.CreatePenIndirect(Windows.LOGPEN(LP));
+End;
+
+{function TWinCEWidgetSet.CreatePixmapIndirect(const Data: Pointer;
+  const TransColor: Longint): HBITMAP;
+begin
+  Result:=inherited CreatePixmapIndirect(Data, TransColor);
+end;
+
+function TWinCEWidgetSet.CreatePolygonRgn(Points: PPoint; NumPts: Integer;
+  FillMode: integer): HRGN;
+begin
+  Result:=inherited CreatePolygonRgn(Points, NumPts, FillMode);
+end;}
+
+{------------------------------------------------------------------------------
+  Method:  CreateRectRgn
+  Params:  X1 - x-coordinate of region's upper-left corner
+           Y1 - y-coordinate of region's upper-left corner
+           X2 - x-coordinate of region's lower-right corner
+           Y2 - y-coordinate of region's lower-right corner
+  Returns: the handle to the region
+
+  Creates a rectangular region.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.CreateRectRgn(X1, Y1, X2, Y2: Integer): HRGN;
+Begin
+  Result := Windows.CreateRectRgn(X1, Y1, X2, Y2);
+End;
+
+{procedure TWinCEWidgetSet.DeleteCriticalSection(
+  var CritSection: TCriticalSection);
+begin
+  inherited DeleteCriticalSection(CritSection);
+end;}
+
+{------------------------------------------------------------------------------
+  Method:  DeleteDC
+  Params:  HDC - handle to device context
+  Returns: If the function succeeds.
+
+  Deletes the specified device context (DC).
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.DeleteDC(HDC: HDC): Boolean;
+Begin
+  Result := Boolean(Windows.DeleteDC(HDC));
+End;
+
+{------------------------------------------------------------------------------
+  Method:  DeleteObject
+  Params:  GDIObject - handle to graphic object
+  Returns: If the function succeeds.
+
+  Deletes a graphic object, freeing all system resources associated with the
+  object.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.DeleteObject(GDIObject: HGDIOBJ): Boolean;
+Begin
+  { Find out if we want to release internal GDI object }
+  Result := Boolean(Windows.DeleteObject(GDIObject));
+End;
+
+{function TWinCEWidgetSet.DestroyCaret(Handle: HWND): Boolean;
+begin
+  Result:=inherited DestroyCaret(Handle);
+end;
+
+function TWinCEWidgetSet.DrawFrameControl(DC: HDC; var Rect: TRect; uType,
+  uState: Cardinal): Boolean;
+begin
+  Result:=inherited DrawFrameControl(DC, Rect, uType, uState);
+end;
+
+function TWinCEWidgetSet.DrawEdge(DC: HDC; var ARect: TRect; Edge: Cardinal;
+  grfFlags: Cardinal): Boolean;
+begin
+  Result:=inherited DrawEdge(DC, ARect, Edge, grfFlags);
+end;}
+
+{------------------------------------------------------------------------------
+  Method:  DrawText
+  Params:  DC, Str, Count, Rect, Flags
+  Returns: If the string was drawn, or CalcRect run
+
+ ------------------------------------------------------------------------------}
+function TWinCEWidgetSet.DrawText(DC: HDC; Str: PChar; Count: Integer; var Rect: TRect; Flags: Cardinal): Integer;
+var
+WideStr : PWideChar;
+begin
+  Assert(False, Format('trace:> [TWinCEWidgetSet.DrawText] DC:0x%x, Str:''%s'', Count: %d, Rect = %d,%d,%d,%d, Flags:%d',
+    [DC, Str, Count, Rect.Left, Rect.Top, Rect.Right, Rect.Bottom, Flags]));
+  WideStr := CreatePWideCharFromString(String(str));
+  Result := Windows.DrawText(DC, WideStr, Count, @Rect, Flags);
+  DisposePWideChar(WideStr);
+  Assert(False, Format('trace:> [TWinCEWidgetSet.DrawText] DC:0x%x, Str:''%s'', Count: %d, Rect = %d,%d,%d,%d, Flags:%d',
+    [DC, Str, Count, Rect.Left, Rect.Top, Rect.Right, Rect.Bottom, Flags]));
+end;
+
+{function TWinCEWidgetSet.Ellipse(DC: HDC; x1, y1, x2, y2: Integer): Boolean;
+begin
+  Result:=inherited Ellipse(DC, x1, y1, x2, y2);
+end;
+
+function TWinCEWidgetSet.EnableScrollBar(Wnd: HWND; wSBflags, wArrows: Cardinal
+  ): Boolean;
+begin
+  Result:=inherited EnableScrollBar(Wnd, wSBflags, wArrows);
+end;
+
+function TWinCEWidgetSet.EnableWindow(hWnd: HWND; bEnable: Boolean): Boolean;
+begin
+  Result:=inherited EnableWindow(hWnd, bEnable);
+end;}
+
+{------------------------------------------------------------------------------
+  Method:  EndPaint
+  Params:  Handle        - Handle to window
+           PS            - PAINTSTRUCT variable with painting information
+  Returns: always nonzero.
+
+  The EndPaint function marks the end of painting in the specified window.
+  This function is required for each call to the BeginPaint function, but only
+  after painting is complete.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.EndPaint(Handle : hwnd; var PS : TPaintStruct): Integer;
+Begin
+  Result := Integer(Windows.EndPaint(Handle, @PS));
+End;
+
+{procedure TWinCEWidgetSet.EnterCriticalSection(var CritSection: TCriticalSection
+  );
+begin
+  inherited EnterCriticalSection(CritSection);
+end;
+
+function TWinCEWidgetSet.EnumFontFamilies(DC: HDC; Family: Pchar;
+  EnumFontFamProc: FontEnumProc; LParam: Lparam): longint;
+begin
+  Result:=inherited EnumFontFamilies(DC, Family, EnumFontFamProc, LParam);
+end;
+
+function TWinCEWidgetSet.EnumFontFamiliesEx(DC: HDC; lpLogFont: PLogFont;
+  Callback: FontEnumExProc; Lparam: LParam; Flags: dword): longint;
+begin
+  Result:=inherited EnumFontFamiliesEx(DC, lpLogFont, Callback, Lparam, Flags);
+end;
+
+function TWinCEWidgetSet.ExcludeClipRect(dc: hdc; Left, Top, Right,
+  Bottom: Integer): Integer;
+begin
+  Result:=inherited ExcludeClipRect(dc, Left, Top, Right, Bottom);
+end;}
+
+{------------------------------------------------------------------------------
+  Method:  ExtTextOut
+  Params:  DC      - handle to device context
+           X       - x-coordinate of reference point
+           Y       - x-coordinate of reference point
+           Options - text-output options
+           Rect    - optional clipping and/or opaquing rectangle
+           Str     - character string to be drawn
+           Count   - number of characters in string
+           Dx      - pointer to array of intercharacter spacing values
+  Returns: If the string was drawn.
+
+  Draws a character string by using the currently selected font.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.ExtTextOut(DC: HDC; X, Y: Integer; Options: Longint; Rect: PRect; Str: PChar; Count: Longint; Dx: PInteger): Boolean;
+var
+pWideStr : PWideChar;
+Begin
+  Assert(False, Format('trace:> [TWinCEWidgetSet.ExtTextOut] DC:0x%x, X:%d, Y:%d, Options:%d, Str:''%s'', Count: %d', [DC, X, Y, Options, Str, Count]));
+  pWideStr := CreatePWideCharFromString(string(Str));
+  Result := Boolean(Windows.ExtTextOut(DC, X, Y, Options, LPRECT(Rect), pWideStr, Count, Dx));
+  DisposePWideChar(pWideStr);
+  Assert(False, Format('trace:< [TWinCEWidgetSet.ExtTextOut] DC:0x%x, X:%d, Y:%d, Options:%d, Str:''%s'', Count: %d', [DC, X, Y, Options, Str, Count]));
+End;
+
+function TWinCEWidgetSet.ExtSelectClipRGN(dc: hdc; rgn: hrgn; Mode: Longint
+  ): Integer;
+begin
+  Result:=inherited ExtSelectClipRGN(dc, rgn, Mode);
+end;
+
+{------------------------------------------------------------------------------
+  Method:  FillRect
+  Params:  DC    - handle to device context
+           Rect  - record with rectangle
+           Brush - handle to brush
+  Returns: If the function succeeds
+
+  The FillRect Function fills a rectangle by using the specified brush.
+  This Function includes the left and top borders, but excludes the right and
+  bottom borders of the rectangle.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.FillRect(DC: HDC; Const Rect: TRect; Brush: HBRUSH): Boolean;
+Var
+  R: TRect;
+Begin
+  R := Rect;
+  Assert(False, Format('trace:> [TWinCEWidgetSet.FillRect] DC: 0x%x; Rect: ((%d,%d)(%d,%d)); Brush: %x', [Integer(DC), R.left, R.top, R.right, R.bottom, brush]));
+  Result := Boolean(Windows.FillRect(DC, Windows.RECT(r), Brush));
+  Assert(False, Format('trace:< [TWinCEWidgetSet.FillRect] DC: 0x%x; Rect: ((%d,%d)(%d,%d)); Brush: %x', [Integer(DC), R.left, R.top, R.right, R.bottom, brush]));
+End;
+
+{------------------------------------------------------------------------------
+  Method: Frame3D
+  Params: DC         - handle to device context
+          Rect       - bounding rectangle
+          FrameWidth - width of the frame (ignored on wince)
+          Style      - frame style
+  Returns: Whether the function was successful
+
+  Draws a 3D border in GTK native style.
+  NOTE: This function is mapped to DrawEdge on Windows.
+------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.Frame3D(DC: HDC; var ARect: TRect;
+  Const FrameWidth: Integer; Const Style: TBevelCut): Boolean;
+Const
+  Edge: Array[TBevelCut] Of Integer = (0, BDR_SUNKENOUTER, BDR_RAISEDINNER, 0);
+Begin
+  Result := Boolean(DrawEdge(DC, ARect, Edge[Style], BF_RECT));
+End;
+
+{function TWinCEWidgetSet.FrameRect(DC: HDC; const ARect: TRect;
+  hBr: HBRUSH) : integer;
+begin
+  Result:=inherited FrameRect(DC, ARect,hBr);
+end;
+
+
+function TWinCEWidgetSet.Frame(DC: HDC; const ARect: TRect): Integer;
+begin
+  Result:=inherited Frame(DC, ARect);
+end;
+}
+
+{function TWinCEWidgetSet.GetActiveWindow: HWND;
+begin
+  Result:=inherited GetActiveWindow;
+end;
+
+function TWinCEWidgetSet.GetBitmapBits(Bitmap: HBITMAP; Count: Longint;
+  Bits: Pointer): Longint;
+begin
+  Result:=inherited GetBitmapBits(Bitmap, Count, Bits);
+end;
+
+function TWinCEWidgetSet.GetBitmapRawImageDescription(Bitmap: HBITMAP;
+  Desc: PRawImageDescription): boolean;
+begin
+  Result:=inherited GetBitmapRawImageDescription(Bitmap, Desc);
+end;
+
+function TWinCEWidgetSet.GetCapture: HWND;
+begin
+  Result:=inherited GetCapture;
+end;
+
+function TWinCEWidgetSet.GetCaretPos(var lpPoint: TPoint): Boolean;
+begin
+  Result:=inherited GetCaretPos(lpPoint);
+end;
+
+function TWinCEWidgetSet.GetCaretRespondToFocus(handle: HWND;
+  var ShowHideOnFocus: boolean): Boolean;
+begin
+  Result:=inherited GetCaretRespondToFocus(handle, ShowHideOnFocus);
+end;
+
+function TWinCEWidgetSet.GetCharABCWidths(DC: HDC; p2, p3: UINT;
+  const ABCStructs): Boolean;
+begin
+  Result:=inherited GetCharABCWidths(DC, p2, p3, ABCStructs);
+end;
+}
+{------------------------------------------------------------------------------
+  Method:  GetClientBounds
+  Params: Handle - handle of window
+          Rect   - record for client coordinates
+  Returns: If the function succeeds
+
+  Retrieves the coordinates of a window's client area.
+ ------------------------------------------------------------------------------}
+function TWinCEWidgetSet.GetClientBounds(Handle: HWND; var Rect: TRect): Boolean;
+var
+  ARect: TRect;
+begin
+  Result := Boolean(Windows.GetClientRect(Handle, @Rect));
+  if not Result then exit;
+  if not GetLCLClientBoundsOffset(Handle, ARect) then exit;
+  Inc(Rect.Left, ARect.Left);
+  Inc(Rect.Top, ARect.Top);
+  Inc(Rect.Right, ARect.Right);
+  Inc(Rect.Bottom, ARect.Bottom);
+end;
+
+{------------------------------------------------------------------------------
+  Method:  GetClientRect
+  Params: Handle - handle of window
+          Rect   - record for client coordinates
+  Returns: If the function succeeds
+
+  Retrieves the dimension of a window's client area.
+  Left and Top are always 0,0
+ ------------------------------------------------------------------------------}
+function TWinCEWidgetSet.GetClientRect(Handle: HWND; var Rect: TRect): Boolean;
+begin
+  Result := GetClientBounds(Handle, Rect);
+  OffsetRect(Rect, -Rect.Left, -Rect.Top);
+end;
+
+{------------------------------------------------------------------------------
+  Function: GetClipBox
+  Params: dc, lprect
+  Returns: Integer
+
+  Returns the smallest rectangle which includes the entire current
+  Clipping Region.
+
+  The result can be one of the following constants
+      Error
+      NullRegion
+      SimpleRegion
+      ComplexRegion
+
+
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.GetClipBox(DC : hDC; lpRect : PRect) : Longint;
+begin
+  Result := Windows.GetClipBox(DC, Windows.LPRECT(lpRect));
+end;
+
+{------------------------------------------------------------------------------
+  Function: GetClipRGN
+  Params: dc, rgn
+  Returns: Integer
+
+  Returns the current Clipping Region.
+
+  The result can be one of the following constants
+      Error
+      NullRegion
+      SimpleRegion
+      ComplexRegion
+
+
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.GetClipRGN(DC : hDC; RGN : hRGN) : Integer;
+begin
+  Result := Windows.GetClipRGN(DC, RGN);
+end;
+
+{function TWinCEWidgetSet.GetCmdLineParamDescForInterface: string;
+begin
+  Result:=inherited GetCmdLineParamDescForInterface;
+end;
+
+function TWinCEWidgetSet.GetCursorPos(var lpPoint: TPoint): Boolean;
+begin
+  Result:=inherited GetCursorPos(lpPoint);
+end;}
+
+{------------------------------------------------------------------------------
+  Method:  GetDC
+  Params:  HWND - handle of window
+  Returns: value identifying the device context for the given window's client
+           area
+
+  Retrieves a handle of a display device context (DC) for the client area of
+  the specified window.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.GetDC(HWnd: HWND): HDC;
+var
+  ORect: TRect;
+Begin
+  Assert(False, Format('Trace:> [TWinCEWidgetSet.GetDC] HWND: 0x%x', [HWnd]));
+  Result := Windows.GetDC(HWnd);
+  if (Result<>0) and (HWnd<>0)
+  and GetLCLClientBoundsOffset(HWnd, ORect) then begin
+    MoveWindowOrgEx(Result, ORect.Left, ORect.Top);
+  end;
+  Assert(False, Format('Trace:< [TWinCEWidgetSet.GetDC] Got 0x%x', [Result]));
+End;
+
+
+{function TWinCEWidgetSet.GetDCOriginRelativeToWindow(PaintDC: HDC;
+  WindowHandle: HWND; var OriginDiff: TPoint): boolean;
+begin
+  Result:=inherited GetDCOriginRelativeToWindow(PaintDC, WindowHandle,
+    OriginDiff);
+end;
+
+function TWinCEWidgetSet.GetDesignerDC(WindowHandle: HWND): HDC;
+begin
+  Result:=inherited GetDesignerDC(WindowHandle);
+end;}
+
+{------------------------------------------------------------------------------
+  Method: GetDeviceCaps
+  Params: DC - display device context
+          Index - index of needed capability
+
+  Returns device specific information
+ ------------------------------------------------------------------------------}
+function TWinCEWidgetSet.GetDeviceCaps(DC: HDC; Index: Integer): Integer;
+begin
+  Result := Windows.GetDeviceCaps(DC, Index);
+end;
+
+function TWinCEWidgetSet.GetDCOriginRelativeToWindow(PaintDC: HDC;
+  WindowHandle: HWND; var OriginDiff: TPoint): boolean;
+var
+  DCOrg, winOrg: Windows.POINT;
+  ORect: TRect;
+begin
+  OriginDiff.X := 0;
+  OriginDiff.Y := 0;
+  //roozbeh changed
+  //Result := Windows.GetDCOrgEx(PaintDC, DCOrg);
+  DCOrg.X := 0;
+  DCOrg.Y := 0;
+  Result:=true;
+  if not Result then exit;
+  winOrg.X := 0;
+  winOrg.Y := 0;
+  Result := Windows.ClientToScreen(WindowHandle, @winOrg);
+  if not Result then exit;
+  Result := GetLCLClientBoundsOffset(WindowHandle, ORect);
+  if not Result then exit;
+  OriginDiff.X := DCOrg.X - winOrg.X - ORect.Left;
+  OriginDiff.Y := DCOrg.Y - winOrg.Y - ORect.Top;
+//  Result := Windows.GetWindowOrgEx(PaintDC, winOrg);
+  Result := true;
+  winOrg.X := 0;
+  winOrg.Y := 0;
+  if not Result then exit;
+  dec(OriginDiff.X, winOrg.X);
+  dec(OriginDiff.Y, winOrg.Y);
+end;
+
+
+function TWinCEWidgetSet.GetDeviceSize(DC: HDC; var P: TPoint): Boolean;
+var
+  hBitmap: HGDIOBJ;
+  hWindow: HWND;
+  BitmapInfo: BITMAP;
+  ClientRect: TRect;
+begin
+  // check if memory dc with bitmap
+  Result := false;
+  case GetObjectType(DC) of
+    OBJ_MEMDC:
+      begin
+        hBitmap := GetCurrentObject(DC, OBJ_BITMAP);
+        if hBitmap <> HGDIOBJ(nil) then
+        begin
+          GetObject(hBitmap, SizeOf(BITMAP), @BitmapInfo);
+          P.x := BitmapInfo.bmWidth;
+          P.y := BitmapInfo.bmHeight;
+          Result := true;
+        end;
+      end;
+ {   OBJ_DC:
+      begin
+        hWindow := WindowFromDC(DC);
+        if hWindow <> HWND(nil) then
+        begin
+          Result := GetClientRect(hWindow, ClientRect);
+          P.x := ClientRect.Right;
+          P.y := ClientRect.Bottom;
+        end;
+      end;}
+  else
+  end;
+
+  if not Result then
+  begin
+    // do default
+    Result := inherited GetDeviceSize(DC, P);
+  end;
+end;
+
+
+function TWinCEWidgetSet.GetDIBits(DC: HDC; Bitmap: HBitmap; StartScan, NumScans: UINT; Bits: Pointer; var BitInfo: BitmapInfo; Usage: UINT): Integer;
+begin
+  Result := 0;
+  //Result := Windows.GetDIBits(DC, Bitmap, StartScan, NumScans, Bits, Windows.PBitmapInfo(@BitInfo)^, Usage)
+end;
+
+{function TWinCEWidgetSet.GetBitmapBits(Bitmap: HBITMAP; Count: Longint;  Bits: Pointer): Longint;
+begin
+  Result := Windows.GetBitmapBits(Bitmap, Count, Bits);
+end;}
+
+
+procedure TWinCEWidgetSet.FillRawImageDescriptionColors(Desc: PRawImageDescription);
+begin
+  case Desc^.BitsPerPixel of
+    1,4,8:
+      begin
+        // palette mode, no offsets
+        Desc^.Format := ricfGray;
+        Desc^.RedPrec := Desc^.BitsPerPixel;
+        Desc^.GreenPrec := 0;
+        Desc^.BluePrec := 0;
+        Desc^.RedShift := 0;
+        Desc^.GreenShift := 0;
+        Desc^.BlueShift := 0;
+      end;
+    16:
+      begin
+        // 5-6-5 mode
+        //roozbeh all changed from 5-5-5 to 5-6-5
+        Desc^.RedPrec := 5;
+        Desc^.GreenPrec := 6;
+        Desc^.BluePrec := 5;
+        Desc^.RedShift := 11;
+        Desc^.GreenShift := 5;
+        Desc^.BlueShift := 0;
+        Desc^.Depth := 16;
+      end;
+    24:
+      begin
+        // 8-8-8 mode
+        Desc^.RedPrec := 8;
+        Desc^.GreenPrec := 8;
+        Desc^.BluePrec := 8;
+        Desc^.RedShift := 16;
+        Desc^.GreenShift := 8;
+        Desc^.BlueShift := 0;
+      end;
+  else    //  32:
+    // 0-8-8-8 mode, high byte is not used
+    Desc^.RedPrec := 8;
+    Desc^.GreenPrec := 8;
+    Desc^.BluePrec := 8;
+    Desc^.RedShift := 16;
+    Desc^.GreenShift := 8;
+    Desc^.BlueShift := 0;
+    Desc^.Depth := 24;
+  end;
+end;
+
+
+procedure TWinCEWidgetSet.FillRawImageDescription(const BitmapInfo: Windows.TBitmap;
+    Desc: PRawImageDescription);
+begin
+  Desc^.Format := ricfRGBA;
+  Desc^.HasPalette := BitmapInfo.bmBitsPixel <= 8;   // if true, each pixel is an index in the palette
+  Desc^.Depth := BitmapInfo.bmBitsPixel;          // used bits per pixel
+  Desc^.Width := BitmapInfo.bmWidth;
+  Desc^.Height := BitmapInfo.bmHeight;
+  Desc^.PaletteColorCount := 0;             // TODO, also `ColorCount'
+  Desc^.BitOrder := riboReversedBits;
+  Desc^.ByteOrder := riboLSBFirst;
+  Desc^.LineOrder := riloTopToBottom;
+  Desc^.ColorCount := 0;                // entries in color palette. Ignore when no palette.
+  Desc^.BitsPerPixel := BitmapInfo.bmBitsPixel;    // bits per pixel. can be greater than Depth.
+  Desc^.LineEnd := rileDWordBoundary;
+  FillRawImageDescriptionColors(Desc);
+  Desc^.AlphaShift := 0;
+  Desc^.AlphaSeparate := true; // the alpha is stored as separate Mask
+  // The next values are only valid, if there is a separate alpha mask
+  Desc^.AlphaBitsPerPixel := 1; // bits per alpha mask pixel.
+  Desc^.AlphaPrec := 1;
+  Desc^.AlphaLineEnd := rileDWordBoundary;
+  Desc^.AlphaBitOrder := riboReversedBits;
+  Desc^.AlphaByteOrder := riboLSBFirst;
+end;
+
+
+function TWinCEWidgetSet.GetBitmapRawImageDescription(Bitmap: HBITMAP;
+  Desc: PRawImageDescription): Boolean;
+var
+  BitmapInfo: Windows.TBitmap;
+begin
+  Result := Windows.GetObject(Bitmap, SizeOf(BitmapInfo), @BitmapInfo) > 0;
+  if Result then
+    FillRawImageDescription(BitmapInfo, Desc);
+end;
+
+
+
+function TWinCEWidgetSet.GetDeviceRawImageDescription(DC: HDC; Desc: PRawImageDescription): boolean;
+begin
+  Result := true;
+
+  FillChar(Desc^, SizeOf(Desc^), 0);
+  Desc^.Format := ricfRGBA;
+  Desc^.HasPalette := (Windows.GetDeviceCaps(DC, RASTERCAPS) and RC_PALETTE) <> 0;
+  Desc^.Depth := Windows.GetDeviceCaps(DC, BITSPIXEL) * Windows.GetDeviceCaps(DC, PLANES);
+  // Width and Height not relevant
+  Desc^.PaletteColorCount := Windows.GetDeviceCaps(DC, SIZEPALETTE);
+  Desc^.BitOrder := riboReversedBits;
+  Desc^.ByteOrder := riboLSBFirst;
+  Desc^.LineOrder := riloTopToBottom;
+  Desc^.ColorCount := Desc^.PaletteColorCount;
+  if Desc^.HasPalette then
+    Desc^.BitsPerPixel := Windows.GetDeviceCaps(DC, COLORRES)
+  else
+    Desc^.BitsPerPixel := Desc^.Depth;
+  Desc^.LineEnd := rileDWordBoundary;
+  FillRawImageDescriptionColors(Desc);
+  Desc^.AlphaPrec := 1;
+  Desc^.AlphaSeparate := true; // the alpha is stored as separate Mask
+  // The next values are only valid, if there is a separate alpha mask
+  Desc^.AlphaBitsPerPixel := 1; // bits per alpha mask pixel.
+  Desc^.AlphaBitOrder := riboReversedBits;
+  Desc^.AlphaByteOrder := riboLSBFirst;
+  // CreateBitmap winapi call wants word-aligned data
+  Desc^.AlphaLineEnd := rileWordBoundary;
+  Desc^.AlphaShift := 0;
+end;
+
+
+
+function TWinCEWidgetSet.GetRawImageFromDevice(SrcDC: HDC; const SrcRect: TRect; var NewRawImage: TRawImage): boolean;
+var
+  SrcWidth, SrcHeight: Integer;
+  hMemDC: HDC;
+  hMemBitmap: HBITMAP;
+  hOldObject: HGDIOBJ;
+begin
+  FillChar(NewRawImage, SizeOf(NewRawImage), 0);
+
+  // make bitmap compatible to src device
+  SrcWidth := SrcRect.Right - SrcRect.Left;
+  SrcHeight := SrcRect.Bottom - SrcRect.Top;
+  hMemBitmap := Windows.CreateCompatibleBitmap(SrcDC, SrcWidth, SrcHeight);
+  Result := hMemBitmap <> 0;
+  if not Result then exit;
+
+  // make memory device context compatible to device, to select bitmap in for copying
+  hMemDC := Windows.CreateCompatibleDC(SrcDC);
+  Result := hMemDC <> 0;
+  hOldObject := Windows.SelectObject(hMemDC, hMemBitmap);
+
+  // copy srcdc -> membitmap
+  Result := Result and Windows.BitBlt(hMemDC, 0, 0, SrcWidth, SrcHeight,
+        SrcDC, SrcRect.Left, SrcRect.Top, SRCCOPY);
+
+  // done copying, deselect bitmap from dc
+  Windows.SelectObject(hMemDC, hOldObject);
+
+  // copy membitmap -> rawimage
+  Result := Result and GetRawImageFromBitmap(hMemBitmap, 0,
+    Rect(0, 0, SrcWidth, SrcHeight), NewRawImage);
+
+  // free temporary stuff
+  Windows.DeleteDC(hMemDC);
+  Windows.DeleteObject(hMemBitmap);
+end;
+
+
+
+procedure TWinCEWidgetSet.AllocAndCopy(const BitmapInfo: Windows.TBitmap;
+  const BitmapHandle: HBITMAP; const SrcRect: TRect; var Data: PByte;
+  var Size: Cardinal);
+var
+  bmInfoBuffer: array[0..sizeof(TBitmapInfo)+256*sizeof(Windows.RGBQUAD)] of byte;
+  bmInfo: TBitmapInfo absolute bmInfoBuffer;
+  ScreenDC: HDC;
+begin
+  // initialize bitmapinfo structure
+  bmInfo.bmiHeader.biSize := sizeof(bmInfo.bmiHeader);
+  bmInfo.bmiHeader.biWidth := BitmapInfo.bmWidth;
+  bmInfo.bmiHeader.biHeight := BitmapInfo.bmHeight;
+  // request a top-down DIB
+  if bmInfo.bmiHeader.biHeight > 0 then
+    bmInfo.bmiHeader.biHeight := -bmInfo.bmiHeader.biHeight;
+  bmInfo.bmiHeader.biPlanes := 1;
+  bmInfo.bmiHeader.biBitCount := BitmapInfo.bmBitsPixel;
+  if BitmapInfo.bmBitsPixel=16 then
+  bmInfo.bmiHeader.biCompression := BI_RGB
+  else
+  bmInfo.bmiHeader.biCompression := BI_BITFIELDS;
+
+  bmInfo.bmiHeader.biSizeImage := 0;
+  Size := ((BitmapInfo.bmWidthBytes+3) and not 3) * (SrcRect.Bottom-SrcRect.Top);
+  ScreenDC := GetDC(0);
+  GetMem(Data, Size);
+  GetDIBits(ScreenDC, BitmapHandle, SrcRect.Top, SrcRect.Bottom-SrcRect.Top, Data, bmInfo, DIB_RGB_COLORS);
+  // release resources
+  ReleaseDC(0, ScreenDC);
+end;
+
+
+
+function TWinCEWidgetSet.GetRawImageFromBitmap(SrcBitmap, SrcMaskBitmap: HBITMAP; const SrcRect: TRect; var NewRawImage: TRawImage): boolean;
+var
+  BitmapInfo: Windows.TBitmap;
+  ARect: TRect;
+begin
+  FillChar(NewRawImage, SizeOf(NewRawImage), 0);
+  Result := Windows.GetObject(SrcBitmap, SizeOf(BitmapInfo), @BitmapInfo) > 0;
+  if not Result then exit;
+
+  FillRawImageDescription(BitmapInfo, @NewRawImage.Description);
+  ARect := SrcRect;
+  if ARect.Top > BitmapInfo.bmHeight then
+    ARect.Top := BitmapInfo.bmHeight;
+  if ARect.Bottom > BitmapInfo.bmHeight then
+    ARect.Bottom := BitmapInfo.bmHeight;
+  if ARect.Left > BitmapInfo.bmWidth then
+    ARect.Left := BitmapInfo.bmWidth;
+  if ARect.Right > BitmapInfo.bmWidth then
+    ARect.Right := BitmapInfo.bmWidth;
+
+  // copy bitmap
+  AllocAndCopy(BitmapInfo, SrcBitmap, ARect, NewRawImage.Data, NewRawImage.DataSize);
+
+  // check mask
+  if SrcMaskBitmap <> 0 then
+  begin
+    Result := Windows.GetObject(SrcMaskBitmap, SizeOf(BitmapInfo), @BitmapInfo) > 0;
+    if not Result then exit;
+
+    AllocAndCopy(BitmapInfo, SrcMaskBitmap, ARect, NewRawImage.Mask, NewRawImage.MaskSize);
+    NewRawImage.Description.AlphaSeparate := true;
+  end;
+end;
+
+
+
+function BytesPerLine(nWidth,nBitsPerPixel:integer):integer;
+begin
+     result := ( (nWidth * nBitsPerPixel + 31) and (not 31) ) div 8;
+end;
+
+
+
+function TWinCEWidgetSet.CreateDIBitmap(DC: HDC; var InfoHeader: TBitmapInfoHeader;
+  dwUsage: DWORD; InitBits: PChar; var InitInfo: TBitmapInfo;
+  wUsage: UINT): HBITMAP;
+var
+hbit,htargetbit : HBITMAP;
+lpDestBits : PChar;
+dwLen : longint;
+lpH:TBitmapInfoHeader;
+orig_bitcount,nPadWidth,pad:integer;
+i,dwError:longint;
+d:PByte;
+s,s0:PWord;
+pixel:word;
+dc2:HDC;
+begin
+nPadWidth := 4;
+lpH := InfoHeader;
+lpH.biSize:=sizeof(TBitmapInfoHeader);
+
+if lpH.biWidth mod nPadWidth <> 0  then
+pad := nPadWidth - lpH.biWidth mod nPadWidth;
+// there are problems with padding. i dont know the rules
+// anymore...
+pad := 0;
+// This is wrong when the infoheader is followed by color data...
+// We hope that biSizeImage is set then...
+dwLen := ((lpH.biWidth+pad) * abs(lpH.biHeight) * lpH.biBitCount) div 8;
+// includes colordata, if any...
+if lpH.biSizeImage <> 0 then
+dwLen := lpH.biSizeImage;
+orig_bitcount := lpH.biBitCount;
+
+{if unaligned(InitInfo.bmiHeader.biBitCount) = 16 then
+unaligned(InitInfo.bmiHeader.biBitCount) := 24;}
+
+{hbit := windows.CreateDIBSection( dc, windows.PBITMAPINFO(@lph)^,
+        DIB_RGB_COLORS, lpDestBits, 0, 0);}
+//getmem(lpDestBits,dwLen);
+hbit := Windows.CreateBitmap( lpH.biWidth, abs(lpH.biHeight),1,InitInfo.bmiHeader.biBitCount,InitBits);
+
+//dc2:=windows.getdc(0);
+//htargetbit := Windows.CreateCompatibleBitmap( dc2,lpH.biWidth, abs(lpH.biHeight));
+
+//SelectObject(dc,hbit);
+//SelectObject(dc2,htargetbit);
+//BitBlt(dc2,0, 0, lpH.biWidth, abs(lpH.biHeight), Dc, 0, 0, SRCPAINT);
+result := hbit;
+//DeleteObject(dc2);
+//DeleteObject(hbit);
+
+exit;
+
+//hbit := CreateDIBSection(dc, InitInfo, DIB_RGB_COLORS, lpDestBits, 0, 0);
+//if (hbit <> 0) then
+ begin
+
+   if (orig_bitcount = 16) then
+    begin
+      if  (lpH.biCompression = BI_RGB) then
+        begin
+          s := PWord(InitBits);
+	  d := PByte(lpDestBits);
+	  //s0 := PWord(lpDestBits);
+		// There is a bug in this code when padding was used!
+		// how do you get the full color range from 5 bits???
+		// shifting left seems to be ok...
+          dwLen := dwLen shr 1;
+	  for i := 0 to  dwLen-1 do
+            begin
+              d^ := ((s^ shr 0) and $1F) shl 3;
+              inc(d);
+              d^ := ((s^ shr 5) and $1F) shl 3;
+              inc(d);
+              d^ := ((s^ shr 10) and $1F) shl 3;
+              inc(d);
+              s:=s+2;
+            end;
+	  end else begin
+                move(lpDestBits^, InitBits^, dwLen);
+                //fillchar(lpDestBits^,100,dwlen);
+            end;
+	end else begin
+	    move(lpDestBits^, InitBits^, dwLen);
+        end;
+
+        hbit := Windows.CreateBitmap( lpH.biWidth, abs(lpH.biHeight), InitInfo.bmiHeader.biPlanes,
+                               InitInfo.bmiHeader.biBitCount, lpDestBits );
+	result := hbit;
+        freemem(lpDestBits);
+        exit;
+    end;
+    dwError := GetLastError();
+    //writeln('Cannot create bitmap: %d');
+    result := HBITMAP(GDI_ERROR);
+end;
+
+
+
+function TWinCEWidgetSet.CreateBitmapFromRawImage(const RawImage: TRawImage;
+  var Bitmap, MaskBitmap: HBitmap; AlwaysCreateMask: boolean): boolean;
+var
+  BitmapInfo: ^TBitmapInfo;
+  hScreenDC,hVidDC: HDC;
+begin
+  BitmapInfo:=GetMem(sizeof(TBitmapInfo)+3*sizeof(TRGBQuad));
+  FillChar(BitmapInfo^, sizeof(TBitmapInfo)+3*sizeof(TRGBQuad), 0);
+  unaligned(BitmapInfo^.bmiHeader.biSize) := sizeof(TBITMAPINFOHEADER);
+  unaligned(BitmapInfo^.bmiHeader.biWidth) := RawImage.Description.Width;
+  unaligned(BitmapInfo^.bmiHeader.biHeight) := -RawImage.Description.Height;
+  unaligned(BitmapInfo^.bmiHeader.biPlanes) := 1;
+  unaligned(BitmapInfo^.bmiHeader.biBitCount) := RawImage.Description.BitsPerPixel;
+  if RawImage.Description.BitsPerPixel=16 then
+  unaligned(BitmapInfo^.bmiHeader.biCompression) := BI_BITFIELDS
+  else
+  unaligned(BitmapInfo^.bmiHeader.biCompression) := BI_RGB;
+
+  unaligned(BitmapInfo^.bmiHeader.biClrUsed) := 0;
+  unaligned(BitmapInfo^.bmiHeader.biClrImportant) := 0;
+  unaligned(BitmapInfo^.bmiHeader.biSizeImage) := BytesPerLine(BitmapInfo^.bmiHeader.biWidth,BitmapInfo^.bmiHeader.biBitCount)*RawImage.Description.Height;
+
+  unaligned(BitmapInfo^.bmiColors[0]) := TRGBQuad($1f);
+  unaligned(BitmapInfo^.bmiColors[1]) := TRGBQuad($3f shl 5);
+  unaligned(BitmapInfo^.bmiColors[2]) := TRGBQuad($1f shl 11);
+
+  hVidDC:= Windows.GetDC(0);
+
+  MaskBitmap := 0;
+
+  Bitmap := CreateDIBitmap(hVidDC, BitmapInfo^.bmiHeader, CBM_INIT, PChar(RawImage.Data),
+    BitmapInfo^, DIB_RGB_COLORS);
+
+  Result := Bitmap <> 0;
+  if Result then
+  begin
+    if (AlwaysCreateMask or (not RawImageMaskIsEmpty(@RawImage,true))) then
+    begin
+      if RawImage.Description.AlphaSeparate then
+      begin
+        MaskBitmap := Windows.CreateBitmap(RawImage.Description.Width,
+                              RawImage.Description.Height, 1, 1, RawImage.Mask);
+        Result := Result and (MaskBitmap <> 0);
+      end;
+    end;
+  end;
+  FreeMem(BitmapInfo);
+  Windows.ReleaseDC(0, hVidDC);
+end;
+
+
+
+function TWinCEWidgetSet.CreateDIBSection(DC: HDC; const p2: tagBitmapInfo; p3: UINT;
+  var p4: Pointer; p5: THandle; p6: DWORD): HBITMAP;
+begin
+  Result := Windows.CreateDIBSection(DC, Windows.PBitmapInfo(@p2)^,  p3, p4, p5, p6)
+end;
+
+
+{------------------------------------------------------------------------------
+  Method:  GetFocus
+  Params:  none
+  Returns: The handle of the window with focus
+
+  The GetFocus function retrieves the handle of the window that has the focus.
+ ------------------------------------------------------------------------------}
+
+Function TWinCEWidgetSet.GetFocus: HWND;
+Begin
+  Result := Windows.GetFocus;
+End;
+
+{------------------------------------------------------------------------------
+  Method:  GetForegroundWindow
+  Params:  none
+  Returns: The handle of the foreground window
+
+  The GetForegroundWindow function returns the window that the user is
+  currently working with, session wide.
+ ------------------------------------------------------------------------------}
+function TWinCEWidgetSet.GetForegroundWindow: HWND;
+begin
+  Result := Windows.GetForegroundWindow;
+end;
+{function TWinCEWidgetSet.GetFontLanguageInfo(DC: HDC): DWord;
+begin
+  Result:=inherited GetFontLanguageInfo(DC);
+end;
+
+function TWinCEWidgetSet.GetKeyState(nVirtKey: Integer): Smallint;
+begin
+  Result:=inherited GetKeyState(nVirtKey);
+end;}
+
+{------------------------------------------------------------------------------
+  Method:  GetObject
+  Params:  GDIObj  - handle to graphics object of interest
+           BufSize - size of buffer for object information
+           Buf     - pointer to buffer for object information
+  Returns: the number of bytes stored into the buffer
+
+  Gets information about a specified graphics object.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.GetObject(GDIObj: HGDIOBJ; BufSize: Integer; Buf: Pointer): Integer;
+Begin
+  Assert(False, 'Trace:[TWinCEWidgetSet.GetObject]');
+  Result := Windows.GetObject(GDIObj, BufSize, Buf);
+End;
+
+{------------------------------------------------------------------------------
+  Method:  GetParent
+  Params: Handle - handle of child window
+  Returns: the handle of the parent window
+
+  Retrieves the handle of the specified child window's parent window.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.GetParent(Handle: HWND): HWND;
+Begin
+  Result := Windows.GetParent(Handle);
+End;
+
+{function TWinCEWidgetSet.GetProp(Handle: hwnd; Str: PChar): Pointer;
+begin
+  Result:=inherited GetProp(Handle, Str);
+end;
+
+function TWinCEWidgetSet.GetRawImageFromDevice(SrcDC: HDC;
+  const SrcRect: TRect; var NewRawImage: TRawImage): boolean;
+begin
+  Result:=inherited GetRawImageFromDevice(SrcDC, SrcRect, NewRawImage);
+end;
+
+function TWinCEWidgetSet.GetRawImageFromBitmap(SrcBitmap,
+  SrcMaskBitmap: HBITMAP; const SrcRect: TRect; var NewRawImage: TRawImage
+  ): boolean;
+begin
+  Result:=inherited GetRawImageFromBitmap(SrcBitmap, SrcMaskBitmap, SrcRect,
+    NewRawImage);
+end;
+
+function TWinCEWidgetSet.GetRgnBox(RGN: HRGN; lpRect: PRect): Longint;
+begin
+  Result:=inherited GetRgnBox(RGN, lpRect);
+end;
+
+function TWinCEWidgetSet.GetROP2(DC: HDC): Integer;
+begin
+  Result:=inherited GetROP2(DC);
+end;
+
+function TWinCEWidgetSet.GetScrollBarSize(Handle: HWND; BarKind: Integer
+  ): integer;
+begin
+  Result:=inherited GetScrollBarSize(Handle, BarKind);
+end;
+
+function TWinCEWidgetSet.GetScrollbarVisible(Handle: HWND; SBStyle: Integer
+  ): boolean;
+begin
+  Result:=inherited GetScrollbarVisible(Handle, SBStyle);
+end;}
+
+{------------------------------------------------------------------------------
+  Method:  GetScrollInfo
+  Params:  Handle     - handle of window with scroll bar
+           BarFlag    - scroll bar flag
+           ScrollInfo - record for scroll parameters
+  Returns: If the function retrieved any values.
+
+  Retrieves the parameters of a scroll bar.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.GetScrollInfo(Handle: HWND; BarFlag: Integer; var ScrollInfo: TScrollInfo): Boolean;
+Begin
+  ScrollInfo.cbSize:=sizeof(ScrollInfo);
+  Assert(False, 'Trace:TODO: [TWinCEWidgetSet.GetScrollInfo]');
+  Result := Boolean(Windows.GetScrollInfo(Handle, BarFlag, @ScrollInfo));
+End;
+
+{------------------------------------------------------------------------------
+  Method:  GetStockObject
+  Params:  Value - type of stock object
+  Returns: a value identifying the logical object requested
+
+  Retrieves a handle to one of the predefined stock objects.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.GetStockObject(Value: Integer): LongInt;
+Begin
+  Assert(False, Format('Trace:> [TWinCEWidgetSet.GetStockObject] %d ', [Value]));
+  Result := Windows.GetStockObject(Value);
+  Assert(False, Format('Trace:< [TWinCEWidgetSet.GetStockObject] %d --> 0x%x', [Value, Result]));
+End;
+
+{------------------------------------------------------------------------------
+  Method:  GetSysColor
+  Params:   NIndex - display element whose color is to be retrieved
+  Returns:  RGB value
+
+  Retrieves the current color of the specified display element.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.GetSysColor(NIndex: Integer): DWORD;
+Begin
+  if NIndex = COLOR_FORM then
+    NIndex := COLOR_BTNFACE;
+  Result := Windows.GetSysColor(nIndex or $40000000);
+End;
+
+{------------------------------------------------------------------------------
+  Method:  GetSystemMetrics
+  Params: NIndex - system metric to retrieve
+  Returns: the requested system metric
+
+  Retrieves various system metrics.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.GetSystemMetrics(NIndex: Integer): Integer;
+Begin
+  Assert(False, Format('Trace:[TWinCEWidgetSet.GetSystemMetrics] %s', [IntToStr(NIndex)]));
+  Result := Windows.GetSystemMetrics(NIndex);
+  Assert(False, Format('Trace:[TWinCEWidgetSet.GetSystemMetrics] %s --> 0x%S (%s)', [IntToStr(NIndex), IntToHex(Result, 8), IntToStr(Result)]));
+End;
+
+Function TWinCEWidgetSet.GetTextColor(DC: HDC): TColorRef;
+Begin
+  Result := Windows.GetTextColor(DC);
+End;
+
+function TWinCEWidgetSet.UpdateWindow(Handle: HWND): Boolean;
+begin
+Result := Windows.UpdateWindow(Handle);
+end;
+{------------------------------------------------------------------------------
+  Method:  GetTextExtentPoint
+  Params:  DC    - handle of device context
+           Str   - text string
+           Count - number of characters in string
+           Size  - TSize record in which the dimensions of the string are to be
+                   returned
+  Returns: If the function succeeded
+
+  Computes the width and height of the specified string of text.
+ ------------------------------------------------------------------------------}
+
+Function TWinCEWidgetSet.GetTextExtentPoint(DC: HDC; Str: PChar; Count: Integer; Var Size: TSize): Boolean;
+var
+WideStr : PWideChar;
+Begin
+  Assert(False, 'Trace:[TWinCEWidgetSet.GetTextExtentPoint] - Start');
+  Result := false;
+  WideStr := CreatePWideCharFromString(String(Str));
+  Result := Boolean(Windows.GetTextExtentExPoint(DC, WideStr, Count, 0,nil,nil,@Size));
+  DisposePWideChar(WideStr);
+  Assert(False, 'Trace:[TWinCEWidgetSet.GetTextExtentPoint] - Exit');
+End;
+
+
+{------------------------------------------------------------------------------
+  Method:  GetTextMetrics
+  Params:  DC - handle of device context
+           TM - text metrics record
+  Returns: If the function succeeds
+
+  Fills the specified buffer with the metrics for the currently selected font.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.GetTextMetrics(DC: HDC; Var TM: TTextMetric): Boolean;
+var
+tmw: TTextMetricW;
+Begin
+  Assert(False, Format('Trace:> TODO FINISH[TWinCEWidgetSet.GetTextMetrics] DC: 0x%x', [DC]));
+  Result := Boolean(Windows.GetTextMetrics(DC, @TMw));
+  TM.tmHeight:= TMW.tmHeight;
+  TM.tmAscent:= TMW.tmAscent;
+  TM.tmDescent:= TMW.tmDescent;
+  TM.tmInternalLeading:= TMW.tmInternalLeading;
+  TM.tmExternalLeading:= TMW.tmExternalLeading;
+  TM.tmAveCharWidth:= TMW.tmAveCharWidth;
+  TM.tmMaxCharWidth:= TMW.tmMaxCharWidth;
+  TM.tmWeight:= TMW.tmWeight;
+  TM.tmOverhang:= TMW.tmOverhang;
+  TM.tmDigitizedAspectX:= TMW.tmDigitizedAspectX;
+  TM.tmDigitizedAspectY:= TMW.tmDigitizedAspectY;
+  TM.tmFirstChar:= TMW.tmFirstChar;
+  TM.tmLastChar:= TMW.tmLastChar;
+  TM.tmDefaultChar:= TMW.tmDefaultChar;
+  TM.tmBreakChar:= TMW.tmBreakChar;
+  TM.tmItalic:= TMW.tmItalic;
+  TM.tmUnderlined:= TMW.tmUnderlined;
+  TM.tmStruckOut:= TMW.tmStruckOut;
+  TM.tmPitchAndFamily:= TMW.tmPitchAndFamily;
+  TM.tmCharSet:= TMW.tmCharSet;
+  Assert(False, Format('Trace:< TODO FINISH[TWinCEWidgetSet.GetTextMetrics] DC: 0x%x', [DC]));
+End;
+
+{------------------------------------------------------------------------------
+  Method:  GetWindowLong
+  Params:  Handle - handle of window
+           Int    - value to retrieve
+  Returns: the requested 32-bit value
+
+  Retrieves information about the specified window.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.GetWindowLong(Handle: HWND; Int: Integer): PtrInt;
+Begin
+  //TODO:Started but not finished
+  Assert(False, Format('Trace:> [TWinCEWidgetSet.GETWINDOWLONG] HWND: 0x%x, int: 0x%x (%d)', [Handle, int, int]));
+  Result := Windows.GetWindowLong(Handle, int);
+  Assert(False, Format('Trace:< [TWinCEWidgetSet.GETWINDOWLONG] HWND: 0x%x, int: 0x%x (%d) --> 0x%x (%d)', [Handle, int, int, Result, Result]));
+End;
+
+{------------------------------------------------------------------------------
+  Method:  GetWindowOrgEx
+  Params:  DC - handle of device context
+           P  - record receiving the window origin
+  Returns: 0 if the function fails; non-zero integer otherwise
+
+  Retrieves the x-coordinates and y-coordinates of the window origin for the
+  specified device context.
+ ------------------------------------------------------------------------------}
+{
+//roozbeh:not in wince?//not even getviewportorgex?!
+Function TWinCEWidgetSet.GetWindowOrgEx(DC: HDC; P: PPoint): Integer;
+Begin
+  Result := Integer(Windows.GetWindowOrgEx(DC, LPPoint(P)));
+End;
+}
+{------------------------------------------------------------------------------
+  Method:  GetWindowRect
+  Params:  Handle - handle of window
+           Rect   - record for window coordinates
+  Returns: if the function succeeds, the return value is nonzero; if the
+           function fails, the return value is zero
+
+  Retrieves the dimensions of the bounding rectangle of the specified window.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.GetWindowRect(Handle: HWND; Var Rect: TRect): Integer;
+Begin
+  Result := Integer(Windows.GetWindowRect(Handle, @Rect));
+End;
+
+{------------------------------------------------------------------------------
+  Function: GetWindowRelativePosition
+  Params:  Handle : HWND;
+  Returns: true on success
+
+  returns the current widget Left, Top, relative to the client origin of its
+  parent
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.GetWindowRelativePosition(Handle : HWND;
+  var Left, Top:integer): boolean;
+var
+  LeftTop:TPoint;
+  R: TRect;
+  ParentHandle: THandle;
+  WindowInfo: PWindowInfo;
+begin
+  Result:=false;
+  WindowInfo := GetWindowInfo(Handle);
+//  if (WindowInfo^.WinControl is TCustomFloatSpinEdit) then
+//    Handle := Windows.SendMessage(Handle, UDM_GETBUDDY, 0, 0);
+  if not Windows.GetWindowRect(Handle,@R) then exit;
+  LeftTop.X:=R.Left;
+  LeftTop.Y:=R.Top;
+  ParentHandle:=Windows.GetParent(Handle);
+  if ParentHandle<>0 then
+  begin
+    if not Windows.ScreenToClient(ParentHandle,@LeftTop) then exit;
+    if not GetLCLClientBoundsOffset(ParentHandle, R) then
+      exit;
+    dec(LeftTop.X, R.Left);
+    dec(LeftTop.Y, R.Top);
+  end;
+  Left:=LeftTop.X;
+  Top:=LeftTop.Y;
+  Result:=true;
+end;
+
+{------------------------------------------------------------------------------
+  Function: GetWindowSize
+  Params:  Handle : hwnd;
+  Returns: true on success
+
+  Returns the current widget Width and Height
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.GetWindowSize(Handle : hwnd;
+  var Width, Height: integer): boolean;
+var
+  WP: WINDOWPLACEMENT;
+  R: TRect;
+  Style, ExStyle: LongInt;
+  WindowInfo: PWindowInfo;
+
+    procedure AdjustForBuddySize;
+    var
+      BuddyWidth, BuddyHeight: integer;
+    begin
+      GetWindowSize(Windows.SendMessage(Handle, UDM_GETBUDDY, 0, 0), BuddyWidth, BuddyHeight);
+      Inc(Width, BuddyWidth);
+    end;
+
+begin
+  WP.length := SizeOf(WP);
+//  Result := Boolean(Windows.GetWindowPlacement(Handle, WP));
+//  if (WP.showCmd=SW_MAXIMIZE) then
+  begin
+    // if the form is maximized, you can't use the normal size
+    Result := Boolean(Windows.GetWindowRect(Handle,@R));
+    with R Do
+    begin
+      Width := Right - Left;
+      Height := Bottom - Top;
+    end;
+  end;
+{  else
+    with WP.rcNormalPosition do
+    begin
+      Width := Right - Left;
+      Height := Bottom - Top;
+    end;}
+  WindowInfo := GetWindowInfo(Handle);
+
+  //debugln('TWinCEWidgetSet.GetWindowSize ',DbgSName(WindowInfo^.WinControl),' SW_MAXIMIZE=',dbgs(WP.showCmd=SW_MAXIMIZE),' ',dbgs(WP.rcNormalPosition));
+
+  // convert top level lcl window coordinaties to win32 coord
+  Style := Windows.GetWindowLong(Handle, GWL_STYLE);
+  ExStyle := Windows.GetWindowLong(Handle, GWL_EXSTYLE);
+  if (Style and WS_THICKFRAME) <> 0 then
+  begin
+    // thick, sizing border
+    // add twice, top+bottom border
+    Dec(Width, 2*Windows.GetSystemMetrics(SM_CXSIZEFRAME));
+    Dec(Height, 2*Windows.GetSystemMetrics(SM_CYSIZEFRAME));
+  end else
+  if (Style and WS_BORDER) <> 0 then
+  begin
+    // thin, non-sizing border
+    Dec(Width, 2*Windows.GetSystemMetrics(SM_CXFIXEDFRAME));
+    Dec(Height, 2*Windows.GetSystemMetrics(SM_CYFIXEDFRAME));
+  end;
+  if (Style and WS_CAPTION) <> 0 then
+    if (ExStyle and WS_EX_TOOLWINDOW) <> 0 then
+      Dec(Height, Windows.GetSystemMetrics(SM_CYSMCAPTION))
+    else
+      Dec(Height, Windows.GetSystemMetrics(SM_CYCAPTION));
+
+//  if (WindowInfo^.WinControl is TCustomFloatSpinEdit) then
+//    AdjustForBuddySize;
+end;
+
+{
+
+
+function TWinCEWidgetSet.GradientFill(DC: HDC; Vertices: PTriVertex;
+  NumVertices: Longint; Meshes: Pointer; NumMeshes: Longint; Mode: Longint
+  ): Boolean;
+begin
+  Result:=inherited GradientFill(DC, Vertices, NumVertices, Meshes, NumMeshes,
+    Mode);
+end;
+
+function TWinCEWidgetSet.HideCaret(hWnd: HWND): Boolean;
+begin
+  Result:=inherited HideCaret(hWnd);
+end;
+
+procedure TWinCEWidgetSet.InitializeCriticalSection(
+  var CritSection: TCriticalSection);
+begin
+  inherited InitializeCriticalSection(CritSection);
+end;}
+
+{------------------------------------------------------------------------------
+  Function: IntersectClipRect
+  Params:  dc, Left, Top, Right, Bottom
+  Returns: Integer
+
+  Shrinks the clipping region in the device context dc to a region of all
+  intersecting points between the boundary defined by Left, Top, Right,
+  Bottom , and the Current clipping region.
+
+  The result can be one of the following constants
+      Error
+      NullRegion
+      SimpleRegion
+      ComplexRegion
+
+ ------------------------------------------------------------------------------}
+function TWinCEWidgetSet.IntersectClipRect(dc: hdc;
+  Left, Top, Right, Bottom: Integer): Integer;
+begin
+  Result := Windows.IntersectClipRect(DC, Left, Top, Right, Bottom);
+end;
+
+
+{------------------------------------------------------------------------------
+  Method:  InvalidateRect
+  Params: AHandle - handle of window with changed update region
+          Rect    - address of rectangle coordinates
+          BErase  - specifies whether the background is to be erased
+  Returns: if the function succeeds
+
+  Adds a rectangle to the specified window's update region.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.InvalidateRect(aHandle: HWND; Rect: PRect; BErase: Boolean): Boolean;
+Var
+  Flags: UINT;
+  ORect: TRect;
+Begin
+  Flags := RDW_INVALIDATE or RDW_ALLCHILDREN;
+  if BErase then
+    Flags := Flags or RDW_ERASE;
+  if Rect <> nil then
+  begin
+    GetLCLClientBoundsOffset(aHandle, ORect);
+    OffsetRect(Rect^, ORect.Left, ORect.Top);
+  end;
+  Result := Boolean(Windows.RedrawWindow(aHandle, Rect, 0, Flags));
+End;
+
+
+{------------------------------------------------------------------------------
+  Method: IsWindowEnabled
+  Params: handle - window handle
+  Returns: true if window is enabled, false otherwise
+ ------------------------------------------------------------------------------}
+function TWinCEWidgetSet.IsWindowEnabled(handle: HWND): boolean;
+begin
+  Result := Boolean(Windows.IsWindowEnabled(handle));
+end;
+
+{------------------------------------------------------------------------------
+  Method: IsWindowVisible
+  Params: handle - window handle
+  Returns: true if window is visible, false otherwise
+ ------------------------------------------------------------------------------}
+function TWinCEWidgetSet.IsWindowVisible(handle: HWND): boolean;
+begin
+  Result := Boolean(Windows.IsWindowVisible(handle));
+end;
+{
+procedure TWinCEWidgetSet.LeaveCriticalSection(var CritSection: TCriticalSection
+  );
+begin
+  inherited LeaveCriticalSection(CritSection);
+end;}
+
+{------------------------------------------------------------------------------
+  Method:  LineTo
+  Params:  DC - device context handle
+           X  - x-coordinate of line's ending point
+           Y  - y-coordinate of line's ending point
+  Returns: if the function succeeds
+
+  Draws a line from the current position up to, but not including, the specified point.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.LineTo(DC: HDC; X, Y: Integer): Boolean;
+Begin
+  Assert(False, Format('Trace:> [TWinCEWidgetSet.LineTo] DC:0x%x, X:%d, Y:%d', [DC, X, Y]));
+  Result := Boolean(Windows.LineTo(DC, X, Y));
+  Assert(False, Format('Trace:< [TWinCEWidgetSet.LineTo] DC:0x%x, X:%d, Y:%d', [DC, X, Y]));
+End;
+
+{------------------------------------------------------------------------------
+  Method:  MessageBox
+  Params:  HWnd      - The handle of parent window
+           LPText    - text in message box
+           LPCaption - title of message box
+           UType     - style of message box
+  Returns: 0 if not successful (out of memory), otherwise one of the defined
+           values:
+             IDABORT
+             IDCANCEL
+             IDIGNORE
+             IDNO
+             IDOK
+             IDRETRY
+             IDYES
+
+ The MessageBox function displays a modal dialog, with text and caption defined,
+ and includes buttons.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.MessageBox(HWnd: HWND; LPText, LPCaption: PChar; UType: Cardinal): Integer;
+var
+LPWCaption,LPWText : PWideChar;
+Begin
+  LPWCaption := CreatePWideCharFromString(String(LPCaption));
+  LPWText := CreatePWideCharFromString(String(LPText));
+  Result := Windows.MessageBox(HWnd, LPWText, LPWCaption, UType);
+  DisposePWideChar(LPWCaption);
+  DisposePWideChar(LPWText);
+End;
+
+{------------------------------------------------------------------------------
+  Method:  MoveToEx
+  Params:  DC       - handle of device context
+           X        - x-coordinate of new current position
+           Y        - x-coordinate of new current position
+           OldPoint - address of old current position
+  Returns: If the function succeeds.
+
+  Updates the current position to the specified point.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.MoveToEx(DC: HDC; X, Y: Integer; OldPoint: PPoint): Boolean;
+Begin
+  Assert(False, Format('Trace:> [TWinCEWidgetSet.MoveToEx] DC:0x%x, X:%d, Y:%d', [DC, X, Y]));
+  Result := Boolean(Windows.MoveToEx(DC, X, Y, LPPOINT(OldPoint)));
+  Assert(False, Format('Trace:< [TWinCEWidgetSet.MoveToEx] DC:0x%x, X:%d, Y:%d', [DC, X, Y]));
+End;
+
+{function TWinCEWidgetSet.MoveWindowOrgEx(DC: HDC; dX, dY: Integer): Boolean;
+begin
+  Result:=inherited MoveWindowOrgEx(DC, dX, dY);
+end;
+
+function TWinCEWidgetSet.PairSplitterAddSide(SplitterHandle, SideHandle: hWnd;
+  Side: integer): Boolean;
+begin
+  Result:=inherited PairSplitterAddSide(SplitterHandle, SideHandle, Side);
+end;
+
+function TWinCEWidgetSet.PairSplitterGetInterfaceInfo: Boolean;
+begin
+  Result:=inherited PairSplitterGetInterfaceInfo;
+end;
+
+function TWinCEWidgetSet.PairSplitterRemoveSide(SplitterHandle,
+  SideHandle: hWnd; Side: integer): Boolean;
+begin
+  Result:=inherited PairSplitterRemoveSide(SplitterHandle, SideHandle, Side);
+end;
+
+function TWinCEWidgetSet.PairSplitterSetPosition(SplitterHandle: hWnd;
+  var NewPosition: integer): Boolean;
+begin
+  Result:=inherited PairSplitterSetPosition(SplitterHandle, NewPosition);
+end;
+
+
+function TWinCEWidgetSet.PolyBezier(DC: HDC; Points: PPoint; NumPts: Integer;
+  Filled, Continuous: boolean): boolean;
+begin
+  Result:=inherited PolyBezier(DC, Points, NumPts, Filled, Continuous);
+end;}
+
+{------------------------------------------------------------------------------
+  Method:  PeekMessage
+  Params:  LPMsg         - Where it should put the message
+           Handle        - Handle of the window (thread)
+           WMsgFilterMin - Lowest MSG to grab
+           WMsgFilterMax - Highest MSG to grab
+           WRemoveMsg    - Should message be pulled out of the queue
+  Returns: Boolean if an event was there
+
+  Checks a thread message queue for a message.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.PeekMessage(Var LPMsg: TMsg; Handle: HWND; WMsgFilterMin, WMsgFilterMax, WRemoveMsg: UINT): Boolean;
+Begin
+  Result := Boolean(Windows.PeekMessage(@LPMsg, Handle, WMsgFilterMin, WMsgFilterMax, WRemoveMsg));
+End;
+
+{------------------------------------------------------------------------------
+  Method:  Polygon
+  Params:  DC - handle to device context
+           Points - pointer to polygon's vertices
+           NumPts - count of polygon's vertices
+           Winding
+  Returns: If the function succeeds
+
+  Use Polygon to draw a closed, many-sided shape on the canvas, using the value
+  of Pen. After drawing the complete shape, Polygon fills the shape using the
+  value of Brush.
+  The Points parameter is an array of points that give the vertices of the
+  polygon.
+  Winding determines how the polygon is filled.
+  When Winding is True, Polygon
+  fills the shape using the Winding fill algorithm. When Winding is False,
+  Polygon uses the even-odd (alternative) fill algorithm.
+  NumPts indicates the number of points to use.
+  The first point is always connected to the last point.
+  To draw a polygon on the canvas, without filling it, use the Polyline method,
+  specifying the first point a second time at the end.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.Polygon(DC: HDC; Points: PPoint; NumPts: Integer; Winding: Boolean): Boolean;
+var
+  PFMode : Longint;
+Begin
+  Assert(False, Format('Trace:TWinCEWidgetSet.Polygon --> DC: 0x%X, Number of points: %D, Use winding fill: %S', [DC, NumPts, BOOL_RESULT[Winding]]));
+//  If Winding then
+//    PFMode := SetPolyFillMode(DC, Windows.WINDING)
+//  else
+//    PFMode := SetPolyFillMode(DC, Windows.ALTERNATE);
+  Result := Boolean(Windows.Polygon(DC, LPPOINT(Points), NumPts));
+//  SetPolyFillMode(DC, PFMode);
+End;
+
+{------------------------------------------------------------------------------
+  Method:  Polyline
+  Params:  DC - handle of device context
+           Points - address of array containing endpoints
+           NumPts - number of points in the array
+  Returns: If the function succeeds
+
+  Draws a series of line segments by connecting the points in the specified
+  array.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.Polyline(DC: HDC; Points: PPoint; NumPts: Integer): Boolean;
+Begin
+  Result := Boolean(Windows.Polyline(DC, LPPOINT(Points), NumPts));
+End;
+
+{------------------------------------------------------------------------------
+  Method:  PostMessage
+  Params: Handle - handle of destination window
+          Msg - message to post
+          WParam - first message parameter
+          LParam - second message parameter
+  Returns: True if succesful
+
+  The PostMessage Function places (posts) a message in the message queue and
+  then returns without waiting.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.PostMessage(Handle: HWND; Msg: Cardinal; WParam: WParam; LParam: LParam): Boolean;
+Begin
+  Result := Boolean(Windows.PostMessage(Handle, Msg, WParam, LParam));
+End;
+
+{function TWinCEWidgetSet.RadialArc(DC: HDC; x, y, width, height, sx, sy, ex,
+  ey: Integer): Boolean;
+begin
+  Result:=inherited RadialArc(DC, x, y, width, height, sx, sy, ex, ey);
+end;
+
+function TWinCEWidgetSet.RadialChord(DC: HDC; x, y, width, height, sx, sy, ex,
+  ey: Integer): Boolean;
+begin
+  Result:=inherited RadialChord(DC, x, y, width, height, sx, sy, ex, ey);
+end;
+
+function TWinCEWidgetSet.RadialPie(DC: HDC; x, y, width, height, sx, sy, ex,
+  ey: Integer): Boolean;
+begin
+  Result:=inherited RadialPie(DC, x, y, width, height, sx, sy, ex, ey);
+end;
+
+function TWinCEWidgetSet.RealizePalette(DC: HDC): Cardinal;
+begin
+  Result:=inherited RealizePalette(DC);
+end;}
+
+{------------------------------------------------------------------------------
+  Method:  Rectangle
+  Params:  DC - handle of device context
+           X1 - x-coordinate of bounding rectangle's upper-left corner
+           Y1 - y-coordinate of bounding rectangle's upper-left corner
+           X2 - x-coordinate of bounding rectangle's lower-right corner
+           Y2 - y-coordinate of bounding rectangle's lower-right corner
+  Returns: If the function succeeds
+
+  The Rectangle function draws a rectangle. The rectangle is outlined by using
+  the current pen and filled by using the current brush.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.Rectangle(DC: HDC; X1, Y1, X2, Y2: Integer): Boolean;
+Begin
+  Assert(False, Format('Trace:> [TWinCEWidgetSet.Rectangle] DC:0x%x, X1:%d, Y1:%d, X2:%d, Y2:%d', [DC, X1, Y1, X2, Y2]));
+  Result := Boolean(Windows.Rectangle(DC, X1, Y1, X2+1, Y2+1));
+  Assert(False, Format('Trace:< [TWinCEWidgetSet.Rectangle] DC:0x%x, X1:%d, Y1:%d, X2:%d, Y2:%d', [DC, X1, Y1, X2, Y2]));
+End;
+
+function TWinCEWidgetSet.RectVisible(dc : hdc; const ARect: TRect) : Boolean;
+begin
+  Result := Boolean(Windows.RectVisible(DC, LPRECT(@ARect)^));
+end;
+
+{function TWinCEWidgetSet.RegroupMenuItem(hndMenu: HMENU; GroupIndex: integer
+  ): Boolean;
+begin
+  Result:=inherited RegroupMenuItem(hndMenu, GroupIndex);
+end;
+
+function TWinCEWidgetSet.ReleaseCapture: Boolean;
+begin
+  Result:=inherited ReleaseCapture;
+end;}
+
+{------------------------------------------------------------------------------
+  Method:  ReleaseDC
+  Params:  HWnd - handle of window
+           DC   - handle of device context
+  Returns: 1 if the device context was released or 0 if it wasn't
+
+  Releases a device context (DC), freeing it for use by other applications.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.ReleaseDC(Window: HWND; DC: HDC): Integer;
+Begin
+  Assert(False, Format('Trace:> [TWinCEWidgetSet.ReleaseDC] DC:0x%x', [DC]));
+  Result := Windows.ReleaseDC(Window, DC);
+  Assert(False, Format('Trace:< [TWinCEWidgetSet.ReleaseDC] DC:0x%x', [DC]));
+End;
+
+{
+
+function TWinCEWidgetSet.RemoveProp(Handle: hwnd; Str: PChar): THandle;
+begin
+  Result:=inherited RemoveProp(Handle, Str);
+end;}
+
+{------------------------------------------------------------------------------
+  Method:  RestoreDC
+  Params:  DC - handle of device context
+           SavedDC - state to be restored
+  Returns: if the function succeeds
+
+  Restores a device context (DC) to the specified state.
+-------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.RestoreDC(DC: HDC; SavedDC: Integer): Boolean;
+Begin
+  Assert(False, Format('Trace:> [TWinCEWidgetSet.RestoreDC] DC:0x%x, SavedDC: %d', [DC, SavedDC]));
+  Result := Boolean(Windows.RestoreDC(DC, SavedDC));
+//  Assert(False, Format('Trace:< [TWinCEWidgetSet.RestoreDC] DC:0x%x, Saved: %d --> %s', [Integer(DC), SavedDC, BOOL_TEXT[Result]]));
+End;
+
+{------------------------------------------------------------------------------
+  Method:   RoundRect
+  Params:   DC, X1, Y1, X2, Y2, RX, RY
+  Returns:  true if succesfull, false otherwise
+
+  Draws a Rectangle with optional rounded corners. RY is the radial height
+  of the corner arcs, RX is the radial width.
+ ------------------------------------------------------------------------------}
+function TWinCEWidgetSet.RoundRect(DC: HDC; X1, Y1, X2, Y2: Integer; RX, RY : Integer): Boolean;
+begin
+  Result := Windows.RoundRect(DC, X1, Y1, X2, Y2, RX, RY);
+end;
+
+
+
+{------------------------------------------------------------------------------
+  Method:  SaveDC
+  Params:  DC - a DC to save
+  Returns: 0 if the functions fails otherwise a positive integer identifing
+           the saved DC
+
+  The SaveDC function saves the current state of the specified device
+  context (DC) by copying its elements to a context stack.
+-------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.SaveDC(DC: HDC): Integer;
+Begin
+  Assert(False, Format('Trace:> [TWinCEWidgetSet.SaveDC]  0x%x', [Integer(DC)]));
+  Result := Windows.SaveDC(DC);
+  Assert(False, Format('Trace:< [TWinCEWidgetSet.SaveDC]  0x%x --> %d', [Integer(DC), Result]));
+End;
+
+
+{------------------------------------------------------------------------------
+  Method:  ScreenToClient
+  Params: Handle - window handle for source coordinates
+          P      - record containing coordinates
+  Returns: if the function succeeds, the return value is nonzero; if the
+           function fails, the return value is zero
+
+  Converts the screen coordinates of a specified point on the screen to client
+  coordinates.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.ScreenToClient(Handle: HWND; Var P: TPoint): Integer;
+Begin
+  Result := Integer(Windows.ScreenToClient(Handle, @P));
+End;
+
+{------------------------------------------------------------------------------
+  Method:  ScrollWindowEx
+  Params:  HWnd       - handle of window to scroll
+           DX         - horizontal amount to scroll
+           DY         - vertical amount to scroll
+           PRcScroll  - pointer to scroll rectangle
+           PRcClip    - pointer to clip rectangle
+           HRgnUpdate - handle of update region
+           PRcUpdate  - pointer to update rectangle
+           Flags      - scrolling flags
+
+  Returns: True if succesfull
+
+  The ScrollWindowEx function scrolls the content of the specified window's
+  client area
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.ScrollWindowEx(HWnd: HWND; DX, DY: Integer; PRcScroll, PRcClip: PRect; HRgnUpdate: HRGN; PRcUpdate: PRect; Flags: UINT): Boolean;
+Begin
+  Result := Windows.ScrollWindowEx(HWnd, DX, DY, Windows.RECT(PRcScroll^), Windows.RECT(PRcClip^), HRgnUpdate, LPRECT(PRcUpdate), Flags) <> ERROR;
+End;
+
+{------------------------------------------------------------------------------
+  Function: SelectClipRGN
+  Params:  DC, RGN
+  Returns: longint
+
+  Sets the DeviceContext's ClipRegion. The Return value
+  is the new clip regions type, or ERROR.
+
+  The result can be one of the following constants
+      Error
+      NullRegion
+      SimpleRegion
+      ComplexRegion
+
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.SelectClipRGN(DC : hDC; RGN : HRGN) : Longint;
+begin
+  Result := Windows.SelectClipRGN(DC, RGN);
+end;
+
+{------------------------------------------------------------------------------
+  Method:  SelectObject
+  Params:  DC - handle of device context
+           GDIObj - handle of object
+  Returns: he handle of the object being replaced
+
+  Selects an object into the specified device context.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.SelectObject(DC: HDC; GDIObj: HGDIOBJ): HGDIOBJ;
+Begin
+  //TODO: Finish this;
+  Assert(False, Format('Trace:> [TWinCEWidgetSet.SelectObject] DC: 0x%x', [DC]));
+  Result := Windows.SelectObject(DC, GDIObj);
+  Assert(False, Format('Trace:< [TWinCEWidgetSet.SelectObject] DC: 0x%x  --> 0x%x', [DC, Result]));
+End;
+
+{function TWinCEWidgetSet.SelectPalette(DC: HDC; Palette: HPALETTE;
+  ForceBackground: Boolean): HPALETTE;
+begin
+  Result:=inherited SelectPalette(DC, Palette, ForceBackground);
+end;}
+
+{------------------------------------------------------------------------------
+  Method:  SendMessage
+  Params: HandleWnd   - handle of destination window
+          Msg         - message to send
+          WParam      - first message parameter
+          LParam      - second message parameter
+  Returns: the result of the message processing
+
+  The SendMessage function sends the specified message to a window or windows.
+  The function calls the window procedure for the specified window and does
+  not return until the window procedure has processed the message.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.SendMessage(HandleWnd: HWND; Msg: Cardinal; WParam: WParam; LParam: LParam): LResult;
+Begin
+  Result := Windows.SendMessage(HandleWnd, Msg, WParam, LParam);
+End;
+
+{------------------------------------------------------------------------------
+  Method:  SetActiveWindow
+  Params:  Window - Window to focus
+  Returns: Old active window
+
+  Sets focus to the specified window, if the current process is on top
+ ------------------------------------------------------------------------------}
+function TWinCEWidgetSet.SetActiveWindow(Window: HWND): HWND;
+begin
+  Result := Windows.SetActiveWindow(Window);
+end;
+
+
+{------------------------------------------------------------------------------
+  Method:  SetBkColor
+  Params:  DC    - Device context to change the text background color
+           Color - background color value
+  Returns: Old Background color
+
+  Sets the current background color to the specified color value.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.SetBKColor(DC: HDC; Color: TColorRef): TColorRef;
+Begin
+  Assert(False, Format('Trace:> [TWinCEWidgetSet.SetBKColor] DC: 0x%x Color: %8x', [Integer(DC), Color]));
+  Result := Windows.SetBkColor(DC, Windows.COLORREF(ColorToRGB(Color)));
+  Assert(False, Format('Trace:< [TWinCEWidgetSet.SetBKColor] DC: 0x%x Color: %8x --> %8x', [Integer(DC), Color, Result]));
+End;
+
+{------------------------------------------------------------------------------
+  Method:  SetBkMode
+  Params: DC     - handle of device context
+          BkMode - flag specifying background mode
+  Returns: the previous background mode
+
+  Sets the background mix mode of the specified device context.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.SetBkMode(DC: HDC; BkMode: Integer): Integer;
+Begin
+  // Your code here
+  Result := Windows.SetBkMode(DC, BkMode);
+End;
+
+{function TWinCEWidgetSet.SetComboMinDropDownSize(Handle: HWND; MinItemsWidth,
+  MinItemsHeight, MinItemCount: integer): boolean;
+begin
+  Result:=inherited SetComboMinDropDownSize(Handle, MinItemsWidth,
+    MinItemsHeight, MinItemCount);
+end;
+
+function TWinCEWidgetSet.SetCapture(AHandle: HWND): HWND;
+begin
+  Result:=inherited SetCapture(AHandle);
+end;
+
+function TWinCEWidgetSet.SetCaretPos(X, Y: Integer): Boolean;
+begin
+  Result:=inherited SetCaretPos(X, Y);
+end;
+
+function TWinCEWidgetSet.SetCaretPosEx(Handle: HWnd; X, Y: Integer): Boolean;
+begin
+  Result:=inherited SetCaretPosEx(Handle, X, Y);
+end;
+
+function TWinCEWidgetSet.SetCaretRespondToFocus(handle: HWND;
+  ShowHideOnFocus: boolean): Boolean;
+begin
+  Result:=inherited SetCaretRespondToFocus(handle, ShowHideOnFocus);
+end;
+
+function TWinCEWidgetSet.SetCursorPos(X, Y: Integer): Boolean;
+begin
+  Result:=inherited SetCursorPos(X, Y);
+end;}
+
+function TWinCEWidgetSet.SetFocus(hWnd: HWND): HWND;
+begin
+  Result:=Windows.SetFocus(hWnd);
+end;
+
+{function TWinCEWidgetSet.SetProp(Handle: hwnd; Str: PChar; Data: Pointer
+  ): Boolean;
+begin
+  Result:=inherited SetProp(Handle, Str, Data);
+end;}
+
+function TWinCEWidgetSet.SetROP2(DC: HDC; Mode: Integer): Integer;
+begin
+  result := Windows.SetROP2(DC, Mode);
+end;
+
+{------------------------------------------------------------------------------
+  Method:  SetScrollInfo
+  Params:  Handle     - handle of window with scroll bar
+           SBStyle    - scroll bar flag
+           ScrollInfo - record with scroll parameters
+           BRedraw    - is the scroll bar is redrawn?
+  Returns: The old position value
+
+  Sets the parameters of a scroll bar.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.SetScrollInfo(Handle: HWND; SBStyle: Integer; ScrollInfo: TScrollInfo; BRedraw: Boolean): Integer;
+Begin
+//  Assert(False, 'Trace:[TWinCEWidgetSet.SetScrollInfo]');
+  //With ScrollInfo Do
+   // Assert(False, Format('Trace:> [TWinCEWidgetSet.SetScrollInfo] Mask:0x%x, Min:%d, Max:%d, Page:%d, Pos:%d', [FMask, NMin, NMax, NPage, NPos]));
+  ScrollInfo.cbSize:=sizeof(ScrollInfo);
+  Result := Windows.SetScrollInfo(Handle, SBStyle, @ScrollInfo, BRedraw);
+  With ScrollInfo Do
+    Assert(False, Format('Trace:> [TWinCEWidgetSet.SetScrollInfo] --> %d', [Result]));
+End;
+
+{------------------------------------------------------------------------------
+  Method:  SetSysColors
+  Params:  CElements    - the number of elements
+           LPAElements  - array with element numbers
+           LPARGBValues - array with colors
+  Returns: 0 if unsuccesful
+
+  The SetSysColors function sets the colors for one or more display elements.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.SetSysColors(CElements: Integer; Const LPAElements; Const LPARGBValues): Boolean;
+Begin
+  Result := Boolean(Windows.SetSysColors(CElements, PInteger(@LPAElements)^, LPColorRef(@LPARGBValues)^));
+End;
+
+{function TWinCEWidgetSet.SetTextCharacterExtra(_hdc: hdc; nCharExtra: Integer
+  ): Integer;
+begin
+  Result:=inherited SetTextCharacterExtra(_hdc, nCharExtra);
+end;}
+
+{------------------------------------------------------------------------------
+  Method:  SetTextColor
+  Params:  DC    - Identifies the device context.
+           Color - Specifies the color of the text.
+  Returns: The previous color if succesful, CLR_INVALID otherwise
+
+  The SetTextColor function sets the text color for the specified device
+  context to the specified color.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.SetTextColor(DC: HDC; Color: TColorRef): TColorRef;
+Begin
+  Assert(False, Format('Trace:> [TWinCEWidgetSet.SetTextColor] DC: 0x%x Color: %8x', [Integer(DC), Color]));
+  Result := Windows.SetTextColor(DC, Windows.COLORREF(ColorToRGB(Color)));
+  Assert(False, Format('Trace:< [TWinCEWidgetSet.SetTextColor] DC: 0x%x Color: %8x --> %8x', [Integer(DC), Color, Result]));
+End;
+{------------------------------------------------------------------------------
+  Procedure: SetWindowLong
+  Params:  Handle  - handle of window
+           Idx     - value to set
+           NewLong - new value
+  Returns: Nothing
+
+  Changes an attribute of the specified window.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.SetWindowLong(Handle: HWND; Idx: Integer; NewLong: PtrInt): PtrInt;
+Begin
+  //TODO: Finish this;
+  Assert(False, Format('Trace:> [TWinCEWidgetSet.SETWINDOWLONG] HWND: 0x%x, Idx: 0x%x(%d), Value: 0x%x(%d)', [Handle, Idx, Idx, NewLong, NewLong]));
+  Result := Windows.SetWindowLong(Handle, Idx, NewLong);
+  Assert(False, Format('Trace:< [TWinCEWidgetSet.SETWINDOWLONG] HWND: 0x%x, Idx: 0x%x(%d), Value: 0x%x(%d) --> 0x%x(%d)', [Handle, Idx, Idx, NewLong, NewLong, Result, Result]));
+End;
+
+{------------------------------------------------------------------------------
+  Method:  SetWindowOrgEx
+  Params:  DC    - handle of device context
+           NewX  - new x-coordinate of window origin
+           NewY  - new y-coordinate of window origin
+           Point - record receiving original origin
+  Returns: Whether the call was successful
+
+  Sets the window origin of the device context by using the specified coordinates.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.SetWindowOrgEx(DC: HDC; NewX, NewY: Integer;
+  OldPoint: PPoint): Boolean;
+Begin
+ { roozbeh:does this always work?it is heavily used in labels and some other drawing controls}
+  Result := Boolean(SetViewPortOrgEx(DC, -NewX, -NewY, LPPoint(OldPoint)));
+//  Result:=inherited SetWindowOrgEx(dc, NewX, NewY, OldPoint);
+End;
+
+{------------------------------------------------------------------------------
+  Method:  SetWindowPos
+  Params: HWnd            - handle of window
+          HWndInsertAfter - placement-order handle
+          X               - horizontal position
+          Y               - vertical position
+          CX              - width
+          CY              - height
+          UFlags          - window-positioning flags
+  Returns: If the function succeeds
+
+  Changes the size, position, and Z order of a child, pop-up, or top-level
+  window.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.SetWindowPos(HWnd: HWND; HWndInsertAfter: HWND; X, Y, CX, CY: Integer; UFlags: UINT): Boolean;
+var
+  Style, ExStyle: Integer;
+  OldRect, OldClientRect: Windows.RECT;
+Begin
+  //debugln('[TWinCEWidgetSet.SetWindowPos] Top=',HWndInsertAfter=HWND_TOP);
+  Style := Windows.GetWindowLong(HWnd, GWL_STYLE);
+  ExStyle := Windows.GetWindowLong(HWnd, GWL_EXSTYLE);
+  Windows.GetWindowRect(HWnd, @OldRect);
+  Windows.GetClientRect(HWnd, @OldClientRect);
+  if (Style and WS_BORDER) <> 0 then
+  begin
+    // convert top level lcl window coordinaties to win32 coord
+    // add twice, top+bottom border
+    Inc(CX, 2*Windows.GetSystemMetrics(SM_CXSIZEFRAME));
+    Inc(CY, 2*Windows.GetSystemMetrics(SM_CYSIZEFRAME));
+  end;
+  if (Style and WS_CAPTION) <> 0 then
+    if (ExStyle and WS_EX_TOOLWINDOW) <> 0 then
+      Inc(CY, Windows.GetSystemMetrics(SM_CYSMCAPTION))
+    else
+      Inc(CY, Windows.GetSystemMetrics(SM_CYCAPTION));
+  Result := Boolean(Windows.SetWindowPos(HWnd, HWndInsertAfter, X, Y, CX, CY, UFlags));
+End;
+
+{function TWinCEWidgetSet.SetWindowPos(hWnd: HWND; hWndInsertAfter: HWND; X, Y,
+  cx, cy: Integer; uFlags: UINT): Boolean;
+begin
+  Result:=inherited SetWindowPos(hWnd, hWndInsertAfter, X, Y, cx, cy, uFlags);
+end;
+
+function TWinCEWidgetSet.ShowCaret(hWnd: HWND): Boolean;
+begin
+  Result:=inherited ShowCaret(hWnd);
+end;
+
+function TWinCEWidgetSet.ShowScrollBar(Handle: HWND; wBar: Integer;
+  bShow: Boolean): Boolean;
+begin
+  Result:=inherited ShowScrollBar(Handle, wBar, bShow);
+end;}
+
+{------------------------------------------------------------------------------
+  Method: ShowWindow
+  Params: hWnd     - Window handle
+          nCmdShow - (SW_SHOWNORMAL, SW_MINIMIZE, SW_SHOWMAXIMIZED)
+  Returns: If the function succeeds
+------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.ShowWindow(hWnd: HWND; nCmdShow: Integer): Boolean;
+begin
+  Result := Boolean(Windows.ShowWindow(hWnd, nCmdShow));
+end;
+
+{------------------------------------------------------------------------------
+  Method:  StretchBlt
+  Params:  DestDC              - The destination device context
+           X, Y                - The left/top corner of the destination rectangle
+           Width, Height       - The size of the destination rectangle
+           SrcDC               - The source device context
+           XSrc, YSrc          - The left/top corner of the source rectangle
+           SrcWidth, SrcHeight - The size of the source rectangle
+           Rop                 - The raster operation to be performed
+  Returns: True if succesful
+
+  The StretchBlt function copies a bitmap from a source rectangle into a
+  destination rectangle using the specified raster operation. If needed it
+  resizes the bitmap to fit the dimensions of the destination rectangle.
+  Sizing is done according to the stretching mode currently set in the
+  destination device context.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.StretchBlt(DestDC: HDC; X, Y, Width, Height: Integer; SrcDC: HDC; XSrc, YSrc, SrcWidth, SrcHeight: Integer; Rop: Cardinal): Boolean;
+Begin
+  Assert(True, Format('Trace:> [TWinCEWidgetSet.StretchBlt] DestDC:0x%x; X:%d, Y:%d, Width:%d, Height:%d; SrcDC:0x%x; XSrc:%d, YSrc:%d, SrcWidth:%d, SrcHeight:%d; Rop:0x%x', [DestDC, X, Y, Width, Height, SrcDC, XSrc, YSrc, SrcWidth, SrcHeight, Rop]));
+  Result := Boolean(Windows.StretchBlt(DestDc, X, Y, Width, Height, SrcDC, XSrc, YSrc, SrcWidth, SrcHeight, Rop));
+//  Assert(True, Format('Trace:< [TWinCEWidgetSet.StretchBlt] DestDC:0x%x --> %s', [DestDC, BOOL_TEXT[Result]]));
+End;
+
+{------------------------------------------------------------------------------
+  Method:  StretchMaskBlt
+  Params:  DestDC:                The destination devicecontext
+           X, Y:                  The left/top corner of the destination rectangle
+           Width, Height:         The size of the destination rectangle
+           SrcDC:                 The source devicecontext
+           XSrc, YSrc:            The left/top corner of the source rectangle
+           SrcWidth, SrcHeight:   The size of the source rectangle
+           Mask:                  The handle of a monochrome bitmap
+           XMask, YMask:          The left/top corner of the mask rectangle
+           Rop:                   The raster operation to be performed
+  Returns: True if succesful
+
+  The StretchMaskBlt function copies a bitmap from a source rectangle into a
+  destination rectangle using the specified mask and raster operations. If
+  needed it resizes the bitmap to fit the dimensions of the destination
+  rectangle.  Sizing is done according to the stretching mode currently set in
+  the destination device context.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.StretchMaskBlt(DestDC: HDC; X, Y, Width, Height: Integer; SrcDC: HDC; XSrc, YSrc, SrcWidth, SrcHeight: Integer; Mask: HBITMAP; XMask, YMask: Integer; Rop: DWORD): Boolean;
+Var
+  MaskDC: HDC;
+  SaveObj: HGDIOBJ;
+  PrevTextColor, PrevBkColor: COLORREF;
+Begin
+  if Mask = 0 then
+  begin
+    if (Width = SrcWidth) and (Height = SrcHeight) then
+    begin
+      Result := Windows.BitBlt(DestDC, X, Y, Width, Height, SrcDC, XSrc, YSrc, SRCCOPY);
+    end else begin
+      Result := Windows.StretchBlt(DestDC, X, Y, Width, Height, SrcDC, XSrc, YSrc, SrcWidth, SrcHeight, SRCCOPY);
+    end;
+  end else begin
+    MaskDC := Windows.CreateCompatibleDC(0);
+    SaveObj := Windows.SelectObject(MaskDC, Mask);
+    PrevTextColor := Windows.SetTextColor(DestDC, RGB(255,255,255));
+    PrevBkColor := Windows.SetBkColor(DestDC, RGB(0,0,0));
+    if (Width = SrcWidth) and (Height = SrcHeight) then
+    begin
+      Windows.BitBlt(DestDC, X, Y, Width, Height, SrcDC,  XSrc, YSrc, SRCINVERT);
+      Windows.BitBlt(DestDC, X, Y, Width, Height, MaskDC, XSrc, YSrc, SRCAND);
+      Windows.BitBlt(DestDC, X, Y, Width, Height, SrcDC,  XSrc, YSrc, SRCINVERT);
+    end else begin
+      Windows.StretchBlt(DestDC, X, Y, Width, Height, SrcDC,  XSrc, YSrc, SrcWidth, SrcHeight, SRCINVERT);
+      Windows.StretchBlt(DestDC, X, Y, Width, Height, MaskDC, XSrc, YSrc, SrcWidth, SrcHeight, SRCAND);
+      Windows.StretchBlt(DestDC, X, Y, Width, Height, SrcDC,  XSrc, YSrc, SrcWidth, SrcHeight, SRCINVERT);
+    end;
+    Windows.SetTextColor(DestDC, PrevTextColor);
+    Windows.SetBkColor(DestDC, PrevBkColor);
+    Windows.SelectObject(MaskDC, SaveObj);
+    Windows.DeleteDC(MaskDC);
+  end;
+  Result := true;
+end;
+
+
+{------------------------------------------------------------------------------
+  Method:  TextOut
+  Params: DC    - handle of device context
+          X     - x-coordinate of starting position
+          Y     - y-coordinate of starting position
+          Str   - string
+          Count - number of characters in string
+  Returns: If the function succeeds
+
+  Writes a character string at the specified location, using the currently
+  selected font.
+ ------------------------------------------------------------------------------}
+
+Function TWinCEWidgetSet.TextOut(DC: HDC; X, Y: Integer; Str: PChar; Count: Integer): Boolean;
+Begin
+   Result := false;
+//  Result := Boolean(Windows.ExtTextOut(DC, X, Y, Str, Count));
+//  Result := Boolean(Windows.TextOut(DC, X, Y, Str, Count));
+End;
+
+{------------------------------------------------------------------------------
+  Method:  WindowFromPoint
+  Params: Point: Specifies the x and y Coords
+  Returns: The handle of the window.
+
+  Retrieves the handle of the window that contains the specified point.
+ ------------------------------------------------------------------------------}
+Function TWinCEWidgetSet.WindowFromPoint(Point: TPoint): HWND;
+Var
+  ProcessID: DWORD;
+Begin
+  Result := Windows.WindowFromPoint(Windows.POINT(Point));
+  // check if window created by this process
+//  Windows.GetWindowThreadProcessId(Result, @ProcessID);
+//  if ProcessID <> Windows.GetCurrentProcessID then
+//    Result := 0;
+End;
+
+{function TWinCEWidgetSet.VkKeyScan(AChar: Char): Short;
+begin
+  Result:=inherited VkKeyScan(AChar);
+end;
+}
+
+
+{------------------------------------------------------------------------------
+  Method:  CallDefaultWndHandler
+  Params:  Sender - object, that sent the message
+           Message - a TLMessage
+  Returns: -
+
+  Called by TWinControl.DefaultHandler to let the interface call some default
+  functions for the message.
+ ------------------------------------------------------------------------------}
+Procedure TWinCEWidgetSet.CallDefaultWndHandler(Sender: TObject; var Message);
+var
+  Handle: HWND;
+
+  procedure CallWinCEPaintHandler;
+  var
+    ClientBoundRect: TRect;
+    PaintMsg: TLMPaint absolute Message;
+  begin
+    // the LCL creates paint messages, with a DC origin set to the client
+    // origin of the emitting control. The paint handler of win32 expects the
+    // DC origin at the origin of the control.
+    // -> move the windoworigin
+    ClientBoundRect:= Classes.Rect(0,0,0,0);
+    if Sender is TWinControl then
+      if not GetClientBounds(Handle,ClientBoundRect) then exit;
+    MoveWindowOrgEx(PaintMsg.DC,-ClientBoundRect.Left,-ClientBoundRect.Top);
+    try
+      // call wince paint handler
+      CallDefaultWindowProc(Handle, WM_PAINT, PaintMsg.DC, 0);
+    finally
+      // restore DC origin
+      MoveWindowOrgEx(PaintMsg.DC, ClientBoundRect.Left, ClientBoundRect.Top);
+    end;
+  end;
+
+  procedure CallMouseWheelHandler;
+  var
+    ScrollInfo: Windows.tagScrollInfo;
+    WParam: Windows.WParam;
+    ScrollMsg, ScrollBar: dword;
+  begin
+    if not TWinControl(Sender).HandleAllocated then
+      exit;
+
+    // send scroll message
+    FillChar(ScrollInfo, sizeof(ScrollInfo), #0);
+    ScrollInfo.cbSize := sizeof(ScrollInfo);
+    ScrollInfo.fMask := SIF_PAGE or SIF_POS or SIF_RANGE;
+    // if mouse is over horizontal scrollbar, scroll horizontally
+    WParam := (TLMMouseEvent(Message).X and $FFFF) or ((TLMMouseEvent(Message).Y and $FFFF) shl 16);
+    if Windows.SendMessage(Handle, WM_NCHITTEST, 0, WParam) = HTHSCROLL then
+    begin
+      ScrollBar := SB_HORZ;
+      ScrollMsg := WM_HSCROLL;
+    end else begin
+      ScrollBar := SB_VERT;
+      ScrollMsg := WM_VSCROLL;
+    end;
+    if Windows.GetScrollInfo(Handle, ScrollBar, @ScrollInfo) then
+    begin
+      with TLMMouseEvent(Message) do
+      begin
+        WParam := Windows.WParam(ScrollInfo.nPos - (WheelDelta * Integer(ScrollInfo.nPage) * 4) div (120 * 10));
+        if WParam > ScrollInfo.nMax - integer(ScrollInfo.nPage) + 1 then
+          WParam := ScrollInfo.nMax - integer(ScrollInfo.nPage) + 1;
+        if WParam < ScrollInfo.nMin then
+          WParam := ScrollInfo.nMin;
+        WParam := SB_THUMBPOSITION or (WParam shl 16);
+      end;
+      Windows.PostMessage(Handle, ScrollMsg, WParam, HWND(nil));
+    end;
+  end;
+{
+  procedure DrawCheckListBoxItem(CheckListBox: TCheckListBox; Data: PDrawItemStruct);
+  var
+    Selected: Boolean;
+    lgBrush: LOGBRUSH;
+    Brush: HBRUSH;
+    Rect: Windows.Rect;
+    Flags: Cardinal;
+    OldColor: COLORREF;
+    OldBackColor: COLORREF;
+
+  begin
+    Selected := (Data^.itemState AND ODS_SELECTED)>0;
+
+    // fill the background
+    if Selected then
+      lgBrush.lbColor := Windows.GetSysColor(COLOR_HIGHLIGHT)
+    else
+      lgBrush.lbColor := Windows.GetSysColor(COLOR_WINDOW);
+    lgBrush.lbStyle := BS_SOLID;
+    Brush := CreateBrushIndirect(lgBrush);
+    Windows.FillRect(Data^._HDC, Windows.Rect(Data^.rcItem), Brush);
+    DeleteObject(Brush);
+
+    // draw checkbox
+    Flags := DFCS_BUTTONCHECK;
+    if CheckListBox.Checked[Data^.ItemID] then
+      Flags := Flags or DFCS_CHECKED;
+    Rect.Left := Data^.rcItem.Left + 2;
+    Rect.Top := Data^.rcItem.Top + 2;
+    Rect.Bottom := Data^.rcItem.Bottom - 2;
+    Rect.Right := Rect.Left + Rect.Bottom - Rect.Top;
+    Windows.DrawFrameControl(Data^._HDC, Rect, DFC_BUTTON, Flags);
+
+    // draw text
+    Rect := Windows.Rect(Data^.rcItem);
+    Rect.Right := Data^.rcItem.Right;
+    Rect.Left := Rect.Bottom-Rect.Top + 5;
+    if Selected then begin
+      OldColor := Windows.SetTextColor(Data^._HDC, Windows.GetSysColor(COLOR_HIGHLIGHTTEXT));
+      OldBackColor := Windows.SetBkColor(Data^._HDC, Windows.GetSysColor(COLOR_HIGHLIGHT));
+    end;
+    Windows.DrawText(Data^._HDC, PChar(CheckListBox.Items[Data^.ItemID]), -1,
+      Rect, DT_SINGLELINE or DT_VCENTER or DT_NOPREFIX);
+    if Selected then begin
+      Windows.SetTextColor(Data^._HDC, OldColor);
+      Windows.SetBkColor(Data^._HDC, OldBackColor);
+    end;
+  end;
+}
+begin
+  Handle := ObjectToHwnd(Sender);
+  case TLMessage(Message).Msg of
+
+    LM_PAINT:
+      CallWinCEPaintHandler;
+ {
+    LM_DRAWITEM:
+    begin
+      with TLMDrawItems(Message) do
+      begin
+        if Sender is TCheckListBox then
+        begin
+          // ItemID not UINT(-1)
+          if DrawItemStruct^.ItemID <> DWORD($FFFFFFFF) then
+            DrawCheckListBoxItem(TCheckListBox(Sender), DrawItemStruct);
+        end;
+      end;
+    end;
+
+    LM_MEASUREITEM:
+    begin
+      with TLMMeasureItem(Message).MeasureItemStruct^ do
+      begin
+        if Sender is TCustomListBox then
+        begin
+          itemHeight := TCustomListBox(Sender).ItemHeight;
+          if TCustomListBox(Sender).Style = lbOwnerDrawVariable then
+            TCustomListBox(Sender).MeasureItem(itemID, integer(itemHeight));
+        end;
+      end;
+    end;
+}
+    //roozbeh:is this usefull in wince?
+    LM_MOUSEWHEEL:
+    begin
+      // provide default wheel scrolling functionality
+      CallMouseWheelHandler;
+    end;
+
+    LM_GETDLGCODE:
+    begin
+      TLMessage(Message).Result := CallDefaultWindowProc(Handle, WM_GETDLGCODE, 0, 0);
+    end;
+
+  else
+    if TLMessage(Message).Msg >= WM_USER then
+    with TLMessage(Message) do
+      Result := CallDefaultWindowProc(Handle, Msg, WParam, LParam);
+  end;
+end;
+
+
+
+//##apiwiz##epi##   // Do not remove

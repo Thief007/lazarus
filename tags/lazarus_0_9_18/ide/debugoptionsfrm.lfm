@@ -1,0 +1,480 @@
+object DebuggerOptionsForm: TDebuggerOptionsForm
+  Left = 410
+  Height = 443
+  Top = 196
+  Width = 482
+  HorzScrollBar.Page = 481
+  VertScrollBar.Page = 442
+  ActiveControl = cmbDebuggerType
+  BorderIcons = [biSystemMenu]
+  Caption = 'Debugger Options'
+  OnCreate = DebuggerOptionsFormCREATE
+  OnDestroy = DebuggerOptionsFormDESTROY
+  Position = poScreenCenter
+  object nbDebugOptions: TNotebook
+    AnchorSideBottom.Control = cmdOK
+    Left = 6
+    Height = 397
+    Top = 6
+    Width = 470
+    Align = alTop
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Around = 6
+    PageIndex = 3
+    object pgGeneral: TPage
+      Caption = 'Page1'
+      object gbDebuggerType: TGroupBox
+        Left = 6
+        Height = 90
+        Top = 6
+        Width = 454
+        Align = alTop
+        BorderSpacing.Around = 6
+        Caption = 'Debugger type and path'
+        ParentCtl3D = False
+        TabOrder = 0
+        object cmbDebuggerType: TComboBox
+          Left = 6
+          Height = 21
+          Top = 8
+          Width = 433
+          Anchors = [akTop, akLeft, akRight]
+          AutoCompleteText = [cbactEndOfLineComplete, cbactSearchAscending]
+          MaxLength = 0
+          OnChange = cmbDebuggerTypeCHANGE
+          ParentCtl3D = False
+          TabOrder = 0
+        end
+        object cmbDebuggerPath: TComboBox
+          Left = 6
+          Height = 21
+          Top = 40
+          Width = 408
+          Anchors = [akTop, akLeft, akRight]
+          AutoCompleteText = [cbactEndOfLineComplete, cbactSearchAscending]
+          MaxLength = 0
+          ParentCtl3D = False
+          TabOrder = 1
+        end
+        object cmdOpenDebuggerPath: TButton
+          Left = 416
+          Height = 25
+          Top = 37
+          Width = 23
+          Anchors = [akTop, akRight]
+          BorderSpacing.InnerBorder = 4
+          Caption = '...'
+          OnClick = cmdOpenDebuggerPathCLICK
+          TabOrder = 2
+        end
+      end
+      object gbAdditionalSearchPath: TGroupBox
+        Left = 6
+        Height = 56
+        Top = 102
+        Width = 454
+        Align = alTop
+        BorderSpacing.Around = 6
+        Caption = 'Additional search path'
+        ParentCtl3D = False
+        TabOrder = 1
+        object txtAdditionalPath: TEdit
+          Left = 6
+          Height = 25
+          Top = 5
+          Width = 406
+          Anchors = [akTop, akLeft, akRight]
+          TabOrder = 0
+        end
+        object cmdOpenAdditionalPath: TButton
+          Left = 416
+          Height = 24
+          Top = 5
+          Width = 23
+          Anchors = [akTop, akRight]
+          BorderSpacing.InnerBorder = 4
+          Caption = '...'
+          OnClick = cmdOpenAdditionalPathClick
+          TabOrder = 1
+        end
+      end
+      object gbDebuggerSpecific: TGroupBox
+        Left = 6
+        Height = 135
+        Top = 226
+        Width = 454
+        Align = alClient
+        BorderSpacing.Around = 6
+        Caption = 'Debugger specific options (depends on type of debugger)'
+        ParentCtl3D = False
+        TabOrder = 2
+        object pnlDebugSpecific: TPanel
+          Left = 6
+          Height = 106
+          Top = 6
+          Width = 438
+          Align = alClient
+          BorderSpacing.Around = 6
+          BevelOuter = bvNone
+          BorderWidth = 4
+          FullRepaint = False
+          TabOrder = 0
+          TabStop = True
+        end
+      end
+      object gcbDebuggerGeneralOptions: TCheckGroup
+        Left = 6
+        Height = 56
+        Top = 164
+        Width = 454
+        Align = alTop
+        AutoFill = True
+        BorderSpacing.Around = 6
+        Caption = 'Debugger general options'
+        ChildSizing.LeftRightSpacing = 6
+        ChildSizing.TopBottomSpacing = 6
+        ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+        ChildSizing.EnlargeVertical = crsHomogenousChildResize
+        ChildSizing.ShrinkHorizontal = crsScaleChilds
+        ChildSizing.ShrinkVertical = crsScaleChilds
+        ChildSizing.Layout = cclLeftToRightThenTopToBottom
+        ChildSizing.ControlsPerLine = 1
+        TabOrder = 3
+      end
+    end
+    object pgEventLog: TPage
+      Caption = 'Page2'
+      object gbGeneral: TGroupBox
+        Left = 6
+        Height = 132
+        Top = 6
+        Width = 454
+        Align = alTop
+        BorderSpacing.Around = 6
+        Caption = 'General'
+        ParentCtl3D = False
+        TabOrder = 0
+        object chkClearLogOnRun: TCheckBox
+          Left = 4
+          Height = 24
+          Top = 5
+          Width = 118
+          AllowGrayed = True
+          Caption = 'Clear log on run'
+          TabOrder = 0
+        end
+        object chkLimitLinecount: TCheckBox
+          Left = 4
+          Height = 24
+          Top = 29
+          Width = 121
+          AllowGrayed = True
+          Caption = 'Limit linecount to'
+          TabOrder = 1
+        end
+        object seLimitLinecount: TSpinEdit
+          Left = 46
+          Height = 20
+          Top = 54
+          Width = 82
+          Enabled = False
+          TabOrder = 2
+        end
+      end
+      object gbMessages: TGroupBox
+        Left = 6
+        Height = 217
+        Top = 144
+        Width = 454
+        Align = alClient
+        BorderSpacing.Around = 6
+        Caption = 'Messages'
+        Enabled = False
+        ParentCtl3D = False
+        TabOrder = 1
+        object chkMessagesBreakpoint: TCheckBox
+          Left = 4
+          Height = 24
+          Top = 5
+          Width = 86
+          AllowGrayed = True
+          Caption = 'Breakpoint'
+          TabOrder = 0
+        end
+        object chkMessagesProcess: TCheckBox
+          Left = 4
+          Height = 24
+          Top = 29
+          Width = 72
+          AllowGrayed = True
+          Caption = 'Process'
+          TabOrder = 1
+        end
+        object chkMessagesThread: TCheckBox
+          Left = 4
+          Height = 24
+          Top = 53
+          Width = 66
+          AllowGrayed = True
+          Caption = 'Thread'
+          TabOrder = 2
+        end
+        object chkMessagesModule: TCheckBox
+          Left = 4
+          Height = 24
+          Top = 77
+          Width = 69
+          AllowGrayed = True
+          Caption = 'Module'
+          TabOrder = 3
+        end
+        object chkMessagesOutput: TCheckBox
+          Left = 4
+          Height = 24
+          Top = 101
+          Width = 64
+          AllowGrayed = True
+          Caption = 'Output'
+          TabOrder = 4
+        end
+        object chkMessagesWindow: TCheckBox
+          Left = 4
+          Height = 24
+          Top = 125
+          Width = 71
+          AllowGrayed = True
+          Caption = 'Window'
+          TabOrder = 5
+        end
+        object chkMessagesInterface: TCheckBox
+          Left = 4
+          Height = 24
+          Top = 149
+          Width = 75
+          AllowGrayed = True
+          Caption = 'Interface'
+          TabOrder = 6
+        end
+      end
+    end
+    object pgExceptions: TPage
+      Caption = 'Page3'
+      object bgIgnoreExceptions: TGroupBox
+        Left = 6
+        Height = 325
+        Top = 6
+        Width = 454
+        Align = alClient
+        BorderSpacing.Around = 6
+        Caption = 'Ignore these exceptions'
+        ParentCtl3D = False
+        TabOrder = 0
+        object cmdExceptionRemove: TButton
+          AnchorSideRight.Control = bgIgnoreExceptions
+          AnchorSideRight.Side = asrBottom
+          AnchorSideBottom.Control = bgIgnoreExceptions
+          AnchorSideBottom.Side = asrBottom
+          Left = 393
+          Height = 26
+          Top = 293
+          Width = 55
+          Anchors = [akRight, akBottom]
+          AutoSize = True
+          BorderSpacing.Around = 6
+          BorderSpacing.InnerBorder = 4
+          Caption = 'Remove'
+          Enabled = False
+          OnClick = cmdExceptionRemoveCLICK
+          TabOrder = 0
+        end
+        object cmdExceptionAdd: TButton
+          AnchorSideRight.Control = cmdExceptionRemove
+          AnchorSideBottom.Control = bgIgnoreExceptions
+          AnchorSideBottom.Side = asrBottom
+          Left = 354
+          Height = 26
+          Top = 293
+          Width = 33
+          Anchors = [akRight, akBottom]
+          AutoSize = True
+          BorderSpacing.Around = 6
+          BorderSpacing.InnerBorder = 4
+          Caption = 'Add'
+          OnClick = cmdExceptionAddCLICK
+          TabOrder = 1
+        end
+        object clbExceptions: TCheckListBox
+          AnchorSideRight.Side = asrBottom
+          AnchorSideBottom.Control = cmdExceptionAdd
+          Left = 6
+          Height = 281
+          Top = 6
+          Width = 442
+          Align = alTop
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          BorderSpacing.Around = 6
+          OnClick = clbExceptionsCLICK
+          TabOrder = 2
+          TopIndex = -1
+        end
+      end
+      object chkBreakOnException: TCheckBox
+        Left = 6
+        Height = 24
+        Top = 337
+        Width = 454
+        Align = alBottom
+        AllowGrayed = True
+        Anchors = [akLeft, akBottom]
+        BorderSpacing.Around = 6
+        Caption = 'Break on Lazarus Exceptions'
+        TabOrder = 1
+      end
+    end
+    object pgSignals: TPage
+      Caption = 'Page4'
+      object gbSignals: TGroupBox
+        Left = 6
+        Height = 355
+        Top = 6
+        Width = 454
+        Align = alClient
+        BorderSpacing.Around = 6
+        Caption = 'Signals'
+        ParentCtl3D = False
+        TabOrder = 0
+        object cmdSignalRemove: TButton
+          AnchorSideRight.Control = gbSignals
+          AnchorSideRight.Side = asrBottom
+          AnchorSideBottom.Control = gbSignals
+          AnchorSideBottom.Side = asrBottom
+          Left = 385
+          Height = 26
+          Top = 306
+          Width = 59
+          Anchors = [akRight, akBottom]
+          AutoSize = True
+          BorderSpacing.Around = 6
+          BorderSpacing.InnerBorder = 4
+          Caption = 'Remove'
+          Enabled = False
+          TabOrder = 0
+        end
+        object cmdSignalAdd: TButton
+          AnchorSideRight.Control = cmdSignalRemove
+          AnchorSideBottom.Control = gbSignals
+          AnchorSideBottom.Side = asrBottom
+          Left = 342
+          Height = 26
+          Top = 306
+          Width = 37
+          Anchors = [akRight, akBottom]
+          AutoSize = True
+          BorderSpacing.Around = 6
+          BorderSpacing.InnerBorder = 4
+          Caption = 'Add'
+          TabOrder = 1
+        end
+        object lvSignals: TListView
+          AnchorSideBottom.Control = cmdSignalAdd
+          Left = 6
+          Height = 294
+          Top = 6
+          Width = 438
+          Align = alTop
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          BorderSpacing.Around = 6
+          Columns = <          
+            item
+              Caption = 'Name'
+              Width = 200
+            end          
+            item
+              Caption = 'ID'
+            end          
+            item
+              Caption = 'Handled by'
+              Width = 75
+            end          
+            item
+              Caption = 'Resume'
+              Width = 5
+            end>
+          PopupMenu = popSignal
+          TabOrder = 2
+          ViewStyle = vsReport
+        end
+      end
+    end
+  end
+  object cmdOK: TBitBtn
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 421
+    Height = 28
+    Top = 409
+    Width = 55
+    Anchors = [akRight, akBottom]
+    AutoSize = True
+    BorderSpacing.Around = 6
+    Caption = '&OK'
+    Constraints.MaxHeight = 29
+    Kind = bkOK
+    ModalResult = 1
+    NumGlyphs = 0
+    OnClick = cmdOKCLICK
+    TabOrder = 1
+  end
+  object cmdCancel: TBitBtn
+    AnchorSideRight.Control = cmdOK
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 338
+    Height = 28
+    Top = 409
+    Width = 77
+    Anchors = [akRight, akBottom]
+    AutoSize = True
+    BorderSpacing.Around = 6
+    Cancel = True
+    Caption = 'Cancel'
+    Constraints.MaxHeight = 29
+    Kind = bkCancel
+    ModalResult = 2
+    NumGlyphs = 0
+    TabOrder = 2
+  end
+  object popSignal: TPopupMenu
+    left = 8
+    top = 448
+    object mnuHandledByProgram: TMenuItem
+      AutoCheck = True
+      Caption = 'Handled by Program'
+      GroupIndex = 1
+      RadioItem = True
+    end
+    object mnuiHandledByDebugger: TMenuItem
+      AutoCheck = True
+      Caption = 'Handled by Debugger'
+      GroupIndex = 1
+      RadioItem = True
+    end
+    object N1: TMenuItem
+      Caption = '-'
+    end
+    object mnuResumeHandled: TMenuItem
+      AutoCheck = True
+      Caption = 'Resume Handled'
+      GroupIndex = 2
+      RadioItem = True
+    end
+    object mnuResumeUnhandled: TMenuItem
+      AutoCheck = True
+      Caption = 'Resume Unhandled'
+      GroupIndex = 2
+      RadioItem = True
+    end
+  end
+end

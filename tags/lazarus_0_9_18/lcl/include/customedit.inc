@@ -1,0 +1,396 @@
+{%MainUnit ../stdctrls.pp}
+
+{******************************************************************************
+                                     TEdit
+ ******************************************************************************
+
+ *****************************************************************************
+ *                                                                           *
+ *  This file is part of the Lazarus Component Library (LCL)                 *
+ *                                                                           *
+ *  See the file COPYING.modifiedLGPL, included in this distribution,        *
+ *  for details about the copyright.                                         *
+ *                                                                           *
+ *  This program is distributed in the hope that it will be useful,          *
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of           *
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.                     *
+ *                                                                           *
+ *****************************************************************************
+}
+
+procedure TCustomEdit.CalculatePreferredSize(var PreferredWidth,
+  PreferredHeight: integer; WithThemeSpace: Boolean);
+begin
+  inherited CalculatePreferredSize(PreferredWidth,PreferredHeight,WithThemeSpace);
+  // ignore width
+  PreferredWidth:=0;
+end;
+
+procedure TCustomEdit.CreateWnd;
+begin
+  inherited CreateWnd;
+  TWSCustomEditClass(WidgetSetClass).SetCharCase(Self, FCharCase);
+  TWSCustomEditClass(WidgetSetClass).SetEchoMode(Self, FEchoMode);
+  TWSCustomEditClass(WidgetSetClass).SetMaxLength(Self, FMaxLength);
+  TWSCustomEditClass(WidgetSetClass).SetPasswordChar(Self, FPasswordChar);
+  TWSCustomEditClass(WidgetSetClass).SetReadOnly(Self, FReadOnly);
+end;
+
+{------------------------------------------------------------------------------
+  Method:  TCustomEdit.Create
+  Params:  none
+  Returns: Nothing
+
+  Constructor for the class.
+ ------------------------------------------------------------------------------}
+constructor TCustomEdit.Create(AOwner : TComponent);
+begin
+  inherited Create(AOwner);
+  //FCompStyle is set here because TEdit inherits from this.
+  //TCustomMemo also inherits from here but it's create changes fcompstyle to csMemo
+  FCompStyle := csEdit;
+  FMaxLength:= -1;
+  ParentColor := false;
+  TabStop := true;
+  SetInitialBounds(0,0,80,23);
+  FEchoMode := emNormal;
+  BorderStyle := bsSingle;
+end;
+
+{------------------------------------------------------------------------------
+  Method: TCustomEdit.Clear
+  Params: ---
+  Returns: nothing
+
+  Clear the text.
+ ------------------------------------------------------------------------------}
+procedure TCustomEdit.Clear;
+begin
+  Text := '';
+end;
+
+{------------------------------------------------------------------------------
+  Method: TCustomEdit.GetSelText
+  Params: ---
+  Returns: selected text
+
+  Returns the selected part of text-field.
+ ------------------------------------------------------------------------------}
+function TCustomEdit.GetSelText : string;
+begin
+  Result:= Copy(Text, SelStart + 1, SelLength)
+end;
+
+{------------------------------------------------------------------------------
+  Method: TCustomEdit.SetSelText
+  Params: val - new string for text-field
+  Returns: nothings
+
+  Replace the selected part of text-field with "val".
+ ------------------------------------------------------------------------------}
+procedure TCustomEdit.SetSelText(const Val : string);
+var
+  OldText, NewText: string;
+  OldPos: Integer;
+begin
+  OldPos := SelStart;
+  OldText:=Text;
+  NewText:=LeftStr(OldText,SelStart)+Val
+             +RightStr(OldText,length(OldText)-SelStart-SelLength);
+  Text:=NewText;
+  SelStart := OldPos + Length(Val);
+end;
+
+{------------------------------------------------------------------------------
+  Method: TCustomEdit.GetSelStart
+  Params: ---
+  Returns: starting index of selected text
+
+  Returns starting index of selected text
+ ------------------------------------------------------------------------------}
+function TCustomEdit.GetSelStart : integer;
+begin
+  if HandleAllocated then
+    FSelStart:= TWSCustomEditClass(WidgetSetClass).GetSelStart(Self);
+  Result:= FSelStart;
+end;
+
+{------------------------------------------------------------------------------
+  Method: TCustomEdit.SetSelStart
+  Params: val -
+  Returns: nothing
+
+  Sets starting index for selected text.
+ ------------------------------------------------------------------------------}
+procedure TCustomEdit.SetSelStart(Val : integer);
+begin
+  FSelStart:= Val;
+  if HandleAllocated then
+    TWSCustomEditClass(WidgetSetClass).SetSelStart(Self, Val);
+end;
+
+{------------------------------------------------------------------------------
+  Method: TCustomEdit.GetSelLength
+  Params: ---
+  Returns: length of selected text
+
+  Returns length of selected text
+ ------------------------------------------------------------------------------}
+function TCustomEdit.GetSelLength : integer;
+begin
+  if HandleAllocated then
+    FSelLength := TWSCustomEditClass(WidgetSetClass).GetSelLength(Self);
+  Result:= FSelLength;
+end;
+
+{------------------------------------------------------------------------------
+  Method: TCustomEdit.SetSelLength
+  Params: val -
+  Returns: nothing
+
+  Sets length of selected text.
+ ------------------------------------------------------------------------------}
+procedure TCustomEdit.SetSelLength(Val : integer);
+begin
+  if Val<0 then Val:=0;
+  FSelLength := Val;
+  if HandleAllocated then
+    TWSCustomEditClass(WidgetSetClass).SetSelLength(Self, Val);
+end;
+
+{------------------------------------------------------------------------------
+  Method: TCustomEdit.SelectAll
+  Params: -
+  Returns: nothing
+
+  Select entire text.
+ ------------------------------------------------------------------------------}
+procedure TCustomEdit.SelectAll;
+begin
+  if Text <> '' then begin
+    SetSelStart(0);
+    SetSelLength(Length(Text));
+  end;
+end;
+
+{------------------------------------------------------------------------------
+  Method: TCustomEdit.ClearSelection
+  Params: -
+  Returns: nothing
+
+  Delete selected text.
+ ------------------------------------------------------------------------------}
+procedure TCustomEdit.ClearSelection;
+begin
+  if SelLength > 0 then
+    SelText := '';
+end;
+
+{------------------------------------------------------------------------------
+  Method: TCustomEdit.ClearSelection
+  Params: -
+  Returns: nothing
+
+  Copy selected text to clipboard.
+ ------------------------------------------------------------------------------}
+procedure TCustomEdit.CopyToClipboard;
+begin
+  if (EchoMode = emNormal) and (SelLength > 0) then
+    Clipboard.AsText := SelText;
+end;
+
+{------------------------------------------------------------------------------
+  Method: TCustomEdit.ClearSelection
+  Params: -
+  Returns: nothing
+
+  Move selected text to clipboard.
+ ------------------------------------------------------------------------------}
+procedure TCustomEdit.CutToClipboard;
+begin
+  CopyToClipboard;
+  ClearSelection;
+end;
+
+procedure TCustomEdit.PasteFromClipboard;
+begin
+  if Clipboard.HasFormat(CF_TEXT) then
+    SelText := Clipboard.AsText;
+end;
+
+{------------------------------------------------------------------------------
+  Method:  TCustomEdit.GetModified
+  Params:  none
+  Returns: FModified
+ ------------------------------------------------------------------------------}
+Function TCustomEdit.GetModified : Boolean;
+Begin
+  Result := FModified;
+End;
+
+{------------------------------------------------------------------------------
+  Method:  TCustomEdit.SetCharCase
+  Params:  Value to set FCharCase to
+  Returns: Nothing
+ ------------------------------------------------------------------------------}
+Procedure TCustomEdit.SetCharCase(Value : TEditCharCase);
+Begin
+  if FCharCase <> value then
+  Begin
+    FCharCase := Value;
+    // update interface, it might do the case conversion itself.
+    if HandleAllocated then
+      TWSCustomEditClass(WidgetSetClass).SetCharCase(Self, Value);
+    if FCharCase = ecUpperCase then
+      Text := Uppercase(Text)
+    else if FCharCase = ecLowerCase then
+      Text := Lowercase(Text);
+  end;
+End;
+
+{------------------------------------------------------------------------------
+  Method:  TCustomEdit.SetMaxLength
+  Params:  Value to set FMaxLength to
+  Returns: Nothing
+ ------------------------------------------------------------------------------}
+procedure TCustomEdit.SetMaxLength(Value : Integer);
+begin
+  if Value=MaxLength then exit;
+  FMaxLength := Value;
+  if HandleAllocated then
+    TWSCustomEditClass(WidgetSetClass).SetMaxLength(Self, Value);
+end;
+
+{------------------------------------------------------------------------------
+  Method:  TCustomEdit.SetModified
+  Params:  Value to set FModified to
+  Returns: Nothing
+ ------------------------------------------------------------------------------}
+procedure TCustomEdit.SetModified(Value : Boolean);
+begin
+  FModified := Value;
+end;
+
+procedure TCustomEdit.SetPasswordChar(const AValue: Char);
+begin
+  if FPasswordChar=AValue then exit;
+  FPasswordChar:=AValue;
+  if HandleAllocated then
+    TWSCustomEditClass(WidgetSetClass).SetPasswordChar(Self, AValue);
+end;
+
+{------------------------------------------------------------------------------
+  Method:  TCustomEdit.SetEchoMode
+  Params:  Value to set FModified to
+  Returns: Nothing
+ ------------------------------------------------------------------------------}
+procedure TCustomEdit.SetEchoMode(Val : TEchoMode);
+begin
+  if (Val <> FEchoMode) then begin
+    FEchoMode:= Val;
+    if HandleAllocated then
+      TWSCustomEditClass(WidgetSetClass).SetEchoMode(Self, Val);
+  end;
+end;
+
+{------------------------------------------------------------------------------
+  Method:  TCustomEdit.SetReadOnly
+  Params:  Value to set FReadOnly to
+  Returns: Nothing
+ ------------------------------------------------------------------------------}
+procedure TCustomEdit.SetReadOnly(Value : Boolean);
+begin
+  if FreadOnly <> Value then begin
+    FReadOnly := Value;
+    if HandleAllocated then
+      TWSCustomEditClass(WidgetSetClass).SetReadOnly(Self, Value);
+  end;
+end;
+
+{------------------------------------------------------------------------------
+  Method:  TCustomEdit.RealSetText
+  Params:  Override of text setup to watch for max length
+  Returns: Nothing
+ ------------------------------------------------------------------------------}
+procedure TCustomEdit.RealSetText(const Value: TCaption);
+begin
+  if (MaxLength > 0) and (Length(Value) > MaxLength) then
+    inherited RealSetText(Copy(Value, 1, MaxLength))
+  else
+    inherited RealSetText(Value);
+end;
+
+{------------------------------------------------------------------------------
+  function TCustomEdit.ChildClassAllowed(ChildClass: TClass): boolean;
+------------------------------------------------------------------------------}
+function TCustomEdit.ChildClassAllowed(ChildClass: TClass): boolean;
+begin
+  // no childs
+  Result:=false;
+end;
+
+procedure TCustomEdit.KeyUp(var Key: Word; Shift: TShiftState);
+begin
+  inherited KeyUp(Key, Shift);
+  if Key=VK_RETURN then EditingDone;
+end;
+
+procedure TCustomEdit.WMChar(var Message: TLMChar);
+begin
+  // all normal characters are handled by the Edit
+  //debugln('TCustomEdit.WMChar ',DbgSName(Self),' ',dbgs(Message.CharCode));
+  if (KeyDataToShiftState(Message.KeyData) * [ssCtrl, ssAlt] = [])
+      and (Message.CharCode in [ord('A')..ord('Z'),ord('a')..ord('z')]) then
+    // eat normal keys, so they don't trigger accelerators
+    Message.Result := 1
+  else
+    inherited WMChar(Message);
+end;
+
+{------------------------------------------------------------------------------
+  Method:  TCustomEdit.SetModified
+  Params:  Value to set FModified to
+  Returns: Nothing
+ ------------------------------------------------------------------------------}
+Procedure TCustomEdit.TextChanged;
+var
+  Temp : String;
+Begin
+  //debugln('TCustomEdit.TextChanged ',DbgSName(Self));
+  
+  //check to see if the charcase should affect the text.
+  if FCharCase = ecUppercase then
+  Begin
+    Temp := Uppercase(Text);
+    if Temp <> Text then Text := Temp;
+  end
+  else
+  if FCharCase = ecLowercase then
+  Begin
+    Temp := Lowercase(Text);
+    if Temp <> Text then Text := Temp;
+  end;
+
+  Modified := True;
+  if HandleAllocated then Change;
+End;
+
+Procedure TCustomEdit.Change;
+Begin
+  if Assigned(FOnChange) then FOnChange(Self);
+end;
+
+procedure TCustomEdit.InitializeWnd;
+var
+  ASelStart, ASelLength : integer;
+begin
+  inherited InitializeWnd;
+  if FSelStart <> FSelLength then begin
+    ASelStart:= FSelStart;
+    ASelLength:= FSelLength;
+    SelStart:= ASelStart;
+    SelLength:= ASelLength;
+  end;
+end;
+
+// included by stdctrls.pp

@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <Package Version="2">
+    <Name Value="Printer4Lazarus"/>
+    <Author Value="Olivier Guilbaud"/>
+    <CompilerOptions>
+      <Version Value="5"/>
+      <SearchPaths>
+        <IncludeFiles Value="$(TargetOS)/"/>
+        <OtherUnitFiles Value="unix/;win32/"/>
+        <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+      </SearchPaths>
+      <CodeGeneration>
+        <Generate Value="Faster"/>
+      </CodeGeneration>
+      <Other>
+        <CustomOptions Value="-dUseCache
+"/>
+        <CompilerPath Value="$(CompPath)"/>
+        <CreateMakefileOnBuild Value="True"/>
+      </Other>
+    </CompilerOptions>
+    <Description Value="Printer implementation for Lazarus
+"/>
+    <License Value="LGPL
+"/>
+    <Version Minor="5"/>
+    <Files Count="27">
+      <Item1>
+        <Filename Value="printersdlgs.lrs"/>
+        <Type Value="LRS"/>
+      </Item1>
+      <Item2>
+        <Filename Value="printersdlgs.pp"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="PrintersDlgs"/>
+      </Item2>
+      <Item3>
+        <Filename Value="osprinters.pas"/>
+        <UnitName Value="OSPrinters"/>
+      </Item3>
+      <Item4>
+        <Filename Value="readme.txt"/>
+        <Type Value="Text"/>
+      </Item4>
+      <Item5>
+        <Filename Value="unix/udlgselectprinter.lfm"/>
+        <Type Value="LFM"/>
+      </Item5>
+      <Item6>
+        <Filename Value="unix/udlgselectprinter.lrs"/>
+        <Type Value="LRS"/>
+      </Item6>
+      <Item7>
+        <Filename Value="unix/udlgselectprinter.pp"/>
+        <AddToUsesPkgSection Value="False"/>
+        <UnitName Value="uDlgSelectPrinter"/>
+      </Item7>
+      <Item8>
+        <Filename Value="unix/cupsdyn.pp"/>
+        <AddToUsesPkgSection Value="False"/>
+        <UnitName Value="cupsdyn"/>
+      </Item8>
+      <Item9>
+        <Filename Value="unix/cupsprinters.inc"/>
+        <Type Value="Include"/>
+      </Item9>
+      <Item10>
+        <Filename Value="unix/cupsprinters_h.inc"/>
+        <Type Value="Include"/>
+      </Item10>
+      <Item11>
+        <Filename Value="unix/jobsimglist.lrs"/>
+        <Type Value="LRS"/>
+      </Item11>
+      <Item12>
+        <Filename Value="unix/printerprop.lrs"/>
+        <Type Value="LRS"/>
+      </Item12>
+      <Item13>
+        <Filename Value="unix/selectprinter.lrs"/>
+        <Type Value="LRS"/>
+      </Item13>
+      <Item14>
+        <Filename Value="unix/udlgprintersjobs.lfm"/>
+        <Type Value="LFM"/>
+      </Item14>
+      <Item15>
+        <Filename Value="unix/udlgprintersjobs.lrs"/>
+        <Type Value="LRS"/>
+      </Item15>
+      <Item16>
+        <Filename Value="unix/udlgprintersjobs.pp"/>
+        <Type Value="Text"/>
+        <UnitName Value="udlgPrintersJobs"/>
+      </Item16>
+      <Item17>
+        <Filename Value="unix/udlgpropertiesprinter.lfm"/>
+        <Type Value="LFM"/>
+      </Item17>
+      <Item18>
+        <Filename Value="unix/udlgpropertiesprinter.lrs"/>
+        <Type Value="LRS"/>
+      </Item18>
+      <Item19>
+        <Filename Value="unix/udlgpropertiesprinter.pp"/>
+        <AddToUsesPkgSection Value="False"/>
+        <UnitName Value="uDlgPropertiesPrinter"/>
+      </Item19>
+      <Item20>
+        <Filename Value="unix/udlgselectprinter.lfm"/>
+        <Type Value="LFM"/>
+      </Item20>
+      <Item21>
+        <Filename Value="unix/udlgselectprinter.lrs"/>
+        <Type Value="LRS"/>
+      </Item21>
+      <Item22>
+        <Filename Value="win32/winprinters.inc"/>
+        <Type Value="Include"/>
+      </Item22>
+      <Item23>
+        <Filename Value="win32/winutilprnconst.inc"/>
+        <Type Value="Include"/>
+      </Item23>
+      <Item24>
+        <Filename Value="win32/winprinters_h.inc"/>
+        <Type Value="Include"/>
+      </Item24>
+      <Item25>
+        <Filename Value="win32/winprndialogs.inc"/>
+        <Type Value="Include"/>
+      </Item25>
+      <Item26>
+        <Filename Value="unix/cupsprndialogs.inc"/>
+        <Type Value="Include"/>
+      </Item26>
+      <Item27>
+        <Filename Value="unix/minicupslibc.pas"/>
+        <AddToUsesPkgSection Value="False"/>
+        <UnitName Value="MiniCUPSLibc"/>
+      </Item27>
+    </Files>
+    <Type Value="RunAndDesignTime"/>
+    <RequiredPkgs Count="2">
+      <Item1>
+        <PackageName Value="LCL"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="FCL"/>
+        <MinVersion Major="1" Valid="True"/>
+      </Item2>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)/"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+      <CommandAfter Value="tar czf $MakeFile($(ProjPublishDir)).tgz $(ProjPublishDir)"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

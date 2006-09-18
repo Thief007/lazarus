@@ -1,0 +1,86 @@
+The following people contributed to Lazarus:
+
+A. J. Venter
+Aleksey Lagunov
+Alexander Shiyan
+Alexandre Leclerc
+Alexandru Alexandrov
+Andreas Hausladen
+Andrew Haines
+Andrew Johnson
+Bob Wingard
+Boguslaw Brandys
+Boris Arko
+Christian Iversen
+Christopher Kirkpatrick
+Cliff Baeseman
+Colin Western
+Curtis White
+Darek Mazur
+Darius Blaszijk
+Dean Zobec
+Ere Maijala
+Eric Chapman
+Erivelton Silva
+Evgen A. Palamarchuck
+Felipe Monteiro de Carvalho
+Florian Koeberle
+Francisco Manuel
+Giuliano Colla
+GongYu
+Hans-Joachim Ott
+Hwang Weng Sun
+Ido Kanner
+Jan Foster
+Jason King
+Jeffrey A. Wormsley
+Jeroen van Idekinge
+Jesus Reyes
+Joerg Braun - german translation
+Joost van der Sluis
+Jouke Rensma
+Karl Brandt
+Keith Bowes
+Ladislav Michl
+Lagunov Aleksey
+Luis R. Hilario B.
+Luiz Americo
+Marc Geldon
+Marc Weustink
+Martin Patik
+Martin Smat
+Martyn Ranyard
+Matthijs Willemstein
+Mattias Gaertner
+Mazen Neifer
+Michael A. Hess
+Micha Nelissen
+Michal Bukovjan
+Olivier Guilbaud
+Peter Dyson
+Pierre Gillmann
+Radek Cervinka
+Raul Moratalla
+Razvan Adrian Bogdan
+Reimar Grabowski
+Roozbeh GHolizadeh
+Rostislav Okulov
+Salvatore Coppola
+Samuel Herzog
+Samuel Liddicott
+Sean McIlwain
+Seppo Suutarla - finnish translation
+Sergio Marcelo
+Shane Miller
+Stefan Hille
+Taras Boychuk
+Tomas Gregorovic
+Tom Lisjac
+Tony Maro
+Vasily I. Volchenko
+Vincent Beuselinck
+Vincent Snijders
+Wojciech Malinowski
+
+and special thanks to the FPC team.
+

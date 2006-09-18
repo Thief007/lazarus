@@ -1,0 +1,129 @@
+#
+#   Makefile.fpc for Lazarus for Free Pascal
+#
+
+[package]
+name=lazarus
+version=0.9b
+
+[require]
+packages=fcl regexpr
+
+[target]
+programs=lazarus startlazarus
+dirs=lcl components packager/registration ideintf designer packager
+exampledirs=examples
+
+[compiler]
+
+[clean]
+files=$(wildcard *$(OEXT)) $(wildcard *$(PPUEXT)) $(wildcard *$(RSTEXT))
+
+[install]
+fpcpackage=n
+basedir=share/lazarus
+
+[dist]
+destdir=$(BASEDIR)/dist
+
+[prerules]
+RCPP?=$(strip $(firstword cpp$(SRCEXEEXT)))
+#
+LAZARUS_INSTALL_DIR=$(INSTALL_PREFIX)/share/lazarus
+INSTALL_MAN_DIR=$(INSTALL_PREFIX)/share/man
+ifneq ($(findstring $(OS_TARGET),win32 win64),)
+LAZARUS_INSTALL_DIR=C:\lazarus
+endif
+ifneq ($(findstring $(OS_TARGET),freebsd),)
+LAZARUS_INSTALL_DIR=/usr/local/lazarus
+endif
+
+#-----------------------------------------------------------------------------
+[rules]
+.PHONY: lcl components packager/registration ideintf packager bigidecomponents ide idepkg idebig bigide starter lazbuilder tools all clean cleanide purge examples install
+
+#-----------------------------------------------------------------------------
+ide: 
+	$(MAKE) -C ide ide
+
+#-----------------------------------------------------------------------------
+idepkg:
+	$(MAKE) -C ide idepkg
+
+#-----------------------------------------------------------------------------
+bigide: lcl packager/registration ideintf designer packager bigidecomponents idebig starter
+
+#-----------------------------------------------------------------------------
+idebig:
+	$(MAKE) -C ide bigide
+
+#-----------------------------------------------------------------------------
+bigidecomponents:
+	$(MAKE) -C components bigidecomponents
+        
+#-----------------------------------------------------------------------------
+starter:
+	$(MAKE) -C ide starter
+
+#-----------------------------------------------------------------------------
+lazbuilder:
+	$(MAKE) -C ide lazbuilder
+
+#-----------------------------------------------------------------------------
+tools: lcl components
+        $(MAKE) -C tools
+        
+#-----------------------------------------------------------------------------
+examples: lcl components
+        $(MAKE) -C examples
+
+#-----------------------------------------------------------------------------
+all: lcl components packager/registration ideintf designer packager ide starter lazbuilder
+
+#-----------------------------------------------------------------------------
+cleanide:
+	$(MAKE) -C ide cleanide
+
+cleanlaz: cleanide
+        $(MAKE) -C lcl clean
+        $(MAKE) -C components clean
+        $(MAKE) -C packager clean
+        $(MAKE) -C designer clean
+        $(MAKE) -C ideintf clean
+
+purge: cleanlaz
+        $(MAKE) -C examples clean
+        $(MAKE) -C tools clean
+        $(MAKE) -C doceditor clean
+        $(MAKE) -C tools clean
+
+clean: cleanlaz
+
+# create dirs
+installbase:
+ifeq ($(OS_TARGET),win32)
+
+else
+        $(MKDIR) $(INSTALL_PREFIX)/share
+        $(MKDIR) $(INSTALL_PREFIX)/share/lazarus
+        $(MKDIR) $(INSTALL_BINDIR)
+        $(MKDIR) $(INSTALL_MAN_DIR)
+endif
+#-----------------------------------------------------------------------------
+# Many C expect 'make install' to copy the binaries to somewhere
+# Copy the lazarus tree to the install directory and set a link
+install:
+        $(MAKE) installbase
+	$(COPYTREE) . $(LAZARUS_INSTALL_DIR)
+ifeq ($(OS_TARGET),win32)
+
+else
+        ln -sf $(LAZARUS_INSTALL_DIR)/lazarus $(INSTALL_PREFIX)/bin/lazarus
+        ln -sf $(LAZARUS_INSTALL_DIR)/startlazarus $(INSTALL_PREFIX)/bin/startlazarus
+        ln -sf $(LAZARUS_INSTALL_DIR)/lazbuild $(INSTALL_PREFIX)/bin/lazbuild
+        cat $(LAZARUS_INSTALL_DIR)/docs/lazbuild.1 | gzip > $(INSTALL_MAN_DIR)/man1/lazbuild.1.gz
+endif
+
+
+# end.
+

@@ -1,0 +1,894 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Lazarus\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2006-06-03 01:09+0700\n"
+"Last-Translator: Zaenal Mutaqin <ade999@gmail.com>\n"
+"Language-Team: Lazarus Team <ade999@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Indonesian\n"
+"X-Poedit-Country: INDONESIA\n"
+"X-Poedit-SourceCharset: iso-8859-1\n"
+
+#: objinspstrconsts:oisdlinesdchars
+msgid "%d lines, %d chars"
+msgstr "%d baris, %d chars"
+
+#: objinspstrconsts:oisitemsselected
+msgid "%u items selected"
+msgstr "%u item dipilih"
+
+#: objinspstrconsts:oiscadd
+msgid "&Add"
+msgstr "&Tambah"
+
+#: objinspstrconsts:oistdactdatasetcancelheadline
+msgid "&Cancel"
+msgstr "B&atal"
+
+#: objinspstrconsts:oistdacthelpcontentsheadline
+msgid "&Contents"
+msgstr "&Isi"
+
+#: objinspstrconsts:oistdacteditcopyheadline
+msgid "&Copy"
+msgstr "&Copy"
+
+#: objinspstrconsts:oiscdelete
+msgid "&Delete"
+msgstr "&Hapus"
+
+#: objinspstrconsts:oistdactdataseteditheadline
+msgid "&Edit"
+msgstr "&Edit"
+
+#: objinspstrconsts:oistdactdatasetfirstheadline
+msgid "&First"
+msgstr "&Pertama"
+
+#: objinspstrconsts:oistdacthelphelphelpheadline
+msgid "&Help on Help"
+msgstr "Panduan atas &Panduan"
+
+#: objinspstrconsts:oistdactdatasetinsertheadline
+msgid "&Insert"
+msgstr "S&isipkan"
+
+#: objinspstrconsts:oistdactdatasetlastheadline
+msgid "&Last"
+msgstr "&Terakhir"
+
+#: objinspstrconsts:oisload
+msgid "&Load"
+msgstr "&Ambil"
+
+#: objinspstrconsts:oistdactdatasetnextheadline
+msgid "&Next"
+msgstr "&Berikut"
+
+#: objinspstrconsts:oisok
+msgid "&OK"
+msgstr "&OK"
+
+#: objinspstrconsts:oistdactfileopenheadline
+msgid "&Open..."
+msgstr "&Buka"
+
+#: objinspstrconsts:oistdacteditpasteheadline
+msgid "&Paste"
+msgstr "&Paste"
+
+#: objinspstrconsts:oistdactdatasetpriorheadline
+msgid "&Prior"
+msgstr "S&ebelum"
+
+#: objinspstrconsts:oistdactdatasetrefreshheadline
+msgid "&Refresh"
+msgstr "&Segarkan"
+
+#: objinspstrconsts:oissave
+msgid "&Save"
+msgstr "&Simpan"
+
+#: objinspstrconsts:oistdacthelptopicsearchheadline
+msgid "&Topic Search"
+msgstr "Pencarian &Topik"
+
+#: objinspstrconsts:oistdacteditundoheadline
+msgid "&Undo"
+msgstr "&Undo"
+
+#: objinspstrconsts:clbup
+msgid "&Up"
+msgstr "&Naik"
+
+#: objinspstrconsts:cactionlisteditorallcategory
+msgid "(All)"
+msgstr "(Semua)"
+
+#: objinspstrconsts:cactionlisteditorunknowncategory
+msgid "(Unknown)"
+msgstr "(Tidak dikenal)"
+
+#: objinspstrconsts:oisnone
+msgid "(none)"
+msgstr "(tidak ada)"
+
+#: objinspstrconsts:ois0lines0chars
+msgid "0 lines, 0 chars"
+msgstr "0 baris, 0 chars"
+
+#: objinspstrconsts:ois1linedchars
+msgid "1 line, %d chars"
+msgstr "1 baris, %d chars"
+
+#: objinspstrconsts:oisaction
+msgid "Action"
+msgstr "Aksi"
+
+#: objinspstrconsts:oisactionlisteditor
+msgid "Action List Editor"
+msgstr "Editor Daftar Aksi"
+
+#: objinspstrconsts:oicoleditadd
+msgid "Add"
+msgstr "Tambah"
+
+#: objinspstrconsts:sccsiledtopendialog
+msgid "Add Images"
+msgstr "Tambah Gambar"
+
+#: objinspstrconsts:clbadd
+msgid "Add new Item"
+msgstr "Tambah Item baru"
+
+#: objinspstrconsts:nbcesaddpage
+msgid "Add page"
+msgstr "Tambah halaman"
+
+#: objinspstrconsts:tccesaddtab
+msgid "Add tab"
+msgstr ""
+
+#: objinspstrconsts:oisaddtofavorites
+msgid "Add to Favorites"
+msgstr "Tambahkan ke Favorit"
+
+#: objinspstrconsts:sccsiledtadd
+msgid "Add..."
+msgstr "Tambah..."
+
+#: objinspstrconsts:sccsiledtadjustment
+msgid "Adjustment"
+msgstr "Penyesuaian"
+
+#: objinspstrconsts:rscdalignment
+msgid "Alignment"
+msgstr ""
+
+#: objinspstrconsts:oisall
+msgid "All"
+msgstr "Semua"
+
+#: objinspstrconsts:oisallfiles
+msgid "All files"
+msgstr "Semua file"
+
+#: objinspstrconsts:sccstredtapply
+msgid "Apply"
+msgstr "Terapkan"
+
+#: objinspstrconsts:oisarray
+msgid "Array"
+msgstr "Array"
+
+#: objinspstrconsts:rscdautosize
+msgid "Auto Size"
+msgstr ""
+
+#: objinspstrconsts:oisstdactionlisteditorclass
+msgid "Available Action Classes:"
+msgstr "Kelas Aksi Tersedia"
+
+#: objinspstrconsts:oisboolean
+msgid "Boolean"
+msgstr "Boolean"
+
+#: objinspstrconsts:oisclear
+msgid "C&lear"
+msgstr "&Bersihkan"
+
+#: objinspstrconsts:oistdactdatasetcancel1hint
+msgid "Cancel"
+msgstr "Batal"
+
+#: objinspstrconsts:rscdcaption
+msgid "Caption"
+msgstr ""
+
+#: objinspstrconsts:sccslvedtlabelcaption
+msgid "Caption:"
+msgstr "Caption:"
+
+#: objinspstrconsts:oiscategory
+msgid "Category"
+msgstr "Kategori"
+
+#: objinspstrconsts:sccsiledtcenter
+msgid "Center"
+msgstr "Tengah"
+
+#: objinspstrconsts:oischar
+msgid "Char"
+msgstr "Char"
+
+#: objinspstrconsts:oischaractersforblanks
+msgid "Characters for Blanks"
+msgstr "Karakter untuk Blank"
+
+#: objinspstrconsts:clbcheckgroupeditor
+msgid "CheckGroup Editor"
+msgstr "CheckGroup Editor"
+
+#: objinspstrconsts:clbchecklistboxeditor
+msgid "CheckListBox Editor"
+msgstr "CheckListBox Editor"
+
+#: objinspstrconsts:oisclass
+msgid "Class"
+msgstr "Kelas"
+
+#: objinspstrconsts:sccssgedtclean
+msgid "Clean"
+msgstr "Bersihkan"
+
+#: objinspstrconsts:sccsiledtclear
+msgid "Clear"
+msgstr "Bersihkan"
+
+#: objinspstrconsts:oisclearpicture
+msgid "Clear picture"
+msgstr "Bersihkan gambar"
+
+#: objinspstrconsts:oistdactcolorselecthint
+msgid "Color Select"
+msgstr "Pilih Warna"
+
+#: objinspstrconsts:rscdcolumneditor
+msgid "Column Editor"
+msgstr ""
+
+#: objinspstrconsts:oiscomponentnameisnotavalididentifier
+msgid "Component name %s%s%s is not a valid identifier"
+msgstr "Nama komponen %s%s%s bukan pengenal yang benar"
+
+#: objinspstrconsts:oiscomponents
+msgid "Components"
+msgstr "Komponen"
+
+#: objinspstrconsts:oisconfirmdelete
+msgid "Confirm delete"
+msgstr "Konfirmasi hapus"
+
+#: objinspstrconsts:oistdacteditcopyshorthint
+msgid "Copy"
+msgstr "Copy"
+
+#: objinspstrconsts:oiscopycomponents
+msgid "Copy components"
+msgstr ""
+
+#: objinspstrconsts:oiscreateanewpascalunit
+msgid "Create a new pascal unit."
+msgstr "Buat unit pascal baru."
+
+#: objinspstrconsts:oiscreatedefaultevent
+msgid "Create default event"
+msgstr "Buat event default"
+
+#: objinspstrconsts:sccsiledtcrop
+msgid "Crop"
+msgstr "Crop"
+
+#: objinspstrconsts:oistdacteditselectallshortcut
+msgid "Ctrl+A"
+msgstr "Ctrl+A"
+
+#: objinspstrconsts:oistdacteditcopyshortcut
+msgid "Ctrl+C"
+msgstr "Ctrl+C"
+
+#: objinspstrconsts:oistdactfileopenshortcut
+msgid "Ctrl+O"
+msgstr "Ctrl+O"
+
+#: objinspstrconsts:oistdacteditpasteshortcut
+msgid "Ctrl+V"
+msgstr "Ctrl+V"
+
+#: objinspstrconsts:oistdacteditcutshortcut
+msgid "Ctrl+X"
+msgstr "Ctrl+X"
+
+#: objinspstrconsts:oistdacteditundoshortcut
+msgid "Ctrl+Z"
+msgstr "Ctrl+Z"
+
+#: objinspstrconsts:oistdacteditcutheadline
+msgid "Cu&t"
+msgstr "Cu&t"
+
+#: objinspstrconsts:oistdacteditcutshorthint
+msgid "Cut"
+msgstr "Cut"
+
+#: objinspstrconsts:oiscutcomponents
+msgid "Cut components"
+msgstr ""
+
+#: objinspstrconsts:cactionlisteditordatabasecategory
+msgid "Database"
+msgstr "Database"
+
+#: objinspstrconsts:oistdacteditdeleteshortcut
+msgid "Del"
+msgstr "Del"
+
+#: objinspstrconsts:oisdelete
+msgid "Delete"
+msgstr "Hapus"
+
+#: objinspstrconsts:cactionlisteditordeleteactionhint
+msgid "Delete Action"
+msgstr "Hapus Aksi"
+
+#: objinspstrconsts:oisdeletecomponents
+msgid "Delete components"
+msgstr ""
+
+#: objinspstrconsts:oisdeleteitem
+msgid "Delete item %s%s%s?"
+msgstr "Hapus item %s%s%s?"
+
+#: objinspstrconsts:nbcesdeletepage
+msgid "Delete page"
+msgstr "Hapus halaman"
+
+#: objinspstrconsts:tccesdeletetab
+msgid "Delete tab"
+msgstr ""
+
+#: objinspstrconsts:clbdelete
+msgid "Delete the Item %d \"%s\"?"
+msgstr "Hapus Item %d \"%s\"?"
+
+#: objinspstrconsts:cactionlisteditordialogcategory
+msgid "Dialog"
+msgstr "Dialog"
+
+#: objinspstrconsts:clbdown
+msgid "Do&wn"
+msgstr "&Turun"
+
+#: objinspstrconsts:oicoleditdown
+msgid "Down"
+msgstr "Turun"
+
+#: objinspstrconsts:oistdactfileexitheadline
+msgid "E&xit"
+msgstr "&Keluar"
+
+#: objinspstrconsts:cactionlisteditoreditcategory
+msgid "Edit"
+msgstr "Edit"
+
+#: objinspstrconsts:sccslvedt
+msgid "Edit ListView Items..."
+msgstr "Edit Item ListView..."
+
+#: objinspstrconsts:sccssgedt
+msgid "Edit StringGrid..."
+msgstr "Edit StringGrid..."
+
+#: objinspstrconsts:sccstredt
+msgid "Edit TreeView Items..."
+msgstr "Edit Item TreeView..."
+
+#: objinspstrconsts:oiseditactionlist
+msgid "Edit action list..."
+msgstr "Edit daftar aksi..."
+
+#: objinspstrconsts:oicoleditediting
+msgid "Editing"
+msgstr "Mengedit"
+
+#: objinspstrconsts:oisenumeration
+msgid "Enumeration"
+msgstr "Enumeration"
+
+#: objinspstrconsts:oiserror
+msgid "Error"
+msgstr "Salah"
+
+#: objinspstrconsts:oiserrorloadingimage
+msgid "Error loading image"
+msgstr "Kesalahan pengambilan gambar"
+
+#: objinspstrconsts:oiserrorloadingimage2
+msgid "Error loading image %s%s%s:%s%s"
+msgstr "Kesalahan pengambilan gambar %s%s%s:%s%s"
+
+#: objinspstrconsts:oisevents
+msgid "Events"
+msgstr "Event"
+
+#: objinspstrconsts:oistdactfileexithint
+msgid "Exit"
+msgstr "Keluar"
+
+#: objinspstrconsts:oisfavorites
+msgid "Favorites"
+msgstr "Favorit"
+
+#: objinspstrconsts:cactionlisteditorfilecategory
+msgid "File"
+msgstr "File"
+
+#: objinspstrconsts:oistdactdatasetfirsthint
+msgid "First"
+msgstr "Pertama"
+
+#: objinspstrconsts:oisfloat
+msgid "Float"
+msgstr "Float"
+
+#: objinspstrconsts:oistdactfontedithint
+msgid "Font Select"
+msgstr "Pilih Font"
+
+#: objinspstrconsts:cactionlisteditorhelpcategory
+msgid "Help"
+msgstr "Panduan"
+
+#: objinspstrconsts:oistdacthelpcontentshint
+msgid "Help Contents"
+msgstr "Daftar Isi Panduan"
+
+#: objinspstrconsts:oistdacthelphelphelphint
+msgid "Help on help"
+msgstr "Panduan atas Panduan"
+
+#: objinspstrconsts:sccstredtlabelimageindex
+msgid "Image Index:"
+msgstr "Indeks Gambar:"
+
+#: objinspstrconsts:sccsiledtcaption
+msgid "ImageList Editor"
+msgstr "Editor DaftarGambar"
+
+#: objinspstrconsts:sccsiledtgrplcaption
+msgid "Images"
+msgstr "Gambar"
+
+#: objinspstrconsts:oisinputmask
+msgid "Input Mask:"
+msgstr "Input Mask:"
+
+#: objinspstrconsts:oistdactdatasetinserthint
+msgid "Insert"
+msgstr "Sisipkan"
+
+#: objinspstrconsts:nbcesinsertpage
+msgid "Insert page"
+msgstr "Sisipkan halaman"
+
+#: objinspstrconsts:tccesinserttab
+msgid "Insert tab"
+msgstr ""
+
+#: objinspstrconsts:oisint64
+msgid "Int64"
+msgstr "Int64"
+
+#: objinspstrconsts:oisinteger
+msgid "Integer"
+msgstr "Integer"
+
+#: objinspstrconsts:oisinterface
+msgid "Interface"
+msgstr "Interface"
+
+#: objinspstrconsts:rscdinvalidnumericvalue
+msgid "Invalid numeric Value"
+msgstr ""
+
+#: objinspstrconsts:oisinvalidpropertyvalue
+msgid "Invalid property value"
+msgstr "Nilai properti tidak benar"
+
+#: objinspstrconsts:sccstredtitem
+msgid "Item"
+msgstr "Item"
+
+#: objinspstrconsts:sccstredtgrprcaption
+msgid "Item Properties"
+msgstr "Properti Item"
+
+#: objinspstrconsts:sccstredtgrplcaption
+msgid "Items"
+msgstr "Item"
+
+#: objinspstrconsts:oisfinddeclaration
+msgid "Jump to declaration"
+msgstr "Lompat ke deklarasi"
+
+#: objinspstrconsts:oistdactdatasetlasthint
+msgid "Last"
+msgstr "Terakhir"
+
+#: objinspstrconsts:rscdleft
+msgid "Left"
+msgstr ""
+
+#: objinspstrconsts:sccslvedtcaption
+msgid "ListView Items Editor"
+msgstr "Editor Item ListView"
+
+#: objinspstrconsts:sccstredtload
+msgid "Load"
+msgstr "Ambil"
+
+#: objinspstrconsts:oisloadimagedialog
+msgid "Load Image Dialog"
+msgstr "Ambil Dialog Gambar"
+
+#: objinspstrconsts:oisloadpicture
+msgid "Load picture"
+msgstr "Ambil gambar"
+
+#: objinspstrconsts:sccssgedtload
+msgid "Load..."
+msgstr "Ambil..."
+
+#: objinspstrconsts:oismasks
+msgid "Masks..."
+msgstr "Masks..."
+
+#: objinspstrconsts:oismethod
+msgid "Method"
+msgstr "Metode"
+
+#: objinspstrconsts:clbmodify
+msgid "Modify the Item"
+msgstr "Ubah Item"
+
+#: objinspstrconsts:sccsiledtmovedown
+msgid "Move Down"
+msgstr "Turunkan"
+
+#: objinspstrconsts:sccssgedtmoverowscols
+msgid "Move Rows/Cols"
+msgstr ""
+
+#: objinspstrconsts:sccsiledtmoveup
+msgid "Move Up"
+msgstr "Naikan"
+
+#: objinspstrconsts:rscdmovedown
+msgid "Move down"
+msgstr ""
+
+#: objinspstrconsts:nbcesmovepageleft
+msgid "Move page left"
+msgstr "Pindahkan halaman kekiri"
+
+#: objinspstrconsts:nbcesmovepageright
+msgid "Move page right"
+msgstr "Pindahkan halaman kekanan"
+
+#: objinspstrconsts:tccesmovetableft
+msgid "Move tab left"
+msgstr ""
+
+#: objinspstrconsts:tccesmovetabright
+msgid "Move tab right"
+msgstr ""
+
+#: objinspstrconsts:rscdmoveup
+msgid "Move up"
+msgstr ""
+
+#: objinspstrconsts:cactionlisteditornewaction
+msgid "New Action"
+msgstr "Aksi Baru"
+
+#: objinspstrconsts:sccstredtnewitem
+msgid "New Item"
+msgstr "Item Baru"
+
+#: objinspstrconsts:cactionlisteditornewstdaction
+msgid "New Standard Action"
+msgstr "Aksi Standar Baru"
+
+#: objinspstrconsts:sccstredtnewsubitem
+msgid "New SubItem"
+msgstr "Subitem Baru"
+
+#: objinspstrconsts:oistdactdatasetnexthint
+msgid "Next"
+msgstr "Berikut"
+
+#: objinspstrconsts:sccsiledtnone
+msgid "None"
+msgstr "Tidak ada"
+
+#: objinspstrconsts:rscdok
+msgid "OK"
+msgstr ""
+
+#: objinspstrconsts:oisobject
+msgid "Object"
+msgstr "Objek"
+
+#: objinspstrconsts:oisobjectinspector
+msgid "Object Inspector"
+msgstr "Inspektor Objek"
+
+#: objinspstrconsts:oisok2
+msgid "Ok"
+msgstr "Ok"
+
+#: objinspstrconsts:sccstredtopendialog
+msgid "Open"
+msgstr "Buka"
+
+#: objinspstrconsts:oispeopenimagefile
+msgid "Open image file"
+msgstr ""
+
+#: objinspstrconsts:oisopenmaskfile
+msgid "Open masks file (*.dem)"
+msgstr "Buka f ile masks (*.dem)"
+
+#: objinspstrconsts:oisoptions
+msgid "Options"
+msgstr "Opsi"
+
+#: objinspstrconsts:oistdactdatasetpostheadline
+msgid "P&ost"
+msgstr "Tu&lis"
+
+#: objinspstrconsts:cactionlisteditorpaneldescrriptions
+msgid "Panel Descriptions"
+msgstr "Deskripsi Panel"
+
+#: objinspstrconsts:oistdacteditpasteshorthint
+msgid "Paste"
+msgstr "Paste"
+
+#: objinspstrconsts:oispastecomponents
+msgid "Paste components"
+msgstr ""
+
+#: objinspstrconsts:oispepicture
+msgid "Picture"
+msgstr ""
+
+#: objinspstrconsts:clbdisable
+msgid "Popup to disable/enable items"
+msgstr "Popup untuk mematikan/menghidupkan item"
+
+#: objinspstrconsts:oistdactdatasetposthint
+msgid "Post"
+msgstr "Tulis"
+
+#: objinspstrconsts:oistdactdatasetpriorhint
+msgid "Prior"
+msgstr "Sebelum"
+
+#: objinspstrconsts:oisproperties
+msgid "Properties"
+msgstr "Properti"
+
+#: objinspstrconsts:oispropertiesof
+msgid "Properties of %s"
+msgstr "Properti dari %s"
+
+#: objinspstrconsts:oisrecord
+msgid "Record"
+msgstr "Record"
+
+#: objinspstrconsts:oistdactdatasetrefreshhint
+msgid "Refresh"
+msgstr "Segarkan"
+
+#: objinspstrconsts:oisremovefromfavorites
+msgid "Remove from Favorites"
+msgstr "Hapus dari Favorit"
+
+#: objinspstrconsts:rscdright
+msgid "Right"
+msgstr ""
+
+#: objinspstrconsts:oissamplemasks
+msgid "Sample Masks:"
+msgstr "Contoh Masks:"
+
+#: objinspstrconsts:sccstredtsave
+msgid "Save"
+msgstr "Simpan"
+
+#: objinspstrconsts:oistdactfilesaveasheadline
+msgid "Save &As..."
+msgstr "Simpan Seb&agai..."
+
+#: objinspstrconsts:oistdactfilesaveashint
+msgid "Save As"
+msgstr "Simpan Sebagai"
+
+#: objinspstrconsts:sccsiledtsavedialog
+msgid "Save Image"
+msgstr "Simpan Gambar"
+
+#: objinspstrconsts:oissaveliteralcharacters
+msgid "Save Literal Characters"
+msgstr "Simpan Karakter Literal"
+
+#: objinspstrconsts:oispesaveimageas
+msgid "Save image as"
+msgstr ""
+
+#: objinspstrconsts:oissavepicture
+msgid "Save picture"
+msgstr "Simpan gambar"
+
+#: objinspstrconsts:sccsiledtsave
+msgid "Save..."
+msgstr "Simpan..."
+
+#: objinspstrconsts:oistdacteditselectallheadline
+msgid "Select &All"
+msgstr "Pilih &Semua"
+
+#: objinspstrconsts:oistdactcolorselect1headline
+msgid "Select &Color..."
+msgstr "Pilih &Warna..."
+
+#: objinspstrconsts:oistdactfonteditheadline
+msgid "Select &Font..."
+msgstr "Pilih &Font..."
+
+#: objinspstrconsts:oistdacteditselectallshorthint
+msgid "Select All"
+msgstr "Pilih Semua"
+
+#: objinspstrconsts:oisselectafile
+msgid "Select a file"
+msgstr "Pilih sebuah file"
+
+#: objinspstrconsts:sccsiledtgrprcaption
+msgid "Selected Image"
+msgstr "Gambar dipilih"
+
+#: objinspstrconsts:sccstredtlabelselindex
+msgid "Selected Index:"
+msgstr "Indeks Dipilih"
+
+#: objinspstrconsts:oisset
+msgid "Set"
+msgstr "Set"
+
+#: objinspstrconsts:oissettodefaultvalue
+msgid "Set to default value"
+msgstr "Set ke nilai default"
+
+#: objinspstrconsts:oissettodefault
+msgid "Set to default: %s"
+msgstr "Set ke default: %s"
+
+#: objinspstrconsts:oisshowcomponenttree
+msgid "Show Component Tree"
+msgstr "Tampilkan Susunan Komponen"
+
+#: objinspstrconsts:oisshowhints
+msgid "Show Hints"
+msgstr "Tampilkan Petunjuk"
+
+#: objinspstrconsts:nbcesshowpage
+msgid "Show page ..."
+msgstr "Tampilkan halaman..."
+
+#: objinspstrconsts:oissort
+msgid "Sort"
+msgstr "Urut"
+
+#: objinspstrconsts:oisstdactionlisteditor
+msgid "Standard Action Classes"
+msgstr "Kelas Aksi Standar"
+
+#: objinspstrconsts:sccstredtlabelstateindex
+msgid "State Index:"
+msgstr "Indeks Keadaan:"
+
+#: objinspstrconsts:sccsiledtstretch
+msgid "Stretch"
+msgstr "Rentangkan"
+
+#: objinspstrconsts:oisstring
+msgid "String"
+msgstr "String"
+
+#: objinspstrconsts:sccssgedtgrp
+msgid "String Grid"
+msgstr "String Grid"
+
+#: objinspstrconsts:sccssgedtcaption
+msgid "StringGrid Editor"
+msgstr "StringGrid Editor"
+
+#: objinspstrconsts:oisstringseditordialog
+msgid "Strings Editor Dialog"
+msgstr "Dialog Editor String"
+
+#: objinspstrconsts:oistestinput
+msgid "Test Input"
+msgstr "Uji Input"
+
+#: objinspstrconsts:oistestdialog
+msgid "Test dialog..."
+msgstr "Uji dialog..."
+
+#: objinspstrconsts:sccstredtlabeltext
+msgid "Text:"
+msgstr "Teks:"
+
+#: objinspstrconsts:cactionlisteditorpaneltoolbar
+msgid "Toolbar"
+msgstr "Toolbar"
+
+#: objinspstrconsts:oistdacthelptopicsearchhint
+msgid "Topic Search"
+msgstr "Pencarian Topik"
+
+#: objinspstrconsts:sccsiledtransparentcolor
+msgid "Transparent Color:"
+msgstr "Warna Transparan:"
+
+#: objinspstrconsts:sccstredtcaption
+msgid "TreeView Items Editor"
+msgstr "Editor Item TreeView"
+
+#: objinspstrconsts:oisundo
+msgid "Undo"
+msgstr "Undo"
+
+#: objinspstrconsts:oisunknown
+msgid "Unknown"
+msgstr "Tidak dikenal"
+
+#: objinspstrconsts:oicoleditup
+msgid "Up"
+msgstr "Naik"
+
+#: objinspstrconsts:oisvalue
+msgid "Value:"
+msgstr "Nilai:"
+
+#: objinspstrconsts:oisvariant
+msgid "Variant"
+msgstr "Varian"
+
+#: objinspstrconsts:rscdvisible
+msgid "Visible"
+msgstr ""
+
+#: objinspstrconsts:rscdwidth
+msgid "Width"
+msgstr ""
+
+#: objinspstrconsts:oisword
+msgid "Word"
+msgstr "Word"
+

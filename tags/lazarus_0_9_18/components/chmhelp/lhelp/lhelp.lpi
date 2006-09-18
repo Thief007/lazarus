@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectOptions>
+    <PathDelim Value="/"/>
+    <Version Value="5"/>
+    <General>
+      <SessionStorage Value="InProjectDir"/>
+      <MainUnit Value="0"/>
+      <IconPath Value="./"/>
+      <TargetFileExt Value=""/>
+    </General>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IgnoreBinaries Value="False"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|ppw|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+        <LaunchingApplication PathPlusParams="/usr/bin/gnome-terminal -t 'Lazarus Run Output' -e '$(LazarusDir)/tools/runwait.sh $(TargetCmdLine)'"/>
+        <Display Value="192.168.0.250:0"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="4">
+      <Item1>
+        <PackageName Value="TurboPowerIPro"/>
+        <MinVersion Major="1" Valid="True"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="lhelpcontrolpkg"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="LCL"/>
+      </Item3>
+      <Item4>
+        <PackageName Value="chmpkg"/>
+      </Item4>
+    </RequiredPackages>
+    <Units Count="5">
+      <Unit0>
+        <Filename Value="lhelp.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="lhelp"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="chmdataprovider.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ChmDataProvider"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="chmspecialparser.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ChmSpecialParser"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="chmpopup.pas"/>
+        <ComponentName Value="HelpPopupForm"/>
+        <IsPartOfProject Value="True"/>
+        <ResourceFilename Value="chmpopup.lrs"/>
+        <UnitName Value="ChmPopup"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="lhelpcore.pas"/>
+        <ComponentName Value="HelpForm"/>
+        <HasResources Value="True"/>
+        <IsPartOfProject Value="True"/>
+        <ResourceFilename Value="lhelpcore.lrs"/>
+        <UnitName Value="lhelpcore"/>
+      </Unit4>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="5"/>
+    <SearchPaths>
+      <SrcPath Value="$(LazarusDir)/lcl/;$(LazarusDir)/lcl/interfaces/$(LCLWidgetType)/"/>
+    </SearchPaths>
+    <CodeGeneration>
+      <Generate Value="Faster"/>
+      <Optimizations>
+        <OptimizationLevel Value="3"/>
+      </Optimizations>
+    </CodeGeneration>
+    <Linking>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+    <Other>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+</CONFIG>

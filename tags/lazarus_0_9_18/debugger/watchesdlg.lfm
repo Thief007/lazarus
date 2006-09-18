@@ -1,0 +1,78 @@
+object WatchesDlg: TWatchesDlg
+  ActiveControl = lvWatches
+  Caption = 'Watch list'
+  ClientHeight = 200
+  ClientWidth = 500
+  OnClose = FormClose
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  PixelsPerInch = 112
+  HorzScrollBar.Page = 499
+  VertScrollBar.Page = 199
+  Left = 321
+  Height = 200
+  Top = 437
+  Width = 500
+  object lvWatches: TListView
+    Align = alClient
+    Columns = <    
+      item
+        Caption = 'Expression'
+        Width = 10
+      end    
+      item
+        Caption = 'Value'
+        Width = 10
+      end>
+    MultiSelect = True
+    PopupMenu = mnuPopup
+    RowSelect = True
+    TabOrder = 0
+    ViewStyle = vsReport
+    OnDblClick = lvWatchesDblClick
+    OnMouseDown = lvWatchesMouseDown
+    OnKeyDown = lvWatchesKeyDown
+    OnSelectItem = lvWatchesSelectItem
+    Height = 200
+    Width = 500
+  end
+  object mnuPopup: TPopupMenu
+    left = 100
+    top = 96
+    object popAdd: TMenuItem
+      Caption = '&Add'
+      OnClick = popAddClick
+    end
+    object N1: TMenuItem
+      Caption = '-'
+    end
+    object popProperties: TMenuItem
+      Caption = '&Properties'
+      OnClick = popPropertiesClick
+    end
+    object popEnabled: TMenuItem
+      Caption = '&Enabled'
+      OnClick = popEnabledClick
+    end
+    object popDelete: TMenuItem
+      Caption = '&Delete'
+      OnClick = popDeleteClick
+    end
+    object N2: TMenuItem
+      Caption = '-'
+    end
+    object popDisableAll: TMenuItem
+      Caption = 'D&isable All'
+      OnClick = popDisableAllClick
+    end
+    object popEnableAll: TMenuItem
+      Caption = 'E&nable All'
+      OnClick = popEnableAllClick
+    end
+    object popDeleteAll: TMenuItem
+      Caption = 'De&lete All'
+      OnClick = popDeleteAllClick
+    end
+  end
+end
