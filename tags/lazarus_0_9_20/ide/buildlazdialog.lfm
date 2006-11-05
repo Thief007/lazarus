@@ -1,0 +1,292 @@
+object ConfigureBuildLazarusDlg: TConfigureBuildLazarusDlg
+  Left = 459
+  Height = 500
+  Top = 300
+  Width = 500
+  HorzScrollBar.Page = 499
+  VertScrollBar.Page = 499
+  ActiveControl = BuildAllButton
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSizeToolWin
+  Caption = 'ConfigureBuildLazarusDlg'
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  Position = poScreenCenter
+  object OptionsLabel: TLabel
+    AnchorSideTop.Control = OptionsEdit
+    AnchorSideTop.Side = asrCenter
+    Left = 10
+    Height = 13
+    Top = 285
+    Width = 47
+    Caption = 'Options:'
+    Color = clNone
+    ParentColor = False
+  end
+  object TargetOSLabel: TLabel
+    AnchorSideTop.Control = TargetOSEdit
+    AnchorSideTop.Side = asrCenter
+    Left = 10
+    Height = 13
+    Top = 315
+    Width = 61
+    Caption = 'Target OS:'
+    Color = clNone
+    ParentColor = False
+  end
+  object TargetDirectoryLabel: TLabel
+    AnchorSideTop.Control = TargetDirectoryComboBox
+    AnchorSideTop.Side = asrCenter
+    Left = 10
+    Height = 13
+    Top = 346
+    Width = 94
+    Caption = 'Target Directory:'
+    Color = clNone
+    ParentColor = False
+  end
+  object TargetCPULabel: TLabel
+    AnchorSideTop.Control = TargetCPUComboBox
+    AnchorSideTop.Side = asrCenter
+    Left = 10
+    Height = 13
+    Top = 376
+    Width = 65
+    Caption = 'Target CPU'
+    Color = clNone
+    ParentColor = False
+  end
+  object BuildAllButton: TButton
+    Left = 10
+    Height = 25
+    Top = 12
+    Width = 194
+    BorderSpacing.InnerBorder = 4
+    Caption = 'Set to "Build All"'
+    OnClick = BuildAllButtonClick
+    TabOrder = 0
+  end
+  object CleanAllCheckBox: TCheckBox
+    AnchorSideLeft.Control = LCLInterfaceRadioGroup
+    Left = 338
+    Height = 20
+    Top = 12
+    Width = 79
+    Caption = 'Clean All'
+    TabOrder = 1
+  end
+  object OptionsEdit: TEdit
+    Left = 156
+    Height = 23
+    Top = 280
+    Width = 331
+    Anchors = [akLeft, akRight, akBottom]
+    TabOrder = 5
+  end
+  object TargetOSEdit: TEdit
+    Left = 156
+    Height = 24
+    Top = 309
+    Width = 331
+    Anchors = [akLeft, akRight, akBottom]
+    TabOrder = 6
+  end
+  object TargetDirectoryComboBox: TComboBox
+    AnchorSideTop.Side = asrBottom
+    Left = 156
+    Height = 21
+    Top = 342
+    Width = 307
+    Anchors = [akLeft, akRight, akBottom]
+    AutoCompleteText = [cbactEndOfLineComplete, cbactSearchAscending]
+    MaxLength = 0
+    TabOrder = 7
+  end
+  object TargetDirectoryButton: TButton
+    Left = 465
+    Height = 19
+    Top = 342
+    Width = 22
+    Anchors = [akRight, akBottom]
+    BorderSpacing.InnerBorder = 4
+    Caption = '...'
+    OnClick = TargetDirectoryButtonClick
+    TabOrder = 8
+  end
+  object LCLInterfaceRadioGroup: TRadioGroup
+    Left = 338
+    Height = 188
+    Top = 42
+    Width = 149
+    Anchors = [akTop, akRight, akBottom]
+    AutoFill = True
+    Caption = 'LCLInterfaceRadioGroup'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    TabOrder = 3
+  end
+  object WithStaticPackagesCheckBox: TCheckBox
+    AnchorSideLeft.Control = LCLInterfaceRadioGroup
+    Left = 338
+    Height = 20
+    Top = 241
+    Width = 194
+    Anchors = [akLeft, akBottom]
+    Caption = 'WithStaticPackagesCheckBox'
+    TabOrder = 4
+  end
+  object RestartAfterBuildCheckBox: TCheckBox
+    Left = 10
+    Height = 20
+    Top = 409
+    Width = 176
+    Anchors = [akLeft, akBottom]
+    Caption = 'RestartAfterBuildCheckBox'
+    TabOrder = 10
+  end
+  object ConfirmBuildCheckBox: TCheckBox
+    Left = 10
+    Height = 20
+    Top = 435
+    Width = 154
+    Anchors = [akLeft, akBottom]
+    Caption = 'ConfirmBuildCheckBox'
+    TabOrder = 11
+  end
+  object SaveSettingsButton: TButton
+    AnchorSideRight.Control = CancelButton
+    AnchorSideBottom.Control = CancelButton
+    AnchorSideBottom.Side = asrBottom
+    Left = 334
+    Height = 26
+    Top = 463
+    Width = 89
+    Anchors = [akRight, akBottom]
+    AutoSize = True
+    BorderSpacing.Right = 10
+    BorderSpacing.InnerBorder = 4
+    Caption = 'Save settings'
+    Default = True
+    OnClick = SaveSettingsButtonClick
+    TabOrder = 12
+  end
+  object CancelButton: TButton
+    Left = 433
+    Height = 26
+    Top = 463
+    Width = 54
+    Anchors = [akRight, akBottom]
+    AutoSize = True
+    BorderSpacing.InnerBorder = 4
+    Cancel = True
+    Caption = 'Cancel'
+    OnClick = CancelButtonClick
+    TabOrder = 13
+  end
+  object ItemsListBox: TListBox
+    Left = 10
+    Height = 229
+    Top = 42
+    Width = 319
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    ItemHeight = 25
+    OnDrawItem = ItemsListBoxDrawItem
+    OnMouseDown = ItemsListBoxMouseDown
+    Style = lbOwnerDrawFixed
+    TabOrder = 2
+    TopIndex = -1
+  end
+  object TargetCPUComboBox: TComboBox
+    Left = 156
+    Height = 21
+    Top = 372
+    Width = 307
+    Anchors = [akLeft, akRight, akBottom]
+    AutoCompleteText = [cbactEndOfLineComplete, cbactSearchAscending]
+    MaxLength = 0
+    TabOrder = 9
+  end
+  object CompileButton: TButton
+    AnchorSideRight.Control = SaveSettingsButton
+    AnchorSideBottom.Control = SaveSettingsButton
+    AnchorSideBottom.Side = asrBottom
+    Left = 265
+    Height = 26
+    Top = 463
+    Width = 59
+    Anchors = [akRight, akBottom]
+    AutoSize = True
+    BorderSpacing.Right = 10
+    BorderSpacing.InnerBorder = 4
+    Caption = 'Compile'
+    OnClick = CompileButtonClick
+    TabOrder = 14
+  end
+  object ImageList: TImageList
+    Height = 20
+    Width = 20
+    left = 12
+    top = 216
+    Bitmap = {
+      6C69030000001400000014000000C60100002F2A2058504D202A2F0A73746174
+      69632063686172202A206D656E755F737465706F7665725F78706D5B5D203D20
+      7B0A22313620313620352031222C0A22200963204E6F6E65222C0A222E096320
+      23303030303030222C0A222B09632023303030303833222C0A22400963202346
+      4646464646222C0A222309632023383338353833222C0A2220202020202E2020
+      2E20202020202020222C0A2220202E20202020202020202E20202020222C0A22
+      20202020202020202020202020202020222C0A222E2020202020202020202020
+      202E2020222C0A2220202020202020202020202020202020222C0A2220202020
+      202020202020202E2E2E2E2E222C0A222020202020202020202020202E2E2E20
+      222C0A22202020202020202020202020202E2020222C0A22202020202B2B2B2B
+      2B2B2B2020202020222C0A22202020202B40404040402B2320202020222C0A22
+      202020202B40404040402B2320202020222C0A22202020202B40404040402B23
+      20202020222C0A22202020202B40404040402B2320202020222C0A2220202020
+      2B40404040402B2320202020222C0A22202020202B2B2B2B2B2B2B2320202020
+      222C0A2220202020202323232323232320202020227D3B0A740200002F2A2058
+      504D202A2F0A7374617469632063686172202A207468726561645F78706D5B5D
+      203D207B0A2231362031362031372031222C0A22200963204E6F6E65222C0A22
+      2E09632023464638304646222C0A222B09632023383438343030222C0A224009
+      632023383438343834222C0A222309632023433643364336222C0A2224096320
+      23464646463030222C0A222509632023464646464646222C0A22260963202346
+      4646464646222C0A222A09632023464646464646222C0A223D09632023464646
+      464646222C0A222D09632023464646464646222C0A223B096320234646464646
+      46222C0A223E09632023464646464646222C0A222C0963202346464646464622
+      2C0A222709632023464646464646222C0A222909632023464646464646222C0A
+      222109632023303030303030222C0A2220202020202020202020202020202020
+      222C0A2220202020202020202020202020202020222C0A222020202020202020
+      2020202020202020222C0A2220202020202B2B2B2B20202020202020222C0A22
+      2020202B2B2124212B21212020202020222C0A222020202B24242424242B2120
+      20202020222C0A2220202B2B242B212B2421212120202020222C0A2220202B24
+      2421402124242B2120202020222C0A2220202B2B242B212B2421212120202020
+      222C0A222020402B24242424242B212120202020222C0A22202020402B212421
+      2B21212020202020222C0A2220202020402121212120202020202020222C0A22
+      20202020202020202020202020202020222C0A22202020202020202020202020
+      20202020222C0A2220202020202020202020202020202020222C0A2220202020
+      202020202020202020202020227D3B0A270200002F2A2058504D202A2F0A7374
+      617469632063686172202A20616C6C5F78706D5B5D203D207B0A223136203136
+      2031322031222C0A22200963204E6F6E65222C0A222E09632023354133393030
+      222C0A222B09632023363334413138222C0A224009632023303030303030222C
+      0A222309632023464642443441222C0A222409632023464641443030222C0A22
+      2509632023423537333030222C0A222609632023393436333030222C0A222A09
+      632023364234413030222C0A223D09632023383438343834222C0A222D096320
+      23464644363843222C0A223B09632023444539343030222C0A222020202E2E2E
+      2B202020202020202020222C0A22202E2E4023402E404020202020202020222C
+      0A22202E2324242424254020202020202020222C0A222B2E242640262E2E2E2B
+      202020202020222C0A222E2324402E2E4023402E404020202020222C0A222E25
+      24262E2324242424254020202020222C0A222A25242B2E242640262E2E2E2B20
+      2020222C0A22202A252E2324402E2E4023402E404020222C0A2220202A2E2524
+      262E2324242424254020222C0A222020202A25242B2E2426402624404040222C
+      0A22202020202A252E2324403D402D3B2540222C0A2220202020202A2E252426
+      402D3B404040222C0A222020202020202A2524242D3B3B254040222C0A222020
+      20202020202A25403B4025404020222C0A2220202020202020202A4040404020
+      2020222C0A2220202020202020202020202020202020227D3B0A0A
+    }
+  end
+end

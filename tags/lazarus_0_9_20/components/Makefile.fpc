@@ -1,0 +1,42 @@
+#   $Id$
+#
+#   Makefile.fpc for Lazarus for Free Pascal
+#
+
+[target]
+dirs=synedit codetools
+
+[clean]
+files=$(wildcard ./units/*$(OEXT)) \
+      $(wildcard ./units/*$(PPUEXT)) \
+      $(wildcard ./units/*$(RSTEXT)) \
+      $(wildcard ./units/$(CPU_TARGET)/$(OS_TARGET)/*$(OEXT)) \
+      $(wildcard ./units/$(CPU_TARGET)/$(OS_TARGET)/*$(PPUEXT)) \
+      $(wildcard ./units/$(CPU_TARGET)/$(OS_TARGET)/*$(RSTEXT)) \
+      $(wildcard ./custom/*$(OEXT)) \
+      $(wildcard ./custom/*$(PPUEXT)) \
+      $(wildcard ./custom/*$(RSTEXT))
+
+[rules]
+.phony: bigidecomponents
+
+bigidecomponents: all
+        $(MAKE) -C rtticontrols
+        $(MAKE) -C printers
+        $(MAKE) -C cgi
+        $(MAKE) -C cgi/ide
+        $(MAKE) -C turbopower_ipro
+        $(MAKE) -C jpeg
+        $(MAKE) -C fpcunit
+        $(MAKE) -C fpcunit/ide
+        $(MAKE) -C projecttemplates
+        $(MAKE) -C memds
+        $(MAKE) -C sdf
+ifneq ($(OS_TARGET),darwin)
+        $(MAKE) -C tdbf
+ifneq ($(OS_TARGET),win64)
+        $(MAKE) -C sqldb
+endif
+endif
+
+cleanlaz: clean

@@ -1,0 +1,2015 @@
+<?xml version="1.0"?>
+<fpdoc-descriptions>
+  <package name="LCL">
+    <module name="Buttons">
+      <short/>
+      <descr/>
+      <!-- unresolved type reference Visibility: default -->
+      <element name="Classes">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- unresolved type reference Visibility: default -->
+      <element name="SysUtils">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- unresolved type reference Visibility: default -->
+      <element name="FPCAdds">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- unresolved type reference Visibility: default -->
+      <element name="LCLType">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- unresolved type reference Visibility: default -->
+      <element name="LCLProc">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- unresolved type reference Visibility: default -->
+      <element name="LCLIntf">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- unresolved type reference Visibility: default -->
+      <element name="LCLStrConsts">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- unresolved type reference Visibility: default -->
+      <element name="GraphType">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- unresolved type reference Visibility: default -->
+      <element name="Graphics">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- unresolved type reference Visibility: default -->
+      <element name="ImgList">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- unresolved type reference Visibility: default -->
+      <element name="ActnList">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- unresolved type reference Visibility: default -->
+      <element name="Controls">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- unresolved type reference Visibility: default -->
+      <element name="StdCtrls">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- unresolved type reference Visibility: default -->
+      <element name="lMessages">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- unresolved type reference Visibility: default -->
+      <element name="Forms">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- unresolved type reference Visibility: default -->
+      <element name="Menus">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- enumeration type Visibility: default -->
+      <element name="TButtonLayout">
+        <short>A set of constants to define the position of a glyph on a button.</short>
+      </element>
+      <!-- enumeration value Visibility: default -->
+      <element name="TButtonLayout.blGlyphLeft">
+        <short/>
+      </element>
+      <!-- enumeration value Visibility: default -->
+      <element name="TButtonLayout.blGlyphRight">
+        <short/>
+      </element>
+      <!-- enumeration value Visibility: default -->
+      <element name="TButtonLayout.blGlyphTop">
+        <short/>
+      </element>
+      <!-- enumeration value Visibility: default -->
+      <element name="TButtonLayout.blGlyphBottom">
+        <short/>
+      </element>
+      <!-- enumeration type Visibility: default -->
+      <element name="TButtonState">
+        <short>A set of constants to define the state of a SpeedButton.</short>
+      </element>
+      <!-- enumeration value Visibility: default -->
+      <element name="TButtonState.bsUp">
+        <short/>
+      </element>
+      <!-- enumeration value Visibility: default -->
+      <element name="TButtonState.bsDisabled">
+        <short/>
+      </element>
+      <!-- enumeration value Visibility: default -->
+      <element name="TButtonState.bsDown">
+        <short/>
+      </element>
+      <!-- enumeration value Visibility: default -->
+      <element name="TButtonState.bsExclusive">
+        <short/>
+      </element>
+      <!-- range type Visibility: default -->
+      <element name="TNumGlyphs">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- object Visibility: default -->
+      <element name="TCustomButton">
+        <short>The ancestor class for TButton</short>
+        <descr>TCustomButton is the ancestor for TButton. If you want to define your own button class, you should use this class to derive it from.</descr>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomButton.FCancel">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomButton.FDefault">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomButton.FModalResult">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomButton.FShortCut">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomButton.SetCancel">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomButton.SetCancel.NewCancel">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomButton.SetDefault">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomButton.SetDefault.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomButton.SetModalResult">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomButton.SetModalResult.AValue">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomButton.WMDefaultClicked">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomButton.WMDefaultClicked.Message">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TCustomButton.Click">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TCustomButton.CreateWnd">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TCustomButton.DoSendBtnDefault">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TCustomButton.ControlKeyDown">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomButton.ControlKeyDown.Key">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomButton.ControlKeyDown.Shift">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TCustomButton.ControlKeyUp">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomButton.ControlKeyUp.Key">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomButton.ControlKeyUp.Shift">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TCustomButton.SetParent">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomButton.SetParent.AParent">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TCustomButton.RealSetText">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomButton.RealSetText.Value">
+        <short/>
+      </element>
+      <!-- function Visibility: protected -->
+      <element name="TCustomButton.ChildClassAllowed">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TCustomButton.ChildClassAllowed.Result">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomButton.ChildClassAllowed.ChildClass">
+        <short/>
+      </element>
+      <!-- constructor Visibility: public -->
+      <element name="TCustomButton.Create">
+        <short>Creates a new instance of the TCustomButton class</short>
+        <descr>If you drop a component on the form editor you don´t need to add code to explicitly create it. The component is automatically created together with the the form, and destroyed when the form is destroyed.
+
+However, if you create the component by code don´t forget to free it when it is no longer needed.
+
+Constructors allocate memory and system resources needed by the object. They also call the constructor of any sub-objects present in the class.</descr>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomButton.Create.TheOwner">
+        <short/>
+      </element>
+      <!-- procedure Visibility: public -->
+      <element name="TCustomButton.ExecuteDefaultAction">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- procedure Visibility: public -->
+      <element name="TCustomButton.ExecuteCancelAction">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- procedure Visibility: public -->
+      <element name="TCustomButton.UpdateRolesForForm">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomButton.Color">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomButton.Default">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomButton.ModalResult">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomButton.Cancel">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomButton.TabStop">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- object Visibility: default -->
+      <element name="TButton">
+        <short>The most basic button component</short>
+        <descr>Button: Base type for all Buttons. A push button control. The user pushes a button (eg selects it with the mouse cursor and clicks the mouse) to start an action.</descr>
+      </element>
+      <!-- procedure Visibility: public -->
+      <element name="TButton.Click">
+        <short>Click, calling this method will invoke the OnClick event of the button</short>
+        <descr>If you want to programmatically Click on a button you can call its Click method. This will have the same effect as a user clicking on the button.</descr>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TButton.Action">
+        <short>The action executed when the user clicks the button.</short>
+        <descr>If you assign an action from an ActionList to a TButton.Action the correspondig execute-method is assigned to the OnClick event of the button. Assigning a action sets other properties of the button as well, like Enabled and Caption.</descr>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TButton.Align">
+        <short></short>
+        <descr><br/><br/>
+Possible values fo Allign are:<br/>
+alTop: Places the control at the top, using the full clientwidth of its parent control.<br/>
+alBottom: Places the control at the bottom, using the full clientwidth of its parent control.<br/>
+alLeft: Places the control at the left side of its parent and uses the available height between any top or bottom alligned controls.<br/>
+alRight: Like alLeft but on the right side of the parent control.<br/>
+alNone: The control can be placed anywhere on the parent control.<br/>
+alClient: The control takes al available space on parent control next to controls aligned to the top, bottom, right or left.</descr>
+        <errors></errors>
+        <seealso></seealso>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TButton.Anchors">
+        <short>Anchors are used to keep a button on a defined distance to certain borders of the parent control.</short>
+        <descr>Anchors can be used to keep control at a certain distance from a side of its parent control, when the parent control is resized.
+
+For instance setting Anchors to [akBottom, akRight] will keep the control at a constant distance to the bottom right corner.</descr>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TButton.AutoSize">
+        <short>Autosize in TButton has no function.</short>
+        <descr>If this property is set to true, the control will automatically adapt its size to be able to accomodate its content. This property is not used in Buttons.</descr>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TButton.BorderSpacing">
+        <short>Borderspacing ????</short>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TButton.Cancel">
+        <short>Setting this property will make the OnClick event executed when the user hits ESC.</short>
+        <descr>Setting this property to true, will have the effect that when the user hits ESC this button is Clicked. Usually the Button which reacts to ESC sets the ModalResult of the form to mrCancel.</descr>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TButton.Caption">
+        <short>Sets the text displayed on the button.</short>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TButton.Constraints">
+        <short>Constraints can be used to give a control certain minimum and or maximum dimensions.</short>
+        <descr>Sets the minimum and maximum sizes for a control. If a control is resized the new dimensions are allways within the ranges given here. You should take care when setting these options that they do not conflict with the Anchors en Allign settings.</descr>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TButton.Default">
+        <short>Setting this property will make the OnClick event executed when the user hits ENTER</short>
+        <descr>Defines if a button is the default on a form. That is, pressing enter will execute its onClick wether the control has focus or not!</descr>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TButton.Enabled">
+        <short>Determines if the button reacts to a click.</short>
+        <descr>Setting this property determines if the control can be used. If Enabled is false a button cannot be clicked. Setting the Enabled property to false also makes its appearance grayed.
+If an Action has been assigned to the button and this action is disabled then the enabled property is set to false as well.</descr>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TButton.Font">
+        <short>Font is used to set the font of the caption of the Button.</short>
+        <descr>Font is used to set the font of the caption of the Button.</descr>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TButton.ModalResult">
+        <short>If the button gets clicked, the ModalResult of the form will be set to this value.</short>
+        <descr>Setting ModalResult of a button makes closing a form easy. Just set this property to a value different from mrNone and a click on this button will set the modalresult of the form it is placed on to this value. Setting the ModalResult of a form will make it close.</descr>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TButton.OnChangeBounds">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TButton.OnClick">
+        <short>The OnClick event is triggered when a user clicks on the button</short>
+        <descr>The OnClick event is triggered when a user clicks on the button. It can also be invoked by calling the Click method.</descr>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TButton.OnEnter">
+        <short>The OnEnter event is triggered when the button gets focus.</short>
+        <descr>The OnEnter event is triggered when the button gets focus.</descr>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TButton.OnExit">
+        <short>The OnExit event is triggered when the button loses focus.</short>
+        <descr>The OnExit event is triggered when the button loses focus.</descr>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TButton.OnKeyDown">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TButton.OnKeyPress">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TButton.OnKeyUp">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TButton.OnMouseDown">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TButton.OnMouseEnter">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TButton.OnMouseLeave">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TButton.OnMouseMove">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TButton.OnMouseUp">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TButton.OnResize">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TButton.ParentShowHint">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TButton.PopupMenu">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TButton.ShowHint">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TButton.TabOrder">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TButton.TabStop">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TButton.Visible">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- object Visibility: default -->
+      <element name="TButtonGlyph">
+        <short>A small image that can be attached to buttons</short>
+        <descr>Button Glyph: The graphics and legend on a button</descr>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TButtonGlyph.FOriginal">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TButtonGlyph.FNumGlyphs">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TButtonGlyph.FOnChange">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TButtonGlyph.SetGlyph">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TButtonGlyph.SetGlyph.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TButtonGlyph.SetNumGlyphs">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TButtonGlyph.SetNumGlyphs.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TButtonGlyph.GlyphChanged">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TButtonGlyph.GlyphChanged.Sender">
+        <short/>
+      </element>
+      <!-- constructor Visibility: public -->
+      <element name="TButtonGlyph.Create">
+        <short>Creates a new instance of the TButtonGlyph class</short>
+        <descr>If you drop a component on the form editor you don´t need to add code to explicitly create it. The component is automatically created together with the the form, and destroyed when the form is destroyed.
+
+However, if you create the component by code don´t forget to free it when it is no longer needed.
+
+Constructors allocate memory and system resources needed by the object. They also call the constructor of any sub-objects present in the class.</descr>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- destructor Visibility: public -->
+      <element name="TButtonGlyph.Destroy">
+        <short>Deallocates an object</short>
+        <descr>If you call Destroy for an object witch hasn´t being initialized yet it will generate an error. Always use the Free method to deallocate objects, because it verifies if object variable doesn´t contain the value nil.
+
+Take the following precautions when creating your own Destroy method:
+
+* Declare Destroy with the override directive, because it is a virtual method.
+
+* Always call 'inherited Destroy;' as the last thing on the destructor code.
+
+* An exception may be raised on the constructor in case there is not enought memory to create an object, or something else goes wrong. If the exception is not handled inside the constructor, the object will be only partially built. In this case Destroy will be called, so your destructor must check if the resources were really allocated before disposing of them.
+
+* Remember to call Free for all objects created on the constructor.</descr>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function Visibility: public -->
+      <element name="TButtonGlyph.Draw">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TButtonGlyph.Draw.Result">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TButtonGlyph.Draw.Canvas">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TButtonGlyph.Draw.Client">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TButtonGlyph.Draw.Offset">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TButtonGlyph.Draw.State">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TButtonGlyph.Draw.Transparent">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TButtonGlyph.Draw.BiDiFlags">
+        <short/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TButtonGlyph.Glyph">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TButtonGlyph.NumGlyphs">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TButtonGlyph.OnChange">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- enumeration type Visibility: default -->
+      <element name="TBitBtnKind">
+        <short>A set of possible types for BitButtons.</short>
+      </element>
+      <!-- enumeration value Visibility: default -->
+      <element name="TBitBtnKind.bkCustom">
+        <short/>
+      </element>
+      <!-- enumeration value Visibility: default -->
+      <element name="TBitBtnKind.bkOK">
+        <short/>
+      </element>
+      <!-- enumeration value Visibility: default -->
+      <element name="TBitBtnKind.bkCancel">
+        <short/>
+      </element>
+      <!-- enumeration value Visibility: default -->
+      <element name="TBitBtnKind.bkHelp">
+        <short/>
+      </element>
+      <!-- enumeration value Visibility: default -->
+      <element name="TBitBtnKind.bkYes">
+        <short/>
+      </element>
+      <!-- enumeration value Visibility: default -->
+      <element name="TBitBtnKind.bkNo">
+        <short/>
+      </element>
+      <!-- enumeration value Visibility: default -->
+      <element name="TBitBtnKind.bkClose">
+        <short/>
+      </element>
+      <!-- enumeration value Visibility: default -->
+      <element name="TBitBtnKind.bkAbort">
+        <short/>
+      </element>
+      <!-- enumeration value Visibility: default -->
+      <element name="TBitBtnKind.bkRetry">
+        <short/>
+      </element>
+      <!-- enumeration value Visibility: default -->
+      <element name="TBitBtnKind.bkIgnore">
+        <short/>
+      </element>
+      <!-- enumeration value Visibility: default -->
+      <element name="TBitBtnKind.bkAll">
+        <short/>
+      </element>
+      <!-- enumeration value Visibility: default -->
+      <element name="TBitBtnKind.bkNoToAll">
+        <short/>
+      </element>
+      <!-- enumeration value Visibility: default -->
+      <element name="TBitBtnKind.bkYesToAll">
+        <short/>
+      </element>
+      <!-- set type Visibility: default -->
+      <element name="TBitBtnKinds"/>
+      <!-- object Visibility: default -->
+      <element name="TCustomBitBtn">
+        <short>The ancestor class for TBitBtn.</short>
+        <descr>TCustomBitBtn is the ancestor for TBitBtn. If you want to define your own bitbutton class, you should use this class to derive it from.</descr>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomBitBtn.FButtonGlyph">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomBitBtn.FKind">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomBitBtn.FLayout">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomBitBtn.FMargin">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomBitBtn.FSpacing">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- function Visibility: private -->
+      <element name="TCustomBitBtn.GetGlyph">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TCustomBitBtn.GetGlyph.Result">
+        <short/>
+      </element>
+      <!-- function Visibility: private -->
+      <element name="TCustomBitBtn.GetNumGlyphs">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TCustomBitBtn.GetNumGlyphs.Result">
+        <short/>
+      </element>
+      <!-- function Visibility: private -->
+      <element name="TCustomBitBtn.IsGlyphStored">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TCustomBitBtn.IsGlyphStored.Result">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomBitBtn.SetGlyph">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomBitBtn.SetGlyph.AValue">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomBitBtn.SetKind">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomBitBtn.SetKind.AValue">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomBitBtn.SetLayout">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomBitBtn.SetLayout.AValue">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomBitBtn.SetMargin">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomBitBtn.SetMargin.AValue">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomBitBtn.SetNumGlyphs">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomBitBtn.SetNumGlyphs.AValue">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomBitBtn.SetSpacing">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomBitBtn.SetSpacing.AValue">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomBitBtn.RealizeKind">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function Visibility: private -->
+      <element name="TCustomBitBtn.GetCaptionOfKind">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TCustomBitBtn.GetCaptionOfKind.Result">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomBitBtn.GetCaptionOfKind.aKind">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TCustomBitBtn.ActionChange">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomBitBtn.ActionChange.Sender">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomBitBtn.ActionChange.CheckDefaults">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TCustomBitBtn.Click">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TCustomBitBtn.GlyphChanged">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomBitBtn.GlyphChanged.Sender">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TCustomBitBtn.InitializeWnd">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- constructor Visibility: public -->
+      <element name="TCustomBitBtn.Create">
+        <short>Creates a new instance of the TCustomBitBtn class</short>
+        <descr>If you drop a component on the form editor you don´t need to add code to explicitly create it. The component is automatically created together with the the form, and destroyed when the form is destroyed.
+
+However, if you create the component by code don´t forget to free it when it is no longer needed.
+
+Constructors allocate memory and system resources needed by the object. They also call the constructor of any sub-objects present in the class.</descr>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomBitBtn.Create.TheOwner">
+        <short/>
+      </element>
+      <!-- destructor Visibility: public -->
+      <element name="TCustomBitBtn.Destroy">
+        <short>Deallocates an object</short>
+        <descr>If you call Destroy for an object witch hasn´t being initialized yet it will generate an error. Always use the Free method to deallocate objects, because it verifies if object variable doesn´t contain the value nil.
+
+Take the following precautions when creating your own Destroy method:
+
+* Declare Destroy with the override directive, because it is a virtual method.
+
+* Always call 'inherited Destroy;' as the last thing on the destructor code.
+
+* An exception may be raised on the constructor in case there is not enought memory to create an object, or something else goes wrong. If the exception is not handled inside the constructor, the object will be only partially built. In this case Destroy will be called, so your destructor must check if the resources were really allocated before disposing of them.
+
+* Remember to call Free for all objects created on the constructor.</descr>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomBitBtn.Glyph">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomBitBtn.NumGlyphs">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomBitBtn.Kind">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomBitBtn.Layout">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomBitBtn.Margin">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomBitBtn.Spacing">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- object Visibility: default -->
+      <element name="TBitBtn">
+        <short>A Button with a small image attached</short>
+        <descr>Bit Button: a push button control on a toolbar causing a particular action to be executed. It often displays a glyph or small graphic to denote its function.</descr>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TBitBtn.Action">
+        <short>The action executed when the user clicks the button.</short>
+        <descr>If you assign an action from an ActionList to a TBitBtn.Action the correspondig execute-method is assigned to the OnClick event of the button. Assigning a action sets other properties of the button as well, like Enabled and Caption.</descr>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TBitBtn.Align">
+        <short>Is used to allign a bitbutton to a border of a parent control.</short>
+        <descr>Align is used to align a control to a border of a parent control, even if the parent control is resized.<br/><br/>
+Possible values fo Allign are:<br/>
+alTop: Places the control at the top, using the full clientwidth of its parent control.<br/>
+alBottom: Places the control at the bottom, using the full clientwidth of its parent control.<br/>
+alLeft: Places the control at the left side of its parent and uses the available height between any top or bottom alligned controls.<br/>
+alRight: Like alLeft but on the right side of the parent control.<br/>
+alNone: The control can be placed anywhere on the parent control.<br/>
+alClient: The control takes al available space on parent control next to controls aligned to the top, bottom, right or left.</descr>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TBitBtn.Anchors">
+        <short>Anchors are used to keep a button on a defined distance to certain borders of the parent control.</short>
+        <descr>Anchors can be used to keep control at a certain distance from a side of its parent control, when the parent control is resized.<br/><br/>
+For instance setting Anchors to [akBottom, akRight] will keep the control at a constant distance to the bottom right corner.</descr>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TBitBtn.BorderSpacing">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TBitBtn.Cancel">
+        <short>Setting this property will make the OnClick event executed when the user hits ESC.</short>
+        <descr>Setting this property to true, will have the effect that when the user hits ESC this button is Clicked. Usually the Button which reacts to ESC sets the ModalResult of the form to mrCancel.</descr>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TBitBtn.Caption">
+        <short>Sets the text displayed on the button.</short>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TBitBtn.Constraints">
+        <short>Used to give a control certain minimum and or maximum dimensions.</short>
+        <descr>Sets the minimum and maximum sizes for a control. If a control is resized the new dimensions are allways within the ranges given here. You should take care when setting these options that they do not conflict with the Anchors en Allign settings.</descr>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TBitBtn.Default">
+        <short>Setting this property will make the OnClick event executed when the user hits ENTER</short>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TBitBtn.Enabled">
+        <short>Determines if the button reacts to a click.</short>
+        <descr>Setting this property determines if the control can be used. If Enabled is false a bitbutton cannot be clicked. Setting the Enabled property to false also makes its appearance grayed.
+If an Action has been assigned to the bitbutton and this action is disabled then the enabled property is set to false as well.</descr>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TBitBtn.Font">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TBitBtn.Glyph">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TBitBtn.Kind">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TBitBtn.Layout">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TBitBtn.Margin">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TBitBtn.ModalResult">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TBitBtn.OnChangeBounds">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TBitBtn.OnClick">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TBitBtn.OnEnter">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TBitBtn.OnExit">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TBitBtn.OnKeyDown">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TBitBtn.OnKeyPress">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TBitBtn.OnKeyUp">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TBitBtn.OnMouseDown">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TBitBtn.OnMouseMove">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TBitBtn.OnMouseUp">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TBitBtn.OnResize">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TBitBtn.ParentShowHint">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TBitBtn.PopupMenu">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TBitBtn.ShowHint">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TBitBtn.Spacing">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TBitBtn.TabOrder">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TBitBtn.TabStop">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TBitBtn.Visible">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- object Visibility: default -->
+      <element name="TSpeedButtonActionLink">
+        <short>Links a TSpeedButton with an action.</short>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TSpeedButtonActionLink.AssignClient">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TSpeedButtonActionLink.AssignClient.AClient">
+        <short/>
+      </element>
+      <!-- function Visibility: protected -->
+      <element name="TSpeedButtonActionLink.IsCheckedLinked">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TSpeedButtonActionLink.IsCheckedLinked.Result">
+        <short/>
+      </element>
+      <!-- function Visibility: protected -->
+      <element name="TSpeedButtonActionLink.IsGroupIndexLinked">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TSpeedButtonActionLink.IsGroupIndexLinked.Result">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TSpeedButtonActionLink.SetGroupIndex">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TSpeedButtonActionLink.SetGroupIndex.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TSpeedButtonActionLink.SetChecked">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TSpeedButtonActionLink.SetChecked.Value">
+        <short/>
+      </element>
+      <!-- object Visibility: default -->
+      <element name="TCustomSpeedButton">
+        <short>The ancestor class for TSpeedButton</short>
+        <descr>TCustomSpeedButton is the ancestor for TSpeedButton. If you want to define your own speedbutton class, you should use this class to derive it from.</descr>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomSpeedButton.FAllowAllUp">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomSpeedButton.FDown">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomSpeedButton.FDownBuffered">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomSpeedButton.FDragging">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomSpeedButton.FFlat">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomSpeedButton.FGlyph">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomSpeedButton.FGroupIndex">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomSpeedButton.FLastDrawFlags">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomSpeedButton.FLayout">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomSpeedButton.FMargin">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomSpeedButton.FMouseInControl">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomSpeedButton.FShortcut">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomSpeedButton.FSpacing">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomSpeedButton.FTransparent">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- function Visibility: private -->
+      <element name="TCustomSpeedButton.GetGlyph">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TCustomSpeedButton.GetGlyph.Result">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomSpeedButton.UpdateExclusive">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomSpeedButton.SetAllowAllUp">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomSpeedButton.SetAllowAllUp.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomSpeedButton.SetGlyph">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomSpeedButton.SetGlyph.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomSpeedButton.SetLayout">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomSpeedButton.SetLayout.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomSpeedButton.SetTransparent">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomSpeedButton.SetTransparent.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomSpeedButton.CMButtonPressed">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomSpeedButton.CMButtonPressed.Message">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomSpeedButton.MouseEnter">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomSpeedButton.MouseLeave">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomSpeedButton.CMEnabledChanged">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomSpeedButton.CMEnabledChanged.Message">
+        <short/>
+      </element>
+      <!-- variable Visibility: protected -->
+      <element name="TCustomSpeedButton.FState">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- function Visibility: protected -->
+      <element name="TCustomSpeedButton.GetNumGlyphs">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TCustomSpeedButton.GetNumGlyphs.Result">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TCustomSpeedButton.GlyphChanged">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomSpeedButton.GlyphChanged.Sender">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TCustomSpeedButton.MouseDown">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomSpeedButton.MouseDown.Button">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomSpeedButton.MouseDown.Shift">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomSpeedButton.MouseDown.X">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomSpeedButton.MouseDown.Y">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TCustomSpeedButton.MouseMove">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomSpeedButton.MouseMove.Shift">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomSpeedButton.MouseMove.X">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomSpeedButton.MouseMove.Y">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TCustomSpeedButton.MouseUp">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomSpeedButton.MouseUp.Button">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomSpeedButton.MouseUp.Shift">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomSpeedButton.MouseUp.X">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomSpeedButton.MouseUp.Y">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TCustomSpeedButton.Paint">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TCustomSpeedButton.SetDown">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomSpeedButton.SetDown.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TCustomSpeedButton.SetGroupIndex">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomSpeedButton.SetGroupIndex.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TCustomSpeedButton.SetFlat">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomSpeedButton.SetFlat.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TCustomSpeedButton.SetMargin">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomSpeedButton.SetMargin.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TCustomSpeedButton.SetNumGlyphs">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomSpeedButton.SetNumGlyphs.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TCustomSpeedButton.SetSpacing">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomSpeedButton.SetSpacing.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TCustomSpeedButton.RealSetText">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomSpeedButton.RealSetText.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TCustomSpeedButton.UpdateState">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomSpeedButton.UpdateState.InvalidateOnChange">
+        <short/>
+      </element>
+      <!-- function Visibility: protected -->
+      <element name="TCustomSpeedButton.GetDrawFlags">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TCustomSpeedButton.GetDrawFlags.Result">
+        <short/>
+      </element>
+      <!-- property Visibility: protected -->
+      <element name="TCustomSpeedButton.MouseInControl">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TCustomSpeedButton.ActionChange">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomSpeedButton.ActionChange.Sender">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomSpeedButton.ActionChange.CheckDefaults">
+        <short/>
+      </element>
+      <!-- function Visibility: protected -->
+      <element name="TCustomSpeedButton.GetActionLinkClass">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TCustomSpeedButton.GetActionLinkClass.Result">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TCustomSpeedButton.Loaded">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- constructor Visibility: public -->
+      <element name="TCustomSpeedButton.Create">
+        <short>Creates a new instance of the TCustomSpeedButton class</short>
+        <descr>If you drop a component on the form editor you don´t need to add code to explicitly create it. The component is automatically created together with the the form, and destroyed when the form is destroyed.
+
+However, if you create the component by code don´t forget to free it when it is no longer needed.
+
+Constructors allocate memory and system resources needed by the object. They also call the constructor of any sub-objects present in the class.</descr>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomSpeedButton.Create.AOwner">
+        <short/>
+      </element>
+      <!-- destructor Visibility: public -->
+      <element name="TCustomSpeedButton.Destroy">
+        <short>Deallocates an object</short>
+        <descr>If you call Destroy for an object witch hasn´t being initialized yet it will generate an error. Always use the Free method to deallocate objects, because it verifies if object variable doesn´t contain the value nil.
+
+Take the following precautions when creating your own Destroy method:
+
+* Declare Destroy with the override directive, because it is a virtual method.
+
+* Always call 'inherited Destroy;' as the last thing on the destructor code.
+
+* An exception may be raised on the constructor in case there is not enought memory to create an object, or something else goes wrong. If the exception is not handled inside the constructor, the object will be only partially built. In this case Destroy will be called, so your destructor must check if the resources were really allocated before disposing of them.
+
+* Remember to call Free for all objects created on the constructor.</descr>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- procedure Visibility: public -->
+      <element name="TCustomSpeedButton.Click">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomSpeedButton.AllowAllUp">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomSpeedButton.Down">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomSpeedButton.Flat">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomSpeedButton.Glyph">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomSpeedButton.GroupIndex">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomSpeedButton.Layout">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomSpeedButton.Margin">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomSpeedButton.NumGlyphs">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomSpeedButton.Spacing">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomSpeedButton.Transparent">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- object Visibility: default -->
+      <element name="TSpeedButton">
+        <short>A Button used to represent states (checked or not, etc)</short>
+        <descr>The Speed Button is designed to automate a process when it is selected.  An user pushes a button to start an action or set a mode. <br/>
+When a user clicks on a SpeedButton focus is not shifted; a Speed Button never gets focus. The button may carry an descriptive glyph, and has a state (checked or not, etc)</descr>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TSpeedButton.Action">
+        <short>The action executed when the user clicks the speedbutton.</short>
+        <descr>If you assign an action from an ActionList to a TSpeedButton.Action the correspondig execute-method is assigned to the OnClick event of the SpeedButton. Assigning a action sets other properties of the button as well, like Enabled and Caption.</descr>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TSpeedButton.Align">
+        <short>Is used to align the button to a border of a parent control.</short>
+        <descr>Align is used to align a control to a border of a parent control, even if the parent control is resized.
+<br/><br/>
+Possible values fo Allign are:<br/>
+alTop: Places the control at the top, using the full clientwidth of its parent control.<br/>
+alBottom: Places the control at the bottom, using the full clientwidth of its parent control.<br/>
+alLeft: Places the control at the left side of its parent and uses the available height between any top or bottom alligned controls.<br/>
+alRight: Like alLeft but on the right side of the parent control.<br/>
+alNone: The control can be placed anywhere on the parent control.<br/>
+alClient: The control takes al available space on parent control next to controls aligned to the top, bottom, right or left.</descr>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TSpeedButton.Anchors">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TSpeedButton.AllowAllUp">
+        <short>Determines wether all speedbuttons in a group can be up.</short>
+        <descr>SpeedButtons can be grouped by setting their GroupIndex. AllowAllUp specifies whether or not all SpeedButtons in this group can be unselected (all have the state Up). Changing this property for one SpeedButtons sets this for all SpeedButtons in the same group. A GroupIndex of 0 has no effect, that is AllowAllUp has no effect if GroupIndex is 0.</descr>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TSpeedButton.BorderSpacing">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TSpeedButton.Constraints">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TSpeedButton.Caption">
+        <short>Sets the text displayed on the button.</short>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TSpeedButton.Down">
+        <short>Maintains the state of the button.</short>
+        <descr>If the groupindex of a SpeedButton is unequal to 0, its state can be up or down. Use this properties to read or set the state of a speedbutton.</descr>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TSpeedButton.Enabled">
+        <short>Determines if the button reacts to a click.</short>
+        <descr>Setting this property determines if the control can be used. If Enabled is false a speedbutton cannot be clicked. Setting the Enabled property to false also makes its appearance grayed.<br/>
+If an Action has been assigned to the speedbutton and this action is disabled then the enabled property is set to false as well.</descr>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TSpeedButton.Flat">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TSpeedButton.Glyph">
+        <short>Property to read and set the glyph.</short>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TSpeedButton.GroupIndex">
+        <short>Determines how a SpeedButton reacts when it is clicked.</short>
+        <descr>If GroupIndex = 0, the speedbutton reacts like a ordinary push button. That is it appears down when the user clicks on it and it comes up again when the user releases the mouse button.
+
+If GroupIndex &gt; 0, the speedbuttons remains down after the user clicks on it, until it receives a second click.
+
+If more SpeedButtons have the same GroupIndex the behave like a group. You can use SpeedButtons in a group to present mutually exclusive choices to the user. If the user clicks on a SpeedButton in a group, this SpeedButton gets the down state, returning all other buttons to the up state.</descr>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TSpeedButton.Layout">
+        <short>Determines the place of the glyph with respect to the caption.</short>
+        <descr>Determines the place of the glyph with respect to the caption. 
+<br/><br/>
+Possible values are:<br/>
+blGlyphBottom: The glyph is shown under the caption.<br/>
+blGlyphLeft: The glyph is shown left of the caption.<br/>
+blGlyphRight: The glyph is shown right of the caption.<br/>
+blGlyphTop: The glyph is shown above the caption.</descr>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TSpeedButton.Margin">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TSpeedButton.NumGlyphs">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TSpeedButton.Spacing">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TSpeedButton.Transparent">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TSpeedButton.Visible">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TSpeedButton.OnClick">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TSpeedButton.OnDblClick">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TSpeedButton.OnMouseDown">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TSpeedButton.OnMouseMove">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TSpeedButton.OnMouseUp">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TSpeedButton.OnPaint">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TSpeedButton.OnResize">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TSpeedButton.OnChangeBounds">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TSpeedButton.ShowHint">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TSpeedButton.ParentFont">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TSpeedButton.ParentShowHint">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TSpeedButton.PopupMenu">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- procedure Visibility: default -->
+      <element name="Register">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <element name="ENodeNameENodeName"/>
+    </module>
+  </package>
+</fpdoc-descriptions>

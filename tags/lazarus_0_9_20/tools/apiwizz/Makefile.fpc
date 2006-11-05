@@ -1,0 +1,41 @@
+#
+#   Makefile.fpc for APIWizard for Free Pascal
+#
+
+[package]
+name=lazarus-apiwizz
+version=0.7a
+
+[target]
+programs=apiwizz
+
+[require]
+packages=rtl fcl
+
+[clean]
+#units=apiwizard
+
+[compiler]
+options=-gl
+unitdir=. $(LAZDIR)/lcl/units/$(CPU_TARGET)-$(OS_TARGET) \
+          $(LAZDIR)/lcl/units/$(CPU_TARGET)-$(OS_TARGET)/$(LCL_PLATFORM)
+unittargetdir=.
+targetdir=.
+
+[prerules]
+LAZDIR=../..
+# LCL Platform
+ifndef LCL_PLATFORM
+ifeq ($(OS_TARGET),win32)
+LCL_PLATFORM=win32
+else
+LCL_PLATFORM=gtk
+endif
+endif
+export LCL_PLATFORM
+
+[rules]
+.PHONY: all
+
+all: 
+        $(MAKE) --assume-new=apiwizz.pp apiwizz$(EXEEXT)

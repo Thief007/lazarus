@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectOptions>
+    <PathDelim Value="\"/>
+    <Version Value="5"/>
+    <General>
+      <SessionStorage Value="InIDEConfig"/>
+      <MainUnit Value="0"/>
+      <IconPath Value="./"/>
+      <TargetFileExt Value=""/>
+    </General>
+    <VersionInfo>
+      <UseVersionInfo Value="False"/>
+      <AutoIncrementBuild Value="False"/>
+      <CurrentVersionNr Value="0"/>
+      <CurrentMajorRevNr Value="0"/>
+      <CurrentMinorRevNr Value="0"/>
+      <CurrentBuildNr Value="0"/>
+      <ProjectVersion Value="1.0.0.0"/>
+      <Language Value="0409"/>
+      <CharSet Value="04E4"/>
+      <Comments Value=""/>
+      <CompanyName Value=""/>
+      <FileDescription Value=""/>
+      <InternalName Value=""/>
+      <LegalCopyright Value=""/>
+      <LegalTrademarks Value=""/>
+      <OriginalFilename Value=""/>
+      <ProductName Value=""/>
+    </VersionInfo>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|ppw|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+        <LaunchingApplication PathPlusParams="\usr\X11R6\bin\xterm -T 'Lazarus Run Output' -e $(LazarusDir)\tools\runwait.sh $(TargetCmdLine)"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="2">
+      <Item1>
+        <PackageName Value="SynEdit"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="IDEIntf"/>
+      </Item2>
+    </RequiredPackages>
+    <Units Count="3">
+      <Unit0>
+        <Filename Value="lazbuild.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="lazbuild"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="buildmanager.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="BuildManager"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="basebuildmanager.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="BaseBuildManager"/>
+      </Unit2>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="5"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="..\lazbuild"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="include\;include\$(TargetOS)\"/>
+      <OtherUnitFiles Value="..\designer\;..\packager\;..\components\codetools\units\$(TargetCPU)-$(TargetOS)\"/>
+      <UnitOutputDirectory Value="..\units\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <CodeGeneration>
+      <Generate Value="Faster"/>
+    </CodeGeneration>
+    <Other>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+</CONFIG>
