@@ -1,0 +1,1739 @@
+<?xml version="1.0"?>
+<fpdoc-descriptions>
+  <package name="lcl">
+    <!--
+  ====================================================================
+    ActnList
+  ====================================================================
+-->
+    <module name="ActnList">
+      <short/>
+      <descr/>
+      <!-- unresolved type reference Visibility: default -->
+      <element name="Classes">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- unresolved type reference Visibility: default -->
+      <element name="SysUtils">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- unresolved type reference Visibility: default -->
+      <element name="LCLStrConsts">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- unresolved type reference Visibility: default -->
+      <element name="LCLProc">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- unresolved type reference Visibility: default -->
+      <element name="ImgList">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- unresolved type reference Visibility: default -->
+      <element name="LCLClasses">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- object Visibility: default -->
+      <element name="TContainedAction">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TContainedAction.FCategory">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TContainedAction.FActionList">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- function Visibility: private -->
+      <element name="TContainedAction.GetIndex">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TContainedAction.GetIndex.Result">
+        <short/>
+      </element>
+      <!-- function Visibility: private -->
+      <element name="TContainedAction.IsCategoryStored">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TContainedAction.IsCategoryStored.Result">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TContainedAction.SetCategory">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TContainedAction.SetCategory.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TContainedAction.SetIndex">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TContainedAction.SetIndex.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TContainedAction.SetActionList">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TContainedAction.SetActionList.AActionList">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TContainedAction.ReadState">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TContainedAction.ReadState.Reader">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TContainedAction.SetParentComponent">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TContainedAction.SetParentComponent.AParent">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TContainedAction.Change">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- destructor Visibility: public -->
+      <element name="TContainedAction.Destroy">
+        <short>Deallocates an object</short>
+        <descr>If you call Destroy for an object witch hasn´t being initialized yet it will generate an error. Always use the Free method to deallocate objects, because it verifies if object variable doesn´t contain the value nil.
+
+Take the following precautions when creating your own Destroy method:
+
+* Declare Destroy with the override directive, because it is a virtual method.
+
+* Always call 'inherited Destroy;' as the last thing on the destructor code.
+
+* An exception may be raised on the constructor in case there is not enought memory to create an object, or something else goes wrong. If the exception is not handled inside the constructor, the object will be only partially built. In this case Destroy will be called, so your destructor must check if the resources were really allocated before disposing of them.
+
+* Remember to call Free for all objects created on the constructor.</descr>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function Visibility: public -->
+      <element name="TContainedAction.Execute">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TContainedAction.Execute.Result">
+        <short/>
+      </element>
+      <!-- function Visibility: public -->
+      <element name="TContainedAction.GetParentComponent">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TContainedAction.GetParentComponent.Result">
+        <short/>
+      </element>
+      <!-- function Visibility: public -->
+      <element name="TContainedAction.HasParent">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TContainedAction.HasParent.Result">
+        <short/>
+      </element>
+      <!-- function Visibility: public -->
+      <element name="TContainedAction.Update">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TContainedAction.Update.Result">
+        <short/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TContainedAction.ActionList">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TContainedAction.Index">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TContainedAction.Category">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- "class of" type Visibility: default -->
+      <element name="TContainedActionClass">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- procedure type Visibility: default -->
+      <element name="TActionEvent">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TActionEvent.Action">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TActionEvent.Handled">
+        <short/>
+      </element>
+      <!-- enumeration type Visibility: default -->
+      <element name="TActionListState">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- enumeration value Visibility: default -->
+      <element name="TActionListState.asNormal">
+        <short/>
+      </element>
+      <!-- enumeration value Visibility: default -->
+      <element name="TActionListState.asSuspended">
+        <short/>
+      </element>
+      <!-- enumeration value Visibility: default -->
+      <element name="TActionListState.asSuspendedEnabled">
+        <short/>
+      </element>
+      <!-- object Visibility: default -->
+      <element name="TCustomActionList">
+        <short>A generic class for all action list components</short>
+        <descr>TCustomActionList is a generic class for all components that
+ represent action lists. TCustomActionList is the ancestor for TActionList.
+ If you want to define your own action list class, you should use this
+ class to derive it from.
+
+TActionList, TAction, TActionLink and TContainedAction are used to centralize
+ the implementation of user commands, and can then be linked to the apropriete
+ button, menu or another component. This an Object-Oriented programming strategy
+ to reuse the code, as oposed to the Event-Oriented approach of writing an
+ OnClick event for each component.</descr>
+        <errors/>
+        <seealso>
+          <link id="TActionList"/>
+        </seealso>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomActionList.FActions">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomActionList.FImageChangeLink">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomActionList.FImages">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomActionList.FOnChange">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomActionList.FOnExecute">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomActionList.FOnUpdate">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomActionList.FState">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- function Visibility: private -->
+      <element name="TCustomActionList.GetAction">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TCustomActionList.GetAction.Result">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomActionList.GetAction.Index">
+        <short/>
+      </element>
+      <!-- function Visibility: private -->
+      <element name="TCustomActionList.GetActionCount">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TCustomActionList.GetActionCount.Result">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomActionList.ImageListChange">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomActionList.ImageListChange.Sender">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomActionList.SetAction">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomActionList.SetAction.Index">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomActionList.SetAction.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomActionList.SetState">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomActionList.SetState.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TCustomActionList.AddAction">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomActionList.AddAction.Action">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TCustomActionList.RemoveAction">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomActionList.RemoveAction.Action">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TCustomActionList.Change">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TCustomActionList.GetChildren">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomActionList.GetChildren.Proc">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomActionList.GetChildren.Root">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TCustomActionList.Notification">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomActionList.Notification.AComponent">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomActionList.Notification.Operation">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TCustomActionList.SetChildOrder">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomActionList.SetChildOrder.Component">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomActionList.SetChildOrder.Order">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TCustomActionList.SetImages">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomActionList.SetImages.Value">
+        <short/>
+      </element>
+      <!-- property Visibility: protected -->
+      <element name="TCustomActionList.OnChange">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: protected -->
+      <element name="TCustomActionList.OnExecute">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: protected -->
+      <element name="TCustomActionList.OnUpdate">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- constructor Visibility: public -->
+      <element name="TCustomActionList.Create">
+        <short>Creates a new instance of the TCustomActionList class</short>
+        <descr>If you drop a component on the form editor you don´t need to add code to explicitly create it. The component is automatically created together with the the form, and destroyed when the form is destroyed.
+
+However, if you create the component by code don´t forget to free it when it is no longer needed.
+
+Constructors allocate memory and system resources needed by the object. They also call the constructor of any sub-objects present in the class.</descr>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomActionList.Create.AOwner">
+        <short/>
+      </element>
+      <!-- destructor Visibility: public -->
+      <element name="TCustomActionList.Destroy">
+        <short>Deallocates an object</short>
+        <descr>If you call Destroy for an object witch hasn´t being initialized yet it will generate an error. Always use the Free method to deallocate objects, because it verifies if object variable doesn´t contain the value nil.
+
+Take the following precautions when creating your own Destroy method:
+
+* Declare Destroy with the override directive, because it is a virtual method.
+
+* Always call 'inherited Destroy;' as the last thing on the destructor code.
+
+* An exception may be raised on the constructor in case there is not enought memory to create an object, or something else goes wrong. If the exception is not handled inside the constructor, the object will be only partially built. In this case Destroy will be called, so your destructor must check if the resources were really allocated before disposing of them.
+
+* Remember to call Free for all objects created on the constructor.</descr>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function Visibility: public -->
+      <element name="TCustomActionList.ExecuteAction">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TCustomActionList.ExecuteAction.Result">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomActionList.ExecuteAction.Action">
+        <short/>
+      </element>
+      <!-- function Visibility: public -->
+      <element name="TCustomActionList.UpdateAction">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TCustomActionList.UpdateAction.Result">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomActionList.UpdateAction.Action">
+        <short/>
+      </element>
+      <!-- function Visibility: public -->
+      <element name="TCustomActionList.IndexOfName">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TCustomActionList.IndexOfName.Result">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomActionList.IndexOfName.ActionName">
+        <short/>
+      </element>
+      <!-- function Visibility: public -->
+      <element name="TCustomActionList.ActionByName">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TCustomActionList.ActionByName.Result">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomActionList.ActionByName.ActionName">
+        <short/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomActionList.Actions">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomActionList.Actions.Index">
+        <short/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomActionList.ActionCount">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomActionList.Images">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomActionList.State">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- object Visibility: default -->
+      <element name="TActionList">
+        <short>The basic actions list class</short>
+        <descr>TActionList is the last component on the "Standard" component pallete on the Lazarus IDE.
+
+To add, remove or modify actions on the list by right-click an ActionList on the form editor and then choose "Edit action list...". This will open the "Action List Editor". You can now use the "+" and "-" buttons to add and remove actions. To edit an action, click it and then open the object inspector. To add code to be executed when an action is triggered, double-click the action´s name on the "Action List Editor".</descr>
+        <errors/>
+        <seealso>
+          <link id="TActionList"/>
+        </seealso>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TActionList.Images">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TActionList.State">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TActionList.OnChange">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TActionList.OnExecute">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TActionList.OnUpdate">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- object Visibility: default -->
+      <element name="TShortCutList">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function Visibility: private -->
+      <element name="TShortCutList.GetShortCuts">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TShortCutList.GetShortCuts.Result">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TShortCutList.GetShortCuts.Index">
+        <short/>
+      </element>
+      <!-- function Visibility: public -->
+      <element name="TShortCutList.Add">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TShortCutList.Add.Result">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TShortCutList.Add.S">
+        <short/>
+      </element>
+      <!-- function Visibility: public -->
+      <element name="TShortCutList.IndexOfShortCut">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TShortCutList.IndexOfShortCut.Result">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TShortCutList.IndexOfShortCut.Shortcut">
+        <short/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TShortCutList.ShortCuts">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TShortCutList.ShortCuts.Index">
+        <short/>
+      </element>
+      <!-- procedure type Visibility: default -->
+      <element name="THintEvent">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="THintEvent.HintStr">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="THintEvent.CanShow">
+        <short/>
+      </element>
+      <!-- object Visibility: default -->
+      <element name="TCustomAction">
+        <short>A generic class for all Action components</short>
+        <descr>TCustomAction is a generic class for all components that represent actions that can be be set on the user interface for buttons and other controls. TCustomAction is the ancestor for TAction. If you want to define your own action class, you should use this class to derive it from.
+
+TActionList, TAction, TActionLink and TContainedAction are used to centralize the implementation of user commands, and can then be linked to the appropriate button, menu or another component. This is an Object-Oriented programming strategy to reuse code, as opposed to the Event-Oriented approach of writing an OnClick event for each component.
+
+You can assign a action to a component by using the Object Inspector.</descr>
+        <seealso>
+          <link id="TAction"/>
+        </seealso>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomAction.FDisableIfNoHandler">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomAction.FCaption">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomAction.FChecking">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomAction.FChecked">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomAction.FEnabled">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomAction.FGroupIndex">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomAction.FHelpType">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomAction.FHelpContext">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomAction.FHelpKeyword">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomAction.FHint">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomAction.FImageIndex">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomAction.FShortCut">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomAction.FVisible">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomAction.FOnHint">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomAction.FSecondaryShortCuts">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomAction.FSavedEnabledState">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomAction.FAutoCheck">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomAction.SetAutoCheck">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomAction.SetAutoCheck.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomAction.SetCaption">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomAction.SetCaption.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomAction.SetChecked">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomAction.SetChecked.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomAction.SetEnabled">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomAction.SetEnabled.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomAction.SetGroupIndex">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomAction.SetGroupIndex.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomAction.SetHelpContext">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomAction.SetHelpContext.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomAction.SetHelpKeyword">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomAction.SetHelpKeyword.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomAction.SetHelpType">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomAction.SetHelpType.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomAction.SetHint">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomAction.SetHint.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomAction.SetImageIndex">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomAction.SetImageIndex.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomAction.SetShortCut">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomAction.SetShortCut.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomAction.SetVisible">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomAction.SetVisible.Value">
+        <short/>
+      </element>
+      <!-- function Visibility: private -->
+      <element name="TCustomAction.GetSecondaryShortCuts">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TCustomAction.GetSecondaryShortCuts.Result">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomAction.SetSecondaryShortCuts">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomAction.SetSecondaryShortCuts.Value">
+        <short/>
+      </element>
+      <!-- function Visibility: private -->
+      <element name="TCustomAction.IsSecondaryShortCutsStored">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TCustomAction.IsSecondaryShortCutsStored.Result">
+        <short/>
+      </element>
+      <!-- variable Visibility: protected -->
+      <element name="TCustomAction.FImage">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: protected -->
+      <element name="TCustomAction.FMask">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TCustomAction.AssignTo">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomAction.AssignTo.Dest">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TCustomAction.SetName">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomAction.SetName.Value">
+        <short/>
+      </element>
+      <!-- function Visibility: protected -->
+      <element name="TCustomAction.HandleShortCut">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TCustomAction.HandleShortCut.Result">
+        <short/>
+      </element>
+      <!-- property Visibility: protected -->
+      <element name="TCustomAction.SavedEnabledState">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- constructor Visibility: public -->
+      <element name="TCustomAction.Create">
+        <short>Creates a new instance of the TCustomAction class</short>
+        <descr>If you drop a component on the form editor you don´t need to add code to explicitly create it. The component is automatically created together with the the form, and destroyed when the form is destroyed.
+
+However, if you create the component by code don´t forget to free it when it is no longer needed.
+
+Constructors allocate memory and system resources needed by the object. They also call the constructor of any sub-objects present in the class.</descr>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomAction.Create.AOwner">
+        <short/>
+      </element>
+      <!-- destructor Visibility: public -->
+      <element name="TCustomAction.Destroy">
+        <short>Deallocates an object</short>
+        <descr>If you call Destroy for an object witch hasn´t being initialized yet it will generate an error. Always use the Free method to deallocate objects, because it verifies if object variable doesn´t contain the value nil.
+
+Take the following precautions when creating your own Destroy method:
+
+* Declare Destroy with the override directive, because it is a virtual method.
+
+* Always call 'inherited Destroy;' as the last thing on the destructor code.
+
+* An exception may be raised on the constructor in case there is not enought memory to create an object, or something else goes wrong. If the exception is not handled inside the constructor, the object will be only partially built. In this case Destroy will be called, so your destructor must check if the resources were really allocated before disposing of them.
+
+* Remember to call Free for all objects created on the constructor.</descr>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function Visibility: public -->
+      <element name="TCustomAction.DoHint">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TCustomAction.DoHint.Result">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomAction.DoHint.HintStr">
+        <short/>
+      </element>
+      <!-- function Visibility: public -->
+      <element name="TCustomAction.Execute">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TCustomAction.Execute.Result">
+        <short/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomAction.AutoCheck">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomAction.Caption">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomAction.Checked">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomAction.DisableIfNoHandler">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomAction.Enabled">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomAction.GroupIndex">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomAction.HelpContext">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomAction.HelpKeyword">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomAction.HelpType">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomAction.Hint">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomAction.ImageIndex">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomAction.ShortCut">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomAction.SecondaryShortCuts">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomAction.Visible">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomAction.OnHint">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- object Visibility: default -->
+      <element name="TAction">
+        <short>The basic action class</short>
+        <descr>TAction is the basic action object used on the LCL.
+
+It redeclares many properties inherited from TCustomAction on the published section, but does not add any new features. For more details look at the See Also section for TCustomAction.</descr>
+        <seealso>
+          <link id="TCustomAction"/>
+        </seealso>
+      </element>
+      <!-- constructor Visibility: public -->
+      <element name="TAction.Create">
+        <short>Creates a new instance of the TAction class</short>
+        <descr>If you drop a component on the form editor you don´t need to add code to explicitly create it. The component is automatically created together with the the form, and destroyed when the form is destroyed.
+
+However, if you create the component by code don´t forget to free it when it is no longer needed.
+
+Constructors allocate memory and system resources needed by the object. They also call the constructor of any sub-objects present in the class.</descr>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TAction.Create.AOwner">
+        <short/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TAction.AutoCheck">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TAction.Caption">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TAction.Checked">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TAction.Enabled">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TAction.GroupIndex">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TAction.HelpContext">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TAction.HelpKeyword">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TAction.HelpType">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TAction.Hint">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TAction.ImageIndex">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TAction.OnExecute">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TAction.OnHint">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TAction.OnUpdate">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TAction.SecondaryShortCuts">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TAction.ShortCut">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: published -->
+      <element name="TAction.Visible">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- object Visibility: default -->
+      <element name="TActionLink">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TActionLink.SetAutoCheck">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TActionLink.SetAutoCheck.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TActionLink.SetCaption">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TActionLink.SetCaption.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TActionLink.SetChecked">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TActionLink.SetChecked.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TActionLink.SetEnabled">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TActionLink.SetEnabled.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TActionLink.SetGroupIndex">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TActionLink.SetGroupIndex.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TActionLink.SetHelpContext">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TActionLink.SetHelpContext.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TActionLink.SetHelpKeyword">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TActionLink.SetHelpKeyword.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TActionLink.SetHelpType">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TActionLink.SetHelpType.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TActionLink.SetHint">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TActionLink.SetHint.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TActionLink.SetImageIndex">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TActionLink.SetImageIndex.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TActionLink.SetShortCut">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TActionLink.SetShortCut.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TActionLink.SetVisible">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TActionLink.SetVisible.Value">
+        <short/>
+      </element>
+      <!-- function Visibility: public -->
+      <element name="TActionLink.IsCaptionLinked">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TActionLink.IsCaptionLinked.Result">
+        <short/>
+      </element>
+      <!-- function Visibility: public -->
+      <element name="TActionLink.IsCheckedLinked">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TActionLink.IsCheckedLinked.Result">
+        <short/>
+      </element>
+      <!-- function Visibility: public -->
+      <element name="TActionLink.IsEnabledLinked">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TActionLink.IsEnabledLinked.Result">
+        <short/>
+      </element>
+      <!-- function Visibility: public -->
+      <element name="TActionLink.IsGroupIndexLinked">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TActionLink.IsGroupIndexLinked.Result">
+        <short/>
+      </element>
+      <!-- function Visibility: public -->
+      <element name="TActionLink.IsHelpContextLinked">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TActionLink.IsHelpContextLinked.Result">
+        <short/>
+      </element>
+      <!-- function Visibility: public -->
+      <element name="TActionLink.IsHelpLinked">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TActionLink.IsHelpLinked.Result">
+        <short/>
+      </element>
+      <!-- function Visibility: public -->
+      <element name="TActionLink.IsHintLinked">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TActionLink.IsHintLinked.Result">
+        <short/>
+      </element>
+      <!-- function Visibility: public -->
+      <element name="TActionLink.IsImageIndexLinked">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TActionLink.IsImageIndexLinked.Result">
+        <short/>
+      </element>
+      <!-- function Visibility: public -->
+      <element name="TActionLink.IsShortCutLinked">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TActionLink.IsShortCutLinked.Result">
+        <short/>
+      </element>
+      <!-- function Visibility: public -->
+      <element name="TActionLink.IsVisibleLinked">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TActionLink.IsVisibleLinked.Result">
+        <short/>
+      </element>
+      <!-- "class of" type Visibility: default -->
+      <element name="TActionLinkClass">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- procedure type Visibility: default -->
+      <element name="TEnumActionProc">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TEnumActionProc.Category">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TEnumActionProc.ActionClass">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TEnumActionProc.Info">
+        <short/>
+      </element>
+      <!-- procedure Visibility: default -->
+      <element name="RegisterActions">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="RegisterActions.CategoryName">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="RegisterActions.AClasses">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="RegisterActions.Resource">
+        <short/>
+      </element>
+      <!-- procedure Visibility: default -->
+      <element name="UnRegisterActions">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="UnRegisterActions.AClasses">
+        <short/>
+      </element>
+      <!-- procedure Visibility: default -->
+      <element name="EnumRegisteredActions">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="EnumRegisteredActions.Proc">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="EnumRegisteredActions.Info">
+        <short/>
+      </element>
+      <!-- function Visibility: default -->
+      <element name="CreateAction">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="CreateAction.Result">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="CreateAction.TheOwner">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="CreateAction.ActionClass">
+        <short/>
+      </element>
+      <!-- constant Visibility: default -->
+      <element name="RegisterActionsProc">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="CategoryName">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="Resource">
+        <short/>
+      </element>
+      <!-- constant Visibility: default -->
+      <element name="UnRegisterActionsProc">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="AClasses">
+        <short/>
+      </element>
+      <!-- constant Visibility: default -->
+      <element name="EnumRegisteredActionsProc">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="Proc">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="Info">
+        <short/>
+      </element>
+      <!-- constant Visibility: default -->
+      <element name="CreateActionProc">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="Result">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TheOwner">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="ActionClass">
+        <short/>
+      </element>
+      <!-- variable Visibility: default -->
+      <element name="ApplicationActionComponent">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- procedure Visibility: default -->
+      <element name="Register">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+    </module>
+    <!-- ActnList -->
+  </package>
+</fpdoc-descriptions>

@@ -1,0 +1,10700 @@
+<?xml version="1.0" encoding="ISO8859-1"?>
+<fpdoc-descriptions>
+<package name="lcl">
+
+<!--
+  ====================================================================
+    Graphics
+  ====================================================================
+-->
+
+<module name="Graphics">
+<short></short>
+<descr>
+</descr>
+
+<!-- unresolved type reference Visibility: default -->
+<element name="SysUtils">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- unresolved type reference Visibility: default -->
+<element name="Classes">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- unresolved type reference Visibility: default -->
+<element name="Contnrs">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- unresolved type reference Visibility: default -->
+<element name="FPCAdds">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- unresolved type reference Visibility: default -->
+<element name="FPImage">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- unresolved type reference Visibility: default -->
+<element name="FPReadPNG">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- unresolved type reference Visibility: default -->
+<element name="FPWritePNG">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- unresolved type reference Visibility: default -->
+<element name="FPReadBMP">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- unresolved type reference Visibility: default -->
+<element name="FPWriteBMP">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- unresolved type reference Visibility: default -->
+<element name="IntfGraphics">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- unresolved type reference Visibility: default -->
+<element name="AvgLvlTree">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- unresolved type reference Visibility: default -->
+<element name="LCLStrConsts">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- unresolved type reference Visibility: default -->
+<element name="LCLType">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- unresolved type reference Visibility: default -->
+<element name="LCLProc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- unresolved type reference Visibility: default -->
+<element name="LMessages">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- unresolved type reference Visibility: default -->
+<element name="LCLIntf">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- unresolved type reference Visibility: default -->
+<element name="LResources">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- unresolved type reference Visibility: default -->
+<element name="LCLResCache">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- unresolved type reference Visibility: default -->
+<element name="GraphType">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- unresolved type reference Visibility: default -->
+<element name="GraphMath">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- unresolved type reference Visibility: default -->
+<element name="InterfaceBase">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- pointer type Visibility: default -->
+<element name="PColor">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- alias type Visibility: default -->
+<element name="TColor">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="TFontPitch">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TFontPitch.fpDefault">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TFontPitch.fpVariable">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TFontPitch.fpFixed">
+<short></short>
+</element>
+
+<!-- alias type Visibility: default -->
+<element name="TFontName">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- alias type Visibility: default -->
+<element name="TFontDataName">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="TFontStyle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TFontStyle.fsBold">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TFontStyle.fsItalic">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TFontStyle.fsStrikeOut">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TFontStyle.fsUnderline">
+<short></short>
+</element>
+
+<!-- set type Visibility: default -->
+<element name="TFontStyles">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- set type Visibility: default -->
+<element name="TFontStylesbase">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- range type Visibility: default -->
+<element name="TFontCharSet">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- record type Visibility: default -->
+<element name="TFontData">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TFontData.Handle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TFontData.Height">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TFontData.Pitch">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TFontData.Style">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TFontData.CharSet">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TFontData.Name">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="DefFontData">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="TTextLayout">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TTextLayout.tlTop">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TTextLayout.tlCenter">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TTextLayout.tlBottom">
+<short></short>
+</element>
+
+<!-- record type Visibility: default -->
+<element name="TTextStyle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TTextStyle.Alignment">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TTextStyle.Layout">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TTextStyle.SingleLine">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TTextStyle.Clipping">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TTextStyle.ExpandTabs">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TTextStyle.ShowPrefix">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TTextStyle.Wordbreak">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TTextStyle.Opaque">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TTextStyle.SystemFont">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="TPenStyle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TPenStyle.psSolid">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TPenStyle.psDash">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TPenStyle.psDot">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TPenStyle.psDashDot">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TPenStyle.psDashDotDot">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TPenStyle.psClear">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TPenStyle.psInsideframe">
+<short></short>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="TPenMode">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TPenMode.pmBlack">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TPenMode.pmWhite">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TPenMode.pmNop">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TPenMode.pmNot">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TPenMode.pmCopy">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TPenMode.pmNotCopy">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TPenMode.pmMergePenNot">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TPenMode.pmMaskPenNot">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TPenMode.pmMergeNotPen">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TPenMode.pmMaskNotPen">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TPenMode.pmMerge">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TPenMode.pmNotMerge">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TPenMode.pmMask">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TPenMode.pmNotMask">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TPenMode.pmXor">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TPenMode.pmNotXor">
+<short></short>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="TBrushStyle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TBrushStyle.bsSolid">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TBrushStyle.bsClear">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TBrushStyle.bsHorizontal">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TBrushStyle.bsVertical">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TBrushStyle.bsFDiagonal">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TBrushStyle.bsBDiagonal">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TBrushStyle.bsCross">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TBrushStyle.bsDiagCross">
+<short></short>
+</element>
+
+<!-- alias type Visibility: default -->
+<element name="TFillStyle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="TFillMode">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TFillMode.fmAlternate">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TFillMode.fmWinding">
+<short></short>
+</element>
+
+<!-- alias type Visibility: default -->
+<element name="TCopymode">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="TCanvasStates">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TCanvasStates.csHandleValid">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TCanvasStates.csFontValid">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TCanvasStates.csPenvalid">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TCanvasStates.csBrushValid">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TCanvasStates.csRegionValid">
+<short></short>
+</element>
+
+<!-- set type Visibility: default -->
+<element name="TCanvasState">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="TCanvasOrientation">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TCanvasOrientation.csLefttoRight">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TCanvasOrientation.coRighttoLeft">
+<short></short>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="TProgressStage">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TProgressStage.psStarting">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TProgressStage.psRunning">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TProgressStage.psEnding">
+<short></short>
+</element>
+
+<!-- procedure type Visibility: default -->
+<element name="TProgressEvent">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TProgressEvent.Sender">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TProgressEvent.Stage">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TProgressEvent.PercentDone">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TProgressEvent.RedrawNow">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TProgressEvent.R">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TProgressEvent.Msg">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TProgressEvent.DoContinue">
+<short></short>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="TPixelFormat">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TPixelFormat.pfDevice">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TPixelFormat.pf1bit">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TPixelFormat.pf4bit">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TPixelFormat.pf8bit">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TPixelFormat.pf15bit">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TPixelFormat.pf16bit">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TPixelFormat.pf24bit">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TPixelFormat.pf32bit">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TPixelFormat.pfCustom">
+<short></short>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="TTransparentMode">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TTransparentMode.tmAuto">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TTransparentMode.tmFixed">
+<short></short>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clBlack">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clMaroon">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clGreen">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clOlive">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clNavy">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clPurple">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clTeal">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clGray">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clSilver">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clRed">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clLime">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clYellow">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clBlue">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clFuchsia">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clAqua">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clLtGray">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clDkGray">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clWhite">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clCream">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clNone">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clDefault">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clScrollBar">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clBackground">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clActiveCaption">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clInactiveCaption">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clMenu">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clWindow">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clWindowFrame">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clMenuText">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clWindowText">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clCaptionText">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clActiveBorder">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clInactiveBorder">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clAppWorkspace">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clHighlight">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clHighlightText">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clBtnFace">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clBtnShadow">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clGrayText">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clBtnText">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clInactiveCaptionText">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clBtnHighlight">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="cl3DDkShadow">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="cl3DLight">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clInfoText">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clInfoBk">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clHotLight">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clGradientActiveCaption">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clGradientInactiveCaption">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clForm">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clEndColors">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clColorDesktop">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="cl3DFace">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="cl3DShadow">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="cl3DHiLight">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clBtnHiLight">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clFirstSpecialColor">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clMask">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clDontMask">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clForeground">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clButton">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clLight">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clMidlight">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clDark">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clMid">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clText">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clBrightText">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clButtonText">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clBase">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clxBackground">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clShadow">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clxHighlight">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clHighlightedText">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="cloNormal">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="cloDisabled">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="cloActive">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clNormalForeground">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clNormalButton">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clNormalLight">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clNormalMidlight">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clNormalDark">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clNormalMid">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clNormalText">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clNormalBrightText">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clNormalButtonText">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clNormalBase">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clNormalBackground">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clNormalShadow">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clNormalHighlight">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clNormalHighlightedText">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clDisabledForeground">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clDisabledButton">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clDisabledLight">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clDisabledMidlight">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clDisabledDark">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clDisabledMid">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clDisabledText">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clDisabledBrightText">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clDisabledButtonText">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clDisabledBase">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clDisabledBackground">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clDisabledShadow">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clDisabledHighlight">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clDisabledHighlightedText">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clActiveForeground">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clActiveButton">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clActiveLight">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clActiveMidlight">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clActiveDark">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clActiveMid">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clActiveText">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clActiveBrightText">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clActiveButtonText">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clActiveBase">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clActiveBackground">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clActiveShadow">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clActiveHighlight">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="clActiveHighlightedText">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- range type Visibility: default -->
+<element name="TMappedColor">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="TColorGroup">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TColorGroup.cgInactive">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TColorGroup.cgDisabled">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TColorGroup.cgActive">
+<short></short>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="TColorRole">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TColorRole.crForeground">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TColorRole.crButton">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TColorRole.crLight">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TColorRole.crMidlight">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TColorRole.crDark">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TColorRole.crMid">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TColorRole.crText">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TColorRole.crBrightText">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TColorRole.crButtonText">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TColorRole.crBase">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TColorRole.crBackground">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TColorRole.crShadow">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TColorRole.crHighlight">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TColorRole.crHighlightText">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TColorRole.crNoRole">
+<short></short>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="cmBlackness">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="cmDstInvert">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="cmMergeCopy">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="cmMergePaint">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="cmNotSrcCopy">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="cmNotSrcErase">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="cmPatCopy">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="cmPatInvert">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="cmPatPaint">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="cmSrcAnd">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="cmSrcCopy">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="cmSrcErase">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="cmSrcInvert">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="cmSrcPaint">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="cmWhiteness">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TPortableNetworkGraphic">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TGraphicsObject">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TGraphicsObject.FOnChanging">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TGraphicsObject.FOnChange">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: private -->
+<element name="TGraphicsObject.DoChange">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TGraphicsObject.DoChange.Msg">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TGraphicsObject.Changing">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TGraphicsObject.Changed">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TGraphicsObject.Lock">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TGraphicsObject.UnLock">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TGraphicsObject.OnChanging">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TGraphicsObject.OnChange">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TFontHandleCacheDescriptor">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: public -->
+<element name="TFontHandleCacheDescriptor.LogFont">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: public -->
+<element name="TFontHandleCacheDescriptor.LongFontName">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TFontHandleCache">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TFontHandleCache.RemoveItem">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TFontHandleCache.RemoveItem.Item">
+<short></short>
+</element>
+
+<!-- constructor Visibility: public -->
+<element name="TFontHandleCache.Create">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TFontHandleCache.CompareDescriptors">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TFontHandleCache.CompareDescriptors.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TFontHandleCache.CompareDescriptors.Tree">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TFontHandleCache.CompareDescriptors.Desc1">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TFontHandleCache.CompareDescriptors.Desc2">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TFontHandleCache.FindFont">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TFontHandleCache.FindFont.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TFontHandleCache.FindFont.TheFont">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TFontHandleCache.FindFontDesc">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TFontHandleCache.FindFontDesc.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TFontHandleCache.FindFontDesc.LogFont">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TFontHandleCache.FindFontDesc.LongFontName">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TFontHandleCache.Add">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TFontHandleCache.Add.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TFontHandleCache.Add.TheFont">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TFontHandleCache.Add.LogFont">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TFontHandleCache.Add.LongFontName">
+<short></short>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TFont">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TFont.FCanUTF8">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TFont.FHandle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TFont.FPitch">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TFont.FStyle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TFont.FCharSet">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TFont.FPixelsPerInch">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TFont.FUpdateCount">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TFont.FChanged">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TFont.FFontHandleCached">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TFont.FColor">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TFont.FFontName">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TFont.FSize">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TFont.FHeight">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: private -->
+<element name="TFont.FreeHandle">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: private -->
+<element name="TFont.GetData">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TFont.GetData.FontData">
+<short></short>
+</element>
+
+<!-- function Visibility: private -->
+<element name="TFont.IsNameStored">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TFont.IsNameStored.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: private -->
+<element name="TFont.SetData">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TFont.SetData.FontData">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TFont.SetName">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TFont.SetName.AValue">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TFont.SetSize">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TFont.SetSize.AValue">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TFont.Changed">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: protected -->
+<element name="TFont.GetCharSet">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TFont.GetCharSet.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: protected -->
+<element name="TFont.GetHandle">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TFont.GetHandle.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: protected -->
+<element name="TFont.GetHeight">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TFont.GetHeight.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: protected -->
+<element name="TFont.GetName">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TFont.GetName.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: protected -->
+<element name="TFont.GetPitch">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TFont.GetPitch.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: protected -->
+<element name="TFont.GetSize">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TFont.GetSize.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: protected -->
+<element name="TFont.GetStyle">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TFont.GetStyle.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TFont.SetCharSet">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TFont.SetCharSet.AValue">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TFont.SetColor">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TFont.SetColor.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TFont.SetHandle">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TFont.SetHandle.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TFont.SetHeight">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TFont.SetHeight.value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TFont.SetPitch">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TFont.SetPitch.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TFont.SetStyle">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TFont.SetStyle.Value">
+<short></short>
+</element>
+
+<!-- constructor Visibility: public -->
+<element name="TFont.Create">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- destructor Visibility: public -->
+<element name="TFont.Destroy">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TFont.Assign">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TFont.Assign.Source">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TFont.Assign">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TFont.Assign.ALogFont">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TFont.BeginUpdate">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TFont.EndUpdate">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TFont.HandleAllocated">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TFont.HandleAllocated.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TFont.IsDefault">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TFont.IsDefault.Result">
+<short></short>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TFont.Handle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TFont.PixelsPerInch">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TFont.CanUTF8">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: published -->
+<element name="TFont.CharSet">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: published -->
+<element name="TFont.Color">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: published -->
+<element name="TFont.Height">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: published -->
+<element name="TFont.Name">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: published -->
+<element name="TFont.Pitch">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: published -->
+<element name="TFont.Size">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: published -->
+<element name="TFont.Style">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- record type Visibility: default -->
+<element name="TPenData">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TPenData.Handle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TPenData.Color">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TPenData.Width">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TPenData.Style">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TPenHandleCache">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TPenHandleCache.RemoveItem">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPenHandleCache.RemoveItem.Item">
+<short></short>
+</element>
+
+<!-- constructor Visibility: public -->
+<element name="TPenHandleCache.Create">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TPen">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TPen.FHandle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TPen.FColor">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TPen.FPenHandleCached">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TPen.FWidth">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TPen.FStyle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TPen.FMode">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: private -->
+<element name="TPen.FreeHandle">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: protected -->
+<element name="TPen.GetHandle">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TPen.GetHandle.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TPen.SetHandle">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPen.SetHandle.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TPen.SetColor">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPen.SetColor.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TPen.SetMode">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPen.SetMode.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TPen.SetStyle">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPen.SetStyle.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TPen.SetWidth">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPen.SetWidth.value">
+<short></short>
+</element>
+
+<!-- constructor Visibility: public -->
+<element name="TPen.Create">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- destructor Visibility: public -->
+<element name="TPen.Destroy">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TPen.Assign">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPen.Assign.Source">
+<short></short>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TPen.Handle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: published -->
+<element name="TPen.Color">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: published -->
+<element name="TPen.Mode">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: published -->
+<element name="TPen.Style">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: published -->
+<element name="TPen.Width">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- record type Visibility: default -->
+<element name="TBrushData">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TBrushData.Handle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TBrushData.Color">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TBrushData.Bitmap">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TBrushData.Style">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TBrushHandleCache">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TBrushHandleCache.RemoveItem">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBrushHandleCache.RemoveItem.Item">
+<short></short>
+</element>
+
+<!-- constructor Visibility: public -->
+<element name="TBrushHandleCache.Create">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TBrush">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TBrush.FHandle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TBrush.FColor">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TBrush.FBitmap">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TBrush.FStyle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TBrush.FBrushHandleCached">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: private -->
+<element name="TBrush.FreeHandle">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: protected -->
+<element name="TBrush.GetHandle">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TBrush.GetHandle.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TBrush.SetBitmap">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBrush.SetBitmap.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TBrush.SetColor">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBrush.SetColor.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TBrush.SetHandle">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBrush.SetHandle.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TBrush.SetStyle">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBrush.SetStyle.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TBrush.Assign">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBrush.Assign.Source">
+<short></short>
+</element>
+
+<!-- constructor Visibility: public -->
+<element name="TBrush.Create">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- destructor Visibility: public -->
+<element name="TBrush.Destroy">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TBrush.Bitmap">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TBrush.Handle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: published -->
+<element name="TBrush.Color">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: published -->
+<element name="TBrush.Style">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- record type Visibility: default -->
+<element name="TRegionData">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TRegionData.Handle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TRegionData.Rect">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TRegionData.Polygon">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TRegionData.NumPoints">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="TRegionData.Winding">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TRegion">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TRegion.FRegionData">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: private -->
+<element name="TRegion.FreeHandle">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: protected -->
+<element name="TRegion.GetHandle">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TRegion.GetHandle.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TRegion.SetHandle">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TRegion.SetHandle.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TRegion.SetClipRect">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TRegion.SetClipRect.value">
+<short></short>
+</element>
+
+<!-- function Visibility: protected -->
+<element name="TRegion.GetClipRect">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TRegion.GetClipRect.Result">
+<short></short>
+</element>
+
+<!-- constructor Visibility: public -->
+<element name="TRegion.Create">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- destructor Visibility: public -->
+<element name="TRegion.Destroy">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TRegion.Assign">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TRegion.Assign.Source">
+<short></short>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TRegion.Handle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TRegion.ClipRect">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TGraphic">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TGraphic.FModified">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TGraphic.FTransparent">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TGraphic.FOnChange">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TGraphic.FOnProgress">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TGraphic.FPaletteModified">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TGraphic.Changed">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TGraphic.Changed.Sender">
+<short></short>
+</element>
+
+<!-- function Visibility: protected -->
+<element name="TGraphic.Equals">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGraphic.Equals.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TGraphic.Equals.Graphic">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TGraphic.DefineProperties">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TGraphic.DefineProperties.Filer">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TGraphic.Draw">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TGraphic.Draw.ACanvas">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TGraphic.Draw.Rect">
+<short></short>
+</element>
+
+<!-- function Visibility: protected -->
+<element name="TGraphic.GetEmpty">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGraphic.GetEmpty.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: protected -->
+<element name="TGraphic.GetHeight">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGraphic.GetHeight.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: protected -->
+<element name="TGraphic.GetPalette">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGraphic.GetPalette.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: protected -->
+<element name="TGraphic.GetTransparent">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGraphic.GetTransparent.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: protected -->
+<element name="TGraphic.GetWidth">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGraphic.GetWidth.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TGraphic.Progress">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TGraphic.Progress.Sender">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TGraphic.Progress.Stage">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TGraphic.Progress.PercentDone">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TGraphic.Progress.RedrawNow">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TGraphic.Progress.R">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TGraphic.Progress.Msg">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TGraphic.Progress.DoContinue">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TGraphic.ReadData">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TGraphic.ReadData.Stream">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TGraphic.SetHeight">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TGraphic.SetHeight.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TGraphic.SetPalette">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TGraphic.SetPalette.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TGraphic.SetTransparent">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TGraphic.SetTransparent.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TGraphic.SetWidth">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TGraphic.SetWidth.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TGraphic.SetModified">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TGraphic.SetModified.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TGraphic.WriteData">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TGraphic.WriteData.Stream">
+<short></short>
+</element>
+
+<!-- constructor Visibility: public -->
+<element name="TGraphic.Create">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TGraphic.LoadFromFile">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TGraphic.LoadFromFile.Filename">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TGraphic.SaveToFile">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TGraphic.SaveToFile.Filename">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TGraphic.LoadFromStream">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TGraphic.LoadFromStream.Stream">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TGraphic.SaveToStream">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TGraphic.SaveToStream.Stream">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TGraphic.LoadFromMimeStream">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TGraphic.LoadFromMimeStream.Stream">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TGraphic.LoadFromMimeStream.MimeType">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TGraphic.LoadFromLazarusResource">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TGraphic.LoadFromLazarusResource.ResName">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TGraphic.LoadFromClipboardFormat">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TGraphic.LoadFromClipboardFormat.FormatID">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TGraphic.LoadFromClipboardFormatID">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TGraphic.LoadFromClipboardFormatID.ClipboardType">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TGraphic.LoadFromClipboardFormatID.FormatID">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TGraphic.SaveToClipboardFormat">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TGraphic.SaveToClipboardFormat.FormatID">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TGraphic.SaveToClipboardFormatID">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TGraphic.SaveToClipboardFormatID.ClipboardType">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TGraphic.SaveToClipboardFormatID.FormatID">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TGraphic.GetSupportedSourceMimeTypes">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TGraphic.GetSupportedSourceMimeTypes.List">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TGraphic.GetDefaultMimeType">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGraphic.GetDefaultMimeType.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TGraphic.GetFileExtensions">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGraphic.GetFileExtensions.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TGraphic.GetFPReaderForFileExt">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGraphic.GetFPReaderForFileExt.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TGraphic.GetFPReaderForFileExt.FileExtension">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TGraphic.GetFPWriterForFileExt">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGraphic.GetFPWriterForFileExt.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TGraphic.GetFPWriterForFileExt.FileExtension">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TGraphic.GetDefaultFPReader">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGraphic.GetDefaultFPReader.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TGraphic.GetDefaultFPWriter">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TGraphic.GetDefaultFPWriter.Result">
+<short></short>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TGraphic.Empty">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TGraphic.Height">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TGraphic.Modified">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TGraphic.OnChange">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TGraphic.OnProgress">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TGraphic.Palette">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TGraphic.PaletteModified">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TGraphic.Transparent">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TGraphic.Width">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- "class of" type Visibility: default -->
+<element name="TGraphicClass">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TPicture">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TPicture.FGraphic">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TPicture.FOnChange">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TPicture.FOnProgress">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: private -->
+<element name="TPicture.ForceType">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPicture.ForceType.GraphicType">
+<short></short>
+</element>
+
+<!-- function Visibility: private -->
+<element name="TPicture.GetBitmap">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TPicture.GetBitmap.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: private -->
+<element name="TPicture.GetPNG">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TPicture.GetPNG.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: private -->
+<element name="TPicture.GetPixmap">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TPicture.GetPixmap.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: private -->
+<element name="TPicture.GetIcon">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TPicture.GetIcon.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: private -->
+<element name="TPicture.GetHeight">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TPicture.GetHeight.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: private -->
+<element name="TPicture.GetWidth">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TPicture.GetWidth.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: private -->
+<element name="TPicture.ReadData">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPicture.ReadData.Stream">
+<short></short>
+</element>
+
+<!-- procedure Visibility: private -->
+<element name="TPicture.SetBitmap">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPicture.SetBitmap.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: private -->
+<element name="TPicture.SetPNG">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPicture.SetPNG.AValue">
+<short></short>
+</element>
+
+<!-- procedure Visibility: private -->
+<element name="TPicture.SetPixmap">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPicture.SetPixmap.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: private -->
+<element name="TPicture.SetIcon">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPicture.SetIcon.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: private -->
+<element name="TPicture.SetGraphic">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPicture.SetGraphic.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: private -->
+<element name="TPicture.WriteData">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPicture.WriteData.Stream">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TPicture.AssignTo">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPicture.AssignTo.Dest">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TPicture.Changed">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPicture.Changed.Sender">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TPicture.DefineProperties">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPicture.DefineProperties.Filer">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TPicture.Progress">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPicture.Progress.Sender">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPicture.Progress.Stage">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPicture.Progress.PercentDone">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPicture.Progress.RedrawNow">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPicture.Progress.R">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPicture.Progress.Msg">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPicture.Progress.DoContinue">
+<short></short>
+</element>
+
+<!-- constructor Visibility: public -->
+<element name="TPicture.Create">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- destructor Visibility: public -->
+<element name="TPicture.Destroy">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TPicture.LoadFromFile">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPicture.LoadFromFile.Filename">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TPicture.SaveToFile">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPicture.SaveToFile.Filename">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TPicture.LoadFromClipboardFormat">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPicture.LoadFromClipboardFormat.FormatID">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TPicture.LoadFromClipboardFormatID">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPicture.LoadFromClipboardFormatID.ClipboardType">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPicture.LoadFromClipboardFormatID.FormatID">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TPicture.SaveToClipboardFormat">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPicture.SaveToClipboardFormat.FormatID">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TPicture.SupportsClipboardFormat">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TPicture.SupportsClipboardFormat.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPicture.SupportsClipboardFormat.FormatID">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TPicture.Assign">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPicture.Assign.Source">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TPicture.RegisterFileFormat">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPicture.RegisterFileFormat.AnExtension">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPicture.RegisterFileFormat.ADescription">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPicture.RegisterFileFormat.AGraphicClass">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TPicture.RegisterClipboardFormat">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPicture.RegisterClipboardFormat.FormatID">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPicture.RegisterClipboardFormat.AGraphicClass">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TPicture.UnregisterGraphicClass">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPicture.UnregisterGraphicClass.AClass">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TPicture.Clear">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TPicture.Bitmap">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TPicture.Pixmap">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TPicture.PNG">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TPicture.Icon">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TPicture.Graphic">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TPicture.Height">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TPicture.Width">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TPicture.OnChange">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TPicture.OnProgress">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="EInvalidGraphic">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="EInvalidGraphicOperation">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TCanvas">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TCanvas.FAutoRedraw">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TCanvas.FState">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TCanvas.FFont">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TCanvas.FSavedFontHandle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TCanvas.FPen">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TCanvas.FSavedPenHandle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TCanvas.FBrush">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TCanvas.FSavedBrushHandle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TCanvas.FRegion">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TCanvas.FSavedRegionHandle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TCanvas.FPenPos">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TCanvas.FCopyMode">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TCanvas.FHandle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TCanvas.FOnChange">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TCanvas.FOnChanging">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TCanvas.FTextStyle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TCanvas.FLock">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TCanvas.FLockCount">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: private -->
+<element name="TCanvas.BrushChanged">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.BrushChanged.ABrush">
+<short></short>
+</element>
+
+<!-- procedure Visibility: private -->
+<element name="TCanvas.FontChanged">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.FontChanged.AFont">
+<short></short>
+</element>
+
+<!-- procedure Visibility: private -->
+<element name="TCanvas.PenChanged">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.PenChanged.APen">
+<short></short>
+</element>
+
+<!-- procedure Visibility: private -->
+<element name="TCanvas.RegionChanged">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.RegionChanged.ARegion">
+<short></short>
+</element>
+
+<!-- function Visibility: private -->
+<element name="TCanvas.GetColor">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TCanvas.GetColor.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: private -->
+<element name="TCanvas.GetHandle">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TCanvas.GetHandle.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: private -->
+<element name="TCanvas.GetPenPos">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TCanvas.GetPenPos.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: private -->
+<element name="TCanvas.SetAutoRedraw">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.SetAutoRedraw.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: private -->
+<element name="TCanvas.SetBrush">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.SetBrush.value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: private -->
+<element name="TCanvas.SetColor">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.SetColor.c">
+<short></short>
+</element>
+
+<!-- procedure Visibility: private -->
+<element name="TCanvas.SetFont">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.SetFont.value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: private -->
+<element name="TCanvas.SetPen">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.SetPen.value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: private -->
+<element name="TCanvas.SetPenPos">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.SetPenPos.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: private -->
+<element name="TCanvas.SetRegion">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.SetRegion.Value">
+<short></short>
+</element>
+
+<!-- function Visibility: protected -->
+<element name="TCanvas.GetCanvasClipRect">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TCanvas.GetCanvasClipRect.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: protected -->
+<element name="TCanvas.GetPixel">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TCanvas.GetPixel.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.GetPixel.X">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.GetPixel.Y">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TCanvas.CreateBrush">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TCanvas.CreateFont">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TCanvas.CreateHandle">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TCanvas.CreatePen">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TCanvas.CreateRegion">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TCanvas.DeselectHandles">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TCanvas.PenChanging">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.PenChanging.APen">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TCanvas.RealizeAutoRedraw">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TCanvas.RequiredState">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.RequiredState.ReqState">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TCanvas.SetHandle">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.SetHandle.NewHandle">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TCanvas.SetInternalPenPos">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.SetInternalPenPos.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TCanvas.SetPixel">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.SetPixel.X">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.SetPixel.Y">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.SetPixel.Value">
+<short></short>
+</element>
+
+<!-- constructor Visibility: public -->
+<element name="TCanvas.Create">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- destructor Visibility: public -->
+<element name="TCanvas.Destroy">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.Lock">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.Unlock">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.Refresh">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.Changing">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.Changed">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.Arc">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Arc.x">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Arc.y">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Arc.width">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Arc.height">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Arc.angle1">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Arc.angle2">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.Arc">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Arc.x">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Arc.y">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Arc.width">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Arc.height">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Arc.SX">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Arc.SY">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Arc.EX">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Arc.EY">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.BrushCopy">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.BrushCopy.Dest">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.BrushCopy.InternalImages">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.BrushCopy.Src">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.BrushCopy.TransparentColor">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.Chord">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Chord.x">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Chord.y">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Chord.Width">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Chord.Height">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Chord.StartAngle16Deg">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Chord.EndAngle16Deg">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.Chord">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Chord.x">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Chord.y">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Chord.Width">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Chord.Height">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Chord.SX">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Chord.SY">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Chord.EX">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Chord.EY">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.CopyRect">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.CopyRect.Dest">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.CopyRect.SrcCanvas">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.CopyRect.Source">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.Draw">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Draw.X">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Draw.Y">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Draw.SrcGraphic">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.StretchDraw">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.StretchDraw.DestRect">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.StretchDraw.SrcGraphic">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.Ellipse">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Ellipse.ARect">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.Ellipse">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Ellipse.x1">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Ellipse.y1">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Ellipse.x2">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Ellipse.y2">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.FillRect">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.FillRect.ARect">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.FillRect">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.FillRect.X1">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.FillRect.Y1">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.FillRect.X2">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.FillRect.Y2">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.FloodFill">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.FloodFill.X">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.FloodFill.Y">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.FloodFill.FillColor">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.FloodFill.FillStyle">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.Frame3d">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Frame3d.ARect">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Frame3d.FrameWidth">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Frame3d.Style">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.Frame">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Frame.ARect">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.Frame">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Frame.X1">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Frame.Y1">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Frame.X2">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Frame.Y2">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.FrameRect">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.FrameRect.ARect">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.FrameRect">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.FrameRect.X1">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.FrameRect.Y1">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.FrameRect.X2">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.FrameRect.Y2">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.Line">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Line.X1">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Line.Y1">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Line.X2">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Line.Y2">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.LineTo">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.LineTo.X1">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.LineTo.Y1">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.MoveTo">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.MoveTo.X1">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.MoveTo.Y1">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.RadialPie">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.RadialPie.x">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.RadialPie.y">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.RadialPie.Width">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.RadialPie.Height">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.RadialPie.StartAngle16Deg">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.RadialPie.EndAngle16Deg">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.RadialPie">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.RadialPie.x">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.RadialPie.y">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.RadialPie.Width">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.RadialPie.Height">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.RadialPie.sx">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.RadialPie.sy">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.RadialPie.ex">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.RadialPie.ey">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.Pie">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Pie.EllipseX1">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Pie.EllipseY1">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Pie.EllipseX2">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Pie.EllipseY2">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Pie.StartX">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Pie.StartY">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Pie.EndX">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Pie.EndY">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.PolyBezier">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.PolyBezier.Points">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.PolyBezier.NumPts">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.PolyBezier.Filled">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.PolyBezier.Continuous">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.PolyBezier">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.PolyBezier.Points">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.PolyBezier.Filled">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.PolyBezier.Continuous">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.Polygon">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Polygon.Points">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Polygon.Winding">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Polygon.StartIndex">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Polygon.NumPts">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.Polygon">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Polygon.Points">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Polygon.NumPts">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Polygon.Winding">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.Polygon">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Polygon.Points">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.Polyline">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Polyline.Points">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Polyline.StartIndex">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Polyline.NumPts">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.Polyline">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Polyline.Points">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Polyline.NumPts">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.Polyline">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Polyline.Points">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.Rectangle">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Rectangle.X1">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Rectangle.Y1">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Rectangle.X2">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Rectangle.Y2">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.Rectangle">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Rectangle.Rect">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.RoundRect">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.RoundRect.X1">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.RoundRect.Y1">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.RoundRect.X2">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.RoundRect.Y2">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.RoundRect.RX">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.RoundRect.RY">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.RoundRect">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.RoundRect.Rect">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.RoundRect.RX">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.RoundRect.RY">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.TextOut">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.TextOut.X">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.TextOut.Y">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.TextOut.Text">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.TextRect">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.TextRect.ARect">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.TextRect.X">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.TextRect.Y">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.TextRect.Text">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TCanvas.TextRect">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.TextRect.ARect">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.TextRect.X">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.TextRect.Y">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.TextRect.Text">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.TextRect.Style">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TCanvas.TextExtent">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TCanvas.TextExtent.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.TextExtent.Text">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TCanvas.TextHeight">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TCanvas.TextHeight.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.TextHeight.Text">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TCanvas.TextWidth">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TCanvas.TextWidth.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.TextWidth.Text">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TCanvas.HandleAllocated">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TCanvas.HandleAllocated.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TCanvas.GetUpdatedHandle">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TCanvas.GetUpdatedHandle.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.GetUpdatedHandle.ReqState">
+<short></short>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TCanvas.ClipRect">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TCanvas.PenPos">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TCanvas.Pixels">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Pixels.X">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TCanvas.Pixels.Y">
+<short></short>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TCanvas.Handle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TCanvas.TextStyle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TCanvas.LockCount">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: published -->
+<element name="TCanvas.AutoRedraw">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: published -->
+<element name="TCanvas.Brush">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: published -->
+<element name="TCanvas.CopyMode">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: published -->
+<element name="TCanvas.Font">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: published -->
+<element name="TCanvas.Pen">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: published -->
+<element name="TCanvas.Region">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: published -->
+<element name="TCanvas.Color">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: published -->
+<element name="TCanvas.OnChange">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: published -->
+<element name="TCanvas.OnChanging">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TSharedImage">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TSharedImage.FRefCount">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TSharedImage.Reference">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TSharedImage.Release">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TSharedImage.FreeHandle">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: protected -->
+<element name="TSharedImage.RefCount">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TSharedImage.HandleAllocated">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TSharedImage.HandleAllocated.Result">
+<short></short>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="TBitmapNativeType">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TBitmapNativeType.bnNone">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TBitmapNativeType.bnWinBitmap">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TBitmapNativeType.bnXPixmap">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TBitmapNativeType.bnIcon">
+<short></short>
+</element>
+
+<!-- set type Visibility: default -->
+<element name="TBitmapNativeTypes">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="TBitmapHandleType">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TBitmapHandleType.bmDIB">
+<short></short>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TBitmapHandleType.bmDDB">
+<short></short>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TBitmapImage">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TBitmapImage.FHandle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TBitmapImage.FMaskHandle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TBitmapImage.FPalette">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TBitmapImage.FDIBHandle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TBitmapImage.FSaveStream">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TBitmapImage.FSaveStreamType">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TBitmapImage.FreeHandle">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TBitmapImage.FreeMaskHandle">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: protected -->
+<element name="TBitmapImage.ReleaseHandle">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TBitmapImage.ReleaseHandle.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: protected -->
+<element name="TBitmapImage.IsEmpty">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TBitmapImage.IsEmpty.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: protected -->
+<element name="TBitmapImage.GetPixelFormat">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TBitmapImage.GetPixelFormat.Result">
+<short></short>
+</element>
+
+<!-- variable Visibility: public -->
+<element name="TBitmapImage.FDIB">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- destructor Visibility: public -->
+<element name="TBitmapImage.Destroy">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TBitmapImage.HandleAllocated">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TBitmapImage.HandleAllocated.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TBitmapImage.GetHandleType">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TBitmapImage.GetHandleType.Result">
+<short></short>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TBitmapImage.SaveStream">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TBitmapImage.SaveStreamType">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration type Visibility: default -->
+<element name="TBitmapInternalStateFlag">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- enumeration value Visibility: default -->
+<element name="TBitmapInternalStateFlag.bmisCreatingCanvas">
+<short></short>
+</element>
+
+<!-- set type Visibility: default -->
+<element name="TBitmapInternalState">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TBitmap">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TBitmap.FCanvas">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TBitmap.FImage">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TBitmap.FPalette">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TBitmap.FPixelFormat">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TBitmap.FTransparentColor">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TBitmap.FTransparentMode">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TBitmap.FInternalState">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: private -->
+<element name="TBitmap.FreeCanvasContext">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: private -->
+<element name="TBitmap.GetCanvas">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TBitmap.GetCanvas.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: private -->
+<element name="TBitmap.CreateCanvas">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: private -->
+<element name="TBitmap.GetMonochrome">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TBitmap.GetMonochrome.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: private -->
+<element name="TBitmap.SetHandle">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.SetHandle.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: private -->
+<element name="TBitmap.SetMaskHandle">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.SetMaskHandle.NewMaskHandle">
+<short></short>
+</element>
+
+<!-- function Visibility: private -->
+<element name="TBitmap.GetHandleType">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TBitmap.GetHandleType.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: private -->
+<element name="TBitmap.SetHandleType">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.SetHandleType.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: private -->
+<element name="TBitmap.SetMonochrome">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.SetMonochrome.AValue">
+<short></short>
+</element>
+
+<!-- procedure Visibility: private -->
+<element name="TBitmap.SetPixelFormat">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.SetPixelFormat.AValue">
+<short></short>
+</element>
+
+<!-- procedure Visibility: private -->
+<element name="TBitmap.UpdatePixelFormat">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TBitmap.Changed">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.Changed.Sender">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TBitmap.Changing">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.Changing.Sender">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TBitmap.Draw">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.Draw.DestCanvas">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.Draw.DestRect">
+<short></short>
+</element>
+
+<!-- function Visibility: protected -->
+<element name="TBitmap.GetEmpty">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TBitmap.GetEmpty.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: protected -->
+<element name="TBitmap.GetHeight">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TBitmap.GetHeight.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: protected -->
+<element name="TBitmap.GetPalette">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TBitmap.GetPalette.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: protected -->
+<element name="TBitmap.GetWidth">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TBitmap.GetWidth.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: protected -->
+<element name="TBitmap.GetHandle">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TBitmap.GetHandle.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: protected -->
+<element name="TBitmap.GetMaskHandle">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TBitmap.GetMaskHandle.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TBitmap.HandleNeeded">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TBitmap.MaskHandleNeeded">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TBitmap.PaletteNeeded">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TBitmap.UnshareImage">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.UnshareImage.CopyContent">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TBitmap.FreeSaveStream">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TBitmap.ReadData">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.ReadData.Stream">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TBitmap.SetWidthHeight">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.SetWidthHeight.NewWidth">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.SetWidthHeight.NewHeight">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TBitmap.SetHeight">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.SetHeight.NewHeight">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TBitmap.SetPalette">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.SetPalette.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TBitmap.SetTransparentMode">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.SetTransparentMode.Value">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TBitmap.SetWidth">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.SetWidth.NewWidth">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TBitmap.WriteData">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.WriteData.Stream">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TBitmap.StoreOriginalStream">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.StoreOriginalStream.Stream">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.StoreOriginalStream.Size">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TBitmap.WriteStreamWithFPImage">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.WriteStreamWithFPImage.Stream">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.WriteStreamWithFPImage.WriteSize">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.WriteStreamWithFPImage.WriterClass">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TBitmap.InitFPImageReader">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.InitFPImageReader.ImgReader">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TBitmap.InitFPImageWriter">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.InitFPImageWriter.ImgWriter">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TBitmap.FinalizeFPImageReader">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.FinalizeFPImageReader.ImgReader">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TBitmap.FinalizeFPImageWriter">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.FinalizeFPImageWriter.ImgWriter">
+<short></short>
+</element>
+
+<!-- constructor Visibility: public -->
+<element name="TBitmap.Create">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- destructor Visibility: public -->
+<element name="TBitmap.Destroy">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TBitmap.Assign">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.Assign.Source">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TBitmap.FreeImage">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TBitmap.HandleAllocated">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TBitmap.HandleAllocated.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TBitmap.MaskHandleAllocated">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TBitmap.MaskHandleAllocated.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TBitmap.PaletteAllocated">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TBitmap.PaletteAllocated.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TBitmap.CreateFromBitmapHandles">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.CreateFromBitmapHandles.SrcBitmap">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.CreateFromBitmapHandles.SrcMaskBitmap">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.CreateFromBitmapHandles.SrcRect">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TBitmap.LoadFromDevice">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.LoadFromDevice.DC">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TBitmap.LazarusResourceTypeValid">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TBitmap.LazarusResourceTypeValid.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.LazarusResourceTypeValid.ResourceType">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TBitmap.LoadFromStream">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.LoadFromStream.Stream">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TBitmap.LoadFromLazarusResource">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.LoadFromLazarusResource.ResName">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TBitmap.LoadFromResourceName">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.LoadFromResourceName.Instance">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.LoadFromResourceName.ResName">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TBitmap.LoadFromResourceID">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.LoadFromResourceID.Instance">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.LoadFromResourceID.ResID">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TBitmap.LoadFromMimeStream">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.LoadFromMimeStream.Stream">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.LoadFromMimeStream.MimeType">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TBitmap.GetSupportedSourceMimeTypes">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.GetSupportedSourceMimeTypes.List">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TBitmap.GetDefaultMimeType">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TBitmap.GetDefaultMimeType.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TBitmap.GetFileExtensions">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TBitmap.GetFileExtensions.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TBitmap.LoadFromXPMFile">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.LoadFromXPMFile.Filename">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TBitmap.Mask">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.Mask.ATransparentColor">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TBitmap.SaveToStream">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.SaveToStream.Stream">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TBitmap.ReadStream">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.ReadStream.Stream">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.ReadStream.UseSize">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.ReadStream.Size">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TBitmap.WriteStream">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.WriteStream.Stream">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.WriteStream.WriteSize">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TBitmap.ReleaseHandle">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TBitmap.ReleaseHandle.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TBitmap.ReleasePalette">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TBitmap.ReleasePalette.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TBitmap.GetFPReaderForFileExt">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TBitmap.GetFPReaderForFileExt.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.GetFPReaderForFileExt.FileExtension">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TBitmap.GetFPWriterForFileExt">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TBitmap.GetFPWriterForFileExt.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.GetFPWriterForFileExt.FileExtension">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TBitmap.GetDefaultFPReader">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TBitmap.GetDefaultFPReader.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TBitmap.GetDefaultFPWriter">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TBitmap.GetDefaultFPWriter.Result">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TBitmap.ReadStreamWithFPImage">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.ReadStreamWithFPImage.Stream">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.ReadStreamWithFPImage.UseSize">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.ReadStreamWithFPImage.Size">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.ReadStreamWithFPImage.ReaderClass">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TBitmap.WriteNativeStream">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.WriteNativeStream.Stream">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.WriteNativeStream.WriteSize">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TBitmap.WriteNativeStream.SaveStreamType">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TBitmap.CreateIntfImage">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TBitmap.CreateIntfImage.Result">
+<short></short>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TBitmap.Canvas">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TBitmap.Handle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TBitmap.HandleType">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TBitmap.MaskHandle">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TBitmap.Monochrome">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TBitmap.PixelFormat">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TBitmap.TransparentColor">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TBitmap.TransparentMode">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TPixmap">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TPixmap.LazarusResourceTypeValid">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TPixmap.LazarusResourceTypeValid.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPixmap.LazarusResourceTypeValid.ResourceType">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TPixmap.WriteStream">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPixmap.WriteStream.Stream">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TPixmap.WriteStream.WriteSize">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TPixmap.GetDefaultFPReader">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TPixmap.GetDefaultFPReader.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TPixmap.GetDefaultFPWriter">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TPixmap.GetDefaultFPWriter.Result">
+<short></short>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TFPImageBitmap">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TFPImageBitmap.GetFileExtensions">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TFPImageBitmap.GetFileExtensions.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TFPImageBitmap.IsFileExtensionSupported">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TFPImageBitmap.IsFileExtensionSupported.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TFPImageBitmap.IsFileExtensionSupported.FileExtension">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TFPImageBitmap.GetFPReaderForFileExt">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TFPImageBitmap.GetFPReaderForFileExt.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TFPImageBitmap.GetFPReaderForFileExt.FileExtension">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TFPImageBitmap.GetFPWriterForFileExt">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TFPImageBitmap.GetFPWriterForFileExt.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TFPImageBitmap.GetFPWriterForFileExt.FileExtension">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TFPImageBitmap.GetDefaultFPReader">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TFPImageBitmap.GetDefaultFPReader.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TFPImageBitmap.GetDefaultFPWriter">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TFPImageBitmap.GetDefaultFPWriter.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TFPImageBitmap.LazarusResourceTypeValid">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TFPImageBitmap.LazarusResourceTypeValid.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TFPImageBitmap.LazarusResourceTypeValid.ResourceType">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TFPImageBitmap.ReadStream">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TFPImageBitmap.ReadStream.Stream">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TFPImageBitmap.ReadStream.UseSize">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TFPImageBitmap.ReadStream.Size">
+<short></short>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TFPImageBitmap.WriteStream">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TFPImageBitmap.WriteStream.Stream">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TFPImageBitmap.WriteStream.WriteSize">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TFPImageBitmap.GetDefaultMimeType">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TFPImageBitmap.GetDefaultMimeType.Result">
+<short></short>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TPortableNetworkGraphic">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TPortableNetworkGraphic.GetFileExtensions">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TPortableNetworkGraphic.GetFileExtensions.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TPortableNetworkGraphic.GetDefaultFPReader">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TPortableNetworkGraphic.GetDefaultFPReader.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TPortableNetworkGraphic.GetDefaultFPWriter">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TPortableNetworkGraphic.GetDefaultFPWriter.Result">
+<short></short>
+</element>
+
+<!-- object Visibility: default -->
+<element name="TIcon">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: private -->
+<element name="TIcon.FBitmaps">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TIcon.ReadData">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TIcon.ReadData.Stream">
+<short></short>
+</element>
+
+<!-- procedure Visibility: protected -->
+<element name="TIcon.InitFPImageReader">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TIcon.InitFPImageReader.ImgReader">
+<short></short>
+</element>
+
+<!-- function Visibility: public -->
+<element name="TIcon.GetFileExtensions">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TIcon.GetFileExtensions.Result">
+<short></short>
+</element>
+
+<!-- property Visibility: public -->
+<element name="TIcon.Bitmaps">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- destructor Visibility: public -->
+<element name="TIcon.Destroy">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: public -->
+<element name="TIcon.AddBitmap">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TIcon.AddBitmap.Bitmap">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="GraphicFilter">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="GraphicFilter.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="GraphicFilter.GraphicClass">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="GraphicExtension">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="GraphicExtension.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="GraphicExtension.GraphicClass">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="GraphicFileMask">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="GraphicFileMask.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="GraphicFileMask.GraphicClass">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="GetGraphicClassForFileExtension">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="GetGraphicClassForFileExtension.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="GetGraphicClassForFileExtension.FileExt">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="GetFPImageReaderForFileExtension">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="GetFPImageReaderForFileExtension.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="GetFPImageReaderForFileExtension.FileExt">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="GetFPImageWriterForFileExtension">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="GetFPImageWriterForFileExtension.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="GetFPImageWriterForFileExtension.FileExt">
+<short></short>
+</element>
+
+<!-- procedure type Visibility: default -->
+<element name="TGetColorStringProc">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TGetColorStringProc.s">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="ColorToIdent">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="ColorToIdent.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="ColorToIdent.Color">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="ColorToIdent.Ident">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="IdentToColor">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="IdentToColor.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="IdentToColor.Ident">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="IdentToColor.Color">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="SysColorToSysColorIndex">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="SysColorToSysColorIndex.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="SysColorToSysColorIndex.Color">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="ColorToRGB">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="ColorToRGB.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="ColorToRGB.Color">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="ColorToString">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="ColorToString.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="ColorToString.Color">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="StringToColor">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="StringToColor.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="StringToColor.S">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="GetColorValues">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="GetColorValues.Proc">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="Blue">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="Blue.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="Blue.rgb">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="Green">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="Green.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="Green.rgb">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="Red">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="Red.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="Red.rgb">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="RedGreenBlue">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="RedGreenBlue.rgb">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="RedGreenBlue.Red">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="RedGreenBlue.Green">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="RedGreenBlue.Blue">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="FPColorToTColor">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="FPColorToTColor.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="FPColorToTColor.FPColor">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TColorToFPColor">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TColorToFPColor.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TColorToFPColor.c">
+<short></short>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="GetCharsetValues">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="GetCharsetValues.Proc">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="CharsetToIdent">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="CharsetToIdent.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="CharsetToIdent.Charset">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="CharsetToIdent.Ident">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="IdentToCharset">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="IdentToCharset.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="IdentToCharset.Ident">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="IdentToCharset.Charset">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="GetDefFontCharSet">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="GetDefFontCharSet.Result">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="IsFontNameXLogicalFontDesc">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="IsFontNameXLogicalFontDesc.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="IsFontNameXLogicalFontDesc.LongFontName">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="XLFDNameToLogFont">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="XLFDNameToLogFont.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="XLFDNameToLogFont.XLFDName">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="ExtractXLFDItem">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="ExtractXLFDItem.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="ExtractXLFDItem.XLFDName">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="ExtractXLFDItem.Index">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="ExtractFamilyFromXLFDName">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="ExtractFamilyFromXLFDName.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="ExtractFamilyFromXLFDName.XLFDName">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="ClearXLFDItem">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="ClearXLFDItem.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="ClearXLFDItem.LongFontName">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="ClearXLFDItem.Index">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="ClearXLFDHeight">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="ClearXLFDHeight.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="ClearXLFDHeight.LongFontName">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="ClearXLFDPitch">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="ClearXLFDPitch.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="ClearXLFDPitch.LongFontName">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="ClearXLFDStyle">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="ClearXLFDStyle.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="ClearXLFDStyle.LongFontName">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="XLFDHeightIsSet">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="XLFDHeightIsSet.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="XLFDHeightIsSet.LongFontName">
+<short></short>
+</element>
+
+<!-- procedure type Visibility: default -->
+<element name="TOnLoadGraphicFromClipboardFormat">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TOnLoadGraphicFromClipboardFormat.Dest">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TOnLoadGraphicFromClipboardFormat.ClipboardType">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TOnLoadGraphicFromClipboardFormat.FormatID">
+<short></short>
+</element>
+
+<!-- procedure type Visibility: default -->
+<element name="TOnSaveGraphicToClipboardFormat">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TOnSaveGraphicToClipboardFormat.Src">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TOnSaveGraphicToClipboardFormat.ClipboardType">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TOnSaveGraphicToClipboardFormat.FormatID">
+<short></short>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="OnLoadGraphicFromClipboardFormat">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="OnSaveGraphicToClipboardFormat">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TestStreamBitmapNativeType">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TestStreamBitmapNativeType.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TestStreamBitmapNativeType.AStream">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TestStreamIsBMP">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TestStreamIsBMP.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TestStreamIsBMP.AStream">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TestStreamIsXPM">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TestStreamIsXPM.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TestStreamIsXPM.AStream">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="TestStreamIsIcon">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="TestStreamIsIcon.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="TestStreamIsIcon.AStream">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="XPMToPPChar">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="XPMToPPChar.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="XPMToPPChar.XPM">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="LazResourceXPMToPPChar">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="LazResourceXPMToPPChar.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="LazResourceXPMToPPChar.ResourceName">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="ReadXPMFromStream">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="ReadXPMFromStream.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="ReadXPMFromStream.Stream">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="ReadXPMFromStream.Size">
+<short></short>
+</element>
+
+<!-- function Visibility: default -->
+<element name="ReadXPMSize">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+
+<!-- function result Visibility: default -->
+<element name="ReadXPMSize.Result">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="ReadXPMSize.XPM">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="ReadXPMSize.Width">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="ReadXPMSize.Height">
+<short></short>
+</element>
+
+<!-- argument Visibility: default -->
+<element name="ReadXPMSize.ColorCount">
+<short></short>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="ScreenInfo">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="FontResourceCache">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="PenResourceCache">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- variable Visibility: default -->
+<element name="BrushResourceCache">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- constant Visibility: default -->
+<element name="FontCharsets">
+<short></short>
+<descr>
+</descr>
+<seealso>
+</seealso>
+</element>
+
+<!-- procedure Visibility: default -->
+<element name="Register">
+<short></short>
+<descr>
+</descr>
+<errors>
+</errors>
+<seealso>
+</seealso>
+</element>
+</module> <!-- Graphics -->
+</package>
+</fpdoc-descriptions>

@@ -1,0 +1,9 @@
+TLAZCONVERTERFORM.CAPTION=Codepage LazConverter for PAS, LFM, LRS, LRT & INC files v0.0.6
+TLABEL.CAPTION=Path to your project:
+TLABEL.CAPTION=Convert From:
+TLABEL.CAPTION=Convert To:
+TLABEL.CAPTION=Ready...
+TBUTTON.CAPTION=Path
+TBUTTON.CAPTION=Search
+TBUTTON.CAPTION=Convert
+TMENUITEM.CAPTION=Remove from conversion

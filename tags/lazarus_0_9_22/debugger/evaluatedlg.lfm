@@ -1,0 +1,115 @@
+inherited EvaluateDlg: TEvaluateDlg
+  Left = 351
+  Height = 296
+  Top = 136
+  Width = 400
+  HorzScrollBar.Page = 399
+  VertScrollBar.Page = 295
+  ActiveControl = ToolBar1
+  BorderStyle = bsSizeToolWin
+  Caption = 'Evaluate/Modify'
+  KeyPreview = True
+  OnKeyDown = FormKeyDown
+  object Label1: TLabel
+    Left = 8
+    Height = 14
+    Top = 56
+    Width = 57
+    Caption = '&Expression:'
+    Color = clNone
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 8
+    Height = 14
+    Top = 104
+    Width = 35
+    Caption = '&Result:'
+    Color = clNone
+    ParentColor = False
+  end
+  object lblNewValue: TLabel
+    Left = 8
+    Height = 14
+    Top = 247
+    Width = 55
+    Anchors = [akLeft, akBottom]
+    Caption = '&New value:'
+    Color = clNone
+    ParentColor = False
+  end
+  object ToolBar1: TToolBar
+    Height = 54
+    Width = 400
+    AutoSize = True
+    ButtonHeight = 50
+    ButtonWidth = 75
+    Caption = 'ToolBar1'
+    EdgeBorders = [ebTop, ebBottom]
+    Flat = True
+    ShowCaptions = True
+    TabOrder = 0
+    TabStop = True
+    object tbInspect: TToolButton
+      Left = 226
+      Top = 2
+      Caption = '&Inspect'
+      Enabled = False
+    end
+    object tbWatch: TToolButton
+      Left = 151
+      Top = 2
+      Caption = '&Watch'
+      Enabled = False
+      OnClick = tbWatchClick
+    end
+    object tbModify: TToolButton
+      Left = 76
+      Top = 2
+      Caption = '&Modify'
+      Enabled = False
+    end
+    object tbEvaluate: TToolButton
+      Left = 1
+      Top = 2
+      Caption = 'E&valuate'
+      Enabled = False
+      OnClick = tbEvaluateClick
+    end
+  end
+  object cmbExpression: TComboBox
+    Left = 8
+    Height = 21
+    Top = 72
+    Width = 384
+    Anchors = [akTop, akLeft, akRight]
+    AutoCompleteText = [cbactEndOfLineComplete, cbactSearchAscending]
+    MaxLength = 0
+    OnChange = cmbExpressionChange
+    OnKeyDown = cmbExpressionKeyDown
+    TabOrder = 2
+  end
+  object txtResult: TMemo
+    Left = 8
+    Height = 124
+    Top = 120
+    Width = 384
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    ScrollBars = ssAutoVertical
+    TabOrder = 1
+  end
+  object cmbNewValue: TComboBox
+    Left = 8
+    Height = 21
+    Top = 268
+    Width = 384
+    Anchors = [akLeft, akRight, akBottom]
+    AutoCompleteText = [cbactEndOfLineComplete, cbactSearchAscending]
+    MaxLength = 0
+    TabOrder = 3
+  end
+  object ImageList1: TImageList
+    left = 16
+    top = 352
+  end
+end

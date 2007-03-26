@@ -1,0 +1,126 @@
+inherited BreakpointsDlg: TBreakpointsDlg
+  Left = 344
+  Height = 205
+  Top = 153
+  Width = 560
+  HelpType = htKeyword
+  HorzScrollBar.Page = 559
+  VertScrollBar.Page = 204
+  ActiveControl = lvBreakPoints
+  Caption = 'Breakpoint list'
+  OnCreate = BreakpointsDlgCREATE
+  Visible = True
+  object lvBreakPoints: TListView
+    Height = 205
+    Width = 560
+    HelpType = htKeyword
+    Align = alClient
+    Columns = <    
+      item
+        Caption = 'State'
+      end    
+      item
+        Caption = 'Filename/Address'
+        Width = 150
+      end    
+      item
+        Caption = 'Line/Length'
+        Width = 100
+      end    
+      item
+        Caption = 'Condition'
+        Width = 75
+      end    
+      item
+        Caption = 'Action'
+      end    
+      item
+        Caption = 'Pass Count'
+        Width = 100
+      end    
+      item
+        Caption = 'Group'
+        Width = 5
+      end>
+    MultiSelect = True
+    PopupMenu = mnuPopup
+    ReadOnly = True
+    RowSelect = True
+    SortColumn = 1
+    SortType = stText
+    TabOrder = 0
+    ViewStyle = vsReport
+    OnColumnClick = lvBreakPointsColumnClick
+    OnDblClick = lvBreakPointsDBLCLICK
+    OnSelectItem = lvBreakPointsSelectItem
+  end
+  object mnuPopup: TPopupMenu
+    OnPopup = mnuPopupPopup
+    left = 24
+    top = 8
+    object popShow: TMenuItem
+      Caption = 'Show'
+      Default = True
+      OnClick = popShowClick
+    end
+    object N0: TMenuItem
+      Caption = '-'
+    end
+    object popAdd: TMenuItem
+      Caption = 'Add...'
+      object popAddSourceBP: TMenuItem
+        Caption = '&Source breakpoint'
+        Enabled = False
+        OnClick = popAddSourceBPClick
+      end
+    end
+    object N1: TMenuItem
+      Caption = '-'
+    end
+    object popProperties: TMenuItem
+      Caption = '&Properties'
+      OnClick = popPropertiesClick
+    end
+    object popEnabled: TMenuItem
+      Caption = '&Enabled'
+      ShortCut = 16462
+      ShowAlwaysCheckable = True
+      OnClick = popEnabledClick
+    end
+    object popDelete: TMenuItem
+      Caption = '&Delete'
+      ShortCut = 46
+      OnClick = popDeleteClick
+    end
+    object N2: TMenuItem
+      Caption = '-'
+    end
+    object popDisableAll: TMenuItem
+      Caption = 'D&isable All'
+      OnClick = popDisableAllClick
+    end
+    object popEnableAll: TMenuItem
+      Caption = '&Enable All'
+      OnClick = popEnableAllClick
+    end
+    object popDeleteAll: TMenuItem
+      Caption = '&Delete All'
+      OnClick = popDeleteAllClick
+    end
+    object N3: TMenuItem
+      Caption = '-'
+    end
+    object popDisableAllSameSource: TMenuItem
+      Caption = 'Disable All in same source'
+      OnClick = popDisableAllSameSourceCLICK
+    end
+    object popEnableAllSameSource: TMenuItem
+      Caption = 'Enable All in same source'
+      OnClick = popEnableAllSameSourceCLICK
+    end
+    object popDeleteAllSameSource: TMenuItem
+      Caption = 'Delete All in same source'
+      OnClick = popDeleteAllSameSourceCLICK
+    end
+  end
+end
