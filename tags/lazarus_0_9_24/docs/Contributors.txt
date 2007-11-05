@@ -1,0 +1,118 @@
+The following people contributed to Lazarus:
+
+A. J. Venter
+Aleksey Lagunov
+Alexander Shiyan
+Alexandre Leclerc
+Alexandru Alexandrov
+Andreas Hausladen
+Andreas Schneider
+Andrew Haines
+Andrew Johnson
+Anton Kavalenka
+Antonio Galvao
+Bart Broersma
+Bob Wingard
+Boguslaw Brandys
+Boris Arko
+Chris Rorden
+Christian Iversen
+Christian Ulrich
+Christopher Kirkpatrick
+Cliff Baeseman
+Colin Western
+Curtis White
+Darek Mazur
+Darius Blaszijk
+David Guadagnini
+Dean Zobec
+Diogo Picarra
+Ere Maijala
+Eric Chapman
+Erivelton Silva
+Evgen A. Palamarchuck
+Felipe Monteiro de Carvalho
+Florian Koeberle
+Francisco Manuel
+Gerard Visent
+Giuliano Colla
+Giulio Bernardi
+GongYu
+Graeme Geldenhuys
+Grzegorz Zakrzewski
+Hans-Joachim Ott
+Hwang Weng Sun
+Ido Kanner
+James Chandler Jr.
+Jan Foster
+Jason King
+Jeffrey A. Wormsley
+Jeroen van Idekinge
+Jesus Reyes
+Joerg Braun - german translation
+Jonas Maebe
+Joost van der Sluis
+Jose Alonso Cardenas M.
+Jouke Rensma
+Juan Salvador Perez García
+Junior Goncalves
+Karl Brandt
+Keith Bowes
+Ladislav Michl
+Laurent Jacques
+Luca Olivetti
+Luis R. Hilario B.
+Luis Rodrigues made TChart and misc patches
+Luiz Americo
+Marc Fokker
+Marc Geldon
+Marc Weustink
+Martin Patik
+Martin Smat
+Marton Papp
+Martyn Ranyard
+Matthijs Willemstein
+Mattias Gaertner
+Maxim Ganetsky
+Mazen Neifer
+Michael A. Hess
+Micha Nelissen
+Michal Bukovjan
+Nikolay Ermolov
+Olivier Guilbaud
+Patrick Chevalley
+Paul Ishenin
+Pawel Trochimczuk
+Peter Dyson
+Philip J. Hess
+Pierre Gillmann
+Radek Cervinka
+Raul Moratalla
+Razvan Adrian Bogdan
+Reimar Grabowski
+Roozbeh GHolizadeh
+Rostislav Okulov
+Salvatore Coppola
+Samuel Herzog
+Samuel Liddicott
+Sean McIlwain
+Seppo Suutarla - finnish translation
+Sergio Marcelo
+Shane Miller
+Stefan Hille
+Taras Boychuk
+Tobias Giesen
+Tomas Gregorovic
+Tom Lisjac
+Tony Maro
+Valdas Jankunas
+Vasily I. Volchenko
+Vincent Beuselinck
+Vincent Snijders
+Wojciech Malinowski
+Zaenal Mutaqin
+Zaher Dirkey
+Zeljan Rikalo
+
+and special thanks to the FPC team.
+

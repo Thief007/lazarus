@@ -1,0 +1,129 @@
+object SearchResultsView: TSearchResultsView
+  Left = 247
+  Height = 229
+  Top = 353
+  Width = 799
+  HorzScrollBar.Page = 798
+  VertScrollBar.Page = 228
+  ActiveControl = btnSearchAgain
+  Caption = 'SearchResultsView'
+  ClientHeight = 229
+  ClientWidth = 799
+  OnCreate = Form1Create
+  OnDestroy = SearchResultsViewDestroy
+  OnKeyDown = ListBoxKeyDown
+  Position = poScreenCenter
+  object ResultsNoteBook: TNotebook
+    AnchorSideTop.Control = gbSearchPhraseInList
+    AnchorSideTop.Side = asrBottom
+    Height = 157
+    Top = 72
+    Width = 799
+    Align = alBottom
+    Anchors = [akTop, akLeft]
+    OnCloseTabClicked = ResultsNoteBookClosetabclicked
+    OnPageChanged = ResultsNoteBookPageChanged
+    Options = [nboShowCloseButtons, nboMultiLine]
+    TabOrder = 0
+  end
+  object btnSearchAgain: TButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    Left = 6
+    Height = 29
+    Top = 6
+    Width = 97
+    AutoSize = True
+    BorderSpacing.Around = 6
+    Caption = 'Search Again'
+    OnClick = btnSearchAgainClick
+    OnKeyDown = ListBoxKeyDown
+    TabOrder = 1
+  end
+  object gbSearchPhraseInList: TGroupBox
+    AnchorSideLeft.Control = ClosePageButton
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 236
+    Height = 60
+    Top = 6
+    Width = 557
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = True
+    BorderSpacing.Around = 6
+    Caption = 'Search or Filter Phrases In List'
+    ClientHeight = 41
+    ClientWidth = 553
+    TabOrder = 2
+    object edSearchInList: TEdit
+      AnchorSideLeft.Control = gbSearchPhraseInList
+      AnchorSideTop.Control = gbSearchPhraseInList
+      AnchorSideRight.Control = bnFilter
+      Left = 6
+      Height = 23
+      Hint = 'Enter one or more phrases that you want'#10'to Search or Filter in the list,'#10'seperated by space ( '' '' ), or comma ( , )'
+      Top = 6
+      Width = 255
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Around = 6
+      OnChange = edSearchInListChange
+      OnKeyDown = edSearchInListKeyDown
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 0
+    end
+    object bnForwardSearch: TButton
+      Left = 315
+      Height = 29
+      Top = 6
+      Width = 111
+      Align = alRight
+      AutoSize = True
+      BorderSpacing.Around = 6
+      Caption = 'Forward Search'
+      OnClick = bnForwardSearchClick
+      TabOrder = 1
+    end
+    object bnResetResults: TButton
+      Left = 432
+      Height = 29
+      Top = 6
+      Width = 115
+      Align = alRight
+      AutoSize = True
+      BorderSpacing.Around = 6
+      Caption = 'Reset Result List'
+      OnClick = bnResetResultsClick
+      TabOrder = 2
+    end
+    object bnFilter: TButton
+      Left = 267
+      Height = 29
+      Top = 6
+      Width = 42
+      Align = alRight
+      AutoSize = True
+      BorderSpacing.Around = 6
+      Caption = 'Filter'
+      OnClick = bnFilterClick
+      TabOrder = 3
+    end
+  end
+  object ClosePageButton: TButton
+    AnchorSideLeft.Control = btnSearchAgain
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 109
+    Height = 29
+    Top = 6
+    Width = 121
+    AutoSize = True
+    BorderSpacing.Around = 6
+    Caption = 'ClosePageButton'
+    OnClick = ClosePageButtonClick
+    TabOrder = 3
+  end
+end

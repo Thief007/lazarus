@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <Package Version="3">
+    <Name Value="SQLDBLaz"/>
+    <Author Value="Joost van der Sluis"/>
+    <CompilerOptions>
+      <Version Value="5"/>
+      <SearchPaths>
+        <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+      </SearchPaths>
+      <CodeGeneration>
+        <Generate Value="Faster"/>
+      </CodeGeneration>
+      <Other>
+        <CompilerPath Value="$(CompPath)"/>
+        <CreateMakefileOnBuild Value="True"/>
+      </Other>
+    </CompilerOptions>
+    <Description Value="Lazarus package for the FCL SQLdb components."/>
+    <License Value="Modified LGPL"/>
+    <Version Major="1"/>
+    <Files Count="3">
+      <Item1>
+        <Filename Value="registersqldb.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="registersqldb"/>
+      </Item1>
+      <Item2>
+        <Filename Value="sqldb.pp"/>
+        <Type Value="Virtual Unit"/>
+        <UnitName Value="sqldb"/>
+      </Item2>
+      <Item3>
+        <Filename Value="ibconnection.pp"/>
+        <Type Value="Virtual Unit"/>
+        <UnitName Value="ibconnection"/>
+      </Item3>
+    </Files>
+    <Type Value="RunAndDesignTime"/>
+    <RequiredPkgs Count="2">
+      <Item1>
+        <PackageName Value="IDEIntf"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="LCL"/>
+        <MinVersion Major="1" Valid="True"/>
+      </Item2>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)/"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IgnoreBinaries Value="False"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

@@ -1,0 +1,155 @@
+object VersionInfoAdditinalInfoForm: TVersionInfoAdditinalInfoForm
+  Left = 289
+  Height = 296
+  Top = 174
+  Width = 395
+  HorzScrollBar.Page = 394
+  VertScrollBar.Page = 295
+  ActiveControl = OKButton
+  BorderIcons = []
+  Caption = 'Additional Information'
+  ClientHeight = 296
+  ClientWidth = 395
+  Position = poOwnerFormCenter
+  object OKButton: TButton
+    Left = 224
+    Height = 25
+    Top = 264
+    Width = 75
+    Caption = 'OK'
+    Default = True
+    ModalResult = 1
+    TabOrder = 0
+  end
+  object AdditionalInfoGroupBox: TGroupBox
+    Left = 8
+    Height = 248
+    Top = 8
+    Width = 376
+    Caption = 'Additional Information'
+    ClientHeight = 229
+    ClientWidth = 372
+    TabOrder = 1
+    object CommentsLabel: TLabel
+      Left = 6
+      Height = 17
+      Top = 8
+      Width = 60
+      Caption = 'Comments:'
+      ParentColor = False
+    end
+    object CompanyLabel: TLabel
+      Left = 6
+      Height = 17
+      Top = 40
+      Width = 54
+      Caption = 'Company:'
+      ParentColor = False
+    end
+    object InternalNameLabel: TLabel
+      Left = 6
+      Height = 17
+      Top = 72
+      Width = 78
+      Caption = 'Internal Name:'
+      ParentColor = False
+    end
+    object LegalTrademarksLabel: TLabel
+      Left = 6
+      Height = 17
+      Top = 104
+      Width = 95
+      Caption = 'Legal Trademarks:'
+      ParentColor = False
+    end
+    object OriginalFileNameLabel: TLabel
+      Left = 6
+      Height = 17
+      Top = 136
+      Width = 101
+      Caption = 'Original File Name:'
+      ParentColor = False
+    end
+    object ProductNameLabel: TLabel
+      Left = 6
+      Height = 17
+      Top = 168
+      Width = 80
+      Caption = 'Product Name:'
+      ParentColor = False
+    end
+    object ProductVersionLabel: TLabel
+      Left = 6
+      Height = 17
+      Top = 200
+      Width = 88
+      Caption = 'Product Version:'
+      ParentColor = False
+    end
+    object CommentsEdit: TEdit
+      Left = 110
+      Height = 23
+      Top = 8
+      Width = 256
+      TabOrder = 0
+    end
+    object CompanyEdit: TEdit
+      AnchorSideLeft.Control = CommentsEdit
+      Left = 110
+      Height = 23
+      Top = 40
+      Width = 256
+      TabOrder = 1
+    end
+    object InternalNameEdit: TEdit
+      AnchorSideLeft.Control = CommentsEdit
+      Left = 110
+      Height = 23
+      Top = 72
+      Width = 256
+      TabOrder = 2
+    end
+    object LegalTrademarksEdit: TEdit
+      AnchorSideLeft.Control = CommentsEdit
+      Left = 110
+      Height = 23
+      Top = 104
+      Width = 256
+      TabOrder = 3
+    end
+    object OriginalFileNameEdit: TEdit
+      AnchorSideLeft.Control = CommentsEdit
+      Left = 110
+      Height = 23
+      Top = 136
+      Width = 256
+      TabOrder = 4
+    end
+    object ProductNameEdit: TEdit
+      AnchorSideLeft.Control = CommentsEdit
+      Left = 110
+      Height = 23
+      Top = 168
+      Width = 256
+      TabOrder = 5
+    end
+    object ProductVersionEdit: TEdit
+      AnchorSideLeft.Control = CommentsEdit
+      Left = 110
+      Height = 23
+      Top = 200
+      Width = 256
+      TabOrder = 6
+    end
+  end
+  object CancelButton: TButton
+    Left = 309
+    Height = 25
+    Top = 264
+    Width = 75
+    Cancel = True
+    Caption = 'Cancel'
+    ModalResult = 2
+    TabOrder = 2
+  end
+end

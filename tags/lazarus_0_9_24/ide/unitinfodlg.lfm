@@ -1,0 +1,286 @@
+object UnitInfoDialog: TUnitInfoDialog
+  Left = 347
+  Height = 283
+  Top = 251
+  Width = 500
+  HorzScrollBar.Page = 499
+  VertScrollBar.Page = 282
+  ActiveControl = OkButton
+  BorderStyle = bsSizeToolWin
+  Caption = 'UnitInfoDialog'
+  ClientHeight = 283
+  ClientWidth = 500
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  object OkButton: TBitBtn
+    Left = 437
+    Height = 36
+    Top = 234
+    Width = 57
+    Anchors = [akRight, akBottom]
+    AutoSize = True
+    Cancel = True
+    Caption = '&OK'
+    Default = True
+    Kind = bkOK
+    ModalResult = 1
+    NumGlyphs = 0
+    OnClick = OkButtonClick
+    TabOrder = 0
+  end
+  object Notebook: TNotebook
+    AnchorSideBottom.Control = OkButton
+    Left = 6
+    Height = 222
+    Top = 6
+    Width = 488
+    Align = alTop
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Around = 6
+    PageIndex = 2
+    TabOrder = 1
+    object GeneralPage: TPage
+      Caption = 'GeneralPage'
+      ClientWidth = 484
+      ClientHeight = 191
+      object ULines: TLabel
+        Left = 12
+        Height = 13
+        Top = 92
+        Width = 39
+        Alignment = taRightJustify
+        Caption = 'ULines'
+        Font.Style = [fsBold]
+        ParentColor = False
+      end
+      object OutLines: TLabel
+        AnchorSideLeft.Control = ULines
+        AnchorSideLeft.Side = asrBottom
+        Left = 63
+        Height = 13
+        Top = 92
+        Width = 51
+        BorderSpacing.Left = 12
+        Caption = 'OutLines'
+        ParentColor = False
+      end
+      object OutPath: TLabel
+        AnchorSideLeft.Control = UPath
+        AnchorSideLeft.Side = asrBottom
+        Left = 58
+        Height = 13
+        Top = 112
+        Width = 46
+        BorderSpacing.Left = 12
+        Caption = 'OutPath'
+        ParentColor = False
+      end
+      object UPath: TLabel
+        Left = 12
+        Height = 13
+        Top = 112
+        Width = 34
+        Alignment = taRightJustify
+        Caption = 'UPath'
+        Font.Style = [fsBold]
+        ParentColor = False
+      end
+      object UIncludedBy: TLabel
+        Left = 12
+        Height = 13
+        Top = 132
+        Width = 72
+        Alignment = taRightJustify
+        Caption = 'UIncludedBy'
+        Font.Style = [fsBold]
+        ParentColor = False
+      end
+      object OutIncludedBy: TLabel
+        AnchorSideLeft.Control = UIncludedBy
+        AnchorSideLeft.Side = asrBottom
+        Left = 96
+        Height = 13
+        Top = 132
+        Width = 84
+        BorderSpacing.Left = 12
+        Caption = 'OutIncludedBy'
+        ParentColor = False
+      end
+      object OutSize: TLabel
+        AnchorSideLeft.Control = USize
+        AnchorSideLeft.Side = asrBottom
+        Left = 57
+        Height = 13
+        Top = 72
+        Width = 45
+        BorderSpacing.Left = 12
+        Caption = 'OutSize'
+        ParentColor = False
+      end
+      object USize: TLabel
+        Left = 12
+        Height = 13
+        Top = 72
+        Width = 33
+        Alignment = taRightJustify
+        Caption = 'USize'
+        Font.Style = [fsBold]
+        ParentColor = False
+      end
+      object UInProject: TLabel
+        Left = 12
+        Height = 13
+        Top = 52
+        Width = 58
+        Alignment = taRightJustify
+        Caption = 'UInProject'
+        Font.Style = [fsBold]
+        ParentColor = False
+      end
+      object OutInProject: TLabel
+        AnchorSideLeft.Control = UInProject
+        AnchorSideLeft.Side = asrBottom
+        Left = 82
+        Height = 13
+        Top = 52
+        Width = 70
+        BorderSpacing.Left = 12
+        Caption = 'OutInProject'
+        ParentColor = False
+      end
+      object OutType: TLabel
+        AnchorSideLeft.Control = UType
+        AnchorSideLeft.Side = asrBottom
+        Left = 61
+        Height = 13
+        Top = 32
+        Width = 49
+        BorderSpacing.Left = 12
+        Caption = 'OutType'
+        ParentColor = False
+      end
+      object UType: TLabel
+        Left = 12
+        Height = 13
+        Top = 32
+        Width = 37
+        Alignment = taRightJustify
+        Caption = 'UType'
+        Font.Style = [fsBold]
+        ParentColor = False
+      end
+      object OutName: TLabel
+        AnchorSideLeft.Control = UName
+        AnchorSideLeft.Side = asrBottom
+        Left = 65
+        Height = 13
+        Top = 12
+        Width = 53
+        BorderSpacing.Left = 12
+        Caption = 'OutName'
+        ParentColor = False
+      end
+      object UName: TLabel
+        Left = 12
+        Height = 13
+        Top = 12
+        Width = 41
+        Alignment = taRightJustify
+        Caption = 'UName'
+        Font.Style = [fsBold]
+        ParentColor = False
+      end
+      object ClearIncludedBy: TButton
+        AnchorSideTop.Control = UIncludedBy
+        Left = 12
+        Height = 26
+        Top = 152
+        Width = 107
+        AutoSize = True
+        BorderSpacing.Top = 20
+        Caption = 'ClearIncludedBy'
+        OnClick = clearIncludedByClick
+        TabOrder = 0
+      end
+    end
+    object UnitPathsPage: TPage
+      Caption = 'UnitPathsPage'
+      ClientWidth = 484
+      ClientHeight = 195
+      object UnitPathMemo: TMemo
+        Left = 6
+        Height = 183
+        Top = 6
+        Width = 472
+        Align = alClient
+        BorderSpacing.Around = 6
+        ReadOnly = True
+        ScrollBars = ssAutoBoth
+        TabOrder = 0
+      end
+    end
+    object IncludePathsPage: TPage
+      Caption = 'IncludePathsPage'
+      ClientWidth = 484
+      ClientHeight = 191
+      object IncludePathMemo: TMemo
+        Left = 6
+        Height = 179
+        Top = 6
+        Width = 472
+        Align = alClient
+        BorderSpacing.Around = 6
+        ReadOnly = True
+        ScrollBars = ssAutoBoth
+        TabOrder = 0
+      end
+    end
+    object CompleteUnitPathsPage: TPage
+      Caption = 'CompleteUnitPathsPage'
+      ClientWidth = 484
+      ClientHeight = 195
+      object SrcPathMemo: TMemo
+        Left = 6
+        Height = 183
+        Top = 6
+        Width = 472
+        Align = alClient
+        BorderSpacing.Around = 6
+        ReadOnly = True
+        ScrollBars = ssAutoBoth
+        TabOrder = 0
+      end
+    end
+  end
+  object CodeToolsDefsButton: TButton
+    AnchorSideTop.Control = OkButton
+    AnchorSideBottom.Control = OkButton
+    AnchorSideBottom.Side = asrBottom
+    Left = 6
+    Height = 36
+    Top = 234
+    Width = 148
+    Anchors = [akTop, akLeft, akBottom]
+    AutoSize = True
+    Caption = 'CodeToolsDefsButton'
+    OnClick = CodeToolsDefsButtonClick
+    TabOrder = 2
+  end
+  object GotoIncludeDirectiveButton: TButton
+    AnchorSideTop.Control = OkButton
+    AnchorSideRight.Control = OkButton
+    AnchorSideBottom.Control = OkButton
+    AnchorSideBottom.Side = asrBottom
+    Left = 240
+    Height = 36
+    Top = 234
+    Width = 187
+    Anchors = [akTop, akRight, akBottom]
+    AutoSize = True
+    BorderSpacing.Right = 10
+    Caption = 'GotoIncludeDirectiveButton'
+    ModalResult = 6
+    OnClick = GotoIncludeDirectiveButtonClick
+    TabOrder = 3
+  end
+end
