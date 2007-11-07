@@ -1,0 +1,103 @@
+object CheckCompilerOptsDlg: TCheckCompilerOptsDlg
+  Left = 322
+  Height = 307
+  Top = 220
+  Width = 624
+  HorzScrollBar.Page = 623
+  VertScrollBar.Page = 306
+  ActiveControl = OutputListbox
+  BorderIcons = [biSystemMenu]
+  Caption = 'CheckCompilerOptsDlg'
+  ClientHeight = 307
+  ClientWidth = 624
+  Position = poScreenCenter
+  object OutputGroupBox: TGroupBox
+    AnchorSideBottom.Control = CloseButton1
+    Left = 6
+    Height = 151
+    Top = 116
+    Width = 612
+    Align = alTop
+    Anchors = [akBottom]
+    BorderSpacing.Left = 6
+    BorderSpacing.Right = 6
+    BorderSpacing.Bottom = 6
+    Caption = 'Output'
+    ClientHeight = 133
+    ClientWidth = 608
+    ParentCtl3D = False
+    TabOrder = 0
+    object OutputListbox: TListBox
+      Left = 6
+      Height = 121
+      Top = 6
+      Width = 596
+      Align = alClient
+      BorderSpacing.Around = 6
+      PopupMenu = OutputPopupMenu
+      TabOrder = 0
+    end
+  end
+  object TestGroupbox: TGroupBox
+    Left = 6
+    Height = 105
+    Top = 6
+    Width = 612
+    Align = alTop
+    Anchors = [akRight]
+    BorderSpacing.Left = 6
+    BorderSpacing.Top = 6
+    BorderSpacing.Right = 6
+    Caption = 'Test'
+    ClientHeight = 87
+    ClientWidth = 608
+    ParentCtl3D = False
+    TabOrder = 1
+    object TestMemo: TMemo
+      Left = 6
+      Height = 75
+      Top = 6
+      Width = 596
+      Align = alClient
+      BorderSpacing.Around = 6
+      TabOrder = 0
+    end
+  end
+  object CloseButton1: TBitBtn
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 545
+    Height = 28
+    Top = 273
+    Width = 73
+    Anchors = [akRight, akBottom]
+    AutoSize = True
+    BorderSpacing.Around = 6
+    Cancel = True
+    Caption = '&Close'
+    Constraints.MinHeight = 25
+    Constraints.MinWidth = 75
+    Kind = bkClose
+    ModalResult = 1
+    NumGlyphs = 0
+    TabOrder = 2
+  end
+  object Splitter1: TSplitter
+    Cursor = crVSplit
+    Height = 5
+    Top = 111
+    Width = 624
+    Align = alTop
+    ResizeAnchor = akTop
+  end
+  object OutputPopupMenu: TPopupMenu
+    left = 110
+    top = 260
+    object CopyOutputMenuItem: TMenuItem
+      Caption = 'CopyOutputMenuItem'
+      OnClick = CopyOutputMenuItemClick
+    end
+  end
+end

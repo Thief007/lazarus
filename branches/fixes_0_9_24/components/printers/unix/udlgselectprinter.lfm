@@ -1,0 +1,438 @@
+object dlgSelectPrinter: TdlgSelectPrinter
+  Left = 228
+  Height = 401
+  Top = 43
+  Width = 552
+  HorzScrollBar.Page = 551
+  VertScrollBar.Page = 400
+  ActiveControl = cbPrinters
+  Caption = 'Printing'
+  ClientHeight = 401
+  ClientWidth = 552
+  OnCreate = dlgSelectPrinterCREATE
+  OnShow = dlgSelectPrinterSHOW
+  object labCUPS: TLabel
+    Left = 8
+    Height = 14
+    Top = 152
+    Width = 180
+    Caption = 'CUPS (Common Unix Printing System)'
+    ParentColor = False
+  end
+  object labCUPSServer: TLabel
+    Left = 264
+    Height = 14
+    Top = 152
+    Width = 73
+    Caption = 'labCUPSServer'
+    ParentColor = False
+  end
+  object Groupbox1: TGroupBox
+    Left = 8
+    Height = 136
+    Top = 8
+    Width = 536
+    Caption = ' Printer '
+    ClientHeight = 118
+    ClientWidth = 532
+    ParentCtl3D = False
+    TabOrder = 0
+    object ImgPrn: TImage
+      Left = 110
+      Height = 19
+      Top = 7
+      Width = 17
+    end
+    object Label1: TLabel
+      Left = 19
+      Height = 14
+      Top = 9
+      Width = 28
+      Caption = 'Name'
+      ParentColor = False
+    end
+    object Label2: TLabel
+      Left = 17
+      Height = 14
+      Top = 36
+      Width = 27
+      Caption = 'State'
+      ParentColor = False
+    end
+    object Label3: TLabel
+      Left = 18
+      Height = 14
+      Top = 64
+      Width = 41
+      Caption = 'Location'
+      ParentColor = False
+    end
+    object Label4: TLabel
+      Left = 17
+      Height = 14
+      Top = 92
+      Width = 54
+      Caption = 'Description'
+      ParentColor = False
+    end
+    object labState: TLabel
+      Left = 128
+      Height = 14
+      Top = 40
+      Width = 41
+      Caption = 'labState'
+      ParentColor = False
+    end
+    object labLocation: TLabel
+      Left = 128
+      Height = 14
+      Top = 66
+      Width = 55
+      Caption = 'labLocation'
+      ParentColor = False
+    end
+    object labComment: TLabel
+      Left = 126
+      Height = 14
+      Top = 92
+      Width = 60
+      Caption = 'labComment'
+      ParentColor = False
+    end
+    object cbPrinters: TComboBox
+      Left = 126
+      Height = 21
+      Top = 6
+      Width = 280
+      AutoCompleteText = [cbactEndOfLineComplete, cbactSearchAscending]
+      ItemHeight = 13
+      MaxLength = 0
+      OnChange = cbPrintersCHANGE
+      OnKeyPress = cbPrintersKEYPRESS
+      ParentCtl3D = False
+      Style = csDropDownList
+      TabOrder = 0
+    end
+    object btnProp: TButton
+      Left = 422
+      Height = 25
+      Top = 4
+      Width = 100
+      BorderSpacing.InnerBorder = 4
+      Caption = 'Properties ...'
+      OnClick = btnPropCLICK
+      TabOrder = 1
+    end
+    object cbPrintToFile: TCheckBox
+      Left = 422
+      Height = 13
+      Top = 89
+      Width = 69
+      Caption = 'Print to file'
+      TabOrder = 2
+    end
+  end
+  object NbOpts: TNotebook
+    Left = 8
+    Height = 192
+    Top = 168
+    Width = 537
+    PageIndex = 0
+    TabOrder = 1
+    object pgCopies: TPage
+      Caption = 'Copies'
+      ClientWidth = 529
+      ClientHeight = 166
+      object gbPages: TGroupBox
+        Left = 8
+        Height = 156
+        Top = 7
+        Width = 262
+        Caption = ' Select pages '
+        ClientHeight = 138
+        ClientWidth = 258
+        ParentCtl3D = False
+        TabOrder = 0
+        object Bevel1: TBevel
+          Left = 18
+          Height = 3
+          Top = 100
+          Width = 230
+          Shape = bsTopLine
+          Style = bsRaised
+        end
+        object labPage: TLabel
+          Left = 14
+          Height = 14
+          Top = 111
+          Width = 30
+          Caption = 'Pages'
+          ParentColor = False
+        end
+        object edRange: TEdit
+          Left = 92
+          Height = 23
+          Top = 70
+          Width = 154
+          TabOrder = 0
+        end
+        object edPageSet: TComboBox
+          Left = 130
+          Height = 21
+          Top = 108
+          Width = 118
+          AutoCompleteText = [cbactEndOfLineComplete, cbactSearchAscending]
+          ItemHeight = 13
+          ItemIndex = 0
+          Items.Strings = (
+            'All pages'
+            'Odd pages'
+            'Even pages'
+          )
+          MaxLength = 0
+          ParentCtl3D = False
+          Style = csDropDownList
+          TabOrder = 1
+          Text = 'All pages'
+        end
+        object rbCurrentPage: TRadioButton
+          Left = 14
+          Height = 13
+          Top = 21
+          Width = 81
+          AllowGrayed = True
+          Caption = 'Current page'
+          DragCursor = crDefault
+          Enabled = False
+          TabOrder = 2
+        end
+        object rbRange: TRadioButton
+          Left = 14
+          Height = 13
+          Top = 68
+          Width = 52
+          AllowGrayed = True
+          Caption = 'Range'
+          DragCursor = crDefault
+          TabOrder = 4
+        end
+        object rbAllPage: TRadioButton
+          Left = 14
+          Height = 13
+          Width = 34
+          AllowGrayed = True
+          Caption = 'All '
+          Checked = True
+          DragCursor = crDefault
+          State = cbChecked
+          TabOrder = 3
+        end
+        object rbSelection: TRadioButton
+          Left = 14
+          Height = 13
+          Top = 45
+          Width = 64
+          AllowGrayed = True
+          Caption = 'Selection'
+          DragCursor = crDefault
+          Enabled = False
+          TabOrder = 5
+        end
+      end
+      object gbCopies: TGroupBox
+        Left = 279
+        Height = 155
+        Top = 7
+        Width = 257
+        Caption = ' Copies '
+        ClientHeight = 137
+        ClientWidth = 253
+        ParentCtl3D = False
+        TabOrder = 1
+        object imgCollate: TImage
+          Left = 6
+          Height = 37
+          Top = 32
+          Width = 93
+          AutoSize = True
+          Proportional = True
+        end
+        object lanNumCopies: TLabel
+          Left = 6
+          Height = 14
+          Top = 6
+          Width = 84
+          Caption = 'Number of copies'
+          ParentColor = False
+        end
+        object edCopies: TSpinEdit
+          Left = 134
+          Height = 20
+          Top = 3
+          Width = 50
+          TabOrder = 0
+        end
+        object cbCollate: TCheckBox
+          Left = 119
+          Height = 13
+          Top = 32
+          Width = 52
+          AllowGrayed = True
+          Caption = 'Collate'
+          DragCursor = crDefault
+          OnClick = cbReverseCLICK
+          TabOrder = 2
+        end
+        object cbReverse: TCheckBox
+          Left = 119
+          Height = 13
+          Top = 60
+          Width = 60
+          AllowGrayed = True
+          Caption = 'Reverse'
+          DragCursor = crDefault
+          OnClick = cbReverseCLICK
+          TabOrder = 1
+        end
+      end
+    end
+    object pgAdvance: TPage
+      Caption = 'Advanced'
+      ClientWidth = 529
+      ClientHeight = 166
+      object labTask: TLabel
+        Left = 7
+        Height = 13
+        Top = 10
+        Width = 74
+        Caption = 'Delayed task'
+        ParentColor = False
+      end
+      object Label5: TLabel
+        Left = 7
+        Height = 13
+        Top = 45
+        Width = 40
+        Caption = 'Priority'
+        ParentColor = False
+      end
+      object cbTasktime: TComboBox
+        Left = 215
+        Height = 25
+        Top = 7
+        Width = 200
+        AutoCompleteText = [cbactEndOfLineComplete, cbactSearchAscending]
+        ItemHeight = 13
+        ItemIndex = 0
+        Items.Strings = (
+          'Immediate'
+          'Never (suspending)'
+          'during the day'
+          'evening'
+          'night'
+          'Weekend'
+          'After close of business'
+          'After midnight'
+          'At time'
+        )
+        MaxLength = 0
+        OnChange = cbTasktimeCHANGE
+        OnKeyPress = cbPrintersKEYPRESS
+        ParentCtl3D = False
+        Style = csDropDownList
+        TabOrder = 1
+        Text = 'Immediate'
+      end
+      object edTimeTask: TEdit
+        Left = 429
+        Height = 23
+        Top = 9
+        Width = 58
+        DragCursor = crDefault
+        MaxLength = 8
+        TabOrder = 0
+        Text = '23:00:00'
+      end
+      object edPriority: TSpinEdit
+        Left = 127
+        Height = 20
+        Top = 42
+        Width = 50
+        TabOrder = 3
+      end
+      object tkbPriority: TTrackBar
+        Left = 192
+        Height = 20
+        Top = 49
+        Width = 335
+        Frequency = 10
+        Max = 100
+        OnChange = tkbPriorityCHANGE
+        Position = 10
+        ScalePos = trTop
+        TabStop = False
+        TickMarks = tmBoth
+        DragCursor = crDefault
+        ParentCtl3D = False
+        TabOrder = 2
+      end
+    end
+  end
+  object Panel1: TPanel
+    Height = 41
+    Top = 360
+    Width = 552
+    Align = alBottom
+    Anchors = [akLeft, akBottom]
+    ClientHeight = 41
+    ClientWidth = 552
+    FullRepaint = False
+    TabOrder = 2
+    TabStop = True
+    object btnCancel: TButton
+      Left = 447
+      Height = 25
+      Top = 8
+      Width = 91
+      Anchors = [akTop, akRight]
+      BorderSpacing.InnerBorder = 4
+      Cancel = True
+      Caption = 'Cancel'
+      ModalResult = 2
+      TabOrder = 0
+    end
+    object btnPrint: TButton
+      Left = 343
+      Height = 25
+      Top = 8
+      Width = 99
+      Anchors = [akTop, akRight]
+      BorderSpacing.InnerBorder = 4
+      Caption = 'Print'
+      Default = True
+      ModalResult = 1
+      OnClick = btnPrintCLICK
+      TabOrder = 1
+    end
+    object btnReduc: TButton
+      Left = 8
+      Height = 25
+      Top = 8
+      Width = 88
+      BorderSpacing.InnerBorder = 4
+      Caption = 'More ...'
+      OnClick = btnReducCLICK
+      TabOrder = 2
+    end
+    object btnPreview: TButton
+      Left = 208
+      Height = 25
+      Top = 8
+      Width = 123
+      BorderSpacing.InnerBorder = 4
+      Caption = 'Preview'
+      ModalResult = 6
+      TabOrder = 3
+    end
+  end
+end

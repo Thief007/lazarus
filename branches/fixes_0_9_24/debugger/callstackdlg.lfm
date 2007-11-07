@@ -1,0 +1,55 @@
+inherited CallStackDlg: TCallStackDlg
+  Left = 637
+  Height = 200
+  Top = 321
+  Width = 500
+  HorzScrollBar.Page = 499
+  VertScrollBar.Page = 199
+  ActiveControl = lvCallStack
+  Caption = 'CallStack'
+  ClientHeight = 200
+  ClientWidth = 500
+  Visible = True
+  object lvCallStack: TListView
+    Height = 200
+    Width = 500
+    Align = alClient
+    Columns = <    
+      item
+        Caption = 'Source'
+        Width = 150
+      end    
+      item
+        Caption = 'Line'
+      end    
+      item
+        Caption = 'Function'
+        Width = 290
+      end>
+    PopupMenu = mnuPopup
+    RowSelect = True
+    TabOrder = 0
+    ViewStyle = vsReport
+    OnDblClick = lvCallStackDBLCLICK
+  end
+  object mnuPopup: TPopupMenu
+    left = 66
+    top = 88
+    object popShow: TMenuItem
+      Caption = 'Show'
+      Default = True
+      OnClick = popShowClick
+    end
+    object N1: TMenuItem
+      Caption = '-'
+    end
+    object popSetAsCurrent: TMenuItem
+      Caption = 'Set as current'
+    end
+    object popCopyAll: TMenuItem
+      Caption = 'Copy all'
+      ShortCut = 16451
+      OnClick = popCopyAllClick
+    end
+  end
+end
