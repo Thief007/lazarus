@@ -1,0 +1,66 @@
+object AboutForm: TAboutForm
+  ActiveControl = Button1
+  BorderStyle = bsDialog
+  Caption = 'About this application'
+  ClientHeight = 299
+  ClientWidth = 529
+  PixelsPerInch = 90
+  Position = poMainFormCenter
+  HorzScrollBar.Page = 528
+  VertScrollBar.Page = 298
+  Left = 333
+  Height = 299
+  Top = 149
+  Width = 529
+  object LThisApplication: TLabel
+    Caption = 'Lazarus Documentation Editor'
+    Color = clNone
+    ParentColor = False
+    Left = 16
+    Height = 17
+    Top = 8
+    Width = 220
+  end
+  object LCopyRight1: TLabel
+    Caption = 'This application is (c) by  Michael Van Canneyt and the Lazarus team'
+    Color = clNone
+    ParentColor = False
+    Left = 16
+    Height = 17
+    Top = 48
+    Width = 503
+  end
+  object LCopyRight2: TLabel
+    Caption = 'It is released under the terms of the  GENERAL PUBLIC LICENSE:'
+    Color = clNone
+    ParentColor = False
+    Left = 16
+    Height = 17
+    Top = 64
+    Width = 491
+  end
+  object Button1: TButton
+    Anchors = [akRight, akBottom]
+    
+    Cancel = True
+    Caption = '&Close'
+    Default = True
+    ModalResult = 1
+    TabOrder = 0
+    Left = 423
+    Height = 24
+    Top = 264
+    Width = 90
+  end
+  object MCopyRight: TMemo
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    ReadOnly = True
+    ScrollBars = ssBoth
+    TabOrder = 1
+    WordWrap = False
+    Left = 16
+    Height = 175
+    Top = 80
+    Width = 497
+  end
+end

@@ -1,0 +1,57 @@
+object frVarForm: TfrVarForm
+  Left = 555
+  Height = 317
+  Top = 187
+  Width = 217
+  HorzScrollBar.Page = 216
+  VertScrollBar.Page = 316
+  BorderStyle = bsDialog
+  Caption = 'Variables'
+  ClientHeight = 317
+  ClientWidth = 217
+  Font.Color = clBlack
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  OnDeactivate = FormDeactivate
+  OnKeyDown = FormKeyDown
+  Position = poScreenCenter
+  object Label1: TLabel
+    Left = 4
+    Height = 14
+    Top = 4
+    Width = 50
+    Caption = '&Category:'
+    FocusControl = ValCombo
+    ParentColor = False
+  end
+  object ValList: TListBox
+    Left = 4
+    Height = 264
+    Top = 48
+    Width = 209
+    HelpContext = 22
+    ClickOnSelChange = False
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    IntegralHeight = True
+    ItemHeight = 13
+    OnDblClick = ValListDblClick
+    OnKeyDown = ValListKeyDown
+    TabOrder = 0
+  end
+  object ValCombo: TComboBox
+    Left = 4
+    Height = 21
+    Top = 24
+    Width = 209
+    HelpContext = 32
+    AutoCompleteText = [cbactEndOfLineComplete, cbactSearchAscending]
+    ItemHeight = 13
+    MaxLength = 0
+    OnChange = ValComboClick
+    Style = csDropDownList
+    TabOrder = 1
+  end
+end

@@ -1,0 +1,41 @@
+object SelectCodeGeneratorForm: TSelectCodeGeneratorForm
+  Left = 545
+  Height = 300
+  Top = 239
+  Width = 400
+  ActiveControl = BPButtons.CancelButton
+  Caption = 'Select code to be generated'
+  ClientHeight = 300
+  ClientWidth = 400
+  OnClose = FormClose
+  OnShow = FormShow
+  LCLVersion = '0.9.25'
+  object RGGenerators: TRadioGroup
+    Left = 8
+    Height = 240
+    Top = 8
+    Width = 376
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    AutoFill = True
+    Caption = 'Available code generators'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    TabOrder = 0
+  end
+  object BPButtons: TButtonPanel
+    Left = 6
+    Height = 42
+    Top = 258
+    Width = 388
+    Align = alBottom
+    AutoSize = True
+    TabOrder = 1
+    ShowButtons = [pbOK, pbCancel]
+  end
+end
