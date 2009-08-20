@@ -1,0 +1,32 @@
+object CompOptsConditionalsFrame: TCompOptsConditionalsFrame
+  Left = 0
+  Height = 170
+  Top = 0
+  Width = 385
+  ClientHeight = 166
+  ClientWidth = 381
+  TabOrder = 0
+  Visible = False
+  DesignLeft = 449
+  DesignTop = 401
+  object COCTreeView: TTreeView
+    Left = 0
+    Height = 166
+    Top = 0
+    Width = 381
+    Align = alClient
+    AutoExpand = True
+    DefaultItemHeight = 19
+    PopupMenu = COCPopupMenu
+    RowSelect = True
+    TabOrder = 0
+    OnEdited = COCTreeViewEdited
+    OnEditing = COCTreeViewEditing
+    Options = [tvoAutoExpand, tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoRowSelect, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoShowSeparators, tvoToolTips]
+  end
+  object COCPopupMenu: TPopupMenu
+    OnPopup = COCPopupMenuPopup
+    left = 48
+    top = 48
+  end
+end

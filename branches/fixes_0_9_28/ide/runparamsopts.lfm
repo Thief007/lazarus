@@ -1,0 +1,390 @@
+object RunParamsOptsDlg: TRunParamsOptsDlg
+  Left = 443
+  Height = 501
+  Top = 176
+  Width = 500
+  ActiveControl = Notebook
+  BorderStyle = bsSizeToolWin
+  Caption = 'RunParamsOptsDlg'
+  ClientHeight = 501
+  ClientWidth = 500
+  Position = poScreenCenter
+  LCLVersion = '0.9.27'
+  object Notebook: TNotebook
+    Left = 0
+    Height = 463
+    Top = 0
+    Width = 500
+    Align = alClient
+    BorderSpacing.Bottom = 6
+    PageIndex = 1
+    TabOrder = 0
+    object GeneralPage: TPage
+      Caption = 'GeneralPage'
+      ClientWidth = 492
+      ClientHeight = 421
+      object DisplayGroupBox: TGroupBox
+        Left = 6
+        Height = 82
+        Top = 232
+        Width = 480
+        Align = alTop
+        AutoSize = True
+        BorderSpacing.Around = 6
+        Caption = 'DisplayGroupBox'
+        ClientHeight = 64
+        ClientWidth = 476
+        TabOrder = 3
+        object DisplayEdit: TEdit
+          Left = 6
+          Height = 23
+          Top = 34
+          Width = 464
+          Align = alTop
+          BorderSpacing.Around = 6
+          TabOrder = 0
+          Text = 'DisplayEdit'
+        end
+        object UseDisplayCheckBox: TCheckBox
+          Left = 6
+          Height = 22
+          Top = 6
+          Width = 464
+          Align = alTop
+          BorderSpacing.Left = 6
+          BorderSpacing.Top = 6
+          BorderSpacing.Right = 6
+          BorderSpacing.Bottom = 6
+          Caption = 'UseDisplayCheckBox'
+          TabOrder = 1
+        end
+      end
+      object CmdLineParametersGroupBox: TGroupBox
+        Left = 6
+        Height = 60
+        Top = 72
+        Width = 480
+        Align = alTop
+        AutoSize = True
+        BorderSpacing.Around = 6
+        Caption = 'CmdLineParametersGroupBox'
+        ClientHeight = 42
+        ClientWidth = 476
+        TabOrder = 0
+        object CmdLineParametersComboBox: TComboBox
+          Left = 6
+          Height = 21
+          Top = 6
+          Width = 464
+          Align = alTop
+          AutoComplete = False
+          BorderSpacing.Around = 6
+          ItemHeight = 13
+          ItemWidth = 0
+          TabOrder = 0
+          Text = 'CmdLineParametersComboBox'
+        end
+      end
+      object UseLaunchingApplicationGroupBox: TGroupBox
+        Left = 6
+        Height = 88
+        Top = 138
+        Width = 480
+        Align = alTop
+        AutoSize = True
+        BorderSpacing.Around = 6
+        Caption = 'UseLaunchingApplicationGroupBox'
+        ClientHeight = 70
+        ClientWidth = 476
+        TabOrder = 1
+        object UseLaunchingApplicationCheckBox: TCheckBox
+          Left = 6
+          Height = 22
+          Top = 6
+          Width = 464
+          Align = alTop
+          BorderSpacing.Left = 6
+          BorderSpacing.Top = 6
+          BorderSpacing.Right = 6
+          BorderSpacing.Bottom = 6
+          Caption = 'UseLaunchingApplicationCheckBox'
+          TabOrder = 0
+        end
+        object UseLaunchingApplicationComboBox: TComboBox
+          Left = 6
+          Height = 21
+          Top = 34
+          Width = 464
+          Align = alTop
+          AutoComplete = False
+          BorderSpacing.Around = 6
+          ItemHeight = 13
+          ItemWidth = 0
+          TabOrder = 1
+          Text = 'UseLaunchingApplicationComboBox'
+        end
+      end
+      object HostApplicationGroupBox: TGroupBox
+        Left = 6
+        Height = 60
+        Top = 6
+        Width = 480
+        Align = alTop
+        AutoSize = True
+        BorderSpacing.Around = 6
+        Caption = 'HostApplicationGroupBox'
+        ClientHeight = 42
+        ClientWidth = 476
+        TabOrder = 2
+        object HostApplicationBrowseBtn: TButton
+          AnchorSideTop.Control = HostApplicationGroupBox
+          AnchorSideRight.Control = HostApplicationGroupBox
+          AnchorSideRight.Side = asrBottom
+          AnchorSideBottom.Control = HostApplicationEdit
+          AnchorSideBottom.Side = asrBottom
+          Left = 290
+          Height = 27
+          Top = 6
+          Width = 180
+          Anchors = [akTop, akRight, akBottom]
+          AutoSize = True
+          BorderSpacing.Left = 6
+          BorderSpacing.Top = 6
+          BorderSpacing.Right = 6
+          Caption = 'HostApplicationBrowseBtn'
+          OnClick = HostApplicationBrowseBtnClick
+          TabOrder = 0
+        end
+        object HostApplicationEdit: TEdit
+          AnchorSideLeft.Control = HostApplicationGroupBox
+          AnchorSideTop.Control = HostApplicationGroupBox
+          AnchorSideRight.Control = HostApplicationBrowseBtn
+          Left = 6
+          Height = 27
+          Top = 6
+          Width = 278
+          Anchors = [akTop, akLeft, akRight]
+          AutoSize = True
+          BorderSpacing.Around = 6
+          TabOrder = 1
+          Text = 'HostApplicationEdit'
+        end
+      end
+      object WorkingDirectoryGroupBox: TGroupBox
+        Left = 6
+        Height = 60
+        Top = 320
+        Width = 480
+        Align = alTop
+        AutoSize = True
+        BorderSpacing.Around = 6
+        Caption = 'WorkingDirectoryGroupBox'
+        ClientHeight = 42
+        ClientWidth = 476
+        TabOrder = 4
+        object WorkingDirectoryBtn: TButton
+          AnchorSideTop.Control = WorkingDirectoryGroupBox
+          AnchorSideRight.Control = WorkingDirectoryGroupBox
+          AnchorSideRight.Side = asrBottom
+          AnchorSideBottom.Control = WorkingDirectoryComboBox
+          AnchorSideBottom.Side = asrBottom
+          Left = 329
+          Height = 21
+          Top = 6
+          Width = 141
+          Anchors = [akTop, akRight, akBottom]
+          AutoSize = True
+          BorderSpacing.Top = 6
+          BorderSpacing.Right = 6
+          Caption = 'WorkingDirectoryBtn'
+          OnClick = WorkingDirectoryBtnClick
+          TabOrder = 0
+        end
+        object WorkingDirectoryComboBox: TComboBox
+          AnchorSideLeft.Control = WorkingDirectoryGroupBox
+          AnchorSideTop.Control = WorkingDirectoryGroupBox
+          AnchorSideRight.Control = WorkingDirectoryBtn
+          Left = 6
+          Height = 21
+          Top = 6
+          Width = 317
+          Anchors = [akTop, akLeft, akRight]
+          AutoComplete = False
+          BorderSpacing.Around = 6
+          ItemHeight = 13
+          ItemWidth = 0
+          TabOrder = 1
+          Text = 'WorkingDirectoryComboBox'
+        end
+      end
+    end
+    object EnvVarsPage: TPage
+      Caption = 'EnvVarsPage'
+      ClientWidth = 492
+      ClientHeight = 437
+      OnResize = EnvVarsPageResize
+      object IncludeSystemVariablesCheckBox: TCheckBox
+        AnchorSideLeft.Control = EnvVarsPage
+        AnchorSideBottom.Control = EnvVarsPage
+        AnchorSideBottom.Side = asrBottom
+        Left = 6
+        Height = 17
+        Top = 414
+        Width = 480
+        Align = alBottom
+        BorderSpacing.Around = 6
+        Caption = 'IncludeSystemVariablesCheckBox'
+        Enabled = False
+        TabOrder = 0
+      end
+      object UserOverridesGroupBox: TGroupBox
+        AnchorSideLeft.Control = EnvVarsPage
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = EnvVarsPage
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Control = IncludeSystemVariablesCheckBox
+        Left = 6
+        Height = 179
+        Top = 229
+        Width = 480
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        BorderSpacing.Around = 6
+        Caption = 'UserOverridesGroupBox'
+        ClientHeight = 161
+        ClientWidth = 476
+        TabOrder = 1
+        object UserOverridesListView: TListView
+          AnchorSideLeft.Control = UserOverridesGroupBox
+          AnchorSideTop.Control = UserOverridesGroupBox
+          AnchorSideRight.Control = UserOverridesGroupBox
+          AnchorSideRight.Side = asrBottom
+          AnchorSideBottom.Control = UserOverridesAddButton
+          Left = 6
+          Height = 120
+          Top = 6
+          Width = 464
+          Align = alTop
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          BorderSpacing.Around = 6
+          Columns = <          
+            item
+              AutoSize = True
+              Caption = 'Caption'
+              Width = 59
+            end          
+            item
+              AutoSize = True
+              Caption = 'Caption'
+              Width = 391
+            end>
+          RowSelect = True
+          SortType = stText
+          TabOrder = 0
+          ViewStyle = vsReport
+        end
+        object UserOverridesAddButton: TBitBtn
+          AnchorSideLeft.Control = UserOverridesGroupBox
+          AnchorSideBottom.Control = UserOverridesGroupBox
+          AnchorSideBottom.Side = asrBottom
+          Left = 6
+          Height = 23
+          Top = 132
+          Width = 146
+          Anchors = [akLeft, akBottom]
+          AutoSize = True
+          BorderSpacing.Around = 6
+          Caption = 'UserOverridesAddButton'
+          NumGlyphs = 0
+          OnClick = UserOverridesAddButtonClick
+          TabOrder = 1
+        end
+        object UserOverridesEditButton: TBitBtn
+          AnchorSideLeft.Control = UserOverridesDeleteButton
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideBottom.Control = UserOverridesGroupBox
+          AnchorSideBottom.Side = asrBottom
+          Left = 322
+          Height = 23
+          Top = 132
+          Width = 145
+          Anchors = [akLeft, akBottom]
+          AutoSize = True
+          BorderSpacing.Around = 6
+          Caption = 'UserOverridesEditButton'
+          NumGlyphs = 0
+          OnClick = UserOverridesEditButtonClick
+          TabOrder = 2
+        end
+        object UserOverridesDeleteButton: TBitBtn
+          AnchorSideLeft.Control = UserOverridesAddButton
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideBottom.Control = UserOverridesGroupBox
+          AnchorSideBottom.Side = asrBottom
+          Left = 158
+          Height = 23
+          Top = 132
+          Width = 158
+          Anchors = [akLeft, akBottom]
+          AutoSize = True
+          BorderSpacing.Around = 6
+          Caption = 'UserOverridesDeleteButton'
+          NumGlyphs = 0
+          OnClick = UserOverridesDeleteButtonClick
+          TabOrder = 3
+        end
+      end
+      object SystemVariablesGroupBox: TGroupBox
+        AnchorSideBottom.Control = UserOverridesGroupBox
+        Left = 6
+        Height = 217
+        Top = 6
+        Width = 480
+        Align = alTop
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        BorderSpacing.Around = 6
+        Caption = 'SystemVariablesGroupBox'
+        ClientHeight = 199
+        ClientWidth = 476
+        TabOrder = 2
+        object SystemVariablesListView: TListView
+          AnchorSideLeft.Control = SystemVariablesGroupBox
+          AnchorSideTop.Control = SystemVariablesGroupBox
+          AnchorSideRight.Control = SystemVariablesGroupBox
+          AnchorSideRight.Side = asrBottom
+          AnchorSideBottom.Control = SystemVariablesGroupBox
+          AnchorSideBottom.Side = asrBottom
+          Left = 6
+          Height = 187
+          Top = 6
+          Width = 464
+          Align = alClient
+          BorderSpacing.Around = 6
+          Columns = <          
+            item
+              AutoSize = True
+              Caption = 'Caption'
+              Width = 59
+            end          
+            item
+              AutoSize = True
+              Caption = 'Caption'
+              Width = 391
+            end>
+          RowSelect = True
+          SortType = stText
+          TabOrder = 0
+          ViewStyle = vsReport
+        end
+      end
+    end
+  end
+  object ButtonPanel: TButtonPanel
+    Left = 6
+    Height = 26
+    Top = 469
+    Width = 488
+    TabOrder = 1
+    ShowButtons = [pbOK, pbCancel, pbHelp]
+    ShowBevel = False
+  end
+end

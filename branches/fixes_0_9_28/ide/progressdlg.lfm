@@ -1,0 +1,45 @@
+object IDEProgressDialog: TIDEProgressDialog
+  Left = 286
+  Height = 132
+  Top = 202
+  Width = 400
+  Caption = 'IDEProgressDialog'
+  ClientHeight = 132
+  ClientWidth = 400
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  Position = poScreenCenter
+  LCLVersion = '0.9.27'
+  object DescriptionLabel: TLabel
+    Left = 152
+    Height = 13
+    Top = 16
+    Width = 95
+    Anchors = [akTop]
+    AutoSize = False
+    Caption = 'DescriptionLabel'
+    ParentColor = False
+    WordWrap = True
+  end
+  object ProgressBar: TProgressBar
+    Left = 15
+    Height = 20
+    Top = 64
+    Width = 370
+    Anchors = [akTop]
+    TabOrder = 0
+  end
+  object AbortButton: TBitBtn
+    Left = 130
+    Height = 33
+    Top = 92
+    Width = 139
+    Anchors = [akBottom]
+    Cancel = True
+    Caption = 'Cancel'
+    Kind = bkCancel
+    ModalResult = 3
+    NumGlyphs = 0
+    TabOrder = 1
+  end
+end

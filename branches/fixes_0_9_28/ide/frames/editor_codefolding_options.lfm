@@ -1,0 +1,95 @@
+inherited EditorCodefoldingOptionsFrame: TEditorCodefoldingOptionsFrame
+  Height = 334
+  Width = 521
+  Anchors = [akTop]
+  ClientHeight = 334
+  ClientWidth = 521
+  Visible = False
+  object Bevel1: TBevel[0]
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = chkCodeFoldingEnabled
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 0
+    Height = 2
+    Top = 25
+    Width = 521
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 6
+  end
+  object LanguageLabel: TLabel[1]
+    AnchorSideLeft.Control = LanguageComboBox
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = LanguageComboBox
+    AnchorSideTop.Side = asrCenter
+    Left = 206
+    Height = 16
+    Top = 34
+    Width = 81
+    BorderSpacing.Left = 6
+    Caption = 'LanguageLabel'
+    ParentColor = False
+  end
+  object chkCodeFoldingEnabled: TCheckBox[2]
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    Left = 0
+    Height = 19
+    Top = 0
+    Width = 149
+    Caption = 'chkCodeFoldingEnabled'
+    TabOrder = 0
+  end
+  object LanguageComboBox: TComboBox[3]
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Bevel1
+    Left = 0
+    Height = 23
+    Top = 31
+    Width = 200
+    BorderSpacing.Top = 6
+    ItemHeight = 15
+    OnChange = LanguageComboBoxChange
+    OnExit = LanguageComboBoxExit
+    OnKeyDown = LanguageComboBoxKeyDown
+    Style = csDropDownList
+    TabOrder = 1
+  end
+  object FoldConfPanel: TPanel[4]
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = LanguageComboBox
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 0
+    Height = 274
+    Top = 60
+    Width = 521
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Top = 6
+    BevelOuter = bvNone
+    ClientHeight = 274
+    ClientWidth = 521
+    TabOrder = 2
+    object FoldConfigCheckListBox: TCheckListBox
+      AnchorSideLeft.Control = FoldConfPanel
+      AnchorSideTop.Control = FoldConfPanel
+      AnchorSideBottom.Control = FoldConfPanel
+      AnchorSideBottom.Side = asrBottom
+      Left = 0
+      Height = 274
+      Top = 0
+      Width = 200
+      Anchors = [akTop, akLeft, akBottom]
+      ExtendedSelect = False
+      ItemHeight = 0
+      OnClickCheck = FoldConfigCheckListBoxClickCheck
+      OnExit = FoldConfigCheckListBoxClickCheck
+      OnKeyUp = FoldConfigCheckListBoxKeyUp
+      TabOrder = 0
+    end
+  end
+end

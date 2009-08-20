@@ -1,0 +1,102 @@
+object CheckListBoxEditorDlg: TCheckListBoxEditorDlg
+  Left = 316
+  Height = 294
+  Top = 154
+  Width = 445
+  ActiveControl = FCheck
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'CheckListBoxEditorDlg'
+  ClientHeight = 294
+  ClientWidth = 445
+  Constraints.MinHeight = 100
+  Constraints.MinWidth = 200
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '0.9.27'
+  object FCheck: TCheckListBox
+    Left = 0
+    Height = 232
+    Top = 24
+    Width = 445
+    Align = alClient
+    ItemHeight = 0
+    OnClick = FCheckClick
+    TabOrder = 0
+  end
+  object ToolBar: TToolBar
+    Left = 0
+    Height = 24
+    Top = 0
+    Width = 445
+    AutoSize = True
+    Caption = 'ToolBar'
+    TabOrder = 1
+    object tbAdd: TToolButton
+      Left = 1
+      Top = 2
+      Caption = 'tbAdd'
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = AddItem
+    end
+    object tbDelete: TToolButton
+      Left = 24
+      Top = 2
+      Caption = 'tbDelete'
+      Enabled = False
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = DeleteItem
+    end
+    object ToolButton3: TToolButton
+      Left = 47
+      Top = 2
+      Width = 9
+      Caption = 'ToolButton3'
+      Style = tbsDivider
+    end
+    object tbUp: TToolButton
+      Left = 56
+      Top = 2
+      Caption = 'tbUp'
+      Enabled = False
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = MoveUpItem
+    end
+    object tbDown: TToolButton
+      Left = 79
+      Top = 2
+      Caption = 'tbDown'
+      Enabled = False
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = MoveDownItem
+    end
+    object ToolButton6: TToolButton
+      Left = 102
+      Top = 2
+      Width = 10
+      Caption = 'ToolButton6'
+      Style = tbsDivider
+    end
+    object tbEdit: TToolButton
+      Left = 112
+      Top = 2
+      Caption = 'tbEdit'
+      Enabled = False
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = ModifyItem
+    end
+  end
+  object BtnPanel: TButtonPanel
+    Left = 6
+    Height = 26
+    Top = 262
+    Width = 433
+    TabOrder = 2
+    ShowBevel = False
+  end
+end
