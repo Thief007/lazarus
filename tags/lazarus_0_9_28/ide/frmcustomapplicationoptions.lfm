@@ -1,0 +1,120 @@
+object CustomApplicationOptionsForm: TCustomApplicationOptionsForm
+  Left = 386
+  Height = 290
+  Top = 242
+  Width = 460
+  ActiveControl = EClassName
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'New console application'
+  ClientHeight = 290
+  ClientWidth = 460
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '0.9.27'
+  object LEClassName: TLabel
+    Left = 8
+    Height = 23
+    Top = 8
+    Width = 227
+    Alignment = taRightJustify
+    AutoSize = False
+    Caption = '&Application class name'
+    FocusControl = EClassName
+    Layout = tlCenter
+    ParentColor = False
+  end
+  object LETitle: TLabel
+    Left = 8
+    Height = 23
+    Top = 38
+    Width = 227
+    Alignment = taRightJustify
+    AutoSize = False
+    Caption = '&Title'
+    FocusControl = ETitle
+    Layout = tlCenter
+    ParentColor = False
+  end
+  object EClassName: TEdit
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 241
+    Height = 23
+    Top = 8
+    Width = 213
+    Anchors = [akTop, akLeft, akRight]
+    AutoSelect = True
+    BorderSpacing.Around = 6
+    OnKeyPress = EClassNameKeyPress
+    TabOrder = 0
+    Text = 'TMyApplication'
+  end
+  object CGOptions: TCheckGroup
+    Left = 8
+    Height = 181
+    Top = 72
+    Width = 443
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    AutoFill = True
+    AutoSize = True
+    Caption = 'Code generation options'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    TabOrder = 2
+  end
+  object ETitle: TEdit
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 240
+    Height = 23
+    Top = 38
+    Width = 214
+    Anchors = [akTop, akLeft, akRight]
+    AutoSelect = True
+    BorderSpacing.Around = 6
+    TabOrder = 1
+    Text = 'My Application'
+  end
+  object BOK: TBitBtn
+    AnchorSideRight.Control = BCancel
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 298
+    Height = 25
+    Top = 259
+    Width = 75
+    Anchors = [akRight, akBottom]
+    BorderSpacing.Around = 6
+    Caption = '&OK'
+    Default = True
+    Kind = bkOK
+    ModalResult = 1
+    NumGlyphs = 0
+    TabOrder = 3
+  end
+  object BCancel: TBitBtn
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 379
+    Height = 25
+    Top = 259
+    Width = 75
+    Anchors = [akRight, akBottom]
+    BorderSpacing.Around = 6
+    Cancel = True
+    Caption = 'Cancel'
+    Kind = bkCancel
+    ModalResult = 2
+    NumGlyphs = 0
+    TabOrder = 4
+  end
+end

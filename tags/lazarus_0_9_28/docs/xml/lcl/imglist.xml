@@ -1,0 +1,1137 @@
+<?xml version="1.0"?>
+<fpdoc-descriptions>
+  <package name="lcl">
+    <!--
+  ====================================================================
+    ImgList
+  ====================================================================
+-->
+    <module name="ImgList">
+      <short>Contains definitions for TCustomImageList. base class for TImageList</short>
+      <descr/>
+      <!-- unresolved type reference Visibility: default -->
+      <element name="SysUtils">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- unresolved type reference Visibility: default -->
+      <element name="Classes">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- unresolved type reference Visibility: default -->
+      <element name="FPCAdds">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- unresolved type reference Visibility: default -->
+      <element name="LCLStrConsts">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- unresolved type reference Visibility: default -->
+      <element name="LCLIntf">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- unresolved type reference Visibility: default -->
+      <element name="LResources">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- unresolved type reference Visibility: default -->
+      <element name="LCLType">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- unresolved type reference Visibility: default -->
+      <element name="LCLProc">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- unresolved type reference Visibility: default -->
+      <element name="Graphics">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- unresolved type reference Visibility: default -->
+      <element name="GraphType">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- unresolved type reference Visibility: default -->
+      <element name="LCLClasses">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- unresolved type reference Visibility: default -->
+      <element name="IntfGraphics">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- unresolved type reference Visibility: default -->
+      <element name="FPReadBMP">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- "type" alias type Visibility: default -->
+      <element name="TImageIndex">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- object Visibility: default -->
+      <element name="TChangeLink">
+        <short>
+          <var>TChangeLink</var> - class to notify when an Imagelist changes</short>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TChangeLink.FSender">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TChangeLink.FOnChange">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- destructor Visibility: public -->
+      <element name="TChangeLink.Destroy" link="#rtl.System.TObject.Destroy">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- procedure Visibility: public -->
+      <element name="TChangeLink.Change">
+        <short>
+          <var>Change</var> - software emulation of the <var>OnChange</var> event</short>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TChangeLink.OnChange">
+        <short>
+          <var>OnChange</var> - event handler for a change in the Imagelist</short>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TChangeLink.Sender">
+        <short>
+          <var>Sender</var> - the imagelist that has notified us of a change</short>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- enumeration type Visibility: default -->
+      <element name="TDrawingStyle">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- enumeration value Visibility: default -->
+      <element name="TDrawingStyle.dsFocus">
+        <short/>
+      </element>
+      <!-- enumeration value Visibility: default -->
+      <element name="TDrawingStyle.dsSelected">
+        <short/>
+      </element>
+      <!-- enumeration value Visibility: default -->
+      <element name="TDrawingStyle.dsNormal">
+        <short/>
+      </element>
+      <!-- enumeration value Visibility: default -->
+      <element name="TDrawingStyle.dsTransparent">
+        <short/>
+      </element>
+      <!-- enumeration type Visibility: default -->
+      <element name="TImageType">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- enumeration value Visibility: default -->
+      <element name="TImageType.itImage">
+        <short/>
+      </element>
+      <!-- enumeration value Visibility: default -->
+      <element name="TImageType.itMask">
+        <short/>
+      </element>
+      <!-- object Visibility: default -->
+      <element name="TCustomImageList">
+        <short>
+          <var>TCustomImageList</var>  - base class for <var>TImageList</var> (not the same as a <var>TBitmap</var> collection)</short>
+        <descr>
+          <p>
+            <printshort id="TCustomImageList"/>
+          </p>
+          <p>Ancestor of <var>TDragImageList</var> which is base class for <var>TImageList</var> in Unit <var>Controls</var>
+          </p>
+          <pre>Delphi's TCustomImageList is based on the Win32 imagelists which has
+    internally only one bitmap to hold all images. This reduces handle
+    allocation.
+    The original Lazarus TCustomImageList implementation was LCL only based, so for
+    other platforms the single bitmap implementation had some speed drawbacks.
+    Therefore it was implemented as a list of bitmaps, however it doesn't reduce
+    handle allocation.
+    In its current form, the imagelist is again based on a 32bit RGBA raw
+    imagedata and the widgetset is notified when images are added or removed,
+    so the widgetset can create its own optimal storage. The LCL keeps only the
+    data, so all transparency info will be stored cross platform. (not all
+    platforms have an 8bit alpha channel).
+
+    NOTE: due to its implementation, the TCustomImageList is not a TBitmap
+    collection. If a fast storage of bitmaps is needed, create your own list!
+</pre>
+          <p/>
+        </descr>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomImageList.FDrawingStyle">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomImageList.FImageList">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomImageList.FMaskList">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomImageList.FBitmap">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomImageList.FImageType">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomImageList.FMaskBitmap">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomImageList.FHeight">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomImageList.FMasked">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomImageList.FShareImages">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomImageList.FWidth">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomImageList.FAllocBy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomImageList.FCount">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomImageList.FAllocCount">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomImageList.FBlendColor">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomImageList.FOnChange">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomImageList.FChangeLinkList">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomImageList.FBkColor">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomImageList.FHandle">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- variable Visibility: private -->
+      <element name="TCustomImageList.FChanged">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomImageList.AllocBitmap">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.AllocBitmap.Amount">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomImageList.NotifyChangeLink">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomImageList.SetBkColor">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.SetBkColor.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomImageList.SetDrawingStyle">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.SetDrawingStyle.AValue">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomImageList.SetHeight">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.SetHeight.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomImageList.SetMasked">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.SetMasked.AValue">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomImageList.SetShareImages">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.SetShareImages.AValue">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomImageList.SetWidth">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.SetWidth.Value">
+        <short/>
+      </element>
+      <!-- function Visibility: private -->
+      <element name="TCustomImageList.GetCount">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TCustomImageList.GetCount.Result">
+        <short/>
+      </element>
+      <!-- procedure Visibility: private -->
+      <element name="TCustomImageList.ShiftImages">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.ShiftImages.Source">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.ShiftImages.Start">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.ShiftImages.Shift">
+        <short/>
+      </element>
+      <!-- variable Visibility: protected -->
+      <element name="TCustomImageList.FUpdateCount">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TCustomImageList.GetImages">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.GetImages.Index">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.GetImages.Image">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.GetImages.Mask">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TCustomImageList.Initialize">
+        <short>
+          <var>Initialize</var> - sets up the list</short>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TCustomImageList.DefineProperties">
+        <short>
+          <var>DefineProperties</var> - defines the properties of the ImageList (stored in a file)</short>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.DefineProperties.Filer">
+        <short/>
+      </element>
+      <!-- procedure Visibility: protected -->
+      <element name="TCustomImageList.SetWidthHeight">
+        <short>
+          <var>SetWidthHeight</var> - specifies the dimensions for display</short>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.SetWidthHeight.NewWidth">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.SetWidthHeight.NewHeight">
+        <short/>
+      </element>
+      <!-- constructor Visibility: public -->
+      <element name="TCustomImageList.Create" link="#rtl.Classes.TComponent.Create">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.Create.TheOwner">
+        <short/>
+      </element>
+      <!-- procedure Visibility: public -->
+      <element name="TCustomImageList.AssignTo" link="#rtl.Classes.TPersistent.AssignTo">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.AssignTo.Dest">
+        <short/>
+      </element>
+      <!-- procedure Visibility: public -->
+      <element name="TCustomImageList.Assign" link="#rtl.Classes.TPersistent.Assign">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.Assign.Source">
+        <short/>
+      </element>
+      <!-- procedure Visibility: public -->
+      <element name="TCustomImageList.WriteData">
+        <short>
+          <var>WriteData</var> to a stream</short>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.WriteData.AStream">
+        <short/>
+      </element>
+      <!-- procedure Visibility: public -->
+      <element name="TCustomImageList.ReadData">
+        <short>
+          <var>ReadData</var> from a stream</short>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.ReadData.AStream">
+        <short/>
+      </element>
+      <!-- procedure Visibility: public -->
+      <element name="TCustomImageList.BeginUpdate">
+        <short>
+          <var>BeginUpdate</var> - start updating the data</short>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- procedure Visibility: public -->
+      <element name="TCustomImageList.EndUpdate">
+        <short>
+          <var>EndUpdate</var> - finish updating the data</short>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function Visibility: public -->
+      <element name="TCustomImageList.Add">
+        <short>
+          <var>Add</var> an Image and Mask to the list. Returns the index of the added image or -1 if unsucessful</short>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TCustomImageList.Add.Result">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.Add.Image">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.Add.Mask">
+        <short/>
+      </element>
+      <!-- function Visibility: public -->
+      <element name="TCustomImageList.AddDirect">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TCustomImageList.AddDirect.Result">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.AddDirect.Image">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.AddDirect.Mask">
+        <short/>
+      </element>
+      <!-- function Visibility: public -->
+      <element name="TCustomImageList.AddCopy">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TCustomImageList.AddCopy.Result">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.AddCopy.SrcImage">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.AddCopy.SrcMask">
+        <short/>
+      </element>
+      <!-- function Visibility: public -->
+      <element name="TCustomImageList.AddIcon">
+        <short>
+          <var>AddIcon</var> - add an icon to the list, returning the index of the icon or -1 if not successful (not yet supported)</short>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TCustomImageList.AddIcon.Result">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.AddIcon.Image">
+        <short/>
+      </element>
+      <!-- procedure Visibility: public -->
+      <element name="TCustomImageList.AddImages">
+        <short>
+          <var>AddImages</var> - adds images from another imagelist to the list</short>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.AddImages.Value">
+        <short/>
+      </element>
+      <!-- function Visibility: public -->
+      <element name="TCustomImageList.AddMasked">
+        <short>
+          <var>AddMasked</var> - adds one or more bitmaps to the list. Every instance of MaskColor will be converted to transparent. Returns index of added bitmap, or -1 if unsuccessful</short>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TCustomImageList.AddMasked.Result">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.AddMasked.Image">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.AddMasked.MaskColor">
+        <short/>
+      </element>
+      <!-- function Visibility: public -->
+      <element name="TCustomImageList.AddFromLazarusResource">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TCustomImageList.AddFromLazarusResource.Result">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.AddFromLazarusResource.ResourceName">
+        <short/>
+      </element>
+      <!-- procedure Visibility: public -->
+      <element name="TCustomImageList.Change">
+        <short>
+          <var>Change</var> - software method to force <var>OnChange</var> event</short>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- procedure Visibility: public -->
+      <element name="TCustomImageList.Clear">
+        <short>
+          <var>Clear</var> - removes all images from the list</short>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- constructor Visibility: public -->
+      <element name="TCustomImageList.CreateSize">
+        <short>
+          <var>CreateSize</var> - runtime constructor for image(s) with given height and width</short>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.CreateSize.AWidth">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.CreateSize.AHeight">
+        <short/>
+      </element>
+      <!-- procedure Visibility: public -->
+      <element name="TCustomImageList.Delete">
+        <short>
+          <var>Delete</var> the image specified by <var>AIndex</var>
+        </short>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.Delete.Index">
+        <short/>
+      </element>
+      <!-- destructor Visibility: public -->
+      <element name="TCustomImageList.Destroy" link="#rtl.Classes.TComponent.Destroy">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- procedure Visibility: public -->
+      <element name="TCustomImageList.Draw">
+        <short>
+          <var>Draw</var> the image specified by <var>AIndex</var> on the specified <var>canvas</var> at position <var>AX, AY</var>
+        </short>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.Draw.Canvas">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.Draw.X">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.Draw.Y">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.Draw.Index">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.Draw.Enabled">
+        <short/>
+      </element>
+      <!-- procedure Visibility: public -->
+      <element name="TCustomImageList.GetBitmap">
+        <short>
+          <var>GetBitmap</var> - creates a copy of the indexed image</short>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.GetBitmap.Index">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.GetBitmap.Image">
+        <short/>
+      </element>
+      <!-- procedure Visibility: public -->
+      <element name="TCustomImageList.GetInternalImage">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.GetInternalImage.Index">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.GetInternalImage.Image">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.GetInternalImage.Mask">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.GetInternalImage.ImageRect">
+        <short/>
+      </element>
+      <!-- function Visibility: public -->
+      <element name="TCustomImageList.GetHotSpot">
+        <short>
+          <var>GetHotSpot</var> - returns the co-ordinates for the hotspot of the drag image</short>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TCustomImageList.GetHotSpot.Result">
+        <short/>
+      </element>
+      <!-- procedure Visibility: public -->
+      <element name="TCustomImageList.GetIcon">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.GetIcon.Index">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.GetIcon.Image">
+        <short/>
+      </element>
+      <!-- function Visibility: public -->
+      <element name="TCustomImageList.HandleAllocated" link="#LCL.LCLClasses.TLCLReferenceComponent.HandleAllocated">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- function result Visibility: default -->
+      <element name="TCustomImageList.HandleAllocated.Result">
+        <short/>
+      </element>
+      <!-- procedure Visibility: public -->
+      <element name="TCustomImageList.Insert">
+        <short>
+          <var>Insert</var> one or more bitmaps into the list at the index position.  If Mask is nil, the image has no transparent parts</short>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.Insert.Index">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.Insert.Image">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.Insert.Mask">
+        <short/>
+      </element>
+      <!-- procedure Visibility: public -->
+      <element name="TCustomImageList.InsertIcon">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.InsertIcon.Index">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.InsertIcon.Image">
+        <short/>
+      </element>
+      <!-- procedure Visibility: public -->
+      <element name="TCustomImageList.InsertMasked">
+        <short>
+          <var>InsertMasked</var> - adds one or more bitmaps to the list. Every instance of MaskColor will be converted to transparent</short>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.InsertMasked.Index">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.InsertMasked.Image">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.InsertMasked.MaskColor">
+        <short/>
+      </element>
+      <!-- procedure Visibility: public -->
+      <element name="TCustomImageList.Move">
+        <short>
+          <var>Move</var> an image from the <var>CurIndex </var>location to <var>NewIndex</var> location</short>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.Move.CurIndex">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.Move.NewIndex">
+        <short/>
+      </element>
+      <!-- procedure Visibility: public -->
+      <element name="TCustomImageList.Replace">
+        <short>
+          <var>Replace</var> an indexed image with the Bitmap given</short>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.Replace.Index">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.Replace.Image">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.Replace.Mask">
+        <short/>
+      </element>
+      <!-- procedure Visibility: public -->
+      <element name="TCustomImageList.ReplaceIcon">
+        <short/>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.ReplaceIcon.Index">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.ReplaceIcon.Image">
+        <short/>
+      </element>
+      <!-- procedure Visibility: public -->
+      <element name="TCustomImageList.ReplaceMasked">
+        <short>
+          <var>ReplaceMasked</var> - replaces the indexed image with the image given. Every instance of MaskColor will be converted to transparent</short>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.ReplaceMasked.Index">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.ReplaceMasked.NewImage">
+        <short/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.ReplaceMasked.MaskColor">
+        <short/>
+      </element>
+      <!-- procedure Visibility: public -->
+      <element name="TCustomImageList.RegisterChanges">
+        <short>Registers an object to get notified of a change of the imagelist</short>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.RegisterChanges.Value">
+        <short/>
+      </element>
+      <!-- procedure Visibility: public -->
+      <element name="TCustomImageList.UnRegisterChanges">
+        <short>
+          <var>UnRegisterChanges</var> - remove the changes from the register</short>
+        <descr/>
+        <errors/>
+        <seealso/>
+      </element>
+      <!-- argument Visibility: default -->
+      <element name="TCustomImageList.UnRegisterChanges.Value">
+        <short/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomImageList.AllocBy">
+        <short>
+          <var>AllocBy</var> - allocate images by an integer value</short>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomImageList.BlendColor">
+        <short>
+          <var>BlendColor</var> - the colour for a blend</short>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomImageList.BkColor">
+        <short>
+          <var>BkColor</var> - background colour (default none)</short>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomImageList.Count">
+        <short>
+          <var>Count</var> - number of images in the list</short>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomImageList.DrawingStyle">
+        <short>
+          <var>DrawingStyle</var> - focus, selected, normal or transparent</short>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomImageList.Handle">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomImageList.Height">
+        <short>
+          <var>Height</var> of images on list</short>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomImageList.Width">
+        <short>
+          <var>Width</var> of images on list</short>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomImageList.OnChange">
+        <short>
+          <var>OnChange</var> - event handler for a change in the imagelist</short>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomImageList.Masked">
+        <short>
+          <var>Masked</var> - if True, a mask is applied to the bitmap</short>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomImageList.Bitmap">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomImageList.MaskBitmap">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomImageList.ShareImages">
+        <short>
+          <var>ShareImages</var> - if True, images are allowed to be shared</short>
+        <descr/>
+        <seealso/>
+      </element>
+      <!-- property Visibility: public -->
+      <element name="TCustomImageList.ImageType">
+        <short>
+          <var>ImageType</var> - an image or a mask</short>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCustomImageList.AddImages.AValue">
+        <short>
+          <var>AValue</var> - the ImageList containing images to add</short>
+      </element>
+      <element name="TCustomImageList.AddLazarusResource">
+        <short>
+          <var>AddLazarusResource</var> - load <var>TBitmap</var> from lazarus resources and add it</short>
+      </element>
+      <element name="TCustomImageList.FillDescription">
+        <short>
+          <var>FillDescription</var> - fills the description with the default info of the imagedata</short>
+      </element>
+      <element name="TCustomImageList.GetRawImage">
+        <short>
+          <var>GetRawImage</var> - primitive method for loading an image: you have to fill in all the description fields yourself</short>
+      </element>
+      <element name="TCustomImageList.Reference">
+        <short>
+          <var>Reference</var> to the imagelist</short>
+      </element>
+      <element name="TCustomImageList.CheckIndex">
+        <short>
+          <var>CheckIndex</var> - method for checking whether the indexed item is supposed to be inserted (default condition is False)</short>
+      </element>
+      <element name="TCustomImageList.GetReferenceHandle">
+        <short>
+          <var>GetReferenceHandle</var> - returns a handle for the reference</short>
+      </element>
+      <element name="TCustomImageList.WSCreateReference">
+        <short>
+          <var>WSCreateReference</var> - creates a reference for the Imagelist (returns this as a result), passing the defined parameters for the creation process</short>
+      </element>
+      <element name="TCustomImageList.StretchDraw">
+        <short>
+          <var>StretchDraw</var> - draw the image to fill the canvas</short>
+      </element>
+      <element name="TCustomImageList.WSRegisterClass" link="#LCL.LCLClasses.TLCLComponent.WSRegisterClass"/>
+    </module>
+    <!-- ImgList -->
+  </package>
+</fpdoc-descriptions>

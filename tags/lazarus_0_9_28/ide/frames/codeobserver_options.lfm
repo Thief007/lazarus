@@ -1,0 +1,209 @@
+inherited CodeObserverOptionsFrame: TCodeObserverOptionsFrame
+  Height = 428
+  Width = 531
+  ClientHeight = 424
+  ClientWidth = 527
+  TabOrder = 0
+  DesignLeft = 220
+  DesignTop = 220
+  object CodeObsIgnoreConstantsLabel: TLabel[0]
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = CodeObsCategoriesCheckGroup
+    AnchorSideTop.Side = asrBottom
+    AnchorSideBottom.Control = CodeObsCharConstCheckBox
+    Left = 0
+    Height = 18
+    Top = 196
+    Width = 200
+    BorderSpacing.Top = 6
+    Caption = 'CodeObsIgnoreConstantsLabel'
+    ParentColor = False
+  end
+  object COIgnoreConstInFuncsLabel: TLabel[1]
+    AnchorSideLeft.Control = CodeObsLeftPanel
+    AnchorSideTop.Control = CodeObsCategoriesCheckGroup
+    AnchorSideTop.Side = asrBottom
+    Left = 267
+    Height = 18
+    Top = 196
+    Width = 182
+    BorderSpacing.Top = 6
+    Caption = 'COIgnoreConstInFuncsLabel'
+    ParentColor = False
+  end
+  object Label1: TLabel[2]
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    Left = 262
+    Height = 15
+    Top = 40
+    Width = 2
+    ParentColor = False
+  end
+  object CodeObsCategoriesCheckGroup: TCheckGroup[3]
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Label1
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 0
+    Height = 190
+    Top = 0
+    Width = 259
+    Anchors = [akTop, akLeft, akRight]
+    AutoFill = True
+    AutoSize = True
+    BorderSpacing.Right = 3
+    Caption = 'CodeObsCategoriesCheckGroup'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    Constraints.MinHeight = 190
+    OnItemClick = CodeObsCategoriesCheckGroupItemClick
+    TabOrder = 0
+  end
+  object CodeObsIgnoreConstantsMemo: TMemo[4]
+    AnchorSideLeft.Control = CodeObsIgnoreConstantsLabel
+    AnchorSideTop.Control = CodeObsIgnoreConstantsLabel
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = CodeObsCategoriesCheckGroup
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 0
+    Height = 207
+    Top = 217
+    Width = 259
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Top = 3
+    Lines.Strings = (
+      'CodeObsIgnoreConstantsMemo'
+    )
+    TabOrder = 1
+  end
+  object CodeObsLeftPanel: TPanel[5]
+    AnchorSideLeft.Control = Label1
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Owner
+    Left = 267
+    Height = 190
+    Top = 0
+    Width = 214
+    AutoSize = True
+    BorderSpacing.Left = 3
+    BevelOuter = bvNone
+    ClientHeight = 190
+    ClientWidth = 214
+    TabOrder = 2
+    object NestedProcCountLabel: TLabel
+      AnchorSideLeft.Control = CodeObsLeftPanel
+      AnchorSideTop.Control = LongParamListCountSpinEdit
+      AnchorSideTop.Side = asrBottom
+      Left = 0
+      Height = 18
+      Top = 114
+      Width = 148
+      BorderSpacing.Top = 6
+      Caption = 'NestedProcCountLabel'
+      ParentColor = False
+    end
+    object LongParamListCountLabel: TLabel
+      AnchorSideLeft.Control = CodeObsLeftPanel
+      AnchorSideTop.Control = LongProcLineCountSpinEdit
+      AnchorSideTop.Side = asrBottom
+      Left = 0
+      Height = 18
+      Top = 60
+      Width = 169
+      BorderSpacing.Top = 6
+      Caption = 'LongParamListCountLabel'
+      ParentColor = False
+    end
+    object LongProcLineCountLabel: TLabel
+      AnchorSideLeft.Control = CodeObsLeftPanel
+      AnchorSideTop.Control = CodeObsLeftPanel
+      Left = 0
+      Height = 18
+      Top = 6
+      Width = 160
+      BorderSpacing.Top = 6
+      Caption = 'LongProcLineCountLabel'
+      ParentColor = False
+    end
+    object CodeObsCharConstCheckBox: TCheckBox
+      AnchorSideLeft.Control = CodeObsLeftPanel
+      AnchorSideTop.Control = NestedProcCountSpinEdit
+      AnchorSideTop.Side = asrBottom
+      Left = 0
+      Height = 22
+      Top = 168
+      Width = 214
+      BorderSpacing.Top = 6
+      Caption = 'CodeObsCharConstCheckBox'
+      TabOrder = 0
+    end
+    object NestedProcCountSpinEdit: TSpinEdit
+      AnchorSideLeft.Control = CodeObsCharConstCheckBox
+      AnchorSideTop.Control = NestedProcCountLabel
+      AnchorSideTop.Side = asrBottom
+      Left = 6
+      Height = 27
+      Top = 135
+      Width = 60
+      AutoSize = True
+      BorderSpacing.Left = 6
+      BorderSpacing.Top = 3
+      TabOrder = 1
+    end
+    object LongParamListCountSpinEdit: TSpinEdit
+      AnchorSideLeft.Control = CodeObsLeftPanel
+      AnchorSideTop.Control = LongParamListCountLabel
+      AnchorSideTop.Side = asrBottom
+      Left = 6
+      Height = 27
+      Top = 81
+      Width = 60
+      AutoSize = True
+      BorderSpacing.Left = 6
+      BorderSpacing.Top = 3
+      TabOrder = 2
+    end
+    object LongProcLineCountSpinEdit: TSpinEdit
+      AnchorSideLeft.Control = CodeObsLeftPanel
+      AnchorSideTop.Control = LongProcLineCountLabel
+      AnchorSideTop.Side = asrBottom
+      Left = 6
+      Height = 27
+      Top = 27
+      Width = 60
+      AutoSize = True
+      BorderSpacing.Left = 6
+      BorderSpacing.Top = 3
+      TabOrder = 3
+    end
+  end
+  object COIgnoreConstInFuncsMemo: TMemo[6]
+    AnchorSideLeft.Control = CodeObsLeftPanel
+    AnchorSideTop.Control = COIgnoreConstInFuncsLabel
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 267
+    Height = 207
+    Top = 217
+    Width = 260
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Top = 3
+    Lines.Strings = (
+      'COIgnoreConstInFuncsMemo'
+    )
+    TabOrder = 3
+  end
+end

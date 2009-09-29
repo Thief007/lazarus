@@ -1,0 +1,84 @@
+object HeapTrcViewForm: THeapTrcViewForm
+  Left = 730
+  Height = 298
+  Top = 134
+  Width = 387
+  ActiveControl = btnBrowse
+  Caption = 'HeapTrcViewForm'
+  ClientHeight = 298
+  ClientWidth = 387
+  FormStyle = fsStayOnTop
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  LCLVersion = '0.9.27'
+  object lblTrcFile: TLabel
+    Left = 16
+    Height = 18
+    Top = 16
+    Width = 44
+    Caption = '.trc file'
+    ParentColor = False
+  end
+  object edtTrcFileName: TEdit
+    Left = 72
+    Height = 23
+    Top = 16
+    Width = 251
+    Anchors = [akTop, akLeft, akRight]
+    TabOrder = 0
+  end
+  object btnUpdate: TButton
+    Left = 16
+    Height = 29
+    Top = 54
+    Width = 59
+    AutoSize = True
+    Caption = 'Update'
+    OnClick = btnUpdateClick
+    TabOrder = 1
+  end
+  object trvTraceInfo: TTreeView
+    Left = 16
+    Height = 191
+    Top = 88
+    Width = 355
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    DefaultItemHeight = 19
+    ReadOnly = True
+    TabOrder = 2
+    OnDblClick = trvTraceInfoDblClick
+    Options = [tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoReadOnly, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips]
+  end
+  object chkStayOnTop: TCheckBox
+    Left = 269
+    Height = 22
+    Top = 56
+    Width = 98
+    Anchors = [akTop, akRight]
+    Caption = 'Stay on top'
+    OnChange = chkStayOnTopChange
+    OnClick = chkStayOnTopClick
+    TabOrder = 3
+  end
+  object btnBrowse: TButton
+    Left = 339
+    Height = 20
+    Top = 14
+    Width = 32
+    Anchors = [akTop, akRight]
+    Caption = '...'
+    OnClick = btnBrowseClick
+    TabOrder = 4
+  end
+  object chkUseRaw: TCheckBox
+    Left = 99
+    Height = 22
+    Top = 56
+    Width = 112
+    Caption = 'Raw leak data'
+    Checked = True
+    OnChange = chkUseRawChange
+    State = cbChecked
+    TabOrder = 5
+  end
+end

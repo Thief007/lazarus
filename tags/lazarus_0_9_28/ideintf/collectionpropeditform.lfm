@@ -1,0 +1,79 @@
+object CollectionPropertyEditorForm: TCollectionPropertyEditorForm
+  ActiveControl = CollectionListBox
+  BorderStyle = bsSizeToolWin
+  Caption = 'CollectionPropertyEditorForm'
+  ClientHeight = 300
+  ClientWidth = 190
+  Constraints.MinHeight = 100
+  Constraints.MinWidth = 190
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  PixelsPerInch = 96
+  Position = poDefaultPosOnly
+  HorzScrollBar.Page = 189
+  VertScrollBar.Page = 299
+  Left = 290
+  Height = 300
+  Top = 153
+  Width = 190
+  object ToolBar1: TToolBar
+    AutoSize = True
+    ButtonHeight = 40
+    ButtonWidth = 44
+    Caption = 'ToolBar1'
+    Flat = True
+    Height = 42
+    ShowCaptions = True
+    TabOrder = 0
+    Height = 42
+    Width = 190
+    object AddButton: TToolButton
+      Caption = 'Add'
+      OnClick = AddButtonClick
+      Height = 40
+      Top = 2
+      Width = 44
+    end
+    object DeleteButton: TToolButton
+      Caption = 'Delete'
+      OnClick = DeleteButtonClick
+      Left = 45
+      Height = 40
+      Top = 2
+      Width = 44
+    end
+    object ToolButton3: TToolButton
+      Caption = 'ToolButton3'
+      Style = tbsSeparator
+      Width = 10
+      Left = 89
+      Height = 40
+      Top = 2
+      Width = 10
+    end
+    object MoveUpButton: TToolButton
+      Caption = 'Up'
+      OnClick = MoveUpButtonClick
+      Left = 99
+      Height = 40
+      Top = 2
+      Width = 44
+    end
+    object MoveDownButton: TToolButton
+      Caption = 'Down'
+      OnClick = MoveDownButtonClick
+      Left = 143
+      Height = 40
+      Top = 2
+      Width = 44
+    end
+  end
+  object CollectionListBox: TListBox
+    Align = alClient
+    OnClick = CollectionListBoxClick
+    TabOrder = 1
+    Height = 258
+    Top = 42
+    Width = 190
+  end
+end
