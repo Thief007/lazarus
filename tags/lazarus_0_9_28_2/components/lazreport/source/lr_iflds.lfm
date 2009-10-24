@@ -1,0 +1,131 @@
+object frInsertFieldsForm: TfrInsertFieldsForm
+  Left = 352
+  Height = 222
+  Top = 210
+  Width = 334
+  BorderStyle = bsDialog
+  Caption = 'Insert fields'
+  ClientHeight = 222
+  ClientWidth = 334
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '0.9.27'
+  object Label1: TLabel
+    Left = 4
+    Height = 14
+    Top = 4
+    Width = 87
+    Caption = '&Available datasets'
+    FocusControl = DatasetCB
+    ParentColor = False
+  end
+  object FieldsL: TListBox
+    Left = 4
+    Height = 173
+    Top = 44
+    Width = 145
+    HelpContext = 106
+    ClickOnSelChange = False
+    ItemHeight = 0
+    MultiSelect = True
+    TabOrder = 0
+  end
+  object DatasetCB: TComboBox
+    Left = 4
+    Height = 21
+    Top = 20
+    Width = 145
+    HelpContext = 97
+    AutoComplete = False
+    ItemHeight = 13
+    ItemWidth = 0
+    OnChange = DatasetCBChange
+    Sorted = True
+    Style = csDropDownList
+    TabOrder = 1
+  end
+  object GroupBox1: TGroupBox
+    Left = 156
+    Height = 65
+    Top = 15
+    Width = 173
+    Caption = 'Placement'
+    ClientHeight = 47
+    ClientWidth = 169
+    TabOrder = 2
+    object HorzRB: TRadioButton
+      Left = 8
+      Height = 17
+      Top = 5
+      Width = 65
+      HelpContext = 115
+      AllowGrayed = True
+      Caption = '&Horizontal'
+      Checked = True
+      State = cbChecked
+      TabOrder = 0
+    end
+    object VertRB: TRadioButton
+      Left = 8
+      Height = 17
+      Top = 25
+      Width = 53
+      HelpContext = 122
+      AllowGrayed = True
+      Caption = '&Vertical'
+      TabOrder = 1
+      TabStop = False
+    end
+  end
+  object Button1: TButton
+    Left = 172
+    Height = 25
+    Top = 192
+    Width = 75
+    HelpContext = 40
+    Caption = 'Ok'
+    Default = True
+    ModalResult = 1
+    TabOrder = 3
+  end
+  object Button2: TButton
+    Left = 252
+    Height = 25
+    Top = 192
+    Width = 75
+    HelpContext = 50
+    Cancel = True
+    Caption = 'Cancel'
+    ModalResult = 2
+    TabOrder = 4
+  end
+  object GroupBox2: TGroupBox
+    Left = 156
+    Height = 60
+    Top = 85
+    Width = 173
+    ClientHeight = 42
+    ClientWidth = 169
+    TabOrder = 5
+    object HeaderCB: TCheckBox
+      Left = 8
+      Height = 17
+      Top = 0
+      Width = 94
+      HelpContext = 132
+      Caption = '&Include headers'
+      TabOrder = 0
+    end
+    object BandCB: TCheckBox
+      Left = 8
+      Height = 17
+      Top = 22
+      Width = 85
+      Caption = 'Include &bands'
+      TabOrder = 1
+    end
+  end
+end

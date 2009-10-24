@@ -1,0 +1,107 @@
+object NewOtherDialog: TNewOtherDialog
+  Left = 281
+  Height = 395
+  Top = 204
+  Width = 476
+  ActiveControl = ItemsTreeView
+  BorderIcons = [biSystemMenu]
+  Caption = 'NewOtherDialog'
+  ClientHeight = 395
+  ClientWidth = 476
+  Position = poScreenCenter
+  LCLVersion = '0.9.27'
+  object Panel1: TPanel
+    Left = 6
+    Height = 351
+    Top = 6
+    Width = 464
+    Align = alClient
+    BorderSpacing.Around = 6
+    BevelOuter = bvNone
+    ClientHeight = 351
+    ClientWidth = 464
+    TabOrder = 0
+    object ItemsTreeView: TTreeView
+      AnchorSideLeft.Control = Owner
+      AnchorSideTop.Control = Owner
+      Left = 0
+      Height = 351
+      Top = 0
+      Width = 178
+      Align = alClient
+      DefaultItemHeight = 15
+      ReadOnly = True
+      ScrollBars = ssAutoBoth
+      TabOrder = 0
+      OnDblClick = OkButtonClick
+      OnSelectionChanged = ItemsTreeViewSelectionChanged
+      Options = [tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoReadOnly, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips]
+    end
+    object DescriptionGroupBox: TGroupBox
+      AnchorSideLeft.Control = ItemsTreeView
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Owner
+      AnchorSideRight.Control = Owner
+      AnchorSideRight.Side = asrBottom
+      Left = 183
+      Height = 351
+      Top = 0
+      Width = 281
+      Align = alRight
+      Caption = 'DescriptionGroupBox'
+      ClientHeight = 333
+      ClientWidth = 277
+      TabOrder = 1
+      object DescriptionLabel: TLabel
+        Left = 6
+        Height = 14
+        Top = 6
+        Width = 265
+        Align = alTop
+        BorderSpacing.Around = 6
+        Caption = 'DescriptionLabel'
+        ParentColor = False
+        WordWrap = True
+      end
+      object InheritableComponentsListView: TListView
+        Left = 0
+        Height = 307
+        Top = 26
+        Width = 277
+        Align = alClient
+        Columns = <        
+          item
+            Caption = 'Form'
+            Width = 100
+          end        
+          item
+            Caption = 'Unit'
+            Width = 250
+          end>
+        HideSelection = False
+        ReadOnly = True
+        RowSelect = True
+        ScrollBars = ssAutoBoth
+        TabOrder = 0
+        ViewStyle = vsReport
+      end
+    end
+    object Splitter1: TSplitter
+      Left = 178
+      Height = 351
+      Top = 0
+      Width = 5
+      Align = alRight
+      ResizeAnchor = akRight
+    end
+  end
+  object ButtonPanel: TButtonPanel
+    Left = 6
+    Height = 26
+    Top = 363
+    Width = 464
+    TabOrder = 1
+    ShowButtons = [pbOK, pbCancel, pbHelp]
+    ShowBevel = False
+  end
+end

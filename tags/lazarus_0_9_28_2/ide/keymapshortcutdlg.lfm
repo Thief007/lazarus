@@ -1,0 +1,43 @@
+object ShortCutDialog: TShortCutDialog
+  Left = 290
+  Height = 248
+  Top = 189
+  Width = 545
+  AutoSize = True
+  Caption = 'ShortCutDialog'
+  ClientHeight = 248
+  ClientWidth = 545
+  OnCreate = FormCreate
+  LCLVersion = '0.9.27'
+  object PrimaryGroupBox: TGroupBox
+    Left = 6
+    Height = 93
+    Top = 6
+    Width = 533
+    Align = alTop
+    BorderSpacing.Around = 6
+    Caption = 'PrimaryGroupBox'
+    TabOrder = 0
+  end
+  object SecondaryGroupBox: TGroupBox
+    Left = 6
+    Height = 105
+    Top = 105
+    Width = 533
+    Align = alTop
+    BorderSpacing.Around = 6
+    Caption = 'SecondaryGroupBox'
+    TabOrder = 1
+  end
+  object BtnPanel: TButtonPanel
+    AnchorSideTop.Side = asrBottom
+    Left = 6
+    Height = 26
+    Top = 216
+    Width = 533
+    Align = alTop
+    TabOrder = 2
+    ShowButtons = [pbOK, pbCancel]
+    ShowBevel = False
+  end
+end

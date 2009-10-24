@@ -1,0 +1,109 @@
+inherited CodetoolsGeneralOptionsFrame: TCodetoolsGeneralOptionsFrame
+  Height = 231
+  Width = 552
+  ClientHeight = 227
+  ClientWidth = 548
+  TabOrder = 0
+  Visible = False
+  DesignLeft = 176
+  DesignTop = 232
+  object SrcPathGroupBox: TGroupBox[0]
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 0
+    Height = 58
+    Top = 0
+    Width = 548
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = True
+    Caption = 'SrcPathGroupBox'
+    ClientHeight = 39
+    ClientWidth = 544
+    Ctl3D = False
+    TabOrder = 0
+    object SrcPathEdit: TEdit
+      AnchorSideLeft.Control = SrcPathGroupBox
+      AnchorSideRight.Control = SrcPathGroupBox
+      AnchorSideRight.Side = asrBottom
+      Left = 6
+      Height = 27
+      Top = 6
+      Width = 532
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Around = 6
+      TabOrder = 0
+      Text = 'SrcPathEdit'
+    end
+  end
+  object JumpingGroupBox: TGroupBox[1]
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = SrcPathGroupBox
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 0
+    Height = 155
+    Top = 64
+    Width = 548
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = True
+    BorderSpacing.Top = 6
+    Caption = 'JumpingGroupBox'
+    ClientHeight = 136
+    ClientWidth = 544
+    Ctl3D = False
+    TabOrder = 1
+    object AdjustTopLineDueToCommentCheckBox: TCheckBox
+      AnchorSideLeft.Control = JumpingGroupBox
+      AnchorSideTop.Control = JumpingGroupBox
+      Left = 6
+      Height = 22
+      Top = 6
+      Width = 285
+      BorderSpacing.Around = 6
+      Caption = 'AdjustTopLineDueToCommentCheckBox'
+      TabOrder = 0
+    end
+    object JumpCenteredCheckBox: TCheckBox
+      AnchorSideLeft.Control = JumpingGroupBox
+      AnchorSideTop.Control = AdjustTopLineDueToCommentCheckBox
+      AnchorSideTop.Side = asrBottom
+      Left = 6
+      Height = 22
+      Top = 40
+      Width = 181
+      BorderSpacing.Top = 6
+      BorderSpacing.Around = 6
+      Caption = 'JumpCenteredCheckBox'
+      TabOrder = 1
+    end
+    object CursorBeyondEOLCheckBox: TCheckBox
+      AnchorSideLeft.Control = JumpingGroupBox
+      AnchorSideTop.Control = JumpCenteredCheckBox
+      AnchorSideTop.Side = asrBottom
+      Left = 6
+      Height = 22
+      Top = 74
+      Width = 205
+      BorderSpacing.Top = 6
+      BorderSpacing.Around = 6
+      Caption = 'CursorBeyondEOLCheckBox'
+      TabOrder = 2
+    end
+    object SkipForwardDeclarationsCheckBox: TCheckBox
+      AnchorSideLeft.Control = JumpingGroupBox
+      AnchorSideTop.Control = CursorBeyondEOLCheckBox
+      AnchorSideTop.Side = asrBottom
+      Left = 6
+      Height = 22
+      Top = 108
+      Width = 252
+      BorderSpacing.Top = 6
+      BorderSpacing.Around = 6
+      Caption = 'SkipForwardDeclarationsCheckBox'
+      TabOrder = 3
+    end
+  end
+end

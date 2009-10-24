@@ -1,0 +1,153 @@
+#The following people contributed to Lazarus:
+
+A. J. Venter
+Aleksey Lagunov
+Alexander Grau
+Alexander S. Klenin
+Alexander Shiyan
+Alexandr Gridnev
+Alexandre Leclerc
+Alexandru Alexandrov
+Andreas Hausladen
+Andreas Schneider
+Andrew Haines
+Andrew Johnson
+Anton Kavalenka
+Antonio Galvao
+Arnold Bosch
+Bart Broersma
+Benito van der Zander
+Bent Normann Olsen
+Bernd Mueller
+Bob Wingard
+Boguslaw Brandys
+Boris Arko
+Boris Glavin
+Brad Campbell
+Bruce Tulloch
+Chris Rorden
+Christian Iversen
+Christian Ulrich
+Christopher Kirkpatrick
+Cliff Baeseman
+Colin Western
+Curtis White
+Daniel Oom
+Daniel Simões de Almeida
+Darek Mazur
+Darius Blaszijk
+David Guadagnini
+David Pethes
+Dean Zobec
+Diogo Picarra
+Dmitry Boyarintsev
+Dominique Louis
+Ere Maijala
+Eric Chapman
+Erivelton Silva
+Evgen A. Palamarchuck
+Fabrizio Fellini
+Felipe Monteiro de Carvalho
+Florian Koeberle
+Francisco Manuel
+Gerard Visent
+Giuliano Colla
+Giulio Bernardi
+GongYu
+Graeme Geldenhuys
+Grzegorz Zakrzewski
+Hakan Kizilhan
+Hans-Joachim Ott
+Hans-Peter Diettrich
+Henry Vermaak
+Hwang Weng Sun
+Ido Kanner
+James Chandler Jr.
+Jan Foster
+Jason King
+Jeffrey A. Wormsley
+Jeroen van Idekinge
+Jesus Reyes
+Joerg Braun - german translation
+Johannes Muller
+Jonas Maebe
+Joost van der Sluis
+Jose Alonso Cardenas M.
+Jose Mejuto
+Jouke Rensma
+Juan Salvador Perez García
+Junior Goncalves
+Karl Brandt
+Keith Bowes
+Ladislav Michl
+Laurent Jacques
+Leslie Kaye
+Louis Hoefler
+Luca Olivetti
+Luis R. Hilario B.
+Luis Rodrigues made TChart and misc patches
+Luiz Americo
+Marc Fokker
+Marc Geldon
+Marc Weustink
+Marcelo Borges de Paula
+Marius Ellen
+Martin Friebe
+Martin Patik
+Martin Smat
+Marton Papp
+Martyn Ranyard
+Matthijs Willemstein
+Mattias Gaertner
+Maxim Ganetsky
+Mazen Neifer
+Michael A. Hess
+Micha Nelissen
+Michal Bukovjan
+Nikolay Ermolov
+Olivier Guilbaud
+Patrick Chevalley
+Paul Ishenin
+Paul Michell
+Pawel Trochimczuk
+Peter Dyson
+Philip J. Hess
+Pierre Gillmann
+Radek Cervinka
+Raul Moratalla
+Razvan Adrian Bogdan
+Reimar Grabowski
+Roozbeh GHolizadeh
+Rostislav Okulov
+Salvatore Coppola
+Samuel Herzog
+Samuel Liddicott
+Sean McIlwain
+Sebastian Gasiorek
+Seppo Suutarla - finnish translation
+Sergio Marcelo
+Shane Miller
+Sileno Goedicke
+Slavko Fedorik
+Stefan Hille
+Taras Boychuk
+Theo Lustenberger
+Tobias Giesen
+Tomas Gregorovic
+Tom Lisjac
+Tony Maro
+Valdas Jankunas
+Vasily I. Volchenko
+Vincent Beuselinck
+Vincent Snijders
+Vladimir Zhirov
+Vladimir Serotyukov
+Wanderlan Santos dos Anjos
+Wojciech Malinowski
+Yuriy Yeroshkin
+Yury Sidorov
+Zaenal Mutaqin
+Zaher Dirkey
+Zeljan Rikalo
+
+#and special thanks to the FPC team.
