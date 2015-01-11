@@ -1,4 +1,0 @@
-#: synunireg:sedituni
-msgid "Edit..."
-msgstr ""
-

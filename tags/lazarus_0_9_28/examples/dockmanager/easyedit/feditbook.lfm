@@ -1,7 +1,0 @@
-inherited EditBook: TEditBook
-  Left = 310
-  Top = 159
-  Caption = 'EditBook'
-  OnActivate = FormActivate
-  OnClose = FormClose
-end

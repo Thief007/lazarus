@@ -1,4 +1,0 @@
-#: registerdbf:dbfsalldbasefiles
-msgid "DBase Files"
-msgstr ""
-
