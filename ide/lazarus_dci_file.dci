@@ -135,7 +135,10 @@ else begin
 
 end;
 [procedure | procedure declaration]
-procedure $Param(ProcName)|($Param());
+$(AttributesStart)
+EnableMakros=true
+$(AttributesEnd)
+procedure $Param(ProcName)($Param());
 begin
   |
 end;
